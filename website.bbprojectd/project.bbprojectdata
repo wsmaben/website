@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>HierarchyData</key>
+	<array>
+		<string>151A9636-0FE7-45FF-AE14-2039FAC70B3C</string>
+	</array>
+	<key>ProjectItems</key>
+	<dict>
+		<key>151A9636-0FE7-45FF-AE14-2039FAC70B3C</key>
+		<dict>
+			<key>ItemData</key>
+			<dict>
+				<key>BookmarkData</key>
+				<data>
+				Ym9vaxADAAAAAAQQMAAAAPksuOKoIz5/Ys1NWFoJmY5F
+				XuOn6gVfqrD4Zb6Uoo+WDAIAAAQAAAADAwAAAAgAKAUA
+				AAABAQAAVXNlcnMAAAAIAAAAAQEAAEJlbmZ1ZWdvJAAA
+				AAEBAABXYXNoaW5ndG9uIFN0YXRlIE1lZGljYWwgQXNz
+				b2NpYXRpb24dAAAAAQEAAFdTTUEgRmlsZSBTaGFyaW5n
+				IC0gRG9jdW1lbnRzAAAABwAAAAEBAABXZWJzaXRlABQA
+				AAABBgAAEAAAACAAAAAwAAAAXAAAAIQAAAAIAAAABAMA
+				AJChCgAAAAAACAAAAAQDAADp5BIAAAAAAAgAAAAEAwAA
+				boEWAAAAAAAIAAAABAMAAP3OMgcAAAAACAAAAAQDAAAp
+				9jIHAAAAABQAAAABBgAAsAAAAMAAAADQAAAA4AAAAPAA
+				AAAIAAAAAAQAAEHB1Vqn///+GAAAAAECAAACAAAAAAAA
+				AA8AAAAAAAAAAAAAAAAAAAAIAAAABAMAAAMAAAAAAAAA
+				BAAAAAMDAAD1AQAACAAAAAEJAABmaWxlOi8vLwwAAAAB
+				AQAATWFjaW50b3NoIEhECAAAAAQDAAAA4AHj6AAAAAgA
+				AAAABAAAQcDATpY0AbUkAAAAAQEAADU0NUU1Mjk2LTZB
+				MTMtNEQyNC05NzE4LTREQjREMTc4MDZEMBgAAAABAgAA
+				gQAAAAEAAADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAv
+				AAAAAAAAAAEFAADMAAAA/v///wEAAAAAAAAAEAAAAAQQ
+				AACUAAAAAAAAAAUQAAAAAQAAAAAAABAQAAAsAQAAAAAA
+				AEAQAAAcAQAAAAAAAAIgAAD4AQAAAAAAAAUgAABoAQAA
+				AAAAABAgAAB4AQAAAAAAABEgAACsAQAAAAAAABIgAACM
+				AQAAAAAAABMgAACcAQAAAAAAACAgAADYAQAAAAAAADAg
+				AAAEAgAAAAAAAAHAAABMAQAAAAAAABHAAAAgAAAAAAAA
+				ABLAAABcAQAAAAAAABDQAAAEAAAAAAAAAA==
+				</data>
+				<key>FileURL</key>
+				<string>file:///Users/Benfuego/Washington%20State%20Medical%20Association/WSMA%20File%20Sharing%20-%20Documents/Website/</string>
+				<key>HasSecurityScope</key>
+				<true/>
+				<key>RelativePath</key>
+				<string>./</string>
+				<key>TypeID</key>
+				<string>_CFileLocator</string>
+				<key>Version</key>
+				<integer>1</integer>
+			</dict>
+			<key>ItemName</key>
+			<string>Website</string>
+			<key>ItemType</key>
+			<string>FolderReference</string>
+			<key>UserOverrideItemName</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>com.barebones.DocumentFormatVersion</key>
+	<integer>5</integer>
+	<key>com.barebones.DocumentType</key>
+	<string>Project</string>
+</dict>
+</plist>
