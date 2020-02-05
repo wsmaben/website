@@ -3,12 +3,12 @@
 <head>
 	<meta charset="utf-8" />
 	<title>
-	Give to the Foundation
+	Complete Association Management Service
 	</title>
 <!-- 
-http://wsma.org/WSMA/About/WSMA_Foundation/Give_to_the_Foundation.aspx
+http://wsma.org/WSMA/Services/CAMS/AMD.aspx
  -->
-<!-- Layout: 1-1-3-3-1EqualHeightRows -->
+	<!-- Layout: Single Column -->
 </head>
 <body>
 <!-- ************************** iPart ****************************** -->
@@ -16,6 +16,7 @@ http://wsma.org/WSMA/About/WSMA_Foundation/Give_to_the_Foundation.aspx
 <div class="secondaryHero row">
 <div class="hero2banner">
 <svg id="Layer_1" viewbox="0 0 650 314" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-name="Layer 1">
+<title>Association Management Services</title>
 <defs>
 <lineargradient id="linear-gradient" gradientunits="userSpaceOnUse" x1="0" y1="154.5" x2="650" y2="154.5">
 <stop stop-color="rgb(255, 255, 255)" offset="0"></stop>
@@ -39,27 +40,38 @@ http://wsma.org/WSMA/About/WSMA_Foundation/Give_to_the_Foundation.aspx
 </mask>
 </defs>
 <g class="cls-2">
-<image width="650" height="314" xlink:href="/images/Secondary%20Banners/Foundation_Feareystock_650px.jpg"></image>
+<image width="650" height="314" xlink:href="/images/Secondary%20Banners/AssociationManagementServices_650px.jpg
+"></image>
 </g>
 </svg>
-<img alt="" width="650" height="314" xlink:href="/images/Secondary%20Banners/Foundation_Feareystock_650px.jpg" />
+<img alt="" width="650" height="314" xlink:href="/images/Secondary%20Banners/AssociationManagementServices_650px.jpg
+" />
 </div>
-<div class="col-md-6">"The foundation makes it easier for me to get engaged and make improvements to my practice."
-<span class="attrib">- Jae Sim, MD, Edmonds Family Medicine</span>
-</div>
+<div class="col-md-6">A professional and affordable solution for your medical organization's management and administrative needs.
+<!--HIDE<span class="attrib">- Not a Real Person</span>-->
 </div>
 <script>
     // Next two lines are for secondard Hero
     jQuery('.hero2banner').appendTo('.hero2after');
     jQuery(".secondaryHero").appendTo('#ctl01_BreadCrumb');
 </script>
+</div>
 <!-- ************************** iPart ****************************** -->
-<h1>Give to the Foundation</h1>
-<p>The WSMA Foundation for Health Care Improvement is celebrating its 50th anniversary this year with more to celebrate than ever before. Ambitious programs touch and improve the lives of patients, physicians and other providers throughout Washington state, such as Honoring Choices® Pacific Northwest; Choosing Wisely®; Healthy Doctors, Healthier Patients; the Medical Officer Collaborative; and the Clinical Performance Improvement Network.</p>
-<p>Make an investment in yourself, your peers and your profession by donating to the WSMA Foundation. </p>
-<!-- ************************** iPart ****************************** -->
+<!-- Accordion Script -->
+<script>
+jQuery(document).ready(function() {
+	jQuery('button.btnExpand').click(function() {
+	if (jQuery(this).parent().parent(".active")[0]) {
+		jQuery(".active").removeClass("active");
+	} else {
+		jQuery(".active").removeClass("active");
+		jQuery(this).parent().parent().addClass('active');
+	}
+	});
+});
+</script>
 
-<!-- DONATION PART -->
+
 
 </body>
 </html>
