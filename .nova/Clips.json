@@ -1,0 +1,161 @@
+{
+  "clips" : [
+    {
+      "children" : [
+        {
+          "content" : "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"utf-8\" \/>\n\t<title>$0<\/title>\n<\/head>\n<body>",
+          "name" : "HTML Head",
+          "trigger" : "HTML Head"
+        },
+        {
+          "content" : "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"utf-8\" \/>\n\t<title><\/title>\n<\/head>\n<body>\n$0\n<\/body>\n<\/html>",
+          "name" : "HTML Full Template",
+          "trigger" : "HTML Template"
+        },
+        {
+          "content" : "<!--  -->\n<!-- Description:  -->\n<!-- Keywords:  -->\n<!-- Layout: Single Column -->\n<!--  -->\n<!-- ************************** iPart ****************************** -->",
+          "name" : "Meta Tags for new page",
+          "trigger" : "Meta Tags for new page"
+        },
+        {
+          "content" : "<h1 class=\"mobileShow\">$PASTEBOARD_TEXT<\/h1>",
+          "name" : "mobileShow h1 tag"
+        }
+      ],
+      "name" : "HTML"
+    },
+    {
+      "children" : [
+        {
+          "content" : "<div class=\"col-md-5 pull-right\" style=\"text-align: center;\"><img alt=\"\" src=\"\/images\/News\/***\" class=\"pull-right\" \/><\/div>",
+          "name" : "Image - News Articles",
+          "trigger" : "Image - News Articles"
+        },
+        {
+          "content" : "<div class=\"col-md-5 pull-right\" style=\"text-align: center;\"><img alt=\"\" src=\"\/images\/News\/***\" class=\"pull-right\" \/><\/div>",
+          "name" : "Image - News Articles",
+          "trigger" : "Image - News Articles"
+        }
+      ],
+      "name" : "Images"
+    },
+    {
+      "children" : [
+        {
+          "content" : "<a href=\"#LINK\" class=\"TextButton Button\">$SELECTED_TEXT<\/a>",
+          "name" : "Button",
+          "trigger" : "Button"
+        },
+        {
+          "content" : "<a href=\"#LINK\" class=\"TextButton LargeButton\">$SELECTED_TEXT<\/a>",
+          "name" : "Button - Large",
+          "trigger" : "Button - Large"
+        },
+        {
+          "content" : "<a href=\"[@]WSMA\/***\/***\/***.aspx\">$SELECTED_TEXT<\/a>",
+          "name" : "iMIS page relative link [@]"
+        },
+        {
+          "content" : "<a href=\"javascript:\/\/[Uploaded files\/***\/***\/$PASTEBOARD_TEXT]\">$SELECTED_TEXT<\/a>.",
+          "name" : "PDF files in iMIS - Javascript link",
+          "shortcut" : "cmd-ctrl-a",
+          "trigger" : "PDF files in iMIS - Javascript link"
+        },
+        {
+          "content" : "<p><a href=\"\/EventDetail?EventKey=***\" class=\"TextButton\">Register<\/a><\/p>",
+          "name" : "Register Button and Link",
+          "trigger" : "Register Button and Link"
+        },
+        {
+          "content" : "\/* sidebar css class for non-block display *\/\nclass=\"pull-left\" style=\"width: 125px;\"",
+          "name" : "Sidebar Link Display CSS"
+        }
+      ],
+      "name" : "Links"
+    },
+    {
+      "children" : [
+        {
+          "content" : "<div class=\"expander-container container\">\n<div class=\"expander row\">\n<div class=\"expander-head col-sm-9\">\n<h2><\/h2>\n<p><\/p>\n<\/div>\n<div class=\"expander-switch col-sm-3 col-sm-offset-1\">\n<button class=\"btnExpand\" type=\"button\">Expand<\/button>\n<\/div>\n<\/div>\n<div class=\"expander-body row\">\n<!-- Content Below -->\n<\/div>\n<\/div>",
+          "name" : "Accordion",
+          "trigger" : "Accordion"
+        },
+        {
+          "content" : "<div class=\"col-sm-12 aux-nav\">\n<h1>Stay in the Know<\/h1>\n<a href=\"#\">Resource title listed here<\/a>\n<a href=\"#\">Resource title listed here<\/a>\n<a href=\"#\">Resource title listed here<\/a>\n<a href=\"#\">Resource title listed here<\/a>\n<\/div>",
+          "name" : "Sidebar",
+          "trigger" : "Sidebar"
+        }
+      ],
+      "name" : "Parts"
+    },
+    {
+      "children" : [
+        {
+          "content" : "<!-- ************************** iPart ****************************** -->",
+          "name" : "New iPart",
+          "trigger" : "New iPart"
+        },
+        {
+          "content" : "<!-- **************************NEW LISTING****************************** -->",
+          "name" : "New Listing"
+        },
+        {
+          "content" : "<!-- ******************************************** BODY ************************************************* -->",
+          "name" : "Full Width Delimiter",
+          "trigger" : "Full Width Delimiter"
+        },
+        {
+          "content" : "<!-- ******************************************** SECTION ************************************************* -->",
+          "name" : "Full Width Delimiter",
+          "trigger" : "Full Width Delimiter"
+        }
+      ],
+      "name" : "Section Delimiters"
+    },
+    {
+      "children" : [
+        {
+          "content" : "Weekly Rounds: $DATE - $PASTEBOARD_TEXT\n",
+          "name" : "Weekly Rounds title slug",
+          "trigger" : "Weekly Rounds title slug"
+        },
+        {
+          "content" : "<p>Jennifer Hanscom, Executive Director\/CEO<\/p>",
+          "name" : "Jennifer Hanscom, Executive Director\/CEO",
+          "trigger" : "Jennifer Hanscom, Executive Director\/CEO"
+        },
+        {
+          "content" : "<div class=\"col-md-5 pull-right\" style=\"text-align: center;\"><img alt=\"Weekly Rounds logo\" class=\"pull-right\" src=\"\/images\/Logos\/Weekly_Rounds_Article_Image_645x425.jpg\" \/><\/div>",
+          "name" : "Weekly Rounds logo - image",
+          "trigger" : "Weekly Rounds logo - image"
+        },
+        {
+          "content" : "<h5>$DATE<\/h5>",
+          "name" : "Date - News Article <h5>month date, year<\/h5>",
+          "trigger" : "Date - News Article <h5>month date, year<\/h5>"
+        },
+        {
+          "content" : "$DATE $PASTEBOARD_TEXT",
+          "name" : "Career Center job title slug",
+          "trigger" : "Career Center job title slug"
+        },
+        {
+          "content" : "<h5>\n<em>Members only; sign-in required.<\/em>\n<\/h5>",
+          "name" : "Members Only",
+          "trigger" : "Members Only"
+        }
+      ],
+      "name" : "Shared Content"
+    },
+    {
+      "children" : [
+        {
+          "content" : "<!-- **************************NEW VIDEO****************************** -->\n<div style=\"padding:56.25% 0 0 0;position:relative;\">\n<iframe src=\"https:\/\/player.vimeo.com\/video\/****?title=0&amp;byline=0&amp;portrait=0\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" frameborder=\"0\" allow=\"autoplay; fullscreen\"><\/iframe>\n<\/div>\n<script src=\"https:\/\/player.vimeo.com\/api\/player.js\">\n<\/script>\n<br \/>\n <br \/>",
+          "name" : "Vimeo video embed",
+          "trigger" : "Vimeo"
+        }
+      ],
+      "name" : "Video"
+    }
+  ]
+}
