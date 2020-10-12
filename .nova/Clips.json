@@ -3,7 +3,7 @@
     {
       "children" : [
         {
-          "content" : "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"utf-8\" \/>\n\t<title>$0<\/title>\n<\/head>\n<body>",
+          "content" : "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"utf-8\" \/>\n\t<title>$0<\/title>\n\t<link rel=\"stylesheet\" href=\"https:\/\/wsma.org\/Assets\/css\/10-UltraWaveResponsive.css\">\n\t<link href=\"https:\/\/wsma.org\/App_Themes\/WSMA\/99-WSMA.css\" type=\"text\/css\" rel=\"stylesheet\" \/>\n\t<link href=\"https:\/\/wsma.org\/App_Themes\/WSMA\/images\/elegant-icons.css\" type=\"text\/css\" rel=\"stylesheet\" \/>\n\t<link href=\"https:\/\/wsma.org\/App_Themes\/WSMA\/zzCustom.css\" type=\"text\/css\" rel=\"stylesheet\" \/>\n<\/head>\n<body>\n<!-- ************************************** SECTION ******************************************* -->",
           "name" : "HTML Head",
           "trigger" : "HTML Head"
         },
@@ -13,13 +13,18 @@
           "trigger" : "HTML Template"
         },
         {
-          "content" : "<!--  -->\n<!-- Description:  -->\n<!-- Keywords:  -->\n<!-- Layout: Single Column -->\n<!--  -->\n<!-- ************************** iPart ****************************** -->",
+          "content" : "<!--  -->\n<!-- Description:  -->\n<!-- Keywords:  -->\n<!-- Access Settings: Everyone Full Control -->\n<!-- Layout: Single Column -->\n<!--  -->\n<!-- ************************** iPart ****************************** -->",
           "name" : "Meta Tags for new page",
           "trigger" : "Meta Tags for new page"
         },
         {
           "content" : "<h1 class=\"mobileShow\">$PASTEBOARD_TEXT<\/h1>",
           "name" : "mobileShow h1 tag"
+        },
+        {
+          "content" : "<!-- ******************************************** HTML FOOTER ************************************************* -->\n<\/body>\n<\/html>",
+          "name" : "HTML Footer",
+          "trigger" : "HTML Footer"
         }
       ],
       "name" : "HTML"
@@ -32,9 +37,9 @@
           "trigger" : "Image - News Articles"
         },
         {
-          "content" : "<div class=\"col-md-5 pull-right\" style=\"text-align: center;\"><img alt=\"\" src=\"\/images\/News\/***\" class=\"pull-right\" \/><\/div>",
-          "name" : "Image - News Articles",
-          "trigger" : "Image - News Articles"
+          "content" : "<div class=\"row\">\n\t<div class=\"col-lg-2\">\n\t\t<img alt=\"***\" src=\"\/images\/***.***\" class=\"pull-left\" \/>\n\t<\/div>\n\t<div class=\"col-lg-10\">\n\t\t<p>\n\t\t\t***\n\t\t<\/p>\n\t<\/div>\n<\/div>",
+          "name" : "Image - Head Shot ",
+          "trigger" : "Image - Head Shot "
         }
       ],
       "name" : "Images"
@@ -76,9 +81,34 @@
     {
       "children" : [
         {
+          "content" : "<!-- Access Settings: Everyone Full Control -->",
+          "name" : "Access Settings: Everyone Full Control",
+          "trigger" : "Access Settings: Everyone Full Control"
+        },
+        {
+          "content" : "<!-- Layout: Single Column -->",
+          "name" : "Layout: Single Column",
+          "trigger" : "Layout: Single Column"
+        },
+        {
+          "content" : "<!-- Layout: 1-1-Sidebar -->",
+          "name" : "Layout: 1-1-Sidebar",
+          "trigger" : "Layout: 1-1-Sidebar"
+        }
+      ],
+      "name" : "Meta"
+    },
+    {
+      "children" : [
+        {
           "content" : "<div class=\"expander-container container\">\n<div class=\"expander row\">\n<div class=\"expander-head col-sm-9\">\n<h2><\/h2>\n<p><\/p>\n<\/div>\n<div class=\"expander-switch col-sm-3 col-sm-offset-1\">\n<button class=\"btnExpand\" type=\"button\">Expand<\/button>\n<\/div>\n<\/div>\n<div class=\"expander-body row\">\n<!-- Content Below -->\n<\/div>\n<\/div>",
           "name" : "Accordion",
           "trigger" : "Accordion"
+        },
+        {
+          "content" : "<!-- Aux Nav - More Practice Assistance -->\n<div class=\"col-sm-12 aux-nav\">\n<h1>More Practice Assistance<\/h1>\n<a href=\"[@]WSMA\/Services\/Physician_Practice_Helpline\/Physician_Practice_Helpline\">Physician Practice Helpline<\/a>\n<a href=\"[@]WSMA\/News_Publications\/Newsletters\/WSMA_Practice_Alerts.aspx\">Practice Alerts<\/a>\n<a href=\"[@]WSMA\/Advocacy\/Insurance_Claims\/Insurance_Claims.aspx\">Insurance Claims Assistance<\/a>\n<a href=\"[@]WSMA\/Services\/Chart_Review_Service\/Chart_Review_Service.aspx\">Chart Review Service<\/a>\n<a href=\"[@]WSMA\/Services\/Career_Center\/Career_Center.aspx\">Career Center<\/a>\n<\/div>\n",
+          "name" : "Auxiliary Sidebar Navigation",
+          "trigger" : "Auxiliary Sidebar Navigation"
         },
         {
           "content" : "<div class=\"col-sm-12 aux-nav\">\n<h1>Stay in the Know<\/h1>\n<a href=\"#\">Resource title listed here<\/a>\n<a href=\"#\">Resource title listed here<\/a>\n<a href=\"#\">Resource title listed here<\/a>\n<a href=\"#\">Resource title listed here<\/a>\n<\/div>",
@@ -87,6 +117,26 @@
         }
       ],
       "name" : "Parts"
+    },
+    {
+      "children" : [
+        {
+          "content" : "<!-- Part Type: ContentWebUserControl -->",
+          "name" : "ContentWebUserControl",
+          "trigger" : "Part Type: ContentWebUserControl"
+        },
+        {
+          "content" : "<!-- Part Type: Content HTML -->",
+          "name" : "Content HTML",
+          "trigger" : "Part Type: Content HTML"
+        },
+        {
+          "content" : "<!-- Part Type: Panel Editor -->",
+          "name" : "Panel Editor",
+          "trigger" : "Part Type: Panel Editor"
+        }
+      ],
+      "name" : "Part Types"
     },
     {
       "children" : [
@@ -100,14 +150,14 @@
           "name" : "New Listing"
         },
         {
-          "content" : "<!-- ******************************************** BODY ************************************************* -->",
-          "name" : "Full Width Delimiter",
-          "trigger" : "Full Width Delimiter"
+          "content" : "<!-- *********************************** BODY **************************************** -->",
+          "name" : "Body Delimiter",
+          "trigger" : "Body Delimiter"
         },
         {
-          "content" : "<!-- ******************************************** SECTION ************************************************* -->",
-          "name" : "Full Width Delimiter",
-          "trigger" : "Full Width Delimiter"
+          "content" : "<!-- ************************************** SECTION ******************************************* -->",
+          "name" : "Section Delimiter",
+          "trigger" : "Section Delimiter"
         }
       ],
       "name" : "Section Delimiters"
