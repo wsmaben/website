@@ -3,7 +3,7 @@
     {
       "children" : [
         {
-          "content" : "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"utf-8\" \/>\n\t<title>$0<\/title>\n\t<link rel=\"stylesheet\" href=\"https:\/\/wsma.org\/Assets\/css\/10-UltraWaveResponsive.css\">\n\t<link href=\"https:\/\/wsma.org\/App_Themes\/WSMA\/99-WSMA.css\" type=\"text\/css\" rel=\"stylesheet\" \/>\n\t<link href=\"https:\/\/wsma.org\/App_Themes\/WSMA\/images\/elegant-icons.css\" type=\"text\/css\" rel=\"stylesheet\" \/>\n\t<link href=\"https:\/\/wsma.org\/App_Themes\/WSMA\/zzCustom.css\" type=\"text\/css\" rel=\"stylesheet\" \/>\n<\/head>\n<body>\n<!-- ************************************** SECTION ******************************************* -->",
+          "content" : "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"utf-8\" \/>\n\t<title>$0<\/title>\n\t<!-- !CSS ********************************************************************************* -->\n\t<link type=\"text\/css\" rel=\"stylesheet\" href=\"https:\/\/www.wsma.org\/Assets\/css\/10-UltraWaveResponsive.css\" \/>\n\t<link type=\"text\/css\" rel=\"stylesheet\" href=\"https:\/\/www.wsma.org\/App_Themes\/WSMA\/99-WSMA.css\"  \/>\n\t<link type=\"text\/css\" rel=\"stylesheet\" href=\"https:\/\/www.wsma.org\/App_Themes\/WSMA\/images\/elegant-icons.css\"  \/>\n\t<link type=\"text\/css\" rel=\"stylesheet\" href=\"https:\/\/www.wsma.org\/App_Themes\/WSMA\/zzCustom.css\" \/>\n<!-- !META ********************************************************************************* -->\t\n<\/head>\n<body>\n<!-- !BODY ********************************************************************************* -->",
           "name" : "HTML Head",
           "trigger" : "HTML Head"
         },
@@ -13,7 +13,7 @@
           "trigger" : "HTML Template"
         },
         {
-          "content" : "<!--  -->\n<!-- Description:  -->\n<!-- Keywords:  -->\n<!-- Access Settings: Everyone Full Control -->\n<!-- Layout: Single Column -->\n<!--  -->\n<!-- ************************** iPart ****************************** -->",
+          "content" : "<!-- !META *************************************************************************** -->\n<!--  -->\n<!-- !Description:  -->\n<!-- !Keywords:  -->\n<!-- !Access Settings: Everyone Full Control -->\n<!-- !Layout: Single Column -->\n<!--  -->\n",
           "name" : "Meta Tags for new page",
           "trigger" : "Meta Tags for new page"
         },
@@ -22,7 +22,7 @@
           "name" : "mobileShow h1 tag"
         },
         {
-          "content" : "<!-- ******************************************** HTML FOOTER ************************************************* -->\n<\/body>\n<\/html>",
+          "content" : "<!-- !HTML FOOTER ********************************************************************************************* -->\n<\/body>\n<\/html>",
           "name" : "HTML Footer",
           "trigger" : "HTML Footer"
         }
@@ -47,6 +47,31 @@
     {
       "children" : [
         {
+          "content" : "<!-- !Layout: Single Column -->",
+          "name" : "Layout: Single Column",
+          "trigger" : "Layout: Single Column"
+        },
+        {
+          "content" : "<!-- !Layout: 1-1-Sidebar -->",
+          "name" : "Layout: 1-1-Sidebar",
+          "trigger" : "Layout: 1-1-Sidebar"
+        },
+        {
+          "content" : "<!-- !Layout: 1-1-Side-News -->",
+          "name" : "Layout: 1-1-Side-News",
+          "trigger" : "Layout: 1-1-Side-News"
+        },
+        {
+          "content" : "<!-- Layout: 1-1-3-2-Side-NewsEqualHeightRows -->",
+          "name" : "Layout: 1-1-3-2-Side-NewsEqualHeightRows",
+          "trigger" : "Layout: 1-1-3-2-Side-NewsEqualHeightRows"
+        }
+      ],
+      "name" : "Layout"
+    },
+    {
+      "children" : [
+        {
           "content" : "<a href=\"#LINK\" class=\"TextButton Button\">$SELECTED_TEXT<\/a>",
           "name" : "Button",
           "trigger" : "Button"
@@ -57,8 +82,18 @@
           "trigger" : "Button - Large"
         },
         {
+          "content" : "<!-- <link rel=\"canonical\" href=\"$PASTEBOARD_TEXT\" \/> -->",
+          "name" : "Canonical url link",
+          "trigger" : "Canonical url link"
+        },
+        {
           "content" : "<a href=\"[@]WSMA\/***\/***\/***.aspx\">$SELECTED_TEXT<\/a>",
           "name" : "iMIS page relative link [@]"
+        },
+        {
+          "content" : "<span class=\"HighlightText\">WSMA members only&mdash;sign-in required<\/span>",
+          "name" : "Members Only text",
+          "trigger" : "Members Only text"
         },
         {
           "content" : "<a href=\"javascript:\/\/[Uploaded files\/***\/***\/$PASTEBOARD_TEXT]\">$SELECTED_TEXT<\/a>.",
@@ -77,26 +112,6 @@
         }
       ],
       "name" : "Links"
-    },
-    {
-      "children" : [
-        {
-          "content" : "<!-- Access Settings: Everyone Full Control -->",
-          "name" : "Access Settings: Everyone Full Control",
-          "trigger" : "Access Settings: Everyone Full Control"
-        },
-        {
-          "content" : "<!-- Layout: Single Column -->",
-          "name" : "Layout: Single Column",
-          "trigger" : "Layout: Single Column"
-        },
-        {
-          "content" : "<!-- Layout: 1-1-Sidebar -->",
-          "name" : "Layout: 1-1-Sidebar",
-          "trigger" : "Layout: 1-1-Sidebar"
-        }
-      ],
-      "name" : "Meta"
     },
     {
       "children" : [
@@ -121,17 +136,22 @@
     {
       "children" : [
         {
-          "content" : "<!-- Part Type: ContentWebUserControl -->",
+          "content" : "<!-- !Part Type: Contact Sign In -->",
+          "name" : "Contact Sign In",
+          "trigger" : "Part Type: Contact Sign In"
+        },
+        {
+          "content" : "<!-- !Part Type: ContentWebUserControl -->",
           "name" : "ContentWebUserControl",
           "trigger" : "Part Type: ContentWebUserControl"
         },
         {
-          "content" : "<!-- Part Type: Content HTML -->",
+          "content" : "<!-- !Part Type: Content HTML -->",
           "name" : "Content HTML",
           "trigger" : "Part Type: Content HTML"
         },
         {
-          "content" : "<!-- Part Type: Panel Editor -->",
+          "content" : "<!-- !Part Type: Panel Editor -->",
           "name" : "Panel Editor",
           "trigger" : "Part Type: Panel Editor"
         }
@@ -141,26 +161,52 @@
     {
       "children" : [
         {
-          "content" : "<!-- ************************** iPart ****************************** -->",
-          "name" : "New iPart",
-          "trigger" : "New iPart"
-        },
-        {
-          "content" : "<!-- **************************NEW LISTING****************************** -->",
-          "name" : "New Listing"
-        },
-        {
-          "content" : "<!-- *********************************** BODY **************************************** -->",
+          "content" : "<!-- !BODY*************************************************************************** -->",
           "name" : "Body Delimiter",
           "trigger" : "Body Delimiter"
         },
         {
-          "content" : "<!-- ************************************** SECTION ******************************************* -->",
+          "content" : "<!-- !CSS *************************************************************************** -->\n",
+          "name" : "CSS Delimiter",
+          "trigger" : "CSS Delimiter"
+        },
+        {
+          "content" : "<!-- !iPART *************************************************** -->",
+          "name" : "iPart Delimiter",
+          "trigger" : "iPart Delimiter"
+        },
+        {
+          "content" : "<!-- !LISTING******************************************************** -->",
+          "name" : "Listing Delimiter",
+          "trigger" : "Listing Delimiter"
+        },
+        {
+          "content" : "<!-- !META *************************************************************************** -->",
+          "name" : "Meta Delimiter",
+          "trigger" : "Meta Delimiter"
+        },
+        {
+          "content" : "<!-- !SECTION ********************************************************************************* -->",
           "name" : "Section Delimiter",
           "trigger" : "Section Delimiter"
         }
       ],
       "name" : "Section Delimiters"
+    },
+    {
+      "children" : [
+        {
+          "content" : "<!-- !Access Settings: Everyone Full Control -->",
+          "name" : "Access Settings: Everyone Full Control",
+          "trigger" : "Access Settings: Everyone Full Control"
+        },
+        {
+          "content" : "<!-- !Access Settings: Everyone Read -->",
+          "name" : "Access Settings: Everyone Read",
+          "trigger" : "Access Settings: Everyone Read"
+        }
+      ],
+      "name" : "Security"
     },
     {
       "children" : [
@@ -200,12 +246,22 @@
     {
       "children" : [
         {
-          "content" : "<!-- **************************NEW VIDEO****************************** -->\n<div style=\"padding:56.25% 0 0 0;position:relative;\">\n<iframe src=\"https:\/\/player.vimeo.com\/video\/****?title=0&amp;byline=0&amp;portrait=0\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" frameborder=\"0\" allow=\"autoplay; fullscreen\"><\/iframe>\n<\/div>\n<script src=\"https:\/\/player.vimeo.com\/api\/player.js\">\n<\/script>\n<br \/>\n <br \/>",
+          "content" : "<!-- !NEW VIDEO******************************************************** -->\n<div style=\"padding:56.25% 0 0 0;position:relative;\">\n<iframe src=\"https:\/\/player.vimeo.com\/video\/****?title=0&amp;byline=0&amp;portrait=0\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" frameborder=\"0\" allow=\"autoplay; fullscreen\"><\/iframe>\n<\/div>\n<script src=\"https:\/\/player.vimeo.com\/api\/player.js\">\n<\/script>\n<br \/>\n <br \/>",
           "name" : "Vimeo video embed",
           "trigger" : "Vimeo"
         }
       ],
       "name" : "Video"
+    },
+    {
+      "content" : "<!-- !Description: -->",
+      "name" : "Description Meta Tag",
+      "trigger" : "Description Meta Tag"
+    },
+    {
+      "content" : "<!-- !Keywords: -->",
+      "name" : "Keywords Meta Tag",
+      "trigger" : "Keywords Meta Tag"
     }
   ]
 }
