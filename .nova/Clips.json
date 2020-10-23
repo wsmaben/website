@@ -58,6 +58,11 @@
           "trigger" : "Layout: Single Column"
         },
         {
+          "content" : "<!-- !Layout: TwoColumns50-50 -->",
+          "name" : "Layout: TwoColumns50-50",
+          "trigger" : "Layout: TwoColumns50-50"
+        },
+        {
           "content" : "<!-- !Layout: 1-1-Sidebar -->",
           "name" : "Layout: 1-1-Sidebar",
           "trigger" : "Layout: 1-1-Sidebar"
@@ -91,6 +96,11 @@
           "content" : "<!-- <link rel=\"canonical\" href=\"$PASTEBOARD_TEXT\" \/> -->",
           "name" : "Canonical url link",
           "trigger" : "Canonical url link"
+        },
+        {
+          "content" : "<a href=\"$PASTEBOARD_TEXT\">$SELECTED_TEXT<\/a>",
+          "name" : "Hyperlink",
+          "trigger" : "Hyperlink"
         },
         {
           "content" : "<a href=\"[@]WSMA\/***\/***\/***.aspx\">$SELECTED_TEXT<\/a>",

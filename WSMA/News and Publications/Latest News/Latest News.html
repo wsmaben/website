@@ -4,34 +4,17 @@
     <meta charset="utf-8" />
     <title>Latest News</title>
     <!-- !CSS ********************************************************************************* -->
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="https://www.wsma.org/Assets/css/10-UltraWaveResponsive.css"
-    />
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="https://www.wsma.org/App_Themes/WSMA/99-WSMA.css"
-    />
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="https://www.wsma.org/App_Themes/WSMA/images/elegant-icons.css"
-    />
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="https://www.wsma.org/App_Themes/WSMA/zzCustom.css"
-    />
+    <link type="text/css" rel="stylesheet" href="https://www.wsma.org/Assets/css/10-UltraWaveResponsive.css" />
+    <link type="text/css" rel="stylesheet" href="https://www.wsma.org/App_Themes/WSMA/99-WSMA.css" />
+    <link type="text/css" rel="stylesheet" href="https://www.wsma.org/App_Themes/WSMA/images/elegant-icons.css" />
+    <link type="text/css" rel="stylesheet" href="https://www.wsma.org/App_Themes/WSMA/zzCustom.css" />
     <!-- !META ********************************************************************************* -->
     <!-- Latest_News -->
     <!-- !Description: Latest news from the WSMA, the Washington State Medical Association-->
     <!-- !Keywords: latest, news-->
     <!-- !Layout: Single Column -->
     <!-- !Access Settings: Everyone Full Control -->
-    <!-- <link rel="canonical" href="	http://wsma.org/WSMA/News_Publications/Latest_News/Latest_News.aspx
-" /> -->
+    <!-- <link rel="canonical" href="	http://wsma.org/WSMA/News_Publications/Latest_News/Latest_News.aspx" /> -->
   </head>
   <body>
     <!-- !BODY ********************************************************************************* -->
@@ -46,14 +29,7 @@
           viewbox="0 0 650 314"
         >
           <defs>
-            <lineargradient
-              id="linear-gradient"
-              x1="0"
-              y1="154.5"
-              x2="650"
-              y2="154.5"
-              gradientunits="userSpaceOnUse"
-            >
+            <lineargradient id="linear-gradient" x1="0" y1="154.5" x2="650" y2="154.5" gradientunits="userSpaceOnUse">
               <stop offset="0" stop-color="#fff"></stop>
               <stop offset="0"></stop>
               <stop offset="0.03" stop-color="#060606"></stop>
@@ -70,23 +46,12 @@
               <stop offset="0.97" stop-color="#111"></stop>
               <stop offset="1"></stop>
             </lineargradient>
-            <mask
-              id="mask"
-              x="0"
-              y="0"
-              width="650"
-              height="314"
-              maskunits="userSpaceOnUse"
-            >
+            <mask id="mask" x="0" y="0" width="650" height="314" maskunits="userSpaceOnUse">
               <rect class="cls-1" x="0" y="0" width="650" height="314"></rect>
             </mask>
           </defs>
           <g class="cls-2">
-            <image
-              width="650"
-              height="314"
-              xlink:href="/images/Secondary%20Banners/Latest_News-banner-graphic_650x314.jpg"
-            ></image>
+            <image width="650" height="314" xlink:href="/images/Secondary%20Banners/Latest_News-banner-graphic_650x314.jpg"></image>
           </g>
         </svg>
         <img
@@ -97,8 +62,7 @@
         />
       </div>
       <div class="col-md-6">
-        WSMA- and state-focused news and information for the physician
-        community.
+        WSMA- and state-focused news and information for the physician community.
         <!--HIDE<span class="attrib">- Medical Employee</span>-->
       </div>
     </div>
@@ -164,14 +128,7 @@ Newsfeed JavaScript
 
       // generate markup for index and sidebar nav
       function rtnMarkup(news) {
-        var markup =
-          '<div class="Tag' +
-          news.TagName +
-          '"><a href="/' +
-          news.Location +
-          '">' +
-          news.Alternatename +
-          "</a></div>";
+        var markup = '<div class="Tag' + news.TagName + '"><a href="/' + news.Location + '">' + news.Alternatename + "</a></div>";
         return markup;
       }
 
