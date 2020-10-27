@@ -1,49 +1,62 @@
-
-	<title> Events </title>
-<!-- 
-	http://wsma.org/WSMA/Events/Events.aspx
- -->
- <!-- !Description: -->
-<!-- !Keywords: -->
-<!-- !Layout: Single Column -->
-
-<h1 class="mobileShow">Events</h1>
-<p>
-	The WSMA holds three key annual events, open to members and non-members—the Legislative Summit in January/February, the highly-acclaimed Leadership Development Conference in the spring and the WSMA Annual Meeting in the fall. In this section, you'll find information on these annual gatherings, plus other special events and live educational sessions.
-</p>
-<!-- !iPART *************************************************** -->
-<!-- !Accordion -->
-<div class="expander-container container">
-	<div class="expander row">
-		<div class="expander-head col-sm-9">
-			<a name="family"></a> 
-			<h2>
-				Disclaimer
-			</h2>
-		</div>
-		<div class="expander-switch col-sm-3 col-sm-offset-1">
-			<button class="btnExpand" type="button">Expand</button> 
-		</div>
-	</div>
-	<div class="expander-body row">
-<!-- Content Below -->
-		<p>
-			Please note that the WSMA may have a photographer and/or videographer on-site at its event to gather imagery for use by the WSMA in its communications materials and channels, as well as for media outreach. These images will be the property of the WSMA, and the WSMA will not sell or otherwise market event imagery. If you have any questions regarding imagery taken at a WSMA event, please contact Milana McLead at 206.441.9762 or <a href="mailto:milana@wsma.org">milana@wsma.org</a>. 
-		</p>
-	</div>
-</div>
-<!-- !iPART *************************************************** -->
-<!-- !Accordion Script -->
-<script>
-	jQuery(document).ready(function() {
-		jQuery('button.btnExpand').click(function() {
-		if (jQuery(this).parent().parent(".active")[0]) {
-			jQuery(".active").removeClass("active");
-		} else {
-			jQuery(".active").removeClass("active");
-			jQuery(this).parent().parent().addClass('active');
-		}
-		});
-	});
-</script>
-
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <title>Events</title>
+      <!-- !CSS ********************************************************************************* -->
+      <link type="text/css" rel="stylesheet" href="https://www.wsma.org/Assets/css/10-UltraWaveResponsive.css" />
+      <link type="text/css" rel="stylesheet" href="https://www.wsma.org/App_Themes/WSMA/99-WSMA.css" />
+      <link type="text/css" rel="stylesheet" href="https://www.wsma.org/App_Themes/WSMA/images/elegant-icons.css" />
+      <link type="text/css" rel="stylesheet" href="https://www.wsma.org/App_Themes/WSMA/zzCustom.css" />
+      <!-- !META ********************************************************************************* -->
+      <!-- Events -->
+      <!-- !Description: -->
+      <!-- !Keywords: -->
+      <!-- !Access Settings: Everyone Full Control -->
+      <!-- !Layout: Single Column -->
+      <!-- <link rel="canonical" href="http://wsma.org/WSMA/Events/Events.aspx" /> -->
+   </head>
+   <body>
+      <!-- !BODY ********************************************************************************* -->
+      <h1 class="mobileShow">Events</h1>
+      <p>
+         The WSMA holds three key annual events, open to members and non-members—the Legislative Summit in January/February, the
+         highly-acclaimed Leadership Development Conference in the spring and the WSMA Annual Meeting in the fall. In this section, you'll
+         find information on these annual gatherings, plus other special events and live educational sessions.
+      </p>
+      <!-- !iPART *************************************************** -->
+      <!-- !Accordion -->
+      <div class="expander-container container">
+         <div class="expander row">
+            <div class="expander-head col-sm-9">
+               <h2>Disclaimer</h2>
+            </div>
+            <div class="expander-switch col-sm-3 col-sm-offset-1">
+               <button class="btnExpand" type="button">Expand</button>
+            </div>
+         </div>
+         <div class="expander-body row">
+            <p>
+               Please note that the WSMA may have a photographer and/or videographer on-site at its event to gather imagery for use by the
+               WSMA in its communications materials and channels, as well as for media outreach. These images will be the property of the
+               WSMA, and the WSMA will not sell or otherwise market event imagery. If you have any questions regarding imagery taken at a
+               WSMA event, please contact Milana McLead at 206.441.9762 or <a href="mailto:milana@wsma.org">milana@wsma.org</a>.
+            </p>
+         </div>
+      </div>
+      <!-- !iPART *************************************************** -->
+      <!-- !Accordion Script -->
+      <script>
+         jQuery(document).ready(function () {
+            jQuery("button.btnExpand").click(function () {
+               if (jQuery(this).parent().parent(".active")[0]) {
+                  jQuery(".active").removeClass("active");
+               } else {
+                  jQuery(".active").removeClass("active");
+                  jQuery(this).parent().parent().addClass("active");
+               }
+            });
+         });
+      </script>
+   </body>
+</html>

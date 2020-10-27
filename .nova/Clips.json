@@ -132,7 +132,7 @@
     {
       "children" : [
         {
-          "content" : "<div class=\"expander-container container\">\n<div class=\"expander row\">\n<div class=\"expander-head col-sm-9\">\n<h2><\/h2>\n<p><\/p>\n<\/div>\n<div class=\"expander-switch col-sm-3 col-sm-offset-1\">\n<button class=\"btnExpand\" type=\"button\">Expand<\/button>\n<\/div>\n<\/div>\n<div class=\"expander-body row\">\n<!-- Content Below -->\n<\/div>\n<\/div>",
+          "content" : "<div class=\"expander-container container\">\n<div class=\"expander row\">\n<div class=\"expander-head col-sm-9\">\n<h2><\/h2>\n<p><\/p>\n<\/div>\n<div class=\"expander-switch col-sm-3 col-sm-offset-1\">\n<button class=\"btnExpand\" type=\"button\">Expand<\/button>\n<\/div>\n<\/div>\n<div class=\"expander-body row\">\n<!-- !Accordion Content -->\n<\/div>\n<\/div>",
           "name" : "Accordion",
           "trigger" : "Accordion"
         },
