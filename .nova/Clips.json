@@ -182,7 +182,7 @@
           "trigger" : "Part Type: ContentWebUserControl"
         },
         {
-          "content" : "<!-- !Part Type: Content HTML -->",
+          "content" : "",
           "name" : "Content HTML",
           "trigger" : "Part Type: Content HTML"
         },
@@ -217,7 +217,7 @@
           "trigger" : "CSS Delimiter"
         },
         {
-          "content" : "<!-- !iPART *************************************************** -->",
+          "content" : "<!-- !iPART - Content HTML *************************************************** -->",
           "name" : "iPart Delimiter",
           "trigger" : "iPart Delimiter"
         },

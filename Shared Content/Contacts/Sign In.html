@@ -16,6 +16,8 @@
       <!-- !Access Settings: Everyone Read -->
       <!-- !Layout: Single Column -->
       <!-- <link rel="canonical" href="https://wsma.org/Shared_Content/Contacts/Sign_In.aspx" /> -->
+      <!-- TEMP: https://wsma.org/Shared_Content/Contacts/NEW_Sign-In.aspx -->
+      
       <!-- PROPERTIES 
 		Display within the template: check 
 		Content is secure (https://): check -->
@@ -26,40 +28,39 @@
 		Title CSS Class: PageTitle
 		Zone CSS class: AuthHide -->
       <!-- !BODY *************************************************************************** -->
-      <!-- !Part Type: Content HTML -->
+      
       <h1 class="mobileShow">Sign In</h1>
       <p><strong>To sign in, select from the three options below.</strong></p> 
-      <!-- !iPART *************************************************** -->
+      <!-- !iPART - Content HTML *************************************************** -->
       <!-- !Box 1: Returning Member or Guest: User with an existing account -->
       <div id="returningMemberOrGuest" class="Spotlight">
          <span class="SectionLabel">Returning Member or Guest</span>
-         <p><strong>User with an existing account</strong></p>
-         <p><em>Enter your existing username and password. You can reset either if you forgot them.</em></p>
+         <p class="MembershipBox"><strong>User with an existing account</strong></p>
+         <p class="MembershipBox"><em>Enter your existing username and password. You can reset either if you forgot them.</em></p>
          <a href="#signIn" class="spLnk">Sign In »</a>
       </div>
-      <!-- !iPART *************************************************** -->
+      <!-- !iPART - Content HTML *************************************************** -->
       <!-- !Box 2: First-time Visitor: Physician or Physician Assistant Only -->
       <div id="firstTimeVisitorPhys" class="Spotlight">
          <span class="SectionLabel">First-time Visitor</span>
-         <p><strong>Physician or Physician Assistant Only</strong></p>
-         <p><em>You’re a physician or physician assistant without a WSMA username and password</em>.</p>
-         <a href="#accountLookUp" class="spLnk">Learn More »</a>
+         <p class="MembershipBox"><strong>Physician or Physician Assistant Only</strong></p>
+         <p class="MembershipBox"><em>You’re a physician or physician assistant without a WSMA username and password</em>.</p>
+         <a href="#accountLookUp" class="spLnk">Enter your medical license number to proceed »</a>
       </div>
-      <!-- !iPART *************************************************** -->
+      <!-- !iPART - Content HTML *************************************************** -->
       <!-- !Box 3: First-time Visitor: NOT a Physician or Physician Assistant -->
       <div id="firstTimeVisitorNotPhys" class="Spotlight">
          <span class="SectionLabel">First-time Visitor</span>
-         <p><strong>NOT a Physician or Physician Assistant</strong></p>
-         <p>
+         <p class="MembershipBox"><strong>NOT a Physician or Physician Assistant</strong></p>
+         <p class="MembershipBox">
             <em
                >You’re not a physician or a physician assistant. You’re a medical student, or a physician assistant student, or a first-time
                user of the WSMA website.
             </em>
          </p>
-         <a href="[~]WSMA/Shared_Content/Contacts/Create_Account_no_Sign_In.aspx" class="spLnk">Create a new account »</a>
+         <a href="[~]Shared_Content/Contacts/NEW_Create_Account_no_Sign_In.aspx" class="spLnk">Create a new account »</a>
       </div>
-      <!-- !iPART *************************************************** -->
-      <!-- !Part Type: Content HTML -->
+      <!-- !iPART- Content HTML *************************************************** -->
       <!-- Sign in instructions -->
       <div class="col-md-12">
       <a id="signIn"></a>
@@ -70,8 +71,7 @@
          <a href="mailto:wsma@wsma.org">wsma@wsma.org</a> or call 206.441.9762.
       </p>
       </div>
-      <!-- !iPART *************************************************** -->
-      <!-- !Part Type: Contact Sign In -->
+      <!-- !iPART - Contact Sign In *************************************************** -->
       <!-- Name: New ContactSignInCommon -->
       <!-- Display a border around this content -->
       <!-- Display on screen sizes (for responsive themes only): all check -->
@@ -79,9 +79,8 @@
 				Forgot password instructions: Enter the Username for your user account, then click Submit. We will email you a link to a page where you can easily create a new password. -->
       <!-- Display forgot username link: check
 				Forgot user ID instructions: Enter the following values to verify your user identity, then click Submit. We will email your username to the email address specified in your user account. -->
-      <!-- !iPART *************************************************** -->
-      <!-- !Part Type: Content HTML -->
-      <!-- !License lookup instructions -->
+      <!-- !iPART - Content HTML *************************************************** -->
+      <!-- !Account lookup instructions -->
       <div class="col-md-12">
       <a id="accountLookUp"></a>
       <h2>Account Lookup</h2>
@@ -92,13 +91,12 @@
       </ul>
       <p>For assistance, email <a href="mailto:wsma@wsma.org">wsma@wsma.org</a> or call 206.441.9762.</p>
       </div>
-      <!-- !iPART *************************************************** -->
-      <!-- !Part Type: ContentWebUserControl -->
+      <!-- !iPART - ContentWebUserControl *************************************************** -->
+      <!-- !Account Finder -->
       <!-- Name: Account Finder -->
       <!-- The path to the web user control to display: ~/va_iParts/Custom/ctlAccountFinder.ascx -->
 
-      <!-- !iPART *************************************************** -->
-      <!-- !Part Type: Content HTML -->
+      <!-- !iPART - Content HTML *************************************************** -->
       <!-- Name: Script -->
       <script>
          var a = JSON.parse(jQuery("#__ClientContext").val())["loggedInPartyId"];
