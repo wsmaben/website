@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <title>Sign In</title>
+      <!-- !CSS *************************************************************************** -->
+      <link type="text/css" rel="stylesheet" href="https://www.wsma.org/Assets/css/10-UltraWaveResponsive.css" />
+      <link type="text/css" rel="stylesheet" href="https://www.wsma.org/App_Themes/WSMA/99-WSMA.css" />
+      <link type="text/css" rel="stylesheet" href="https://www.wsma.org/App_Themes/WSMA/images/elegant-icons.css" />
+      <link type="text/css" rel="stylesheet" href="https://www.wsma.org/App_Themes/WSMA/zzCustom.css" />
+      <!-- !META *************************************************************************** -->
+      <!-- !Title: Sign In -->
+      <!-- !Slug: Sign_In -->
+      <!-- !Description:  -->
+      <!-- !Keywords:  -->
+      <!-- !Access Settings: Everyone Read -->
+      <!-- !Layout: Single Column -->
+      <!-- <link rel="canonical" href="http://wsma.org/Shared_Content/Contacts/Sign-In.aspx" /> -->
+
+      <!-- !PAGE PROPERTIES *************************************************************************-->
+      <!-- Display within the template: check 
+		Content is secure (https://): check -->
+   </head>
+   <body>
+      <!-- !ZONE PROPERTIES *************************************************************************-->
+      <!-- Title: Sign In
+		Title CSS Class: PageTitle
+		Zone CSS class: AuthHide -->
+      <!-- !BODY *************************************************************************** -->
+
+      <!-- !Box 1: Returning Member or Guest: User with an existing account -->
+      <div id="returningMemberOrGuest" class="Spotlight">
+         <span class="MembershipBoxLabel">Returning Member or Guest</span>
+         <p class="MembershipBox"><strong>User with an existing account</strong></p>
+         <p class="MembershipBox"><em>Enter your existing username and password. You can reset either if you forgot them.</em></p>
+         <a href="@/Shared_Content/Contacts/NEW_Sign-In" class="spLnk" name="Sign In »"></a
+         ><a href="[@]Shared_Content/Contacts/NEW_Sign-In.aspx" class="spLnk">Sign In »</a>
+      </div>
+      <!-- !iPART - Content HTML *************************************************** -->
+      <!-- !Box 2: First-time Visitor: Physician or Physician Assistant Only -->
+      <div id="firstTimeVisitorPhys" class="Spotlight">
+         <span class="MembershipBoxLabel">First-time Visitor</span>
+         <p class="MembershipBox"><strong>Physician or Physician Assistant Only</strong></p>
+         <p class="MembershipBox"><em>You’re a physician or physician assistant without a WSMA username and password</em>.</p>
+         <a href="@/Shared_Content/Contacts/NEW_Account_Lookup" class="spLnk" name="Enter your medical license number to proceed »"></a
+         ><a href="[@]Shared_Content/Contacts/NEW_Account_Lookup.aspx" class="spLnk">Enter your medical license number to proceed »</a>
+      </div>
+      <!-- !iPART - Content HTML *************************************************** -->
+      <!-- !Box 3: First-time Visitor: NOT a Physician or Physician Assistant -->
+      <div id="firstTimeVisitorNotPhys" class="Spotlight">
+         <span class="MembershipBoxLabel">First-time Visitor</span>
+         <p class="MembershipBox"><strong>NOT a Physician or Physician Assistant</strong></p>
+         <p class="MembershipBox">
+            <em
+               >You’re not a physician or a physician assistant. You’re a medical student, or a physician assistant student, or a first-time
+               user of the WSMA website.
+            </em>
+         </p>
+         <a href="[~]Shared_Content/Contacts/NEW_Create_Account_no_Sign_In.aspx" class="spLnk">Create a new account »</a>
+      </div>
+
+      <!-- !iPART - Content HTML *************************************************** -->
+      <!-- Name: Script -->
+      <script>
+         var a = JSON.parse(jQuery("#__ClientContext").val())["loggedInPartyId"];
+         if (a != "3") {
+            jQuery(".AuthHide").hide();
+         }
+      </script>
+      <!-- !HTML FOOTER ********************************************************************************************* -->
+   </body>
+</html>

@@ -235,6 +235,16 @@
           "content" : "<!-- !SECTION ********************************************************************************* -->",
           "name" : "Section Delimiter",
           "trigger" : "Section Delimiter"
+        },
+        {
+          "content" : "<!-- !PAGE PROPERTIES *************************************************************************-->",
+          "name" : "Page Properties Delimiter",
+          "trigger" : "Page Properties Delimiter"
+        },
+        {
+          "content" : "<!-- !ZONE PROPERTIES *************************************************************************-->",
+          "name" : "Zone Properties Delimiter",
+          "trigger" : "Zone Properties Delimiter"
         }
       ],
       "name" : "Section Delimiters"

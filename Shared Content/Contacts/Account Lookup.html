@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <title>Account Lookup</title>
+      <!-- !CSS *************************************************************************** -->
+      <link type="text/css" rel="stylesheet" href="https://www.wsma.org/Assets/css/10-UltraWaveResponsive.css" />
+      <link type="text/css" rel="stylesheet" href="https://www.wsma.org/App_Themes/WSMA/99-WSMA.css" />
+      <link type="text/css" rel="stylesheet" href="https://www.wsma.org/App_Themes/WSMA/images/elegant-icons.css" />
+      <link type="text/css" rel="stylesheet" href="https://www.wsma.org/App_Themes/WSMA/zzCustom.css" />
+      <!-- !META *************************************************************************** -->
+      <!-- !Title: Account Lookup -->
+      <!-- !Slug:  -->
+      <!-- !Description:  -->
+      <!-- !Keywords:  -->
+      <!-- !Access Settings: Everyone Read -->
+      <!-- !Layout: Single Column -->
+
+      <!-- PROPERTIES 
+		Display within the template: check 
+		Content is secure (https://): check -->
+   </head>
+   <body>
+      <!-- !Edit Zone Properties
+		Title: Sign In
+		Title CSS Class: PageTitle
+		Zone CSS class: AuthHide -->
+      <!-- !BODY *************************************************************************** -->
+      <!-- !iPART - Content HTML *************************************************** -->
+      <!-- !Account lookup instructions -->
+      <h1 class="mobileShow">Account Lookup</h1>
+      <ul>
+         <li>Enter your Washington state medical license number and other required information below.</li>
+         <li>Select “Find” to determine if you have an existing account.</li>
+         <li>Follow the resulting prompts to proceed.</li>
+      </ul>
+      <p>For assistance, email <a href="mailto:wsma@wsma.org">wsma@wsma.org</a> or call 206.441.9762.</p>
+
+      <!-- !iPART - ContentWebUserControl *************************************************** -->
+      <!-- !Account Finder -->
+      <!-- Name: Account Finder -->
+      <!-- The path to the web user control to display: ~/va_iParts/Custom/ctlAccountFinder.ascx -->
+
+      <!-- !iPART - Content HTML *************************************************** -->
+      <!-- Name: Script -->
+      <script>
+         var a = JSON.parse(jQuery("#__ClientContext").val())["loggedInPartyId"];
+         if (a != "3") {
+            jQuery(".AuthHide").hide();
+         }
+      </script>
+      <!-- !HTML FOOTER ********************************************************************************************* -->
+   </body>
+</html>
