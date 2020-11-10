@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <title>Sign In Form</title>
+      <!-- !CSS *************************************************************************** -->
+      <link type="text/css" rel="stylesheet" href="https://www.wsma.org/Assets/css/10-UltraWaveResponsive.css" />
+      <link type="text/css" rel="stylesheet" href="https://www.wsma.org/App_Themes/WSMA/99-WSMA.css" />
+      <link type="text/css" rel="stylesheet" href="https://www.wsma.org/App_Themes/WSMA/images/elegant-icons.css" />
+      <link type="text/css" rel="stylesheet" href="https://www.wsma.org/App_Themes/WSMA/zzCustom.css" />
+      <!-- !META *************************************************************************** -->
+      <!-- !Title: Sign In -->
+      <!-- !Slug: Sign_In -->
+      <!-- !Description:  -->
+      <!-- !Keywords:  -->
+      <!-- !Access Settings: Everyone Read -->
+      <!-- !Layout: Single Column -->
+      <!-- <link rel="canonical" href="https://wsma.org/Shared_Content/Contacts/Sign_In_Form.aspx" /> -->
+
+      <!-- !PAGE PROPERTIES *************************************************************************-->
+      <!-- Display within the template: check 
+		Content is secure (https://): check -->
+   </head>
+   <body>
+      <!-- !ZONE PROPERTIES *************************************************************************-->
+      <!-- Title: Sign In
+		Title CSS Class: PageTitle
+		Zone CSS class: AuthHide -->
+      <!-- !BODY *************************************************************************** -->
+      <!-- !iPART- Content HTML *************************************************** -->
+      <!-- Sign in instructions -->
+      <h1 class="mobileShow">Sign In</h1>
+      <p>Once you sign in, you can access your profile <strong>[Membership tab → Your Profile]</strong>.</p>
+      <p>
+         Forgot your logon credentials? Click either link below to reset your username or password. For assistance, email
+         <a href="mailto:wsma@wsma.org">wsma@wsma.org</a> or call 206.441.9762.
+      </p>
+      <!-- !iPART - Contact Sign In *************************************************** -->
+      <!-- Name: New ContactSignInCommon -->
+      <!-- Display a border around this content -->
+      <!-- Display on screen sizes (for responsive themes only): all check -->
+      <!-- Display forgot password link: check
+				Forgot password instructions: Enter the Username for your user account, then click Submit. We will email you a link to a page where you can easily create a new password. -->
+      <!-- Display forgot username link: check
+				Forgot user ID instructions: Enter the following values to verify your user identity, then click Submit. We will email your username to the email address specified in your user account. -->
+
+      <!-- !iPART - Content HTML *************************************************** -->
+      <!-- !Name: Script -->
+      <script>
+         var a = JSON.parse(jQuery("#__ClientContext").val())["loggedInPartyId"];
+         if (a != "3") {
+            jQuery(".AuthHide").hide();
+         }
+      </script>
+      <!-- !HTML FOOTER ********************************************************************************************* -->
+   </body>
+</html>

@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta charset="utf-8" />
-      <title>Sign In Form</title>
+      <title>Sign In</title>
       <!-- !CSS *************************************************************************** -->
       <link type="text/css" rel="stylesheet" href="https://www.wsma.org/Assets/css/10-UltraWaveResponsive.css" />
       <link type="text/css" rel="stylesheet" href="https://www.wsma.org/App_Themes/WSMA/99-WSMA.css" />
@@ -15,7 +15,7 @@
       <!-- !Keywords:  -->
       <!-- !Access Settings: Everyone Read -->
       <!-- !Layout: Single Column -->
-      <!-- <link rel="canonical" href="https://wsma.org/Shared_Content/Contacts/Sign_In_Form.aspx" /> -->
+      <!-- <link rel="canonical" href="http://wsma.org/Shared_Content/Contacts/Sign-In.aspx" /> -->
 
       <!-- !PAGE PROPERTIES *************************************************************************-->
       <!-- Display within the template: check 
@@ -27,25 +27,49 @@
 		Title CSS Class: PageTitle
 		Zone CSS class: AuthHide -->
       <!-- !BODY *************************************************************************** -->
-      <!-- !iPART- Content HTML *************************************************** -->
-      <!-- Sign in instructions -->
-      <h1 class="mobileShow">Sign In</h1>
-      <p>Once you sign in, you can access your profile <strong>[Membership tab → Your Profile]</strong>.</p>
-      <p>
-         Forgot your logon credentials? Click either link below to reset your username or password. For assistance, email
-         <a href="mailto:wsma@wsma.org">wsma@wsma.org</a> or call 206.441.9762.
-      </p>
-      <!-- !iPART - Contact Sign In *************************************************** -->
-      <!-- Name: New ContactSignInCommon -->
-      <!-- Display a border around this content -->
-      <!-- Display on screen sizes (for responsive themes only): all check -->
-      <!-- Display forgot password link: check
-				Forgot password instructions: Enter the Username for your user account, then click Submit. We will email you a link to a page where you can easily create a new password. -->
-      <!-- Display forgot username link: check
-				Forgot user ID instructions: Enter the following values to verify your user identity, then click Submit. We will email your username to the email address specified in your user account. -->
+      <!-- !Box 1: Returning Member or Guest: User with an existing account -->
+      <div id="returningMemberOrGuest" class="Spotlight">
+         <span class="MembershipBoxLabel">Returning Member or Guest</span>
+         <div class="col-sm-12" style="text-align: center">
+            <img alt="evergreen-colored head silouette" src="/images/WSMA/Membership/Join-Renew/head_icon_evergreen.png" />
+         </div>
+         <p class="MembershipBox"><strong>User with an existing account</strong></p>
+         <p class="MembershipBox"><em>Enter your existing username and password. You can reset either if you forgot them.</em></p>
+         <a href="@/Shared_Content/Contacts/Sign-In" class="spLnk" name="Sign In »"></a
+         ><a href="[@]Shared_Content/Contacts/Sign-In.aspx" class="spLnk">Sign In »</a>
+      </div>
 
       <!-- !iPART - Content HTML *************************************************** -->
-      <!-- !Name: Script -->
+      <!-- !Box 2: First-time Visitor: Physician or Physician Assistant Only -->
+      <div id="firstTimeVisitorPhys" class="Spotlight">
+         <span class="MembershipBoxLabel">First-time Visitor</span>
+         <div class="col-sm-12" style="text-align: center">
+            <img alt="seafoam-colored head silouette" src="/images/WSMA/Membership/Join-Renew/head_icon_seafoam.png" />
+         </div>
+         <p class="MembershipBox"><strong>Physician or Physician Assistant Only</strong></p>
+         <p class="MembershipBox"><em>You’re a physician or physician assistant without a WSMA username and password</em>.</p>
+         <a href="@/Shared_Content/Contacts/Account_Lookup" class="spLnk" name="Enter your medical license number to proceed »"></a
+         ><a href="[@]Shared_Content/Contacts/Account_Lookup.aspx" class="spLnk">Enter your medical license number to proceed »</a>
+      </div>
+      <!-- !iPART - Content HTML *************************************************** -->
+      <!-- !Box 3: First-time Visitor: NOT a Physician or Physician Assistant -->
+      <div id="firstTimeVisitorNotPhys" class="Spotlight">
+         <span class="MembershipBoxLabel">First-time Visitor</span>
+         <div class="col-sm-12" style="text-align: center">
+            <img alt="leaf-colored head silouette" src="/images/WSMA/Membership/Join-Renew/head_icon_leaf.png" />
+         </div>
+         <p class="MembershipBox"><strong>NOT a Physician or Physician Assistant</strong></p>
+         <p class="MembershipBox">
+            <em
+               >You’re not a physician or a physician assistant. You’re a medical student, or a physician assistant student, or a first-time
+               user of the WSMA website.
+            </em>
+         </p>
+         <a href="[~]Shared_Content/Contacts/NEW_Create_Account_no_Sign_In.aspx" class="spLnk">Create a new account »</a>
+      </div>
+
+      <!-- !iPART - Content HTML *************************************************** -->
+      <!-- Name: Script -->
       <script>
          var a = JSON.parse(jQuery("#__ClientContext").val())["loggedInPartyId"];
          if (a != "3") {
