@@ -1516,7 +1516,7 @@ img.ImgNoResize,
    margin-bottom: 20px;
 }
 
-ol {
+/* ol {
    counter-reset: item;
    padding: 0;
 }
@@ -1528,7 +1528,7 @@ ol li:before {
    counter-increment: item;
    color: #f0d283;
    padding-right: 1em;
-}
+} */
 
 /* ==========================================================================
    MASTERPAGE ELEMENTS
