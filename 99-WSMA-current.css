@@ -2760,7 +2760,7 @@ ol li:before {
 .navbar-toggle .icon-search {
    display: inline-block;
    float: left;
-   background: transparent url("images/ResponsiveHeaderSprite.png") 0 -22px no-repeat;
+   background: transparent url("images/ResponsiveHeaderSprite.png") 0 0px no-repeat;
    width: 22px;
    height: 19px;
    margin: 0;

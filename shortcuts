@@ -1,3 +1,19 @@
+
+Ben,
+
+I haven’t tested yet, but I believe the sign-in issue will be resolved. We may have to change some of our shortcuts in the site if necessary, to point to the our new Prev sign-in page instead of the actual sign-in page.
+
+The signin shortcut is a system shortcut for signing in. It used to point to sign_in page. Now that you have modified that page and moved the actual sign_in page to sign-in-form, I modified the signin shortcut to reflect that.
+
+I have a feeling this will change the loginURL used in the reset password email.
+
+I’m only telling you now, I’ll update the others once tested. I’m also creating a little flow chart of join/renew and sign-in so we can easily see how the paths are operating.
+______________________________________________
+https://www.grantinterface.com/Home/Logon?urlkey=wsma
+_____________________________________________
+
+
+
 For Website	Shortcut	URL or Content Record	Description
 
 All Sites
