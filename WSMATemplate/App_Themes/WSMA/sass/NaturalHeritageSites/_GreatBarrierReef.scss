@@ -1,0 +1,397 @@
+﻿/* ==========================================================================
+   Great Barrier Reef Skin Specific Styles
+   ========================================================================== */
+
+// Skin-Specific Mixins
+// -------------------------
+@mixin underlinedTitles($title-color,$line-thickness:2px,$line-length:45%){
+     &:after{
+        content: '';
+        display: block;
+        bottom: 0;
+        width: $line-length;
+        margin: 5px auto 0 auto;
+        border-bottom: $line-thickness solid lighten($title-color,60%);
+    }
+}
+@mixin dottedBoxTop($borderColor){
+     &:before{
+        content: '';
+        display: block;
+        width: 50%;
+        height: 15px;
+        border-bottom: dotted 2px $borderColor;
+        border-right: dotted 2px $borderColor;
+        position: absolute;
+        left: 0px;
+        top: -15px;
+    }
+}
+@mixin dottedBoxCenter($borderColor){
+    border-left:dotted 2px $borderColor;     
+}
+@mixin dottedBoxBottom($borderColor){
+    &:after{
+        content: '';
+        display:block;
+        width:50%;
+        height:15px;
+        border-top:dotted 2px $borderColor;
+        border-right:dotted 2px $borderColor;
+        position:absolute;
+        left:0px;
+        bottom:-15px;
+    }   
+}
+@mixin LargeIconMultiLineHeading($color, $XPosition, $YPosition){
+    color: $color;
+     &:before{
+        content: '';
+        display: block;
+        float: left;
+        margin:0 15px 0 0;
+        @include size(90px,90px);
+        @include IconBackground($XPosition, $YPosition);    
+    }
+    strong{
+        font-size: 250%;
+        display: block;
+        padding-bottom: 15px;
+    }
+}
+
+// Page Titles
+// -------------------------
+h1 {
+    position: relative;
+    display: table;
+    @include underlinedTitles($color-secondary-b,3px,45%);    
+} 
+
+.Wrapper-HomePage h2.panel-title {
+    color: $color-secondary-b;
+    display: table;
+    @include underlinedTitles($color-secondary-b,2px,30%);
+}
+
+
+// Homepage Full Width Areas
+// -------------------------
+.Wrapper-HomePage {
+    .FullWidthArea-StyleBg2 {
+        //background: $color-alt-bg2 url(images/FullWidthArea_Bg2.jpg) center top no-repeat;
+        color: #fff;
+         h2 {
+             @include LargeIconMultiLineHeading(#fff, -65px, 0px);
+         }
+    }
+    .FullWidthArea-StyleBg3, .FullWidthArea-StyleBg5 {
+        background: $color-alt-bg;
+    }
+    .FullWidthArea-StyleBg4 {
+        background: $color-alt-bg2 url(images/FullWidthArea_Bg4.jpg) center top no-repeat;
+        color: #fff;
+        font-family: $headings-font-family;
+        padding: 20px 1%;
+        line-height: 1.5;
+        blockquote { 
+            font-size: 250%; 
+            @include respond-to('grid large') {
+                width: 45%; 
+            }
+        }
+        em {
+            font-size: 50%;
+            display: table;
+            margin-top: 1em;
+        }
+    }
+    /* Arrow shaped containers for nice browsers only. */
+    // .FullWidthArea-StyleBg1, .FullWidthArea-StyleBg2,
+    // .FullWidthArea-StyleBg3, .FullWidthArea-StyleBg4,
+    // .FullWidthArea-StyleBg5 {
+    //     -webkit-clip-path: polygon(0 15px, 47% 15px, 50% 30px, 53% 15px, 100% 15px, 100% 100%, 0 100%);
+    //             clip-path: polygon(0 15px, 47% 15px, 50% 30px, 53% 15px, 100% 15px, 100% 100%, 0 100%);
+    //             margin: -60px 0 15px 0;     
+    // }
+    // .FullWidthArea-StyleBg5 { // Last arrow shape container
+    //     margin: -60px 0 0 0;
+    //     padding-bottom: 60px;
+    // }
+}
+
+// Buttons
+// -------------------------
+/* Diamond shaped button, excluding Safari */
+html:not(.t-safari) {
+    .btn, .TextButton {   
+        background: url(images/DiamondButton.svg#color-base) no-repeat top center!important;  
+        background-size: 100% 100%!important; 
+        padding: 5px 25px !important;     
+    }
+
+    .PrimaryButton, .SaveAndClose, .SaveAs, 
+    .UsePrimaryButton .TextButton, 
+    .UsePrimaryButton .TextButtonWithImage, 
+    #masterHeaderActionArea a, .RadGrid input.PrimaryButton,
+    .Spotlight .TextButton, .BigButtonPanelArea2 .btn,
+    .RadUpload .ruButton, .ruButton, .ruFileInput { 
+        background: url(images/DiamondButton.svg#color-secondary-a) no-repeat top center!important; 
+        background-size: 100% 100%!important;
+        color: $color-base!important;
+    }
+}
+
+/* Button styles for all browsers */
+ .btn, .TextButton, .ruButton {  
+     font-size: $font-size-base + 2!important;   
+     @include transition(all $transition-speed ease-in-out!important);             
+     margin: 0; 
+     @include scale(0.94);
+     &:hover, &:focus {
+        @include scale(1.00);
+    }   
+ }
+
+/* Button styles for Safari only */
+html.t-safari {
+    .PrimaryButton, .SaveAndClose, .SaveAs, 
+    .UsePrimaryButton .TextButton, 
+    .UsePrimaryButton .TextButtonWithImage, 
+    #masterHeaderActionArea a, .RadGrid input.PrimaryButton,
+    .Spotlight .TextButton, .BigButtonPanelArea2 .btn,
+    .RadUpload .ruButton, .ruButton, .ruFileInput { 
+        background-color: $color-secondary-a!important; 
+        color: $color-base!important;
+    }
+}
+
+.BigButtonPanelArea1 { 
+   position: relative;
+   padding: 15px 5px;
+   @include dottedBoxCenter(lighten($color-neutral,25%));   
+   @include dottedBoxTop(lighten($color-neutral,25%));
+   @include dottedBoxBottom(lighten($color-neutral,25%));
+   .btn {     
+     color: transparent!important;     
+     width: 30%; 
+     @include size(45px,45px);     
+     opacity: 0.5;
+     margin: 0 2%;
+     padding: 0!important;
+   }
+   a[href*="PrintProfile"] {    
+       @include IconBackground(-2px, -595px);          
+   }  
+   a[href*="Profile.aspx"] { 
+       @include IconBackground(-2px, -380px);  
+   }
+   a[href*="Duplicate_Merge.aspx"] { 
+       @include IconBackground(-2px, -487px);  
+   }
+   .btn:hover, .btn:focus { 
+       opacity: 0.7;
+   }
+}
+.BigButtonPanelArea2 .btn {
+    width: 90%;
+    max-width: 250px;
+}
+
+.nav-auxiliary .nav-aux-button.nav-aux-account .nav-text {
+    @include respond-to('grid large') {
+        background: transparent url($header-sprite-path) 0 -100px no-repeat!important;
+    }
+}
+
+
+// Spotlight Sections
+// -------------------------
+.Spotlight .SectionLabel,
+.Spotlight h4 {
+    display: block;
+    position: relative;
+    padding: 15px 0 10px 0;
+    
+    &:after {
+        width: 25%;
+    }
+    @include dottedBoxCenter(lighten($color-neutral,25%));  
+    @include dottedBoxTop(lighten($color-neutral,25%));    
+    @include underlinedTitles($color-secondary-b,2px,30%);
+}
+.Spotlight {
+    margin-bottom: 20px;
+    p {    
+        @include dottedBoxCenter(lighten($color-neutral,25%));
+        padding: 3px 20px;
+        margin: -3px 0 0 0;
+        position: relative;
+        @include dottedBoxBottom(lighten($color-neutral,25%));
+    }
+    a { text-decoration: none; }
+    img { margin-bottom: 15px; }
+}
+
+
+// Testimonial Area
+// -------------------------
+.TestimonialArea {
+    @include respond-to('grid large') {
+        width: 70%;
+    }
+    img {
+        object-fit: cover; 
+        width: 150px;
+        height: 150px!important;
+        border-radius: 50% 50%;
+        margin: 0 auto;
+        display: block;            
+    }
+    blockquote:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 10%;
+        height: 100px;
+        top: -100px;
+        right: 20%;
+        border-top: 2px dotted lighten($color-neutral,25%);
+        border-right: 2px dotted lighten($color-neutral,25%);
+    }
+    blockquote {
+        background: #fff;
+        position: relative;
+        color: $color-base;
+        padding: 20px 3%;
+        margin: 25px auto 0 auto;
+        text-align: center;
+        em {
+            display: block;
+            margin-top: 1em;
+        }            
+    }
+}  
+
+// Upcoming Events
+// -------------------------
+.UpcomingEventsHome {
+    @include respond-to('grid large') { 
+        ul.RelatedItemsHorizontal li, 
+        .RelatedItemsHorizontal ul.rrItemsList li {
+            width: 225px;
+            height: auto;
+            margin: 9px 2%;
+        }
+        a.ImageLink img {      
+            width: 225px!important;
+            height: auto!important;  
+            display: block;
+        }  
+    }
+    a.LabelLink {
+        text-decoration: none;
+        font-weight: bold;
+        color: $color-base;
+        line-break: normal;
+    }
+}
+
+// Progress Tracker
+// -------------------------
+.ProgressTracker2 {
+    text-align: center;
+   
+    .ProgressTrackerPanel {         
+        .label, a { color: #fff; }
+    }
+    .SuccessfulMessage {
+        width: 95%;
+        margin: 0 auto;
+        background-color: $color-secondary-a!important;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+    .ProgressBar {
+        border-radius: 0;
+        background-color: darken($color-secondary-a,50%)!important;
+        height: 25px;
+        span {
+            background-color: $color-secondary-a!important;
+            border-radius: 0;
+        }    
+    }
+    div p { color:#000!important; }
+}
+
+.Wrapper-HomePage .ProgressTracker2 {
+    .ProgressTrackerPanel {
+        background-color: transparent;
+    }
+    .inset{
+        text-align: left;
+        font-size:125%;
+    }
+    span.count {
+        @include LargeIconMultiLineHeading(#fff, -65px, 0px);
+    }
+}
+
+// TELERIK overwrites 
+// -------------------------
+
+/* Search Results */
+.SearchResultSummary .ListItemTitle a {
+    background: none!important;
+}
+
+/* RadStrip Tabs */
+.RadTabStrip.RadTabStrip_MetroTouch {
+    background: $color-base;
+    padding: 10px 10px 0 10px!important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected {
+    background-color: #fff!important;
+    border-color: #fff!important;
+    color: $color-base!important;
+}
+.RadTabStrip_MetroTouch .rtsLevel1 .rtsLink {
+    background-color: $color-base!important;
+    border-color: $color-base!important;
+}
+.RadTabStrip_MetroTouch .rtsLink {
+    color: #fff!important;
+}
+.RadTabStripTop_MetroTouch .rtsLevel1 { border-bottom: none!important;  }
+
+h2, .h2, .PanelHead.Distinguish, 
+.TitleBarCaption, div.PanelTitle, 
+.panel-heading.Distinguish { border: none!important; }
+
+
+// Account Mini Profile
+// -------------------------
+.CalloutPart2 { 
+    background-color: $color-alt-bg; 
+    text-align: center;
+    .PanelFieldValue {
+        text-align: center;
+    }
+    .SectionLabel {
+        @include underlinedTitles($color-callout,2px, 45%);        
+    }
+}
+
+.AsiInformation, .AsiSuccess, .AsiWarning, 
+.AsiError, .AsiValidation, .AsiValidationSummary, 
+.AsiNeutral { border: none; }
+
+// Other 
+// -------------------------
+.SelectedItem a, .ProxyPanelContact a {
+    color: #fff!important;
+}
+ 

@@ -1,0 +1,234 @@
+﻿// VARIABLES
+// --------------------------------------------
+
+// GLOBAL ELEMENTS
+// --------------------------------------------
+$theme-family:          NaturalHeritageSites !default;
+$theme-name:            GreatBarrierReef !default;
+$view-type:             Responsive !default;
+
+// Sprites
+// -------------------------
+$header-sprite-path:             'images/ResponsiveHeaderSprite.png' !default; /* Not in use by family's themes, may be used by Ultrawave. */
+$theme-icons-sprite-path:        'images/ThemeIconsSprite.png' !default;
+
+// Color Palette
+// -------------------------
+//$color-base:                #0d0d0d !default; 
+//$color-callout:             #3d00a3 !default; 
+//$color-secondary-a:         #66ffcc !default;
+//$color-secondary-b:         #3d00a3 !default;
+
+// WSMA Brand Colors
+$color-wsma-dkgrey:         #36424a !default;
+$color-wsma-mdgrey:         #6c6f70 !default;
+$color-wsma-ltgrey:         #d0cfcb !default;
+//$color-wsma-red:            #a62d38 !default;
+//$color-wsma-forest:         #00837e !default;
+//$color-wsma-teal:           #4bc8b6 !default;
+$color-wsma-seafoam:        #9fe6d9 !default;
+//$color-wsma-green:          #8fd400 !default;
+
+$color-base:                $color-wsma-dkgrey !default; 
+$color-callout:             $color-wsma-sun !default; 
+$color-secondary-a:         $color-wsma-sun !default;
+$color-secondary-b:         $color-wsma-evergreen !default;
+
+$color-neutral:             $color-wsma-mdgrey !default;
+$color-alt-bg:              #f0edf2!default; 
+$color-alt-bg2:             #222122;
+
+$hover-highlight:           lighten($color-base,8%) !default; /*progress tracker */
+
+// Social colors
+$color-facebook:            #3B5998 !default;
+$color-linkedin:            #0077B5 !default;
+
+
+// Scaffolding
+// -------------------------
+$grid-gutter-width:     30px !default;
+$border-style:          solid !default;
+
+// Links
+// -------------------------
+$link-color:            darken($color-secondary-b, 2%) !default;
+
+// Typography
+// -------------------------
+$font-family-base:      'Raleway', Arial, sans-serif !default;
+$font-size-base:        16px !default;
+$line-height-base:      1.5 !default;
+$line-height-computed:  floor($font-size-base * $line-height-base) !default;
+$text-color:            #0c0c0c !default;
+
+$headings-font-family:  'Abel', Helvetica Neue, sans-serif !default; 
+$headings-font-weight:  700 !default;
+$headings-color:        $color-neutral !default;
+
+@import url("//fonts.googleapis.com/css?family=Raleway|Abel");
+
+// $font-size-h1:          250% !default;
+// $font-size-h2:          200% !default;
+// $font-size-h3:          130% !default;
+// $font-size-h4:          120% !default;
+// $font-size-h5:          100% !default;
+// $font-size-h6:          85% !default;
+
+$h1-color:              $color-callout !default;
+$h4-color:              $color-secondary-b !default;
+$h5-color:              $color-secondary-b !default;
+
+// Components
+// -------------------------
+$padding-base-vertical:          5px !default;
+$padding-base-horizontal:        10px !default;
+
+$border-radius-base:             0px !default;
+$border-radius-large:            0px !default;
+$border-radius-small:            0px !default;
+$component-active-color:         #fff !default;
+$component-active-bg:            $color-secondary-a !default;
+
+
+// Forms
+// -------------------------
+$input-height-base:             ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
+
+
+// Buttons 
+// -------------------------
+$btn-style:                     flat !default;
+$btn-default-color:             #fff;
+$btn-default-bg:                $color-base;
+$btn-default-border:            transparent !default;
+$btn-default-shadow:            $btn-default-border !default;
+
+$btn-primary-color:             $color-base;
+$btn-primary-bg:                $color-secondary-a;
+$btn-primary-border:            transparent !default;
+$btn-primary-shadow:            $btn-primary-border !default;
+
+$btn-facebook-border:           darken($color-facebook, 10%) !default;
+$btn-linkedin-border:           darken($color-linkedin, 10%) !default;
+
+
+// Navbar
+// -------------------------
+$navbar-top-height:                        46px !default;
+$navbar-height:                            65px !default;
+$navbar-horizontal-alignment:              center; /* left, center, right */
+$navbar-default-color:                     $color-secondary-a !default;
+$navbar-default-bg:                        $color-base !default;
+//$navbar-padding-vertical:                  8px !default;
+
+$navbar-default-link-hover-color:          $color-secondary-a !default;
+$navbar-default-link-hover-bg:             transparent !default;
+//$navbar-default-link-active-color:         $color-secondary-a !default;
+$navbar-default-link-active-bg:            transparent !default;
+$navbar-default-link-disabled-color:       $color-secondary-a !default;
+$navbar-default-link-disabled-bg:          transparent !default;
+$navbar-default-link-weight:               normal !default;
+$navbar-default-link-letter-spacing:       1px !default;
+// $navbar-default-link-font-size:            164% !default;
+// $navbar-default-link-font-family:          $headings-font-family;
+
+// // Callout link
+// $navbar-feature-link-color:                #fff !default;
+// $navbar-feature-link-bg:                   $color-callout !default;
+
+// Mobile buttons
+// $navbar-default-toggle-bg:                 rgba(#fff, 0.8)!default;
+// $navbar-default-toggle-hover-bg:           #fff !default;
+// $navbar-default-toggle-active-bg:          $navbar-default-toggle-bg;
+// $navbar-default-toggle-icon-bar-bg:        $navbar-default-toggle-bg;
+// $navbar-default-toggle-border-color:       transparent !default;
+// $navbar-toggle-margin-left:                10px !default;
+
+// //$navbar-auxiliary-link-color:              #fff;
+// $navbar-auxiliary-font-size:               107%;
+
+//$navbar-default-dropdown-bg:                    $navbar-default-bg !default;
+//$navbar-default-dropdown-link-color:            #fefefe !default;
+//$navbar-default-dropdown-header-color:          $navbar-default-dropdown-link-color !default;
+//$navbar-default-dropdown-link-hover-bg:         transparent !default;
+//$navbar-default-dropdown-link-hover-color:      $color-secondary-a !default;
+//$navbar-default-dropdown-link-active-bg:        $navbar-default-dropdown-link-hover-bg !default;
+//$navbar-default-dropdown-link-active-color:     $navbar-default-dropdown-link-hover-color !default;
+// $navbar-default-dropdown-link-disabled-color:   $navbar-default-dropdown-link-color !default;
+// $navbar-default-dropdown-link-font-family:      $font-family-base;
+// $navbar-default-dropdown-link-font-size:         114%;
+// $navbar-default-dropdown-link-font-weight:       normal;
+
+// Navs
+// -------------------------
+
+// Secondary (internal)
+// $nav-secondary-header-bg:                   $navbar-default-bg !default;
+// $nav-secondary-header-color:                $navbar-default-color !default;
+// $nav-secondary-bg:                          transparent;/*lighten($nav-secondary-header-bg,70%) !default;*/
+// $nav-secondary-link-color:                  #fff;
+// $nav-secondar-divider-bg:                   $nav-secondary-header-bg !default;
+
+// // Cart icon
+// //-------------------------
+// $cart-count-color:              $color-base !default;
+// $cart-count-xs-color:           $color-base !default;
+// $cart-count-bg:                 $color-secondary-a;
+// $cart-count-xs-bg:              $cart-count-bg !default;
+
+// Communities
+// -------------------------
+$communities-nav-hover-bg:          $hover-highlight !default;
+$communities-nav-select-bg:         $component-active-bg !default;
+$communities-link-hover-bg:         $communities-nav-select-bg !default;
+$communities-alt-bg:                hsl(hue($color-neutral), saturation($color-neutral), 95%) !default;
+
+// CalloutPanelFields
+// -------------------------
+$callout1-bg:                        #222122 !default;
+
+
+// Logo 
+// -------------------------
+$logo-default-position-md:          0 -47px !default;
+$logo-default-width-sm:             46px !default;
+$logo-default-height-sm:            46px !default;
+$logo-default-width-md:             120px !default;
+
+$logo-donor-url:                    url('images/DonorHeaderLogo.png') !default;
+$logo-donor-position-md:            null !default;
+$logo-donor-width-md:               169px !default;
+
+// Jumbotron
+// -------------------------
+$jumbotron-background-url:     url(images/HomeBanner.jpg) !default;
+$jumbotron-home-height:        39em !default;
+$jumbotron-h1-size-xs:         200% !default;
+$jumbotron-h1-size:            250% !default;
+
+// Carousel
+// -------------------------
+$carousel-caption-color:            #fff;
+$carousel-caption-text-alignment:   right;
+$carousel-caption-bg-color:         rgba($color-base, 0.85);
+$carousel-caption-font-family:      $headings-font-family;
+$carousel-caption-font-size:        $font-size-base + 4;
+
+// Footer
+// -------------------------
+//$footer-top-color:          #000 !default;
+//$footer-top-link-color:     $footer-top-color !default; /*hsl(hue($link-color), saturation($link-color), 80%) !default;*/
+//$footer-top-bg:             $color-secondary-a !default;
+//$footer-top-h1-color:       $color-base !default;
+
+//$footer-bottom-color:        #000 !default;
+//$footer-bottom-link-color:   $footer-bottom-color !default;
+//$footer-bottom-bg:           $color-secondary-a !default;
+
+// Telerik controls
+// --------------------------
+$radmenu-bg:                $color-secondary-a !default;
+
+// Overwrite Ultrawave variables
+$radwindow-header-bg:       $color-base;

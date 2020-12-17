@@ -1,0 +1,88 @@
+﻿/*****************************************************/
+/*            Donor Sample Site Styles               */
+/*****************************************************/
+/* These styles are used in the Donor sample site  */
+
+.DonorBannerHome
+{
+	background: url(../../images/SampleSites/Donor/birdbanner.jpg) no-repeat;
+	overflow: hidden;
+	height: 330px;
+	position: relative;
+}
+
+.DonorBannerInterior
+{
+	overflow: hidden;
+	height: 275px;
+	position: relative;
+}
+
+.DonorBannerInteriorBackground1
+{
+	background: #67895e url(../../images/SampleSites/Donor/bearbanner.jpg) no-repeat;
+}
+
+.DonorBannerInteriorBackground2
+{
+	background: #95BB19 url(../../images/SampleSites/Donor/butterflybanner.jpg) no-repeat;
+}
+
+.DonorBannerInteriorBackground3
+{
+	background: #764c31 url(../../images/SampleSites/Donor/catbanner.jpg) no-repeat;
+}
+
+.DonorBannerInteriorBackground4
+{
+	background: #416a26 url(../../images/SampleSites/Donor/frogbanner.jpg) no-repeat;
+}
+
+.DonorBannerInteriorBackground5
+{
+	background: #696f44 url(../../images/SampleSites/Donor/numbatbanner.jpg) no-repeat;
+}
+
+.DonorBannerInteriorBackground6
+{
+	background: #3c683d url(../../images/SampleSites/Donor/squirrelbanner.jpg) no-repeat;
+}
+
+.DonorBannerTextBackgroundHome
+{
+	background: none repeat scroll 0 0 rgb(25, 25, 25);
+	background: none repeat scroll 0 0 rgba(0, 0, 0, .4);
+	float: right;
+	height: 292px;
+	width: 450px;
+	margin: 20px;  
+}
+
+.DonorBannerTextBackgroundInterior
+{
+	background: none repeat scroll 0 0 rgb(25, 25, 25);
+	background: none repeat scroll 0 0 rgba(0, 0, 0, .4);
+	float: right;
+	height: 236px;
+	width: 450px;
+	margin: 20px;  
+}
+
+.DonorBannerTextBackgroundHome h1, .DonorBannerTextBackgroundInterior h1
+{
+	color: $white;
+	font-size: 280%;
+	background: none;
+	margin: 0.4em;
+}
+
+.DonorBannerTextBackgroundHome p, .DonorBannerTextBackgroundInterior p
+{
+	color: $white;
+	font-size: 120%;
+	line-height: 1.6em;
+	margin: 1em;
+	padding: 0.4em;
+}
+
+/**** End Donor Sample Site Styles ****/

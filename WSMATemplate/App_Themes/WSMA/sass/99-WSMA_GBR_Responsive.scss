@@ -1,0 +1,86 @@
+﻿/* Responsive NaturalHeritage theme */
+
+// Core variables and mixins
+@import "breakpoint"; // Sass plugin used to generate responsive media queries
+@import "mixins";
+
+@import "NaturalHeritageSites/variables/variables_WSMA";
+// import base variables after theme variables so calculations of dependent variables
+// are based on the theme's variable settings
+@import "variables";
+@import "breakpoint-setup";
+
+// Master page layout
+@import "NaturalHeritageSites/layouts/_naturalHeritageSites-mp.scss";
+
+// Skin-specific styles
+@import "NaturalHeritageSites/_WSMA";
+
+// Typography and other basic setup
+@import "shared/basics";
+
+// Master page elements
+@import "shared/masterpage_styles";
+@import "shared/modules/footer";
+
+// Navigation controls
+@import "NaturalHeritageSites/navigation/primary-responsive";
+@import "NaturalHeritageSites/navigation/secondary-responsive";
+@import "NaturalHeritageSites/navigation/auxiliary-responsive";
+
+// Other components
+@import "shared/icon_sprite";
+@import "shared/forms";
+@import "shared/buttons_flat";
+@import "shared/modules/other-iParts";
+@import "shared/modules/search";
+@import "shared/modules/events-products";
+@import "shared/modules/progress-tracker";
+@import "shared/modules/query-menu";
+@import "shared/modules/cart-charges";
+@import "NaturalHeritageSites/telerik_overrides";
+@import "NaturalHeritageSites/jumbotron";
+@import "shared/modules/communities";
+@import "shared/donor_site";
+@import "NaturalHeritageSites/misc";
+@import "shared/panel_callouts";
+@import "shared/dashboards";
+@import "shared/svg";
+
+#masterHeaderImage {
+    margin-top: 35px;
+}
+
+.carousel-caption {
+    top: 170px;
+}
+
+.UtilityNavigation {
+    text-align: right;
+}
+
+.RadMenu {
+    a.rmLink {
+        color: $color-black;
+    }
+    a:visited {
+        color: $color-black;
+    }
+}
+
+.Wrapper-HomePage {
+    .RadMenu {
+        a.rmLink {
+            color: $color-white;
+        }
+        a:visited {
+            color: $color-white;
+        }
+    }
+}
+
+.ProgressTracker2 {
+    font-size: 135%;
+    width: 75%;
+    margin: 0 auto;
+}

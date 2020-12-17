@@ -1,0 +1,39 @@
+<!--
+On-Demand Custom Search API Key:
+AIzaSyCviDdKzS2QHm68TLo3RkAA01SJqkc7p5U
+
+API data model
+The result of a search query to the Custom Search JSON API is a JSON object that includes three types of data:
+	•	Metadata describing the requested search (and, possibly, related search requests)
+	•	Metadata describing the Programmable Search Engine
+	•	Search results
+See the Response data section of Using REST for more details.
+The data model is based on the OpenSearch 1.1 Specification. In addition to the standard OpenSearch properties, the Custom Search JSON API defines two custom properties and two custom query roles:
+	•	Custom properties
+	•	cx: The identifier of the Programmable Search Engine.
+	•	safe: A description of the safe search level for filtering the returned results.
+	•	Custom query roles
+	•	nextPage: A role that indicates the query can be used to access the next logical page of results, if any.
+	•	previousPage: A role that indicates the query can be used to access the previous logical page of results, if any.
+
+
+GET https://www.googleapis.com/customsearch/v1?key=AIzaSyCviDdKzS2QHm68TLo3RkAA01SJqkc7p5U&cx=d966e3447fdbd0013:omuauf_lfve&q=covid -->
+
+<html>
+   <head>
+      <title>Custom Search JSON API Example</title>
+   </head>
+   <body>
+      <div id="content"></div>
+      <script>
+         function hndlr(response) {
+            for (var i = 0; i < response.items.length; i++) {
+               var item = response.items[i];
+               // in production code, item.htmlTitle should have the HTML entities escaped.
+               document.getElementById("content").innerHTML += "<br>" + item.htmlTitle;
+            }
+         }
+      </script>
+      <script src="https://www.googleapis.com/customsearch/v1?key=AIzaSyCviDdKzS2QHm68TLo3RkAA01SJqkc7p5U&cx=d966e3447fdbd0013:omuauf_lfve&q=cars&callback=hndlr"></script>
+   </body>
+</html>

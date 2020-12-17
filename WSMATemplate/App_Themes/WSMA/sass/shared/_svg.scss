@@ -1,0 +1,155 @@
+.smile {
+    svg {
+        width: 50%;
+        margin-top: 10%;
+        .cls-1 {
+            fill:rgb(245, 245, 245);
+        }
+            
+        .cls-2 {
+            fill:$color-wsma-seafoam;
+        }
+    }
+    &:hover {
+        svg {
+            .cls-1 {
+                fill:$color-wsma-seafoam;
+                }
+                
+            .cls-2 {
+                fill:rgb(255, 255, 255);
+                }
+        }
+    }
+    .Spotlight:hover {
+        //border-bottom: 5px solid $color-wsma-green;
+    }
+    border-bottom: 5px solid transparent;
+    &:hover {
+        border-bottom: 5px solid $color-wsma-seafoam;
+    }
+}
+
+.heads {
+    svg {
+        width: 50%;
+        margin-top: 10%;
+        .st0 {
+            fill:rgb(245, 245, 245);
+        }
+        .st1{
+            fill:$color-wsma-seafoam;
+        }
+    }
+    
+    &:hover {
+        svg {
+            .st0 {
+                fill:$color-wsma-seafoam;
+            }
+            .st1{
+                fill:rgb(245, 245, 245);
+            }
+        }
+    }
+    .Spotlight:hover {
+        //border-bottom: 5px solid $color-wsma-red;
+    }
+    border-bottom: 5px solid transparent;
+    &:hover {
+        border-bottom: 5px solid $color-wsma-seafoam;
+    }
+}
+
+.bubbles {
+    svg {
+        width: 50%;
+        margin-top: 10%;
+        .st0 {
+            fill:rgb(245, 245, 245);
+        }
+        .st1{
+            fill:$color-wsma-seafoam;
+        }
+    }
+    
+    &:hover {
+        svg {
+            .st0 {
+                fill:$color-wsma-seafoam;
+            }
+            .st1{
+                fill:rgb(245, 245, 245);
+            }
+        }
+    }
+    .Spotlight:hover {
+        //border-bottom: 5px solid $color-wsma-teal;
+    }
+    border-bottom: 5px solid transparent;
+    &:hover {
+        border-bottom: 5px solid $color-wsma-seafoam;
+    }
+}
+
+.shift {
+    svg {
+        width: 50%;
+        margin-top: 10%;
+        .st0 {
+            fill:rgb(245, 245, 245);
+        }
+        .st1{
+            fill:$color-wsma-seafoam;
+        }
+    }
+    
+    &:hover {
+        svg {
+            .st0 {
+                fill:$color-wsma-seafoam;
+            }
+            .st1{
+                fill:rgb(245, 245, 245);
+            }
+        }
+    }
+    .Spotlight:hover {
+        //border-bottom: 5px solid $color-wsma-forest;
+    }
+    border-bottom: 5px solid transparent;
+    &:hover {
+        border-bottom: 5px solid $color-wsma-seafoam;
+    }
+}
+//Member Resource Center Icons;
+.people {
+    svg {
+        width: 50%;
+        margin-top: 10%;
+        .st2 {
+            fill:$color-wsma-seafoam;
+        }
+        .st3{
+            fill:$color-wsma-evergreen;
+        }
+    }
+    
+//     &:hover {
+//         svg {
+//             .st2 {
+//                 fill:$color-wsma-seafoam;
+//             }
+//             .st3{
+//                 fill:rgb(245, 245, 245);
+//             }
+//         }
+//     }
+//     .Spotlight:hover {
+//         //border-bottom: 5px solid $color-wsma-forest;
+//     }
+//     border-bottom: 5px solid transparent;
+//     &:hover {
+//         border-bottom: 5px solid $color-wsma-seafoam;
+//     }
+}

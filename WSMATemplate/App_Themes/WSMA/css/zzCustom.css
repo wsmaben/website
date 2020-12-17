@@ -1,0 +1,18 @@
+/* .RadMenu .rmSlide, .RadMenu_Context {
+    min-width: 1170px!important;
+    right: 0!important;
+}  */
+
+#auxiliary-container {
+  /* background-color: pink; */
+  display: flex;
+}
+
+.search-container-sm {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.header-container {
+  padding-top: 10px;
+}

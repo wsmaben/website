@@ -1,0 +1,10 @@
+This is what Wikipedia uses to fade out the last line of a shortened paragraph:
+
+.mwe-popups .mwe-popups-extract:after {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    width: 25%;
+    height: 20px;
+    background-color: transparent;
+}

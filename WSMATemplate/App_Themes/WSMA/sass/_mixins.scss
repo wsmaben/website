@@ -1,0 +1,1097 @@
+﻿//
+// Mixins
+// --------------------------------------------------
+
+// generate sprite background positions
+@mixin sprite-bg($gridSize, $multiplier, $changeOnHover: true, $startingX: 0) {
+    &, &[disabled]:hover, &.Disabled:hover, &.aspNetDisabled:hover, a.aspNetDisabled:hover &      
+                                                    { background-position: $gridSize*$multiplier $startingX }
+    @if $changeOnHover {
+        &:hover, &:focus, a:hover &, a:focus &      { background-position: $gridSize*$multiplier $startingX+$gridSize }
+    }
+}
+
+// hidden content items, when in easy edit
+@mixin hidden-easy-edit() {
+    &:before {
+        content: "This content hidden at this screen size.";
+        display: block;
+        padding: 5px;
+    }
+    background-color: lighten($gray-light, 30%);
+    @include opacity(.7);
+}
+
+// UTILITY MIXINS
+// --------------------------------------------------
+
+// Clearfix
+// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+//
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+//    contenteditable attribute is included anywhere else in the document.
+//    Otherwise it causes space to appear at the top and bottom of elements
+//    that are clearfixed.
+// 2. The use of `table` rather than `block` is only necessary if using
+//    `:before` to contain the top-margins of child elements.
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// overwrites the silly styles applied to PanelFields
+@mixin panel-field-reset() {
+    float: none;
+    clear: none;
+    width: auto;
+}
+
+// Webkit-style focus
+// ------------------
+@mixin tab-focus() {
+  // Default
+  outline: thin dotted #333;
+  // Webkit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+// Center-align a block level element
+// ----------------------------------
+@mixin center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Sizing shortcuts
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin square($size) {
+  @include size($size, $size);
+}
+
+// Placeholder text
+@mixin placeholder($color: $input-color-placeholder) {
+  &:-moz-placeholder            { color: $color; } // Firefox 4-18
+  &::-moz-placeholder           { color: $color; } // Firefox 19+
+  &:-ms-input-placeholder       { color: $color; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: $color; } // Safari and Chrome
+}
+
+// New mixin to use as of v3.0.1
+@mixin text-hide() {
+  font: #{0/0} a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+// rgba mixin with a fallback for browsers that don't support it
+// http://thesassway.com/intermediate/mixins-for-semi-transparent-colors
+@mixin alpha-background-color($color, $background) {
+  $percent: alpha($color) * 100%;
+  $opaque: opacify($color, 1);
+  $solid-color: mix($opaque, $background, $percent);
+  background-color: $solid-color;
+  background-color: $color;
+}
+
+// Lists
+// ----------------
+@mixin unstyled-list() {
+    padding-left: 0;
+    list-style: none;
+    li {
+        list-style: none;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+}
+
+@mixin inline-list() {
+    margin: 0;
+    padding: 0;
+    &, > li {
+        list-style: none;
+        display: inline-block;
+    }
+}
+
+// Text overflow: ellipsis
+// -----------------------
+// requires that a width be defined for the element
+@mixin overflow-ellipsis() {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+// CSS3 PROPERTIES
+// --------------------------------------------------
+
+// Border Radius
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    @warn "border-radius mixin is obsolete"; 
+    // use single border-radius statement instead
+}
+
+// Single Corner Border Radius
+@mixin border-top-left-radius($radius) {
+    border-top-left-radius: $radius;
+    //@warn "border-top-left-radius mixin is obsolete"; 
+    // use single border-top-left-radius statement instead
+}
+@mixin border-top-right-radius($radius) {
+    border-top-right-radius: $radius;
+    //@warn "border-top-right-radius mixin is obsolete"; 
+    // use single border-top-right-radius statement instead
+}
+@mixin border-bottom-right-radius($radius) {
+    border-bottom-right-radius: $radius;
+    //@warn "border-bottom-right-radius mixin is obsolete"; 
+    // use single border-bottom-right-radius statement instead
+}
+@mixin border-bottom-left-radius($radius) {
+    border-bottom-left-radius: $radius;
+    //@warn "border-bottom-left-radius mixin is obsolete"; 
+    // use single border-bottom-left-radius statement instead
+}
+
+// Single side border-radius
+@mixin border-top-radius($radius) {
+  border-top-right-radius: $radius;
+   border-top-left-radius: $radius;
+}
+@mixin border-right-radius($radius) {
+  border-bottom-right-radius: $radius;
+     border-top-right-radius: $radius;
+}
+@mixin border-bottom-radius($radius) {
+  border-bottom-right-radius: $radius;
+   border-bottom-left-radius: $radius;
+}
+@mixin border-left-radius($radius) {
+  border-bottom-left-radius: $radius;
+     border-top-left-radius: $radius;
+}
+
+// Drop shadows
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
+          box-shadow: $shadow;
+}
+
+// Transitions
+
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+       -o-transition: $transition;
+          transition: $transition;
+}
+@mixin transition-property($transition-property...) {
+  -webkit-transition-property: $transition-property;
+          transition-property: $transition-property;
+}
+@mixin transition-delay($transition-delay) {
+  -webkit-transition-delay: $transition-delay;
+          transition-delay: $transition-delay;
+}
+@mixin transition-duration($transition-duration...) {
+  -webkit-transition-duration: $transition-duration;
+          transition-duration: $transition-duration;
+}
+@mixin transition-timing-function($timing-function) {
+  -webkit-transition-timing-function: $timing-function;
+          transition-timing-function: $timing-function;
+}
+@mixin transition-transform($transition...) {
+  -webkit-transition: -webkit-transform $transition;
+     -moz-transition: -moz-transform $transition;
+       -o-transition: -o-transform $transition;
+          transition: transform $transition;
+}
+
+// Transformations
+@mixin scale($ratio...) {
+  -webkit-transform: scale($ratio);
+      -ms-transform: scale($ratio); // IE9 only
+       -o-transform: scale($ratio);
+          transform: scale($ratio);
+}
+
+@mixin scaleX($ratio) {
+  -webkit-transform: scaleX($ratio);
+      -ms-transform: scaleX($ratio); // IE9 only
+       -o-transform: scaleX($ratio);
+          transform: scaleX($ratio);
+}
+@mixin scaleY($ratio) {
+  -webkit-transform: scaleY($ratio);
+      -ms-transform: scaleY($ratio); // IE9 only
+       -o-transform: scaleY($ratio);
+          transform: scaleY($ratio);
+}
+@mixin skew($x, $y) {
+  -webkit-transform: skewX($x) skewY($y);
+      -ms-transform: skewX($x) skewY($y); // See https://github.com/twbs/bootstrap/issues/4885; IE9+
+       -o-transform: skewX($x) skewY($y);
+          transform: skewX($x) skewY($y);
+}
+@mixin translate($x, $y) {
+  -webkit-transform: translate($x, $y);
+      -ms-transform: translate($x, $y); // IE9 only
+       -o-transform: translate($x, $y);
+          transform: translate($x, $y);
+}
+@mixin translate3d($x, $y, $z) {
+  -webkit-transform: translate3d($x, $y, $z);
+          transform: translate3d($x, $y, $z);
+}
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+      -ms-transform: rotate($degrees); // IE9 only
+       -o-transform: rotate($degrees);
+          transform: rotate($degrees);
+}
+@mixin rotateX($degrees) {
+  -webkit-transform: rotateX($degrees);
+      -ms-transform: rotateX($degrees); // IE9 only
+       -o-transform: rotateX($degrees);
+          transform: rotateX($degrees);
+}
+@mixin rotateY($degrees) {
+  -webkit-transform: rotateY($degrees);
+      -ms-transform: rotateY($degrees); // IE9 only
+       -o-transform: rotateY($degrees);
+          transform: rotateY($degrees);
+}
+@mixin perspective($perspective) {
+  -webkit-perspective: $perspective;
+     -moz-perspective: $perspective;
+          perspective: $perspective;
+}
+@mixin perspective-origin($perspective) {
+  -webkit-perspective-origin: $perspective;
+     -moz-perspective-origin: $perspective;
+          perspective-origin: $perspective;
+}
+@mixin transform-origin($origin) {
+  -webkit-transform-origin: $origin;
+     -moz-transform-origin: $origin;
+      -ms-transform-origin: $origin; // IE9 only
+          transform-origin: $origin;
+}
+
+
+// Backface visibility
+// Prevent browsers from flickering when using CSS 3D transforms.
+// Default value is `visible`, but can be changed to `hidden
+// See git pull https://github.com/dannykeane/bootstrap.git backface-visibility for examples
+@mixin backface-visibility($visibility){
+  -webkit-backface-visibility: $visibility;
+     -moz-backface-visibility: $visibility;
+          backface-visibility: $visibility;
+}
+
+// Background clipping
+// Heads up: FF 3.6 and under need "padding" instead of "padding-box"
+@mixin background-clip($clip) {
+  -webkit-background-clip: $clip;
+     -moz-background-clip: $clip;
+          background-clip: $clip;
+}
+
+// Background sizing
+@mixin background-size($size) {
+  -webkit-background-size: $size;
+     -moz-background-size: $size;
+       -o-background-size: $size;
+          background-size: $size;
+}
+
+
+// Box sizing
+@mixin box-sizing($boxmodel) {
+  -webkit-box-sizing: $boxmodel;
+     -moz-box-sizing: $boxmodel;
+          box-sizing: $boxmodel;
+}
+
+// User select
+// For selecting text on the page
+@mixin user-select($select) {
+  -webkit-user-select: $select;
+     -moz-user-select: $select;
+      -ms-user-select: $select;
+       -o-user-select: $select;
+          user-select: $select;
+}
+
+// Resize anything
+@mixin resizable($direction) {
+  resize: $direction; // Options: horizontal, vertical, both
+  overflow: auto; // Safari fix
+}
+
+// CSS3 Content Columns
+@mixin content-columns($columnCount, $columnGap: $gridGutterWidth) {
+  -webkit-column-count: $columnCount;
+     -moz-column-count: $columnCount;
+          column-count: $columnCount;
+  -webkit-column-gap: $columnGap;
+     -moz-column-gap: $columnGap;
+          column-gap: $columnGap;
+}
+
+// Optional hyphenation
+@mixin hyphens($mode: auto) {
+  word-wrap: break-word;
+  -webkit-hyphens: $mode;
+     -moz-hyphens: $mode;
+      -ms-hyphens: $mode;
+       -o-hyphens: $mode;
+          hyphens: $mode;
+}
+
+// Opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  // IE8 filter
+  $opacity-ie: ($opacity * 100);
+  filter: #{alpha(opacity=$opacity-ie)};
+}
+
+
+// BACKGROUNDS
+// --------------------------------------------------
+
+// Add an alphatransparency value to any background or border color (via Elyse Holladay)
+@mixin translucent-background($color: $white, $alpha: 1) {
+  background-color: hsla(hue($color), saturation($color), lightness($color), $alpha);
+}
+
+@mixin translucent-border($color: $white, $alpha: 1) {
+  border-color: hsla(hue($color), saturation($color), lightness($color), $alpha);
+  @include background-clip(padding-box);
+}
+// GRADIENTS
+// --------------------------------------------------
+
+
+
+// Horizontal gradient, from left to right
+//
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+// Color stops are not available in IE9 and below.
+@mixin gradient-horizontal($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+  background-image: -webkit-gradient(linear, $start-percent top, $end-percent top, from($start-color), to($end-color)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(left, color-stop($start-color $start-percent), color-stop($end-color $end-percent)); // Safari 5.1+, Chrome 10+
+  background-image: -moz-linear-gradient(left, $start-color $start-percent, $end-color $end-percent); // FF 3.6+
+  background-image:  linear-gradient(to right, $start-color $start-percent, $end-color $end-percent); // Standard, IE10
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1); // IE9 and down
+}
+
+// Vertical gradient, from top to bottom
+//
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+// Color stops are not available in IE9 and below.
+@mixin gradient-vertical($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+  background-image: -webkit-gradient(linear, left $start-percent, left $end-percent, from($start-color), to($end-color)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(top, $start-color $start-percent, $end-color $end-percent); // Safari 5.1+, Chrome 10+
+  background-image:  -moz-linear-gradient(top, $start-color $start-percent, $end-color $end-percent); // FF 3.6+
+  background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent); // Standard, IE10
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down
+}
+
+@mixin gradient-directional($start-color: #555, $end-color: #333, $deg: 45deg) {
+  background-repeat: repeat-x;
+  background-image: -webkit-linear-gradient($deg, $start-color, $end-color); // Safari 5.1+, Chrome 10+
+  background-image: -moz-linear-gradient($deg, $start-color, $end-color); // FF 3.6+
+  background-image: linear-gradient($deg, $start-color, $end-color); // Standard, IE10
+}
+@mixin gradient-horizontal-three-colors($start-color: #00b3ee, $mid-color: #7a43b6, $color-stop: 50%, $end-color: #c3325f) {
+  background-image: -webkit-gradient(left, linear, 0 0, 0 100%, from($start-color), color-stop($color-stop, $mid-color), to($end-color));
+  background-image: -webkit-linear-gradient(left, $start-color, $mid-color $color-stop, $end-color);
+  background-image: -moz-linear-gradient(left, $start-color, $mid-color $color-stop, $end-color);
+  background-image: linear-gradient(to right, $start-color, $mid-color $color-stop, $end-color);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1); // IE9 and down, gets no color-stop at all for proper fallback
+}
+@mixin gradient-vertical-three-colors($start-color: #00b3ee, $mid-color: #7a43b6, $color-stop: 50%, $end-color: #c3325f) {
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($start-color), color-stop($color-stop, $mid-color), to($end-color));
+  background-image: -webkit-linear-gradient($start-color, $mid-color $color-stop, $end-color);
+  background-image: -moz-linear-gradient(top, $start-color, $mid-color $color-stop, $end-color);
+  background-image: linear-gradient($start-color, $mid-color $color-stop, $end-color);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down, gets no color-stop at all for proper fallback
+}
+@mixin gradient-radial($inner-color: #555, $outer-color: #333) {
+  background-image: -webkit-gradient(radial, center center, 0, center center, 460, from($inner-color), to($outer-color));
+  background-image: -webkit-radial-gradient(circle, $inner-color, $outer-color);
+  background-image: -moz-radial-gradient(circle, $inner-color, $outer-color);
+  background-image: radial-gradient(circle, $inner-color, $outer-color);
+  background-repeat: no-repeat;
+}
+@mixin gradient-striped($color: rgba(255,255,255,.15), $angle: 45deg) {
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, $color), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, $color), color-stop(.75, $color), color-stop(.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+  background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+}
+
+// Reset filters for IE
+//
+// When you need to remove a gradient background, do not forget to use this to reset
+// the IE filter for IE9 and below.
+@mixin reset-filter() {
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+
+// COMPONENT MIXINS
+// --------------------------------------------------
+
+// Button backgrounds
+// ------------------
+@mixin buttonBackground($startColor, $endColor, $textColor: #fff, $textShadow: 0 -1px 0 rgba(0,0,0,.25)) {
+  // gradientBar will set the background to a pleasing blend of these, to support IE<=9
+  @include gradientBar($startColor, $endColor, $textColor, $textShadow);
+  *background-color: $endColor; /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  @include gradient-reset-filter();
+
+  // in these cases the gradient won't cover the background, so we override
+  &:hover, &:active, &.active, &.disabled, &[disabled] {
+    color: $textColor;
+    background-color: $endColor;
+    *background-color: darken($endColor, 5%);
+  }
+
+  // IE 7 + 8 can't handle box-shadow to show active, so we darken a bit ourselves
+  &:active,
+  &.active {
+    background-color: darken($endColor, 10%) \9;
+  }
+}
+
+// Date lines (for publish dates)
+// ------------------------------
+@mixin publish-date {
+    font-size: 85%;
+    font-style: italic;
+}
+
+// Responsive utilities
+// -------------------------
+// More easily include all the states for responsive-utilities.less.
+// [converter] $parent hack
+@mixin responsive-visibility($parent) {
+  #{$parent} { display: block !important; }
+  tr#{$parent} { display: table-row !important; }
+  th#{$parent},
+  td#{$parent} { display: table-cell !important; }
+}
+
+// [converter] $parent hack
+@mixin responsive-invisibility($parent) {
+    #{$parent},
+  tr#{$parent},
+  th#{$parent},
+  td#{$parent} { display: none !important; }
+}
+
+// Grid System
+// -----------
+
+// Centered container element
+@mixin container-fixed() {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left:  ($grid-gutter-width / 2);
+  padding-right: ($grid-gutter-width / 2);
+}
+
+// Creates a wrapper for a series of columns
+@mixin make-row($gutter: $grid-gutter-width) {
+  margin-left:  ($gutter / -2);
+  margin-right: ($gutter / -2);
+  @include clearfix();
+}
+
+// Generate the extra small columns
+@mixin make-xs-column($columns, $gutter: $grid-gutter-width) {
+  position: relative;
+  float: left;
+  width: percentage(($columns / $grid-columns));
+  // Prevent columns from collapsing when empty
+  min-height: 1px;
+  // Inner gutter via padding
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
+}
+
+// Generate the small columns
+@mixin make-sm-column($columns, $gutter: $grid-gutter-width) {
+  position: relative;
+  // Prevent columns from collapsing when empty
+  min-height: 1px;
+  // Inner gutter via padding
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
+
+  // Calculate width based on number of columns available
+  @media (min-width: $screen-sm-min) {
+    float: left;
+    width: percentage(($columns / $grid-columns));
+  }
+}
+
+// Generate the small column offsets
+@mixin make-sm-column-offset($columns) {
+  @media (min-width: $screen-sm-min) {
+    margin-left: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-sm-column-push($columns) {
+  @media (min-width: $screen-sm-min) {
+    left: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-sm-column-pull($columns) {
+  @media (min-width: $screen-sm-min) {
+    right: percentage(($columns / $grid-columns));
+  }
+}
+
+// Generate the medium columns
+@mixin make-md-column($columns, $gutter: $grid-gutter-width) {
+  position: relative;
+  // Prevent columns from collapsing when empty
+  min-height: 1px;
+  // Inner gutter via padding
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
+
+  // Calculate width based on number of columns available
+  @media (min-width: $screen-md-min) {
+    float: left;
+    width: percentage(($columns / $grid-columns));
+  }
+}
+
+// Generate the medium column offsets
+@mixin make-md-column-offset($columns) {
+  @media (min-width: $screen-md-min) {
+    margin-left: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-md-column-push($columns) {
+  @media (min-width: $screen-md) {
+    left: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-md-column-pull($columns) {
+  @media (min-width: $screen-md-min) {
+    right: percentage(($columns / $grid-columns));
+  }
+}
+
+// Generate the large columns
+@mixin make-lg-column($columns, $gutter: $grid-gutter-width) {
+  position: relative;
+  // Prevent columns from collapsing when empty
+  min-height: 1px;
+  // Inner gutter via padding
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
+
+  // Calculate width based on number of columns available
+  @media (min-width: $screen-lg-min) {
+    float: left;
+    width: percentage(($columns / $grid-columns));
+  }
+}
+
+// Generate the large column offsets
+@mixin make-lg-column-offset($columns) {
+  @media (min-width: $screen-lg-min) {
+    margin-left: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-lg-column-push($columns) {
+  @media (min-width: $screen-lg-min) {
+    left: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-lg-column-pull($columns) {
+  @media (min-width: $screen-lg-min) {
+    right: percentage(($columns / $grid-columns));
+  }
+}
+
+
+// Framework grid generation
+//
+// Used only by Bootstrap to generate the correct number of grid classes given
+// any value of `$grid-columns`.
+
+// [converter] Grid converted to use SASS cycles (LESS uses recursive nested mixin defs not supported by SASS)
+@mixin make-grid-columns() {
+  $list: '';
+  $i: 1;
+  $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
+  @for $i from 2 through $grid-columns {
+    $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}, #{$list}";
+  }
+  #{$list} {
+    position: relative;
+    // Prevent columns from collapsing when empty
+    min-height: 1px;
+    // Inner gutter via padding
+    padding-left:  ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+  }
+}
+
+
+// [converter] Grid converted to use SASS cycles (LESS uses recursive nested mixin defs not supported by SASS)
+@mixin make-grid-columns-float($class) {
+  $list: '';
+  $i: 1;
+  $list: ".col-#{$class}-#{$i}";
+  @for $i from 2 through $grid-columns {
+    $list: ".col-#{$class}-#{$i}, #{$list}";
+  }
+  #{$list} {
+    float: left;
+  }
+}
+
+
+@mixin calc-grid($index, $class, $type) {
+  @if ($type == width) and ($index > 0) {
+    .col-#{$class}-#{$index} {
+      width: percentage(($index / $grid-columns));
+    }
+  }
+  @if ($type == push) {
+    .col-#{$class}-push-#{$index} {
+      left: percentage(($index / $grid-columns));
+    }
+  }
+  @if ($type == pull) {
+    .col-#{$class}-pull-#{$index} {
+      right: percentage(($index / $grid-columns));
+    }
+  }
+  @if ($type == offset) {
+    .col-#{$class}-offset-#{$index} {
+      margin-left: percentage(($index / $grid-columns));
+    }
+  }
+}
+
+// [converter] This is defined recursively in LESS, but SASS supports real loops
+@mixin make-grid($columns, $class, $type) {
+  @for $i from 0 through $columns {
+    @include calc-grid($i, $class, $type);
+  }
+}
+
+// Form control focus state
+//
+// Generate a customized focus state and for any input with the specified color,
+// which defaults to the `$input-focus-border` variable.
+//
+// We highly encourage you to not customize the default value, but instead use
+// this to tweak colors on an as-needed basis. This aesthetic change is based on
+// WebKit's default styles, but applicable to a wider range of browsers. Its
+// usability and accessibility should be taken into account with any change.
+//
+// Example usage: change the default blue border and shadow to white for better
+// contrast against a dark gray background.
+
+@mixin form-control-focus($color: $input-border-focus) {
+  &:focus {
+      @include form-control-focus-direct($color);
+  }
+}
+// Same as above, but can be put directly on an element instead of using the :focus selector 
+@mixin form-control-focus-direct($color: $input-border-focus) {
+    $color-rgba: rgba(red($color), green($color), blue($color), .6);
+
+    border-color: $color;
+    outline: 0;
+    @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px $color-rgba);
+}
+
+// Navbar vertical align
+// -------------------------
+// Vertically center elements in the navbar.
+// Example: an element has a height of 30px, so write out `.navbar-vertical-align(30px);` to calculate the appropriate top margin.
+@mixin navbar-vertical-align($element-height) {
+  @include vertical-align($element-height, $navbar-height);
+}
+
+// Vertical align any element
+// -------------------------
+// Vertically center any element within a container 
+// (Please use sparingly :)
+@mixin vertical-align($element-height, $container-height, $type: margin) {
+  #{$type}-top: (($container-height - $element-height) / 2);
+  #{$type}-bottom: (($container-height - $element-height) / 2);
+}
+
+// Link styles 
+// -------------------------
+// Pass in '!important' if important is needed!
+@mixin link-styles($suffix: '') {
+    color: $link-color #{$suffix};
+    text-decoration: underline;
+
+    &:visited { color: $link-color-visited #{$suffix}; }
+    &:hover, &:focus, &:active { color: $link-color-hover #{$suffix}; text-decoration: underline; }
+
+    &.aspNetDisabled {
+        &, &:hover, &:focus, &:active, &:visited {
+            color: $link-color-disabled #{$suffix};
+        }
+    }
+}
+
+// Button variants
+// -------------------------
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+@mixin button-variant($color, $background, $border, $style: 'flat', $shadow: transparent) {
+    color: $color;
+    @if ($style == 'light gradient') {
+        background-color: $background;
+        @include gradient-vertical($background, darken($background, 3%));
+        @include box-shadow ($box-shadow-base);
+        //text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+        border-width: 0;
+    }
+    @else {
+        background-color: $background;
+        border-color: $border;
+    }
+    @if ($style == 'pushable') {
+        position: relative;
+        @include box-shadow(0px 5px 0 0 $shadow);
+    }
+
+    &:hover, &:focus, &:active, &:visited {
+        color: $color;
+        @if ($style == 'pushable') {
+            background-color: darken($background, 4%);
+                border-color: darken($border, 8%);
+                @include box-shadow(0px 5px 0 0 darken($shadow, 8%));
+        }
+        @else {
+            background-color: darken($background, 8%);
+                border-color: darken($border, 12%);
+        }
+
+        @if ($style == 'light gradient') {
+            @include gradient-vertical(darken($background,5%), darken($background, 8%));
+        }
+    }
+    //.open & { &.dropdown-toggle {
+    //    color: $color;
+    //    background-color: darken($background, 8%);
+    //        border-color: darken($border, 12%);
+    //} }
+    &:active {
+        background-image: none;
+        @if ($style == 'pushable') {
+            top: 3px;
+            @include box-shadow(0px 2px 0 0 darken($shadow, 8%), inset 0 3px 5px rgba(0,0,0,.125));
+        }
+    }
+    //.open & { &.dropdown-toggle {
+    //    background-image: none;
+    //} }
+    &[disabled], fieldset[disabled] &, &.aspNetDisabled {
+        &, &:hover, &:focus, &:active {
+            background-color: $background;
+                border-color: $border;
+        }
+    }
+}
+
+
+// Telerik styles
+// -------------------------
+@mixin radgrid-color-reset($link-separate: false) {
+    background-color: $color-base;
+    border-color:$color-base;
+    @if ($link-separate == true) {
+        a { color: #fff !important; }
+    }
+    @else { color: #fff !important; }
+}
+
+@mixin radgrid-metro() {
+    .rgMasterTable { background-color: #fff; }
+
+    .rgHeader, .rgRow td, 
+    .rgAltRow td, .rgEditRow td { 
+        border-left-color: transparent; 
+    }
+
+    td.rgPagerCell { border-width: 0; }
+
+    @if ($view-type == 'Responsive'){
+        .rgHeader, th.rgResizeCol, .rgRow td, 
+        .rgAltRow td, .rgEditRow td, .rgFooter td, 
+        .rgFilterRow td, .rgNoRecords td {
+            &, &:first-child { padding: 7px 12px; }
+        }
+        .rgRow td, .rgAltRow td {
+            &.rgExpandCol, &.rgExpandCol:first-child { 
+                /* reset the padding for expand/collapse column */
+                padding-left: 0; 
+                padding-right: 0;
+            }
+        }
+    }
+
+    .rgCommandRow { background-color: transparent; }
+    
+    .rgNumPart a.rgCurrentPage, .rgNumPart a.rgCurrentPage:hover,
+    .rgPagePrev:active, .rgPageNext:active, .rgPageFirst:active, .rgPageLast:active,
+    .rgPager .rgPagerButton {
+        @include radgrid-color-reset(false);
+    }
+
+    .rgMasterTable .rgSelectedCell, 
+    .rgSelectedRow, 
+    td.rgEditRow .rgSelectedRow, 
+    .rgSelectedRow td.rgSorted,
+    th.rgSorted { 
+        @include radgrid-color-reset(true);
+    }
+
+    .rgGroupPanel, .rgGroupPanel caption { background-color: $color-base; }
+
+    .rgActiveRow td, .rgActiveRow td.rgSorted, 
+    .rgSelectedRow td, .rgSelectedRow td.rgSorted,
+    .rgMasterTable .rgActiveCell { border-color: $color-base; }
+
+    *+html & .rgSelectedRow .rgSorted { background-color: $color-base; }
+    * html & .rgSelectedRow .rgSorted { background-color: $color-base; }
+
+     input.rgAdd, 
+    input.rgRefresh, 
+    .rgSave, 
+    .rgCommandRow .rgCancel {
+        background-color: $color-base;
+
+        &:hover {
+            background-color: #fff;
+        }
+    }
+}
+
+@mixin raddatapager-metro() {
+    border: none;
+    background-color: transparent;
+
+    .rdpNumPart a.rdpCurrentPage, .rdpNumPart a.rdpCurrentPage:hover,
+    .rdpPageFirst:hover, .rdpPagePrev:hover, .rdpPageNext:hover, .rdpPageLast:hover,
+    .rdpPagerButton {
+        background-color: $color-base;
+        border-color: $color-base;
+    }
+}
+
+@mixin radscheduler-metro() {
+    .rsAptIn { border-top: none; }
+    .rsHeader {
+        border-color: $color-base;
+        background-color: $color-base;
+        ul a { border-color: $color-base; }
+        h2 {
+            font-family: $font-family-base;
+            font-weight: bold;
+            color: #fff;
+            text-transform: none;
+            border-bottom: none;
+        }
+    }
+}
+
+@mixin radscheduler-metrotouch() {
+    @include radscheduler-metro();
+
+    @include respond-to('tablets and down') {
+        .rsHeader {
+            height: auto;
+            ul {
+                clear: left;
+                margin-top: 0;
+                margin-bottom: -19px;
+                a,
+                .rsSelected em {
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+@mixin radcalendar-metrotouch() {
+    .rcTitlebar .rcPrev, .rcTitlebar .rcNext, .rcTitlebar .rcFastPrev, .rcTitlebar .rcFastNext {
+        color: $color-base;
+
+        &:hover { border-color: $color-base; }
+    }
+    .rcRow .rcToday a { border-color: $color-base; }
+    .rcMain .rcRow .rcSelected a, td.rcSelected a, #rcMView_Today { 
+        border-color: $color-base;
+        background: $color-base;
+    }
+    .rcSelected a { background: $color-base; }
+}
+
+@mixin radmenu-metro() {
+    &, .rmRootLink { text-transform: none; }
+
+    div.rmRootGroup,
+    ul.rmRootGroup { background-color: $radmenu-bg; }
+
+    .rmRootLink { border-color: $radmenu-bg; }
+
+    .rmDisabled { 
+        &, &:hover { border-color: $radmenu-bg; }
+    }
+
+    .rmGroup .rmFocused,
+    .rmGroup .rmSelected,
+    .rmGroup .rmLink.rmSelected,
+    .rmGroup .rmExpanded { 
+        &, &:hover {
+            border-color: $radmenu-bg;
+            background-color: $radmenu-bg;
+            color: #FFF !important;
+        }
+    }
+}
+
+@mixin radwindow-metrotouch() {
+    .rwTitleRow {
+        .rwTitlebar, .rwTopLeft, .rwTopRight {
+            background-color: $radwindow-header-bg;
+        }
+
+        td.rwWindowContent a.rwPopupButton {
+            &:active, &:focus {
+                border-color: $radwindow-header-bg;
+                background-color: $radwindow-header-bg;
+            }
+        }
+    }
+
+    .rwControlButtons a:focus {
+        border-color: #fff;
+        border-radius: 50%;
+        /* override setting from UltraWave */
+        outline: none;
+    }
+}
+
+@mixin radwindow-metro() {
+    .rwTitlebar, .rwTopLeft, .rwTopRight, 
+    .rwTopResize,
+    .rwControlButtons a {
+        background-color: $radwindow-header-bg;
+    }
+    .rwControlButtons a {
+        border-color: $radwindow-header-bg;
+
+        &:focus {
+            /* give the refresh, expand, close buttons an outline when focused */
+            @include box-shadow(0 0 0 1px rgba(#fff, .7));
+            /* needed for IE9 compability */
+            border-collapse: separate;
+            /* override setting from UltraWave */
+            outline: none;
+        }
+    }
+
+    table.rwTitlebarControls em {
+        text-transform: none; 
+    }
+}
+
+// Button sizes
+// -------------------------
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+    padding: $padding-vertical $padding-horizontal;
+    font-size: $font-size;
+    line-height: $line-height;
+    border-radius: $border-radius;
+}
+
+
+// COMPONENT MIXINS
+// --------------------------------------------------
+
+// Horizontal dividers
+// -------------------------
+// Dividers (basically an hr) within dropdowns and nav lists
+@mixin nav-divider($color: #e5e5e5) {
+  height: 1px;
+  margin: (($line-height-computed / 2) - 1) 0;
+  overflow: hidden;
+  background-color: $color;
+}
+
+@mixin bg-img-cover() {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// Badges
+// -------------------------
+// Badges are indicate numbers
+// such as the number of items in your cart.
+// These mixins may be used together or separately
+// depending on need.
+@mixin badge-position($top: null, $right: null, $bottom: null, $left: null) {
+    position: absolute;
+    @include position($top, $right, $bottom, $left);
+    text-align: center;
+}
+@mixin badge-style($color: $badge-color, $bg-color: $badge-bg, $border-radius: $badge-border-radius) {
+    color: $color;
+    background-color: $bg-color;
+    border-radius: $border-radius;
+    font-size: $badge-font-size;
+    line-height: $badge-line-height;
+    padding: 0 2px 1px;
+    @include box-shadow($badge-box-shadow);
+}
+
+@mixin position($top: null, $right: null, $bottom: null, $left: null) {
+    @if ($top != null)      { top: $top; }
+    @if ($right != null)    { right: $right; }
+    @if ($bottom != null)   { bottom: $bottom; }
+    @if ($left != null)     { left: $left; }
+}

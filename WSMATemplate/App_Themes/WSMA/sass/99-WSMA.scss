@@ -1,0 +1,264 @@
+﻿/* Responsive NaturalHeritage theme */
+
+// Core variables and mixins
+@import "breakpoint"; // Sass plugin used to generate responsive media queries
+@import "mixins";
+
+@import "NaturalHeritageSites/variables/variables_WSMA";
+// import base variables after theme variables so calculations of dependent variables
+// are based on the theme's variable settings
+@import "variables";
+@import "breakpoint-setup";
+
+// Master page layout
+@import "NaturalHeritageSites/layouts/_naturalHeritageSites-mp.scss";
+
+// Skin-specific styles
+@import "NaturalHeritageSites/_WSMA";
+
+// Typography and other basic setup
+@import "shared/basics";
+
+// Master page elements
+@import "shared/masterpage_styles";
+@import "shared/modules/footer";
+
+// Navigation controls
+@import "NaturalHeritageSites/navigation/primary-responsive";
+@import "NaturalHeritageSites/navigation/secondary-responsive";
+@import "NaturalHeritageSites/navigation/auxiliary-responsive";
+//@import "NaturalHeritageSites/navigation/navs"; // This isn't part of the template. It breaks things. Don't know why...
+
+// Other components
+@import "shared/icon_sprite";
+@import "shared/forms";
+@import "shared/buttons_flat";
+@import "shared/modules/other-iParts";
+@import "shared/modules/search";
+@import "shared/modules/events-products";
+@import "shared/modules/progress-tracker";
+@import "shared/modules/query-menu";
+@import "shared/modules/cart-charges";
+@import "NaturalHeritageSites/telerik_overrides";
+@import "NaturalHeritageSites/jumbotron";
+@import "shared/modules/communities";
+@import "shared/donor_site";
+@import "NaturalHeritageSites/misc";
+@import "shared/panel_callouts";
+@import "shared/dashboards";
+@import "shared/svg";
+
+
+// #masterHeaderImage {
+//     margin-top: 32px;
+//     //margin-bottom: 10px;
+// }
+
+.header-containger {
+    @include respond-to('grid large') {
+        .carousel-caption {
+            top: 170px;
+        }
+
+        .UtilityNavigation {
+            text-align: right;
+            padding-bottom: 55px;
+            @include respond-to('large') {
+                padding-bottom: 0;
+            }
+        }
+
+
+        .RadMenu {
+            a.rmLink {
+                color: $color-black;
+            }
+            a:visited {
+                color: $color-black;
+            }
+        }
+
+        .Wrapper-HomePage {
+            .RadMenu {
+                a.rmLink.rmRootLink {
+                    color: $color-white!important;
+                }
+                // a:visited {
+                //     color: $color-white!important;
+                // }
+            }
+        }
+
+        .ProgressTracker2 {
+            font-size: 135%;
+            width: 75%;
+            margin: 0 auto;
+        }
+
+        .ste-section {
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1000;
+        }
+    }
+}
+/*************************
+***  Expander
+**************************/
+
+.RadWindow {
+    .expander-container {
+        .expander-body {
+            display:block;
+        }
+    }
+}
+
+.expander-container {
+    .expander {
+        background-color: #eeeeee;
+        border-bottom: 1px solid #6BCABA;
+        margin-bottom: 15px;
+        margin-top: 25px;
+        display: flex;
+        .expander-head {
+            padding: 40px 35px;
+        }
+        &.active {
+            background-color: #f3f3f3;
+            .expander-switch {
+                button {
+                    background-image: url(images/minus.svg);
+                    // background-position: center;
+                    // background-size: 25%;
+                    // background-repeat: no-repeat;
+                }
+            }
+            
+            & + div {
+                display: block;
+            }
+        }
+    }
+    .expander-body {
+        display: none;
+    }
+    .expander-switch {
+        display: flex;
+        button {
+        background-image: url(images/plus.svg);
+        background-position: center;
+        background-size: 25%;
+        background-repeat: no-repeat;
+        border: none;
+        color: transparent;
+        background-color: transparent;
+        width: 100%;
+        }
+    }
+}
+
+
+/****************************************
+/** FullWidthFt
+/***************************************/
+
+.FullWidthFt {
+    background-color: $color-wsma-evergreen;
+    padding: 30px 0 30px 0;
+    h1, h2, h3, p {
+        color: $color-wsma-ltseafoam;
+    }
+    h1 {
+        font-size: 285%;
+        //display: inline;
+    }
+    .ContentItemContainer {
+        button {
+            background: $color-wsma-dkgrey;
+            border: 2px solid $color-wsma-ltgrey;
+            //border-radius: 5px;
+            color: white;
+            padding: 15px 30px;
+            float: right;
+        }
+    }
+}
+
+//**************************************
+// Colors
+
+.dkgrey {color:$color-wsma-dkgrey;}
+.mdgrey {color:$color-wsma-mdgrey;}
+.ltgrey {color:$color-wsma-ltgrey;}
+//.red {color:$color-wsma-red;}
+//.forest {color:$color-wsma-forest;}
+//.teal {color:$color-wsma-teal;}
+//.ltteal {color:$color-wsma-ltteal;}
+.seafoam {color:$color-wsma-seafoam;}
+.ltseafoam {color:$color-wsma-ltseafoam;}
+.evergreen {color:$color-wsma-evergreen;}
+
+.bg-dkgrey {background-color:$color-wsma-dkgrey;color:#fff;}
+.bg-mdgrey {background-color:$color-wsma-mdgrey;color:#fff;}
+.bg-ltgrey {background-color:$color-wsma-ltgrey;}
+//.bg-red {background-color:$color-wsma-red;color:#fff;}
+//.bg-forest {background-color:$color-wsma-forest;color:#fff;}
+//.bg-teal {background-color:$color-wsma-teal;}
+//.bg-ltteal {background-color:$color-wsma-ltteal;}
+.bg-seafoam {background-color:$color-wsma-seafoam;}
+.bg-ltseafoam {background-color:$color-wsma-ltseafoam;}
+.bg-evergreen {background-color:$color-wsma-evergreen;}
+
+
+// $color-wsma-dkgrey:         #36424a !default; //From style guide
+// $color-wsma-mdgrey:         #6c6f70 !default; //From style guide
+// $color-wsma-ltgrey:         #d0cfcb !default; //From style guide
+// //$color-wsma-red:            #a22a2e !default; This is the one they used in their design files
+// $color-wsma-red:			#a62d38 !default; //From style guide
+// $color-wsma-forest:         #00837e !default; //From style guide
+// $color-wsma-teal:           #4bc8b6 !default;
+// $color-wsma-ltteal:			#ecf9f7 !default;
+// $color-wsma-seafoam:        #9fe6d9 !default; //From style guide
+// $color-wsma-ltseafoam:		#C5F0E8 !default;
+// $color-wsma-green:          #8fd400 !default; //From style guide
+
+
+
+
+//**************************************
+// TEST
+
+// #testofbreakpoints {
+//     @include respond-to('smartphones and up') {
+//         .img {
+//             width: 5px;  // @media (min-width: 480px) { #testofbreakpoints .img { width: 5px; } }
+//         }
+//     }
+    
+//     @include respond-to('tablets and up') {
+//         .img {
+//             width: 10px;// @media (min-width: 768px) { #testofbreakpoints .img { width: 10px; } 
+//         }
+//     }
+    
+//     @include respond-to('desktops and up') {
+//         .img {
+//             width: 15px;// @media (min-width: 992px) { #testofbreakpoints .img { width: 15px; } 
+//         }
+//     }
+    
+//     @include respond-to('grid large') {
+//         .img {
+//             width: 20px;// @media (min-width: 768px) { #testofbreakpoints .img { width: 20px; } }
+//         }
+//     }
+    
+//     @include respond-to('large') {
+//         .img {
+//             width: 25px;// @media (min-width: 1200px) { #testofbreakpoints .img { width: 25px; } }
+//         }
+//     }
+// }

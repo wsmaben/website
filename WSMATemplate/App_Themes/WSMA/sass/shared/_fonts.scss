@@ -1,0 +1,128 @@
+/* ==========================================================================
+   BASE 
+   ========================================================================== */
+/* Defaults for HTML elements */
+h1, 
+.h1, 
+.PageTitle {
+    font-size: $font-size-h1;
+    line-height: 42px;
+    margin:.3em 0;
+}
+
+/* .PanelTitle <span> Title of a StandardPanel - Used inside .PanelHead */
+/* h2s are styled in the same way */
+h2, 
+.h2, 
+.PanelTitle {
+    font-size: $font-size-h2;
+    line-height: 38px;
+}
+
+h2, 
+.h2, 
+div.PanelTitle {
+    border-bottom: 1px $border-style $border-color;
+    margin: .2em 0;
+}
+
+h3, 
+.h3, 
+.SectionTitle {
+    font-size: $font-size-h3;
+    font-weight: 300!important;
+    line-height: 25px;  
+    margin: .1em 0;
+}
+
+h4, 
+.h4, 
+.SectionLabel {
+    font-size: $font-size-h4;
+    line-height: 21px;
+}
+
+h5, 
+.h5, 
+.SectionLabelSmaller
+.expander-body > .h1 {
+    font-size: $font-size-h5;
+    display: block;
+    margin: .2em 0 .2em 0;
+    padding-left: 0;
+    font-weight: 300!important;
+    line-height: 20px;
+}
+
+h6,
+.h6 {
+    font-weight: 300!important;
+    line-height: 18px;
+}
+
+h1, h2, h3, h5, h6,
+h1, .h2, .h3, .h5, .h6,
+.PageTitle, .PanelTitle, .SectionTitle, .SectionLabel, .SectionLabelSmaller {
+    /*bringing boldness back to headers and the strong element*/
+    font-weight:300; 
+}
+
+h4, strong, .h4 {
+    font-weight: 500;
+}
+
+abbr,acronym {
+    /*indicating to users that more info is available */
+    border-bottom:1px dotted #000;
+    cursor:help;
+} 
+
+em {
+    /*bringing italics back to the em element*/
+    font-style:italic;
+}
+
+blockquote,ul,ol,dl {
+    /*giving blockquotes and lists room to breath*/
+    margin:1em;
+}
+
+// blockquote {
+    
+// }
+
+ol,ul,dl {
+    /*bringing lists on to the page with breathing room */
+    margin-left:1.5em;
+    padding-left: 0em;
+}
+
+ol li {
+    /*giving OL's LIs generated numbers*/
+    list-style: decimal outside;	
+}
+
+ul li {
+    /*giving UL's LIs generated disc markers*/
+    list-style: disc outside;
+    
+}
+
+dl dd {
+    /*giving UL's LIs generated numbers*/
+    margin-left:1em;
+}
+
+p,fieldset,table,pre {
+    /*so things don't run into each other*/
+    margin-bottom:0.1em;
+}
+
+/* disabled links */
+a.aspNetDisabled {
+    &, &:hover, &:focus, &:active, &:visited {
+        color: $link-color-disabled;
+        text-decoration: none;
+        cursor: default;
+    }
+}
