@@ -3,20 +3,20 @@
    <head>
       <meta charset="utf-8" />
       <title>Young Physician Section</title>
-      <!-- !CSS ********************************************************************************* -->
+      <!-- !CSS ************************************************************************* -->
       <link type="text/css" rel="stylesheet" href="/WSMATemplate/App_Themes/WSMA/css/10-UltraWave.css" />
       <link type="text/css" rel="stylesheet" href="/WSMATemplate/App_Themes/WSMA/css/99-WSMA.css" />
       <link type="text/css" rel="stylesheet" href="/WSMATemplate/App_Themes/WSMA/css/elegant-icons.css" />
       <link type="text/css" rel="stylesheet" href="/WSMATemplate/App_Themes/WSMA/css/zzCustom.css" />
       <link type="text/css" rel="stylesheet" href="/WSMATemplate/App_Themes/WSMA/css/99-WSMA_GBR_Responsive.css" />
-      <!-- !JavaScript ********************************************************************************* -->
+      <!-- !JavaScript ****************************************************************** -->
       <script src="https://wsma.org/AsiCommon/scripts/Asi.js"></script>
       <script src="https://wsma.org/AsiCommon/Scripts/Asi.Web.js"></script>
       <script src="https://wsma.org/AsiCommon/Scripts/Jquery/jquery-migrate-3.0.1.min.js"></script>
       <script src="https://wsma.org/AsiCommon/Scripts/Jquery/jquery-ui.custom.min.js"></script>
       <script src="https://wsma.org/AsiCommon/Scripts/Jquery/Jquery.min.js"></script>
       <script src="https://wsma.org/AsiCommon/Scripts/Modernizr/Modernizr.min.js"></script>
-      <!-- !META ******************************************************************************-->
+      <!-- !META *************************************************************************-->
       <!-- Young Physician Section -->
       <!-- !Description:  -->
       <!-- !Keywords:  -->
@@ -940,7 +940,8 @@
                   </mask>
                </defs>
                <g class="cls-2">
-                  <image width="650" height="314" xlink:href="/images/Secondary%20Banners/2018-10wsma_am-299_650x314.jpg"></image>
+                    <!-- TODO: remove xlink from SVG -->
+          <image width="650" height="314" xlink:href="/images/Secondary%20Banners/2018-10wsma_am-299_650x314.jpg"></image>
                </g>
             </svg>
             <img alt="" width="650" height="314" xlink:href="/images/Secondary%20Banners/2018-10wsma_am-299_650x314.jpg" />
@@ -954,8 +955,7 @@
          jQuery(".hero2banner").appendTo(".hero2after");
          jQuery(".secondaryHero").appendTo("#ctl01_BreadCrumb");
       </script>
-      <!-- !iPART - Content HTML *************************************************** -->
-      <!-- !Accordion Script -->
+     <!-- !Accordion Script - iPART - Content HTML *************************************************** -->
       <script>
          jQuery(document).ready(function () {
             jQuery("button.btnExpand").click(function () {
@@ -985,6 +985,6 @@
          <a href="[@]WSMA/Resources/Physician_Leadership/Physician_Leadership_Course/Physician_Leadership_Course.aspx">Physician Leadership Course</a>
          <a href="[@]WSMA/Events/LDC/Leadership_Development_Conference.aspx">Leadership Development Conference</a>
       </div>
-      <!-- !HTML FOOTER ********************************************************************************************* -->
+      <!-- !HTML FOOTER ***************************************************************** -->
    </body>
 </html>

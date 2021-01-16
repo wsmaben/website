@@ -9,12 +9,15 @@
    &:after {
       width: 25%;
    }
+
    @include dottedBoxCenter(lighten($color-neutral, 25%));
    @include dottedBoxTop(lighten($color-neutral, 25%));
    @include underlinedTitles($color-secondary-b, 2px, 30%);
 }
+
 .Spotlight {
    margin-bottom: 20px;
+
    p {
       @include dottedBoxCenter(lighten($color-neutral, 25%));
       padding: 3px 20px;
@@ -22,9 +25,11 @@
       position: relative;
       @include dottedBoxBottom(lighten($color-neutral, 25%));
    }
+
    a {
       text-decoration: none;
    }
+
    img {
       margin-bottom: 15px;
    }
@@ -41,12 +46,15 @@
    &:after {
       width: 25%;
    }
+
    @include dottedBoxCenter(lighten($color-neutral, 25%));
    @include dottedBoxTop(lighten($color-neutral, 25%));
    @include underlinedTitles($color-secondary-b, 2px, 30%);
 }
+
 .MembershipBox {
    margin-bottom: 20px;
+
    p {
       @include dottedBoxCenter(lighten($color-neutral, 25%));
       padding: 3px 20px;
@@ -54,9 +62,11 @@
       position: relative;
       @include dottedBoxBottom(lighten($color-neutral, 25%));
    }
+
    a {
       text-decoration: none;
    }
+
    img {
       margin-bottom: 15px;
    }

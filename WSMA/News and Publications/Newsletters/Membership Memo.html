@@ -3,19 +3,19 @@
    <head>
       <meta charset="utf-8" />
       <title>Membership Memo</title>
-  <!-- !CSS ********************************************************************************* --><link type="text/css" rel="stylesheet" href="/WSMATemplate/App_Themes/WSMA/css/10-UltraWave.css" />
+  <!-- !CSS ************************************************************************* --><link type="text/css" rel="stylesheet" href="/WSMATemplate/App_Themes/WSMA/css/10-UltraWave.css" />
   <link type="text/css" rel="stylesheet" href="/WSMATemplate/App_Themes/WSMA/css/99-WSMA.css" />
   <link type="text/css" rel="stylesheet" href="/WSMATemplate/App_Themes/WSMA/css/elegant-icons.css" />
   <link type="text/css" rel="stylesheet" href="/WSMATemplate/App_Themes/WSMA/css/zzCustom.css" />
   <link type="text/css" rel="stylesheet" href="/WSMATemplate/App_Themes/WSMA/css/99-WSMA_GBR_Responsive.css" />
-        <!-- !JavaScript ********************************************************************************* -->
+        <!-- !JavaScript ****************************************************************** -->
   <script src="https://wsma.org/AsiCommon/scripts/Asi.js"></script>
   <script src="https://wsma.org/AsiCommon/Scripts/Asi.Web.js"></script>
   <script src="https://wsma.org/AsiCommon/Scripts/Jquery/jquery-migrate-3.0.1.min.js"></script>
   <script src="https://wsma.org/AsiCommon/Scripts/Jquery/jquery-ui.custom.min.js"></script>
   <script src="https://wsma.org/AsiCommon/Scripts/Jquery/Jquery.min.js"></script>
   <script src="https://wsma.org/AsiCommon/Scripts/Modernizr/Modernizr.min.js"></script>
-      <!-- !META ******************************************************************************-->
+      <!-- !META *************************************************************************-->
       <!-- WSMA Membership Memo -->
       <!-- !Description: WSMA's twice-monthly news bulletin for members. The Membership Memo is not available for subscription.-->
       <!-- !Keywords: membership, memo-->
@@ -58,7 +58,8 @@
                   </mask>
                </defs>
                <g class="cls-2">
-                  <image width="650" height="314" xlink:href="/images/Secondary%20Banners/Membership_Memo_650x314.jpg"></image>
+                    <!-- TODO: remove xlink from SVG -->
+          <image width="650" height="314" xlink:href="/images/Secondary%20Banners/Membership_Memo_650x314.jpg"></image>
                </g>
             </svg>
             <img
@@ -199,6 +200,6 @@ Results display style: NextPrevAndNumerica
             jQuery(this).append(htmlDecode(encoded));
          });
       </script>
-      <!-- !HTML FOOTER ********************************************************************************************* -->
+      <!-- !HTML FOOTER ***************************************************************** -->
    </body>
 </html>
