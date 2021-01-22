@@ -4,19 +4,19 @@
 
 // Mixins
 // -------------------------
-@mixin IconBackground($XPosition, $YPosition, $bgColor:transparent) {
-    background: $bgColor url($theme-icons-sprite-path) $XPosition $YPosition no-repeat!important; 
+@mixin IconBackground($XPosition, $YPosition, $bgColor: transparent) {
+   background: $bgColor url($theme-icons-sprite-path) $XPosition $YPosition
+      no-repeat !important;
 }
 
 // Functions
 // -------------------------
 @function GetBestContextualTextColor($color) {
-  @if (lightness($color) > 50) {
-    @return darken($color, 90);
-  } 
-  @else {
-    @return lighten($color, 90);
-  }
+   @if (lightness($color) > 50) {
+      @return darken($color, 90);
+   } @else {
+      @return lighten($color, 90);
+   }
 }
 
 /* Class used to contain the various pieces of the master page */
@@ -24,150 +24,154 @@
 .header-container,
 .SliderPage1,
 .carousel-link {
-    @if $view-type == Desktop {
-        width: $container-md;
-    }
-    @else {
-        max-width: $container-lg;
-        .no-mqs & {
-            min-width: $container-md;
-        }
-    }
-    @include container-fixed();
-    a {
-        text-decoration: none;
-    }
+   @if $view-type == Desktop {
+      width: $container-md;
+   } @else {
+      max-width: $container-lg;
+      .no-mqs & {
+         min-width: $container-md;
+      }
+   }
+   @include container-fixed();
+   a {
+      text-decoration: none;
+   }
 }
 
-.container, 
+.container,
 .body-container {
-    @include clearfix();
+   @include clearfix();
 }
 
 /* handle secondary column layout */
 .has-secondary-col {
-    @include respond-to('desktops and up') {
-        .col-primary { width: 76%; }
-        .col-secondary { width: 22%; }
-        
-        &.col-on-right {
-            .col-primary { 
-                float: left;
-                margin-right: 2%; 
-            }
+   @include respond-to("desktops and up") {
+      .col-primary {
+         width: 76%;
+      }
+      .col-secondary {
+         width: 22%;
+      }
 
-            .col-secondary { 
-                float: right;
-                //position: sticky;
-                //top: 50px;
-             }
-        }
+      &.col-on-right {
+         .col-primary {
+            float: left;
+            margin-right: 2%;
+         }
 
-        &.col-on-left {
-            .col-primary { 
-                float: right; 
-                margin-left: 2%;
-            }
+         .col-secondary {
+            float: right;
+            //position: sticky;
+            //top: 50px;
+         }
+      }
 
-            .col-secondary { float: left; }
-        }
-    }
+      &.col-on-left {
+         .col-primary {
+            float: right;
+            margin-left: 2%;
+         }
+
+         .col-secondary {
+            float: left;
+         }
+      }
+   }
 }
 
 /* Header
    ========================================================================== */
 /**
  * The following declarations are required to reposition the search bar and
- * Sign In/Out link at different sizes via appendAround 
+ * Sign In/Out link at different sizes via appendAround
  */
 .search-container,
 .auth-link-container {
-    display: block;
+   display: block;
 
-    @include respond-to('tablets and up') {
-        display: none;
-    }
+   @include respond-to("tablets and up") {
+      display: none;
+   }
 }
 
 .search-container-sm,
 .auth-link-container-sm {
-    display: none !important;
+   display: none !important;
 
-    @include respond-to('tablets and up') {
-        display: inline-block !important;
-    }
+   @include respond-to("tablets and up") {
+      display: inline-block !important;
+   }
 }
 
 /* Template Manager  - Reset styles to prevent section overlap */
 .TemplateManagerArea {
-    .header-top-container, .header-bottom-container {
-        position:static;
-        clear:both;
-    }
+   .header-top-container,
+   .header-bottom-container {
+      position: static;
+      clear: both;
+   }
 }
-/* Theme family has primary nav within header-bottom-container so this 
+/* Theme family has primary nav within header-bottom-container so this
    container's z-index needs to be changed for the same as the primary nav's.*/
-.header-bottom-container{
-    z-index: $zindex-navbar!important;
+.header-bottom-container {
+   z-index: $zindex-navbar !important;
 }
 
 /* This applies to the area behind the header logo and auxiliary navigation */
 #masterHeaderBackground,
 .header {
-    border-bottom: none;
+   border-bottom: none;
 }
 
 .navbar-collapse {
-    clear: both;
+   clear: both;
 
-    @include respond-to('grid small') {
-        /* expand to the full width of the page */
-        margin-left: -($grid-gutter-width/2);
-        margin-right: -($grid-gutter-width/2);
-        margin-top: 65px;
-    }
+   @include respond-to("grid small") {
+      /* expand to the full width of the page */
+      margin-left: -($grid-gutter-width/2);
+      margin-right: -($grid-gutter-width/2);
+      margin-top: 65px;
+   }
 
-    @include respond-to('grid large') { 
-        clear: right; 
-    }
+   @include respond-to("grid large") {
+      clear: right;
+   }
 }
 
 .header-top-container {
-    @include respond-to('grid large') { 
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 666;
-        background: $color-white;
-    }
+   @include respond-to("grid large") {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 666;
+      background: $color-white;
+   }
 }
 
-
-
 .header-logo-container {
-    float: left;
-    // @include respond-to('grid small') { 
-    //     visibility: hidden;
-    // }
-    // margin: 0.5em 0;
+   float: left;
+   // @include respond-to('grid small') {
+   //     visibility: hidden;
+   // }
+   // margin: 0.5em 0;
 }
 
 .header-social {
-    @include respond-to('smartphones and down') {
-        display: none !important;
-    }
+   @include respond-to("smartphones and down") {
+      display: none !important;
+   }
 
-    a {
-        text-decoration: none;
-    }
+   a {
+      text-decoration: none;
+   }
 }
 
 /* These styles apply to the auxiliary and footer navigation */
 .NavigationUnorderedList {
-    padding-left: 0;
-    margin: 0;
-    display: inline-block;
+   padding-left: 0;
+   margin: 0;
+   display: inline-block;
 }
 
 // .NavigationListItem {
@@ -176,203 +180,204 @@
 //     margin-left: 0;
 // }
 .NavigationLink {
-    padding-left: ($navbar-padding-horizontal / 2);
-    padding-right: ($navbar-padding-horizontal / 2);
-    white-space: nowrap;
+   padding-left: ($navbar-padding-horizontal / 2);
+   padding-right: ($navbar-padding-horizontal / 2);
+   white-space: nowrap;
 }
 .ste-section {
-    @include respond-to('smartphones and down') {
-        display: none !important;
-    }
+   @include respond-to("smartphones and down") {
+      display: none !important;
+   }
 }
 
 /* Main
    ========================================================================== */
-   
+
 #masterContentArea {
-    //margin-top: 4px;
-    @include respond-to('grid small') {
-        margin-top: 20px;
-    }
+   //margin-top: 4px;
+   @include respond-to("grid small") {
+      margin-top: 20px;
+   }
 }
 
 /* This applies to the breadcrumb area */
 .breadcrumb {
-    float: none;
-    display: inline;
-    line-height: 33px;
+   float: none;
+   display: inline;
+   line-height: 33px;
 }
 
 /* Homepage Full Width areas */
 .Wrapper-FullWidth {
-    
-    #masterContentArea.container {
-        max-width: 100%;
-        padding: 0;
-    }
-    #masterContentArea .container-inner {
-        max-width: 1170px;
-        padding-left: 15px;
-        padding-right: 15px;
-        margin: 0 auto;
-    }
+   #masterContentArea.container {
+      max-width: 100%;
+      padding: 0;
+   }
+   #masterContentArea .container-inner {
+      max-width: 1170px;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin: 0 auto;
+   }
 }
 
-.Wrapper-HomePage {    
-    .FullWidthArea-StyleBg1,
-    .FullWidthArea-StyleBg2,
-    .FullWidthArea-StyleBg3,
-    .FullWidthArea-StyleBg4,
-    .FullWidthArea-StyleBg5 {
-        padding: 50px 1%;
-        //min-height: 450px;
-    }
-    @include respond-to('small') {
-        .FullWidthArea-StyleBg1,
-        .FullWidthArea-StyleBg2,
-        .FullWidthArea-StyleBg3,
-        .FullWidthArea-StyleBg4,
-        .FullWidthArea-StyleBg5 {
-            padding: 20px 1%;
-        }
-    }
-    /* Homepage logo and banner differences */
-    .header-top-container {
-        @include respond-to('grid large') { 
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 666;
-            background: transparent;
-        }
-    }
-    #masterHeaderImage {
-        @include respond-to('grid large') { 
-            // margin-top: 40px;
-            svg {
-                .cls-1 {
-                    fill: none;
-                    stroke: #fff;
-                    stroke-miterlimit: 3.86;
-                    //stroke-width: 0.36px;
-                }
-            
-                .cls-2 {
-                    fill: #fff;
-                }
-            
-                .cls-3 {
-                    fill: $color-wsma-sun;
-                }
+.Wrapper-HomePage {
+   .FullWidthArea-StyleBg1,
+   .FullWidthArea-StyleBg2,
+   .FullWidthArea-StyleBg3,
+   .FullWidthArea-StyleBg4,
+   .FullWidthArea-StyleBg5 {
+      padding: 50px 1%;
+      //min-height: 450px;
+   }
+   @include respond-to("small") {
+      .FullWidthArea-StyleBg1,
+      .FullWidthArea-StyleBg2,
+      .FullWidthArea-StyleBg3,
+      .FullWidthArea-StyleBg4,
+      .FullWidthArea-StyleBg5 {
+         padding: 20px 1%;
+      }
+   }
+   /* Homepage logo and banner differences */
+   .header-top-container {
+      @include respond-to("grid large") {
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         z-index: 666;
+         background: transparent;
+      }
+   }
+   #masterHeaderImage {
+      @include respond-to("grid large") {
+         // margin-top: 40px;
+         svg {
+            .cls-1 {
+               fill: none;
+               stroke: #fff;
+               stroke-miterlimit: 3.86;
+               //stroke-width: 0.36px;
             }
-        }
-    }
+
+            .cls-2 {
+               fill: #fff;
+            }
+
+            .cls-3 {
+               fill: $color-wsma-sun;
+            }
+         }
+      }
+   }
 }
 
 /***** Proxy Panel Styling *****/
 /* This applies to the on behalf of (proxy) area */
 .obo-container {
-    float: right;
+   float: right;
 }
 .obo-panel {
-    line-height: 2.4em;
-    white-space: nowrap;
-    padding-right: 5px;
-    padding-left: 5px;
-    margin-bottom: 10px;
+   line-height: 2.4em;
+   white-space: nowrap;
+   padding-right: 5px;
+   padding-left: 5px;
+   margin-bottom: 10px;
 
-    &.on {
-        padding-left: 2em;
-        padding-right: 2em;
-    }
-    .account-menu & {
-        /* within the account area dropdown make the padding match the other items*/
-        padding: 3px 10px;
-    }
+   &.on {
+      padding-left: 2em;
+      padding-right: 2em;
+   }
+   .account-menu & {
+      /* within the account area dropdown make the padding match the other items*/
+      padding: 3px 10px;
+   }
 }
 .obo-label,
 .obo-actions {
-    display: inline-block;
+   display: inline-block;
 }
 .obo-label {
-    font-weight: bold;
-    
-    span:after { content: ':'; }
+   font-weight: bold;
+
+   span:after {
+      content: ":";
+   }
 }
 
 /* This applies to the button area at the bottom of the page (e.g., Save, Cancel) */
 .CommandBar {
-    margin: .5em 0;
+   margin: 0.5em 0;
 }
 
-.backToTop {     
-    display: block;    
-    font-size: 0px;
-    color: transparent;
-    bottom: 50px;
-    position: fixed;
-    right: 10px;
-    margin-right: 10px;
-    z-index: 1;
-    @include IconBackground(-2px, 0);
-    @include size(45px,45px);
-    @include respond-to('tablets and down') {
-        display: none;
-    }
+.backToTop {
+   display: block;
+   font-size: 0px;
+   color: transparent;
+   bottom: 50px;
+   position: fixed;
+   right: 10px;
+   margin-right: 10px;
+   z-index: 1;
+   @include IconBackground(-2px, 0);
+   @include size(45px, 45px);
+   @include respond-to("tablets and down") {
+      display: none;
+   }
 }
 
 /* Sticky Footer
    ========================================================================== */
 /**
  * Responsive sticky footer.
- * See http://www.joshrcook.com/a-responsive-sticky-footer/ 
+ * See http://www.joshrcook.com/a-responsive-sticky-footer/
  */
 .wrapper {
-    //display: table;
-    width: 100%;
-    height: 100%;
+   //display: table;
+   width: 100%;
+   height: 100%;
 }
 
 .footer {
-    display: table-row;
-    height: 1px;
+   display: table-row;
+   height: 1px;
 }
 .footer-social {
-    @include respond-to('grid large') { 
-        text-align: left;
-    }
+   @include respond-to("grid large") {
+      text-align: left;
+   }
 }
-.footer-promo-container { 
-    @include respond-to('grid large') { 
-        text-align: right;
-    }
+.footer-promo-container {
+   @include respond-to("grid large") {
+      text-align: right;
+   }
 }
-.footer-promo-container .promo { 
-    background: none!important; 
-    box-shadow: none!important;
-    padding-bottom: 0!important;
-    .TextButton {
-        background: lighten($color-secondary-a,25%)!important;
-        color: $color-base;
-    }
+.footer-promo-container .promo {
+   background: none !important;
+   box-shadow: none !important;
+   padding-bottom: 0 !important;
+   .TextButton {
+      background: lighten($color-secondary-a, 25%) !important;
+      color: $color-base;
+   }
 }
 .footer-content-section {
-    padding: 0 15px 0 1em!important;
-    h2 {
-        font-size: 110%;
-    }    
+   padding: 0 15px 0 1em !important;
+   h2 {
+      font-size: 110%;
+   }
 }
 .footer-nav-copyright {
-    padding-top: 0!important;
+   padding-top: 0 !important;
 }
-.HelperText { color: $color-callout; }
-
+.HelperText {
+   color: $color-callout;
+}
 
 // Overwrite EasyEdit styles for legibility
 // -------------------------
 .EasyEditOn .EasyEditContent:hover,
 .EasyEditOn .WebPartZoneDesignTime:hover {
-    background: none;
+   background: none;
 }
-   
