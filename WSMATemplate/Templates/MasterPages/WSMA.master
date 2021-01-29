@@ -165,7 +165,7 @@
         </asp:UpdateProgress>
 
         <asp:Panel ID="masterWrapper" runat="server" CssClass="wrapper has-secondary-col col-on-right">
-            <a name="PageTop" class="sr-only">Top of the Page</a>
+            <!-- TODO: change name to id in link --><a name="PageTop" class="sr-only">Top of the Page</a>
             <header id="hd" class="header ClearFix navbar" data-height-offset="true">
                 <div class="header-top-container">
                     <div class="header-container">
