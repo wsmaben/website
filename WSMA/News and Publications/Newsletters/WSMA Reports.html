@@ -45,8 +45,7 @@
       <!-- <link rel="canonical" href="http://wsma.org/WSMA/News_Publications/Newsletters/WSMA_Reports.aspx" /> -->
    </head>
    <body>
-      <!-- !iPART - Content HTML *************************************************** -->
-      <!-- !Banner -->
+      <!-- !Banner - iPART - Content HTML *************************************************** -->
       <div class="secondaryHero row">
          <div class="hero2banner">
             <svg
@@ -102,7 +101,7 @@
                   <image
                      width="650"
                      height="314"
-                     href="/images/Secondary%20Banners/steth_open_book_650x314.jpg"
+                     href="/images/news-and-publications/newsletters/wsma-reports/banner-steth_open_book_650x314.jpg"
                   ></image>
                </g>
             </svg>
@@ -110,7 +109,7 @@
                alt="stethascope on an open book"
                width="650"
                height="314"
-               src="/images/Secondary%20Banners/steth_open_book_650x314.jpg"
+               src="/images/news-and-publications/newsletters/wsma-reports/banner-steth_open_book_650x314.jpg"
             />
          </div>
          <div class="col-md-6">
@@ -123,21 +122,20 @@
          jQuery(".hero2banner").appendTo(".hero2after");
          jQuery(".secondaryHero").appendTo("#ctl01_BreadCrumb");
       </script>
-      <!-- !iPART - Content HTML *************************************************** -->
+      <!-- !WSMA Reports - main - iPART - Content HTML *************************************************** -->
 
-      <h1>WSMA Reports</h1>
+      <h1 id="WSMAReports">WSMA Reports</h1>
       <p>
          WSMA Reports is published bimonthly as the official publication of the
          WSMA. Find select articles from the print publication below, as well as
          WSMA Reports “Extras”—additional, online-only material. Visit our
-         <a href="[@]WSMA/News_Publications/Publications/Publications.aspx"
-            >Publications page</a
-         >
+         <a href="[@]WSMA/News_Publications/Publications/Publications.aspx">
+            Publications page
+         </a>
          for archives, subscription and advertising information.
       </p>
       <!-- !iPART - Query Menu *************************************************** -->
       <!--
-iPart - Query Menu
 Name: TaggedListQuery
 Title: TaggedListQuery
 iPart CSS class: Hidden
@@ -219,7 +217,7 @@ Results display page: NextPrevAndNumeric
          // Add a header
          jQuery("#BaseDirectory").append("<h1>News Links</h1><br>");
 
-         // loop through the newss (object = news) and output the markup
+         // loop through the news (object = news) and output the markup
          for (i = 0; i < ar.length; i++) {
             var b = ar[i];
             var g = rtnMarkup(b);

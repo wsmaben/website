@@ -4,22 +4,54 @@
       <meta charset="utf-8" />
       <title>Google Site Search</title>
       <!-- !CSS ********************************************************************************* -->
-      <link type="text/css" rel="stylesheet" href="https://www.wsma.org/Assets/css/10-UltraWaveResponsive.css" />
-      <link type="text/css" rel="stylesheet" href="https://www.wsma.org/App_Themes/WSMA/99-WSMA.css" />
-      <link type="text/css" rel="stylesheet" href="https://www.wsma.org/App_Themes/WSMA/images/elegant-icons.css" />
-      <link type="text/css" rel="stylesheet" href="https://www.wsma.org/App_Themes/WSMA/zzCustom.css" />
+      <link
+         type="text/css"
+         rel="stylesheet"
+         href="https://www.wsma.org/Assets/css/10-UltraWaveResponsive.css"
+      />
+      <link
+         type="text/css"
+         rel="stylesheet"
+         href="https://www.wsma.org/App_Themes/WSMA/99-WSMA.css"
+      />
+      <link
+         type="text/css"
+         rel="stylesheet"
+         href="https://www.wsma.org/App_Themes/WSMA/images/elegant-icons.css"
+      />
+      <link
+         type="text/css"
+         rel="stylesheet"
+         href="https://www.wsma.org/App_Themes/WSMA/zzCustom.css"
+      />
       <!-- !META ********************************************************************************* -->
       <!-- Google Site Search -->
-	  <!-- !Access Settings: Everyone Full Control -->
+      <!-- !Access Settings: Everyone Full Control -->
       <!-- <link rel="canonical" href="http://wsma.org/Shared_Content/Google_Site_Search.aspx" /> -->
    </head>
    <body>
       <!-- !BODY ********************************************************************************* -->
-      
-	  <div>
-         <script async="" src="https://cse.google.com/cse.js?cx=002307641009370118343:lypa9ei2vmk"></script>
+
+      <div>
+         <script
+            async=""
+            src="https://cse.google.com/cse.js?cx=002307641009370118343:lypa9ei2vmk"
+            id="googleSearch"
+         ></script>
          <div class="gcse-search">&nbsp;</div>
       </div>
+      <!-- <script>
+         $(function () {
+            $("#googleSearch").focus();
+         });
+      </script> -->
+
+      <script>
+         window.onload = function () {
+            document.getElementById("Box1").focus();
+         };
+      </script>
+
       <!-- !iPART - ContentWebUserControl *************************************************** -->
       <!-- Name: New ContentHtml
 	The path to the web user control to display: ~/AsiCommon/Controls/ContentManagement/DisplayHtml.ascx
