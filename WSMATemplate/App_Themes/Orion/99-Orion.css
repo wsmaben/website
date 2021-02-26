@@ -1066,11 +1066,11 @@ input[type="checkbox"]:focus {
 /* Facebook sign in button */
 .TextButton.Facebook {
   color: #fff;
-  background-color: #3B5998;
-  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#3B5998), to(#37538d));
-  background-image: -webkit-linear-gradient(top, #3B5998 0%, #37538d 100%);
-  background-image: -moz-linear-gradient(top, #3B5998 0%, #37538d 100%);
-  background-image: linear-gradient(to bottom, #3B5998 0%, #37538d 100%);
+  background-color: #3b5998;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#3b5998), to(#37538d));
+  background-image: -webkit-linear-gradient(top, #3b5998 0%, #37538d 100%);
+  background-image: -moz-linear-gradient(top, #3b5998 0%, #37538d 100%);
+  background-image: linear-gradient(to bottom, #3b5998 0%, #37538d 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF3B5998', endColorstr='#FF37538D', GradientType=0);
   -webkit-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.05);
@@ -1092,18 +1092,18 @@ input[type="checkbox"]:focus {
   background-image: none;
 }
 .TextButton.Facebook[disabled], .TextButton.Facebook[disabled]:hover, .TextButton.Facebook[disabled]:focus, .TextButton.Facebook[disabled]:active, fieldset[disabled] .TextButton.Facebook, fieldset[disabled] .TextButton.Facebook:hover, fieldset[disabled] .TextButton.Facebook:focus, fieldset[disabled] .TextButton.Facebook:active, .TextButton.Facebook.aspNetDisabled, .TextButton.Facebook.aspNetDisabled:hover, .TextButton.Facebook.aspNetDisabled:focus, .TextButton.Facebook.aspNetDisabled:active {
-  background-color: #3B5998;
+  background-color: #3b5998;
   border-color: transparent;
 }
 
 /* LinkedIn sign in button */
 .SignInButton.LinkedIn {
   color: #fff;
-  background-color: #0077B5;
-  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#0077B5), to(#006da6));
-  background-image: -webkit-linear-gradient(top, #0077B5 0%, #006da6 100%);
-  background-image: -moz-linear-gradient(top, #0077B5 0%, #006da6 100%);
-  background-image: linear-gradient(to bottom, #0077B5 0%, #006da6 100%);
+  background-color: #0077b5;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#0077b5), to(#006da6));
+  background-image: -webkit-linear-gradient(top, #0077b5 0%, #006da6 100%);
+  background-image: -moz-linear-gradient(top, #0077b5 0%, #006da6 100%);
+  background-image: linear-gradient(to bottom, #0077b5 0%, #006da6 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0077B5', endColorstr='#FF006DA6', GradientType=0);
   -webkit-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.05);
@@ -1125,7 +1125,7 @@ input[type="checkbox"]:focus {
   background-image: none;
 }
 .SignInButton.LinkedIn[disabled], .SignInButton.LinkedIn[disabled]:hover, .SignInButton.LinkedIn[disabled]:focus, .SignInButton.LinkedIn[disabled]:active, fieldset[disabled] .SignInButton.LinkedIn, fieldset[disabled] .SignInButton.LinkedIn:hover, fieldset[disabled] .SignInButton.LinkedIn:focus, fieldset[disabled] .SignInButton.LinkedIn:active, .SignInButton.LinkedIn.aspNetDisabled, .SignInButton.LinkedIn.aspNetDisabled:hover, .SignInButton.LinkedIn.aspNetDisabled:focus, .SignInButton.LinkedIn.aspNetDisabled:active {
-  background-color: #0077B5;
+  background-color: #0077b5;
   border-color: transparent;
 }
 
@@ -1364,7 +1364,7 @@ h2 {
 }
 
 .bg-img-tiger-tall {
-  background-color: #04080B;
+  background-color: #04080b;
   background-image: url("../../images/ImageLibrary/tiger-tall.jpg");
   background-position: center center;
 }
@@ -2413,7 +2413,7 @@ a.riDown, a.riUp {
   padding: 2em;
 }
 .EventSummary .PhotoArea img {
-  border: 1px solid #CCC !important;
+  border: 1px solid #ccc !important;
 }
 .EventSummary .Description {
   padding: 0 2em 2em;
@@ -2874,10 +2874,10 @@ a.riDown, a.riUp {
 
 /* Goals: Total Members, Retained and New Active (orange) – Sea foam #CBCABA */
 .AltBgColor6 > .panel {
-  background-color: #6BCABA;
+  background-color: #6bcaba;
 }
 .AltBgColor6 > .panel.panel-border {
-  border-color: #6BCABA;
+  border-color: #6bcaba;
 }
 
 /* 
@@ -2926,20 +2926,20 @@ Foundation (purple) – Mountain #330072
   border-color: #0068A5;
 }
 
-/* Sand Color #CC9F53 */
+/* Sand Color #cc9f53 */
 .AltBgColor12 > .panel {
-  background-color: #CC9F53;
+  background-color: #cc9f53;
 }
 .AltBgColor12 > .panel.panel-border {
-  border-color: #CC9F53;
+  border-color: #cc9f53;
 }
 
-/* Sun Color #F0D283 */
+/* Sun Color #f0d283 */
 .AltBgColor13 > .panel {
-  background-color: #F0D283;
+  background-color: #f0d283;
 }
 .AltBgColor13 > .panel.panel-border {
-  border-color: #F0D283;
+  border-color: #f0d283;
 }
 
 /* Stone-A Color #BFB7B0 */

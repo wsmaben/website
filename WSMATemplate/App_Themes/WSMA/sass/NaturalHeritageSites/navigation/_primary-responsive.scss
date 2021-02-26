@@ -279,7 +279,7 @@
             letter-spacing: $navbar-default-link-letter-spacing;
             @include respond-to('grid large') {
                             .Wrapper-HomePage & {
-                    color: #313E48;
+                    color: #313e48;
                 }
             }
             @include respond-to('tablets and down') {

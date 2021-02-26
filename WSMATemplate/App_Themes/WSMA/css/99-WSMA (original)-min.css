@@ -380,18 +380,10 @@ html:not(.t-safari) .RadUpload .ruButton, html:not(.t-safari) .ruButton, html:no
 /* Button styles for all browsers */
 .btn, .TextButton, .ruButton {
   font-size: 18px !important;
-  -webkit-transition: all 0.2s ease-in-out !important;
-  -o-transition: all 0.2s ease-in-out !important;
   transition: all 0.2s ease-in-out !important;
   margin: 0;
-  -webkit-transform: scale(0.94);
-  -ms-transform: scale(0.94);
-  -o-transform: scale(0.94);
   transform: scale(0.94); }
   .btn:hover, .btn:focus, .TextButton:hover, .TextButton:focus, .ruButton:hover, .ruButton:focus {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
     transform: scale(1); }
 
 /* Button styles for Safari only */
@@ -468,10 +460,7 @@ html.t-safari .RadUpload .ruButton, html.t-safari .ruButton, html.t-safari .ruFi
     margin-bottom: 60px; }
 
 .row.row-eq-height {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: -webkit-inline-box;
-  display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap; }
   .row.row-eq-height > div {
@@ -496,6 +485,7 @@ html.t-safari .RadUpload .ruButton, html.t-safari .ruButton, html.t-safari .ruFi
 .no-mqs .TestimonialArea {
   width: 70%; }
 .TestimonialArea img {
+  -o-object-fit: cover;
   object-fit: cover;
   width: 150px;
   height: 150px !important;
@@ -684,6 +674,7 @@ h2, .h2, .PanelHead.Distinguish,
     .body-container .hero2banner svg .cls-1 {
       fill: url(#linear-gradient); }
     .body-container .hero2banner svg .cls-2 {
+      -webkit-mask: url(#mask);
       mask: url(#mask); }
   .body-container .hero2after {
     display: block;
@@ -724,6 +715,7 @@ h2, .h2, .PanelHead.Distinguish,
   .no-mqs .body-container .hero2banner svg .cls-1 {
     fill: url(#linear-gradient); }
   .no-mqs .body-container .hero2banner svg .cls-2 {
+    -webkit-mask: url(#mask);
     mask: url(#mask); }
 .no-mqs .body-container .hero2after {
   display: block;
@@ -759,6 +751,7 @@ h2, .h2, .PanelHead.Distinguish,
       color: white; }
 
 .hero2banner img {
+  -webkit-mask: url(#mask);
   mask: url(#mask); }
 
 /***********************************
@@ -1148,9 +1141,6 @@ ol {
   max-width: 300px;
   position: absolute;
   background-repeat: no-repeat;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
   background-size: contain;
   width: 60%;
   height: 60px;
@@ -1629,9 +1619,6 @@ ol {
     background-position: 0 -26px; }
   .RadMenu.RadMenu_WSMA .rmExpanded > .rmLink > .rmToggle > .rmIcon,
   .RadMenu.RadMenu_WSMA .rmExpanded > .rmToggle > .rmIcon {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
     transform: rotate(180deg); }
 
 /*2nd and 3rd level navigation (dropdown menus)*/
@@ -2118,7 +2105,6 @@ ol {
     font-size: 78%;
     line-height: 1;
     padding: 0 2px 1px;
-    -webkit-box-shadow: -1px 1px 0 rgba(34, 34, 34, 0.6);
     box-shadow: -1px 1px 0 rgba(34, 34, 34, 0.6); }
     .nav-auxiliary .nav-aux-button.nav-aux-cart .cartCenter span:before, .nav-auxiliary .nav-aux-button.nav-aux-cart .cartCenter span:after {
       /* Clear the parentheses put around the item count by default */
@@ -2208,10 +2194,7 @@ a.ste-toggle, a.ste-toggle:hover, a.ste-toggle:focus {
         background-color: transparent;
         border: none;
         margin: 0 0 0 -5px;
-        -webkit-transition: width;
-        -o-transition: width;
         transition: width;
-        -webkit-transition-duration: 1s;
         transition-duration: 1s; }
         .header-search .search-field:hover {
           cursor: pointer;
@@ -2230,10 +2213,7 @@ a.ste-toggle, a.ste-toggle:hover, a.ste-toggle:focus {
       background-color: transparent;
       border: none;
       margin: 0 0 0 -5px;
-      -webkit-transition: width;
-      -o-transition: width;
       transition: width;
-      -webkit-transition-duration: 1s;
       transition-duration: 1s; }
       .no-mqs .header-search .search-field:hover {
         cursor: pointer;
@@ -2306,8 +2286,6 @@ a.ste-toggle, a.ste-toggle:hover, a.ste-toggle:focus {
   vertical-align: top;
   opacity: 0.7;
   filter: alpha(opacity=70);
-  -webkit-transition: opacity 0.2s ease-out;
-  -o-transition: opacity 0.2s ease-out;
   transition: opacity 0.2s ease-out; }
   .SocialSprite.LargeButtons {
     width: 32px;
@@ -2389,10 +2367,7 @@ input[type="color"],
   color: #555555;
   border: 1px solid #ccc;
   border-radius: 0px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
   transition: border linear 0.2s, box-shadow linear 0.2s; }
   select:focus,
   textarea:focus,
@@ -2413,7 +2388,6 @@ input[type="color"],
   .uneditable-input:focus {
     border-color: #66afe9;
     outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
   select:-moz-placeholder,
   textarea:-moz-placeholder,
@@ -2505,17 +2479,13 @@ input[type="color"],
     line-height: 1.7;
     border: 1px solid #ccc;
     border-radius: 0px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-    -o-transition: border linear 0.2s, box-shadow linear 0.2s;
     transition: border linear 0.2s, box-shadow linear 0.2s; }
   .RadComboBox.RadComboBox_MetroTouch .rcbInputCell {
     padding: 0; }
   .RadComboBox.RadComboBox_MetroTouch .rcbFocused {
     border-color: #66afe9;
     outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
   .RadComboBox.RadComboBox_MetroTouch .rcbInput {
     height: 100%;
@@ -2552,7 +2522,6 @@ input[type="color"],
 #EventDescriptionDiv .ContentHtmlEditor {
   border: 1px solid #ccc;
   border-radius: 0px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
 #EventDescriptionDiv iframe, #EventDescriptionDiv td {
   background-color: transparent; }
@@ -2566,10 +2535,7 @@ input[type="color"],
   min-height: 39px;
   border-radius: 0px;
   border-color: #ccc;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
   transition: border linear 0.2s, box-shadow linear 0.2s;
   background-image: none; }
   .chosen-container-multi .chosen-choices li.search-field {
@@ -2582,7 +2548,6 @@ input[type="color"],
 .chosen-container-active .chosen-choices {
   border-color: #66afe9;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
 
 input[type="radio"],
@@ -2647,8 +2612,6 @@ input[type="checkbox"]:focus {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
-  -webkit-transition: background 0.2s ease-out;
-  -o-transition: background 0.2s ease-out;
   transition: background 0.2s ease-out; }
   .btn:focus,
   .TextButton:focus,
@@ -2690,7 +2653,6 @@ input[type="checkbox"]:focus {
   #masterHeaderActionArea a.active {
     outline: 0;
     background-image: none;
-    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
   .btn.disabled, .btn[disabled], fieldset[disabled] .btn, .btn.aspNetDisabled,
   .TextButton.disabled,
@@ -2711,7 +2673,6 @@ input[type="checkbox"]:focus {
     pointer-events: none;
     opacity: 0.55;
     filter: alpha(opacity=55);
-    -webkit-box-shadow: none;
     box-shadow: none; }
 
 /* default button */
@@ -3410,7 +3371,6 @@ input[type="checkbox"]:focus {
   border-color: #333; }
   .RadWindow.RadWindow_Metro .rwControlButtons a:focus {
     /* give the refresh, expand, close buttons an outline when focused */
-    -webkit-box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.7);
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.7);
     /* needed for IE9 compability */
     border-collapse: separate;
@@ -3976,7 +3936,6 @@ input[type="checkbox"]:focus {
 .CommunityCommentItem {
   background: #f2f2f2;
   border-left: 10px solid #ddd;
-  -webkit-box-shadow: 1px 1px 28px 3px #e3e3e3;
   box-shadow: 1px 1px 28px 3px #e3e3e3; }
 
 .CommunityWikiItem .CommunityRepeaterList .CommunityCommentItem {
@@ -3985,7 +3944,6 @@ input[type="checkbox"]:focus {
 /* For adding comments */
 .CommunityWikiReplyForm {
   background: #f2f2f2;
-  -webkit-box-shadow: 1px 1px 28px 3px #e3e3e3;
   box-shadow: 1px 1px 28px 3px #e3e3e3; }
 
 /*****************************************************/
@@ -4253,8 +4211,6 @@ h1.BigHeader, .h1.BigHeader {
 
 /* Use class FeatureActionLink on a link to call attention to it */
 a.FeatureActionLink {
-  -webkit-transition: all 0.2s ease 0;
-  -o-transition: all 0.2s ease 0;
   transition: all 0.2s ease 0;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 110%;
@@ -4288,8 +4244,6 @@ a.FeatureActionLink {
     text-align: center;
     padding-top: 0.4em; }
   .Spotlight a img {
-    -webkit-transition: opacity 0.2s;
-    -o-transition: opacity 0.2s;
     transition: opacity 0.2s; }
     .Spotlight a img:hover {
       opacity: 0.8;
@@ -4466,7 +4420,6 @@ a.FeatureActionLink {
   font-size: 125%; }
 
 .RelatedItemsHorizontalEffect li:hover {
-  -webkit-transform: scale(1.06);
   transform: scale(1.06);
   border-radius: 0;
   background-color: transparent; }
@@ -4778,5 +4731,3 @@ ul.RelatedItemsHorizontal li, .RelatedItemsHorizontal ul.rrItemsList li {
 
 .bg-evergreen {
   background-color: #004851; }
-
-/*# sourceMappingURL=99-WSMA.css.map */

@@ -1,4 +1,4 @@
-﻿<%@ Register TagPrefix="asi" TagName="PageNavR" Src="~/AsiCommon/Controls/Navigation/PageNavR.ascx" %>
+<%@ Register TagPrefix="asi" TagName="PageNavR" Src="~/AsiCommon/Controls/Navigation/PageNavR.ascx" %>
 <%@ Register TagPrefix="asi" TagName="SubNavigation" Src="~/AsiCommon/Controls/Navigation/SubNavigation.ascx" %>
 
 <asi:PageNavR runat="server" Skin="WSMA" EnableEmbeddedSkins="False" EnableMegaDropDownMenu="True"
@@ -194,7 +194,7 @@ EnableAutoScroll="False" ShowToggleHandle="True"/>
     <PartTitleStyle CssClass="TitleBar" Font-Bold="True" Font-Size="0.8em" ForeColor="White" />
     <PartChromeStyle BackColor="#F7F6F3" BorderColor="#80A3BD" Font-Names="Verdana" ForeColor="White" />
     <EmptyZoneTextStyle Font-Size="0.8em" />
-    <HeaderStyle ForeColor="#CCCCCC" HorizontalAlign="Center" />
+    <HeaderStyle ForeColor="#cccCCC" HorizontalAlign="Center" />
     <PartStyle Font-Size="0.8em" ForeColor="#333333" />
     <TitleBarVerbStyle Font-Underline="False" ForeColor="White" />
 </asiweb:AsiWebPartZone>

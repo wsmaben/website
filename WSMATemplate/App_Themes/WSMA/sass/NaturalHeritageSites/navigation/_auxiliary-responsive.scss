@@ -3,140 +3,145 @@
    ========================================================================== */
 
 .navbar-header {
-    float: right;
+   float: right;
 
-    > div,
-    > a,
-    .NavigationUnorderedList,
-    .NavigationLink {
-        display: block;
-        vertical-align: right;
-        color: $navbar-auxiliary-link-color;
-        .Wrapper-HomePage & {
-            color: #313E48;
-        }
-    }
-    @include respond-to('grid small') {
-        .NavigationUnorderedList {
-            display: none!important;
-        }
-    }
+   > div,
+   > a,
+   .NavigationUnorderedList,
+   .NavigationLink {
+      display: block;
+      vertical-align: right;
+      color: $navbar-auxiliary-link-color;
+      .Wrapper-HomePage & {
+         color: #313e48;
+      }
+   }
+   @include respond-to("grid small") {
+      .NavigationUnorderedList {
+         display: none !important;
+      }
+   }
 }
 
 .navbar-toggle {
-    @include vertical-align(39px, $navbar-top-height);
-    vertical-align:middle;
-    background-color: $navbar-default-toggle-active-bg; // by default, assign it the active bg color
-    border-color: $navbar-default-toggle-border-color;
-    border-radius: $border-radius-base;    
+   @include vertical-align(39px, $navbar-top-height);
+   vertical-align: middle;
+   background-color: $navbar-default-toggle-active-bg; // by default, assign it the active bg color
+   border-color: $navbar-default-toggle-border-color;
+   border-radius: $border-radius-base;
 
-    &.collapsed {
-        background-color: $navbar-default-toggle-bg; // use the regular bg color when it's collapsed
-    }
-    &:hover,
-    &:focus { background-color: $navbar-default-toggle-hover-bg; }
-    .icon-bar { background-color: $navbar-default-bg; }
+   &.collapsed {
+      background-color: $navbar-default-toggle-bg; // use the regular bg color when it's collapsed
+   }
+   &:hover,
+   &:focus {
+      background-color: $navbar-default-toggle-hover-bg;
+   }
+   .icon-bar {
+      background-color: $navbar-default-bg;
+   }
 }
 
 .header-container .nav-auxiliary {
-    .TextButton,
-    .navbar-toggle {
-        margin-left: $navbar-toggle-margin-left;
-    }
+   .TextButton,
+   .navbar-toggle {
+      margin-left: $navbar-toggle-margin-left;
+   }
 
-    .UtilityAuthentication a {
-        color: $navbar-auxiliary-link-color;
-        font-size: $navbar-auxiliary-font-size;
-        text-decoration: none;
-        font-weight:bold;
-        padding-top:5px;
-        &:hover, &:focus {
-            text-decoration: underline;
-        }
-    }
+   .UtilityAuthentication a {
+      color: $navbar-auxiliary-link-color;
+      font-size: $navbar-auxiliary-font-size;
+      text-decoration: none;
+      font-weight: bold;
+      padding-top: 5px;
+      &:hover,
+      &:focus {
+         text-decoration: underline;
+      }
+   }
 
-    @include respond-to('grid large') {
-        // .NavigationListItem, 
-        .header-social .SocialSprite,
-        .auth-link {
-            padding: 5px 20px 5px 0;
-            color: $navbar-auxiliary-link-color;
-            // margin-left: floor($navbar-padding-horizontal / 2);
-            .Wrapper-HomePage & {
-                color: #313e48;
+   @include respond-to("grid large") {
+      // .NavigationListItem,
+      .header-social .SocialSprite,
+      .auth-link {
+         padding: 5px 20px 5px 0;
+         color: $navbar-auxiliary-link-color;
+         // margin-left: floor($navbar-padding-horizontal / 2);
+         .Wrapper-HomePage & {
+            color: #313e48;
+         }
+      }
+      .NavigationListItem {
+         display: inline-flex;
+         color: $navbar-auxiliary-link-color;
+         //border-left: 1px solid $color-black;
+         .Wrapper-HomePage & {
+            color: #313e48;
+            //border-left: 1px solid white;
+         }
+         &.btn {
+            background-color: $color-wsma-seafoam;
+            font-size: 18px !important;
+            border: none;
+            .NavigationLink {
+               color: #fff;
             }
-        }
-        .NavigationListItem {
-            display: inline-flex;
-            color: $navbar-auxiliary-link-color;
-            //border-left: 1px solid $color-black;
-            .Wrapper-HomePage & {
-                color: #313e48;
-                //border-left: 1px solid white;
+         }
+      }
+      .auth-link-container-sm {
+         line-height: 2;
+         //padding-right: 20px;
+      }
+      .NavigationLink {
+         padding: 0 20px;
+      }
+   }
+   @include respond-to("tablets and down") {
+      // .NavigationListItem,
+      .header-social .SocialSprite,
+      .auth-link {
+         padding: 5px 7px 5px 0;
+         line-height: 2.1;
+         color: $navbar-auxiliary-link-color;
+         // margin-left: floor($navbar-padding-horizontal / 2);
+         .Wrapper-HomePage & {
+            color: #fff;
+         }
+      }
+      .NavigationListItem {
+         display: inline-flex;
+         color: $navbar-auxiliary-link-color;
+         //border-left: 1px solid $color-black;
+         .Wrapper-HomePage & {
+            color: #fff;
+            //border-left: 1px solid white;
+         }
+         &.btn {
+            background-color: $color-wsma-seafoam;
+            font-size: 85% !important;
+            border: none;
+            .NavigationLink {
+               color: #fff;
             }
-            &.btn {
-                background-color: $color-wsma-seafoam;
-                font-size: 18px!important;
-                border: none;
-                .NavigationLink {
-                    color: #fff;
-                }
-            }
-        }
-        .auth-link-container-sm {
-             line-height: 2.0;
-             //padding-right: 20px;
-        }
-        .NavigationLink {
-        padding: 0 20px;
-        }
-    }
-    @include respond-to('tablets and down') {
-        // .NavigationListItem, 
-        .header-social .SocialSprite,
-        .auth-link {
-            padding: 5px 7px 5px 0;
-            line-height: 2.1;
-            color: $navbar-auxiliary-link-color;
-            // margin-left: floor($navbar-padding-horizontal / 2);
-            .Wrapper-HomePage & {
-                color: #fff;
-            }
-        }
-        .NavigationListItem {
-            display: inline-flex;
-            color: $navbar-auxiliary-link-color;
-            //border-left: 1px solid $color-black;
-            .Wrapper-HomePage & {
-                color: #fff;
-                //border-left: 1px solid white;
-            }
-            &.btn {
-                background-color: $color-wsma-seafoam;
-                font-size: 85%!important;
-                border: none;
-                .NavigationLink {
-                    color: #fff;
-                }
-            }
-        }
-        .auth-link-container-sm {
-             line-height: 2.1;
-             //padding-right: 20px;
-        }
-        .NavigationLink {
-        padding: 0 7px;
-        }
-    }
+         }
+      }
+      .auth-link-container-sm {
+         line-height: 2.1;
+         //padding-right: 20px;
+      }
+      .NavigationLink {
+         padding: 0 7px;
+      }
+   }
 
-    @include respond-to('grid small') {      
-        margin-top:5px;
-    }
+   @include respond-to("grid small") {
+      margin-top: 5px;
+   }
 
-    .nav-image {
-        vertical-align: baseline;
-        padding-right: 8px;
-    }
+   .nav-image {
+      vertical-align: baseline;
+      padding-right: 8px;
+   }
 }
 
 /* Cart item count
@@ -144,251 +149,274 @@
 /* By default, put parentheses around the cart item count.
  * This is overwritten when the class "nav-aux-cart" is applied.
  */
- .cartCenter span {
-    &:before { content: '('; }
-    &:after { content: ')'; }
- }
+.cartCenter span {
+   &:before {
+      content: "(";
+   }
+   &:after {
+      content: ")";
+   }
+}
 
 /* Auxiliary toggle buttons
    ========================================================================== */
 /* Toggles that display on x-small screens to display the primary nav and search */
 .navbar-toggle {
-    float: none;
-    padding:5px;
+   float: none;
+   padding: 5px;
 
-    .icon-bar {
-        height: 3px;
-        border-radius: 0;
-        + .icon-bar {
-            margin-top: 5px;
-        }
-    }
-    .icon-search {
-        display: inline-block;
-        float: left;
-        background: transparent url($header-sprite-path) 0 -22px no-repeat;
-        @include size(22px, 19px); 
-        margin:0; /* this makes it line up properly with the hamburger */
-    }
+   .icon-bar {
+      height: 3px;
+      border-radius: 0;
+      + .icon-bar {
+         margin-top: 5px;
+      }
+   }
+   .icon-search {
+      display: inline-block;
+      float: left;
+      background: transparent url($header-sprite-path) 0 0px no-repeat;
+      @include size(22px, 19px);
+      margin: 0; /* this makes it line up properly with the hamburger */
+   }
 }
 
 /* Auxiliary button links
    ========================================================================== */
 /* These links are styled like the toggles (search & hamburger buttons) */
 .nav-auxiliary .nav-aux-button {
-        .NavigationLink {
-            /* This makes the link look like the toggle buttons */
-            background-color: $navbar-default-toggle-bg;
-            margin-left: $navbar-toggle-margin-left;
-            padding: 5px;
-            @include vertical-align(39px, $navbar-top-height);
-            border: 1px solid transparent;
-            border-radius: $border-radius-base;
-            
-            &:hover, &:focus {
-                background-color: $navbar-default-toggle-hover-bg;
-            }
-            &:active {
-                background-color: $navbar-default-toggle-active-bg;
-            }
-        }
-        &.NavigationListItem {
-            position:relative; /* this is required for the cart indicator placement */
-            //display: inline-block;
-        }
-        &.nav-aux-account .nav-text,
-        &.nav-aux-cart .nav-text {
-            /* hide the cart text on small devices */
-            display: inline-block;
-            white-space: nowrap;
-            float:left;
-            overflow: hidden;
-            @include size(22px, 19px);
-            padding-left: 22px;
-        }
-        &.nav-aux-account {   
-            .nav-text {      
-                background: transparent url($header-sprite-path) 0 -125px no-repeat;
-            }        
-            @include respond-to('grid large') {                   
-                .NavigationLink { 
-                    background: none;
-                    padding: 0;
+   .NavigationLink {
+      /* This makes the link look like the toggle buttons */
+      background-color: $navbar-default-toggle-bg;
+      margin-left: $navbar-toggle-margin-left;
+      padding: 5px;
+      @include vertical-align(39px, $navbar-top-height);
+      border: 1px solid transparent;
+      border-radius: $border-radius-base;
 
-                }
-                a:hover .nav-text, a:focus .nav-text {
-                    text-decoration: underline;
-                }
-                .nav-text {                
-                    color: $navbar-auxiliary-link-color;   
-                    padding: 0 0 0 30px;
-                    width: auto;
-                }
-            }
-        }
-        &.nav-aux-cart .nav-text {   
-            background: transparent url($header-sprite-path) 0 -75px no-repeat;
-        }
+      &:hover,
+      &:focus {
+         background-color: $navbar-default-toggle-hover-bg;
+      }
+      &:active {
+         background-color: $navbar-default-toggle-active-bg;
+      }
+   }
+   &.NavigationListItem {
+      position: relative; /* this is required for the cart indicator placement */
+      //display: inline-block;
+   }
+   &.nav-aux-account .nav-text,
+   &.nav-aux-cart .nav-text {
+      /* hide the cart text on small devices */
+      display: inline-block;
+      white-space: nowrap;
+      float: left;
+      overflow: hidden;
+      @include size(22px, 19px);
+      padding-left: 22px;
+   }
+   &.nav-aux-account {
+      .nav-text {
+         background: transparent url($header-sprite-path) 0 -125px no-repeat;
+      }
+      @include respond-to("grid large") {
+         .NavigationLink {
+            background: none;
+            padding: 0;
+         }
+         a:hover .nav-text,
+         a:focus .nav-text {
+            text-decoration: underline;
+         }
+         .nav-text {
+            color: $navbar-auxiliary-link-color;
+            padding: 0 0 0 30px;
+            width: auto;
+         }
+      }
+   }
+   &.nav-aux-cart .nav-text {
+      background: transparent url($header-sprite-path) 0 -75px no-repeat;
+   }
 
-        /* Cart Item Flag indicating how many items are in your cart */
-        &.nav-aux-cart {
-            .cartFull {                
-                /* left postion is padding plus placement */
-                @include badge-position($top: 1px, $left: (($navbar-padding-horizontal / 2))); 
-                line-height: $badge-line-height;
-                width: 1.6em;
-            }
+   /* Cart Item Flag indicating how many items are in your cart */
+   &.nav-aux-cart {
+      .cartFull {
+         /* left postion is padding plus placement */
+         @include badge-position(
+            $top: 1px,
+            $left: (
+               ($navbar-padding-horizontal / 2),
+            )
+         );
+         line-height: $badge-line-height;
+         width: 1.6em;
+      }
 
-            .cartCenter {
-                @include badge-style($cart-count-color, $cart-count-bg, 2px);
-                span:before, span:after { 
-                    /* Clear the parentheses put around the item count by default */
-                    content: none;
-                }
-            }
-        
-            @include respond-to('grid small') {            
-                .cartFull {
-                    /* This is the flag indicating how many items are in your cart */
-                    left: ($navbar-padding-horizontal / 2); /*($navbar-padding-horizontal + 9 + 5)*/
-                    top: 2px;
-                }
-                .cartCenter {
-                    background-color: $cart-count-xs-bg;
-                    color: $cart-count-xs-color;
-                }
-            }
-        }
-        
+      .cartCenter {
+         @include badge-style($cart-count-color, $cart-count-bg, 2px);
+         span:before,
+         span:after {
+            /* Clear the parentheses put around the item count by default */
+            content: none;
+         }
+      }
+
+      @include respond-to("grid small") {
+         .cartFull {
+            /* This is the flag indicating how many items are in your cart */
+            left: (
+               $navbar-padding-horizontal / 2
+            ); /*($navbar-padding-horizontal + 9 + 5)*/
+            top: 2px;
+         }
+         .cartCenter {
+            background-color: $cart-count-xs-bg;
+            color: $cart-count-xs-color;
+         }
+      }
+   }
 }
 
 // Utility Account Area
 // -------------------------
-.UtilityAccountArea {   
-    float:left;
-    margin-top:3px;
-    .account-toggle .nav-text{
-        vertical-align:middle;
-
-    }
+.UtilityAccountArea {
+   float: left;
+   margin-top: 3px;
+   .account-toggle .nav-text {
+      vertical-align: middle;
+   }
 }
-.UtilityNavigation .account-menu > li > a, 
-.UtilityNavigation .account-menu > li > a:hover, 
-.UtilityNavigation .account-menu > li > a:visited, 
+.UtilityNavigation .account-menu > li > a,
+.UtilityNavigation .account-menu > li > a:hover,
+.UtilityNavigation .account-menu > li > a:visited,
 .UtilityNavigation .account-menu > li > a:active {
-    color: $navbar-auxiliary-link-color;
+   color: $navbar-auxiliary-link-color;
 }
 .account-menu {
-    .profile-picture-wrapper img {
-        border-radius:0;
-        width:31px;
-    }
-    @include respond-to('grid small') {
-        margin-top:-8px       
-    }    
+   .profile-picture-wrapper img {
+      border-radius: 0;
+      width: 31px;
+   }
+   @include respond-to("grid small") {
+      margin-top: -8px;
+   }
 }
- 
+
 // Easy Edit & On Behalf of toggles
 // -------------------------
-a.ste-toggle, a.ste-toggle:hover, a.ste-toggle:focus {
+a.ste-toggle,
+a.ste-toggle:hover,
+a.ste-toggle:focus {
    background-color: rgba(255, 255, 255, 0.9);
    @include size(34px, 31px);
-   border-radius:0;
-   margin-left:-5px;
+   border-radius: 0;
+   margin-left: -5px;
 }
-.obo-toggle, .obo-toggle:hover, .obo-toggle:focus {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius:0;    
-    margin-top: 3px;
-    @include size(34px, 31px);
-    @include respond-to('grid large') {
-        margin-top: 2px;
-    }
-} 
-
-.obo-toggle.on, .ste-toggle.on {
-    background-color:$color-base;
+.obo-toggle,
+.obo-toggle:hover,
+.obo-toggle:focus {
+   background-color: rgba(255, 255, 255, 0.9);
+   border-radius: 0;
+   margin-top: 3px;
+   @include size(34px, 31px);
+   @include respond-to("grid large") {
+      margin-top: 2px;
+   }
 }
 
-.OnBehalfOfContainer { width:100%; } 
+.obo-toggle.on,
+.ste-toggle.on {
+   background-color: $color-base;
+}
+
+.OnBehalfOfContainer {
+   width: 100%;
+}
 
 .search-container-sm {
-    @include vertical-align(($input-height-base + 2), $navbar-top-height); // +2 to account for border
+   @include vertical-align(
+      ($input-height-base + 2),
+      $navbar-top-height
+   ); // +2 to account for border
 }
 
 .header-search {
-    padding: 20px ($grid-gutter-width / 2) $navbar-padding-vertical ($grid-gutter-width / 2);
-    > .header-search {
-        padding: 0; /* don't double the padding */
-    }
-    @include respond-to('grid large') {
-        padding: 0 15px;
-    }
-    /* Search field is used as toggle button *and* field on larger devices */
-    .search-field {
-        height:32px;
-        @include respond-to('grid small') {
-            width: 100%;
-            background-color: $color-white;
-        } 
-        @include respond-to('grid large') {
-            padding: 0 0 0 floor($navbar-padding-horizontal / 2);
-            @include size(25px,30px);                
-            padding-left: 34px !important;  
-            background-position: 7px -17px!important;
-           //  .Wrapper-HomePage & {
-//                 background-position: 7px 7px!important;
-//             }
-            background-color: transparent;
-            border: none;
-            margin: 0 0 0 -5px;
-            @include transition(width);
-            @include transition-duration(1s);
-            &:hover{
-                cursor:pointer;
-                background-color: $navbar-default-toggle-hover-bg;
-                background-position: 7px -17px!important;
-            }
-            &:focus{
-                background-color: $navbar-default-toggle-hover-bg;
-                background-position: 7px -17px!important;
-                width: 200px;
-            }
-            // .Wrapper-HomePage & {
-            //     background-color: $color-white;
-            // }
-        }  
-    }
-    
+   padding: 20px ($grid-gutter-width / 2) $navbar-padding-vertical
+      ($grid-gutter-width / 2);
+   > .header-search {
+      padding: 0; /* don't double the padding */
+   }
+   @include respond-to("grid large") {
+      padding: 0 15px;
+   }
+   /* Search field is used as toggle button *and* field on larger devices */
+   .search-field {
+      height: 32px;
+      @include respond-to("grid small") {
+         width: 100%;
+         background-color: $color-white;
+      }
+      @include respond-to("grid large") {
+         padding: 0 0 0 floor($navbar-padding-horizontal / 2);
+         @include size(25px, 30px);
+         padding-left: 34px !important;
+         background-position: 7px -17px !important;
+         //  .Wrapper-HomePage & {
+         //                 background-position: 7px 7px!important;
+         //             }
+         background-color: transparent;
+         border: none;
+         margin: 0 0 0 -5px;
+         @include transition(width);
+         @include transition-duration(1s);
+         &:hover {
+            cursor: pointer;
+            background-color: $navbar-default-toggle-hover-bg;
+            background-position: 7px -17px !important;
+         }
+         &:focus {
+            background-color: $navbar-default-toggle-hover-bg;
+            background-position: 7px -17px !important;
+            width: 200px;
+         }
+         // .Wrapper-HomePage & {
+         //     background-color: $color-white;
+         // }
+      }
+   }
 }
 
 /* Auxiliary/Primary switch
    ========================================================================== */
 /**
- * A class that allows a navigation to display in the primary nav on xs screens 
- * and the auxiliary nav on wider screens. 
- * To use this configure the nav item to not be hidden and also display in the 
- * auxiliary navigaiton item. 
+ * A class that allows a navigation to display in the primary nav on xs screens
+ * and the auxiliary nav on wider screens.
+ * To use this configure the nav item to not be hidden and also display in the
+ * auxiliary navigaiton item.
  */
 @include breakpoint(max-width $screen-xs-max) {
-  @include responsive-invisibility('.nav-auxiliary .nav-aux-primary-switch');
+   @include responsive-invisibility(".nav-auxiliary .nav-aux-primary-switch");
 }
 @include breakpoint($screen-sm-min) {
-  @include responsive-invisibility('.nav-primary .nav-aux-primary-switch');
+   @include responsive-invisibility(".nav-primary .nav-aux-primary-switch");
 }
 // Have to write this as a separate declaration for now due to breakpoint root bug
 .no-mqs {
-    @include responsive-invisibility('.nav-primary .nav-aux-primary-switch');
+   @include responsive-invisibility(".nav-primary .nav-aux-primary-switch");
 }
-@include respond-to('grid small') {  
-    .searchbar-collapse {
-        margin-top: 10px;        
-        width: 100%;       
-        .header-search { padding:8px 8px 10px 10px; }
-    }               
-    .header-container .UtilityNavigation.nav-auxiliary { 
-        text-align: right;
-    }
+@include respond-to("grid small") {
+   .searchbar-collapse {
+      margin-top: 10px;
+      width: 100%;
+      .header-search {
+         padding: 8px 8px 10px 10px;
+      }
+   }
+   .header-container .UtilityNavigation.nav-auxiliary {
+      text-align: right;
+   }
 }
 
 // Pasted from wsma.scss need to make this happen above.

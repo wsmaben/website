@@ -516,7 +516,7 @@ h1 {
 }
 
 .Wrapper-HomePage .FullWidthArea-StyleBg4 em {
-   font-size: 100%;
+   font-size: 50%;
    display: table;
    margin-top: 1em;
 }
@@ -560,13 +560,8 @@ html:not(.t-safari) .ruFileInput {
 .TextButton,
 .ruButton {
    font-size: 18px !important;
-   -webkit-transition: all 0.2s ease-in-out !important;
-   -o-transition: all 0.2s ease-in-out !important;
    transition: all 0.2s ease-in-out !important;
    margin: 0;
-   -webkit-transform: scale(0.94);
-   -ms-transform: scale(0.94);
-   -o-transform: scale(0.94);
    transform: scale(0.94);
 }
 
@@ -576,9 +571,6 @@ html:not(.t-safari) .ruFileInput {
 .TextButton:focus,
 .ruButton:hover,
 .ruButton:focus {
-   -webkit-transform: scale(1);
-   -ms-transform: scale(1);
-   -o-transform: scale(1);
    transform: scale(1);
 }
 
@@ -682,9 +674,10 @@ html.t-safari .ruFileInput {
 
 .Spotlight .spLnk {
    background: none !important;
+   font-weight: bold;
    display: block;
    margin-top: 15px;
-   font-size: 100%;
+   font-size: 110%;
    position: absolute;
    bottom: 0;
    margin: 0 auto;
@@ -693,27 +686,8 @@ html.t-safari .ruFileInput {
    margin-bottom: 60px;
 }
 
-.Spotlight .MembershipBox {
-   padding: 0 20px 20px 20px;
-   position: relative;
-}
-
-.MembershipBoxLabel {
-   margin: 0 0 0.2em;
-   line-height: 28px;
-   /* color: #1B806D; */
-   display: block;
-   position: relative;
-   padding: 15px 0 10px 0;
-   font-size: 160%;
-   font-weight: normal;
-}
-
 .row.row-eq-height {
-   display: -webkit-box;
-   display: -webkit-flex;
    display: -webkit-inline-box;
-   display: -ms-flexbox;
    display: flex;
    flex-wrap: wrap;
 }
@@ -763,6 +737,7 @@ html.t-safari .ruFileInput {
 }
 
 .TestimonialArea img {
+   -o-object-fit: cover;
    object-fit: cover;
    width: 150px;
    height: 150px !important;
@@ -984,7 +959,7 @@ div.PanelTitle,
 @media (min-width: 768px) {
    .body-container .breadcrumb-obo-container {
       height: 155px;
-      background-image: url(images/banners/Banner2.jpg);
+      background-image: url(images/Banner2.jpg);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: left;
@@ -1031,6 +1006,7 @@ div.PanelTitle,
    }
 
    .body-container .hero2banner svg .cls-2 {
+      -webkit-mask: url(#mask);
       mask: url(#mask);
    }
 
@@ -1051,7 +1027,7 @@ div.PanelTitle,
 
 .no-mqs .body-container .breadcrumb-obo-container {
    height: 155px;
-   background-image: url(images/banners/Banner2.jpg);
+   background-image: url(images/Banner2.jpg);
    background-size: cover;
    background-repeat: no-repeat;
    background-position: left;
@@ -1098,6 +1074,7 @@ div.PanelTitle,
 }
 
 .no-mqs .body-container .hero2banner svg .cls-2 {
+   -webkit-mask: url(#mask);
    mask: url(#mask);
 }
 
@@ -1154,6 +1131,7 @@ div.PanelTitle,
 }
 
 .hero2banner img {
+   -webkit-mask: url(#mask);
    mask: url(#mask);
 }
 
@@ -1194,7 +1172,7 @@ footer#ft {
 }
 
 .PanelField {
-   width: -webkit-fill-available;
+   width: unset;
 }
 
 /**********************************
@@ -1263,6 +1241,7 @@ footer#ft {
       display: -webkit-box;
       line-height: 25.2px;
       max-height: 260px;
+      -webkit-line-clamp: 8;
       -webkit-box-orient: vertical;
    }
 
@@ -1299,6 +1278,7 @@ footer#ft {
    display: -webkit-box;
    line-height: 25.2px;
    max-height: 260px;
+   -webkit-line-clamp: 8;
    -webkit-box-orient: vertical;
 }
 
@@ -1335,6 +1315,7 @@ footer#ft {
       display: -webkit-box;
       line-height: 25.2px;
       max-height: 475px;
+      -webkit-line-clamp: 8;
       -webkit-box-orient: vertical;
    }
 
@@ -1679,6 +1660,22 @@ img.ImgNoResize,
    margin-bottom: 20px;
 }
 
+ol {
+   counter-reset: item;
+   padding: 20px;
+}
+
+ol li {
+   display: block;
+}
+
+ol li:before {
+   content: counter(item) ". ";
+   counter-increment: item;
+   color: #004851;
+   padding-right: 1em;
+}
+
 /* ==========================================================================
    MASTERPAGE ELEMENTS
    ========================================================================== */
@@ -1705,9 +1702,6 @@ img.ImgNoResize,
    max-width: 300px;
    position: absolute;
    background-repeat: no-repeat;
-   -webkit-background-size: contain;
-   -moz-background-size: contain;
-   -o-background-size: contain;
    background-size: contain;
    width: 60%;
    height: 60px;
@@ -2446,9 +2440,6 @@ img.ImgNoResize,
 
 .RadMenu.RadMenu_WSMA .rmExpanded > .rmLink > .rmToggle > .rmIcon,
 .RadMenu.RadMenu_WSMA .rmExpanded > .rmToggle > .rmIcon {
-   -webkit-transform: rotate(180deg);
-   -ms-transform: rotate(180deg);
-   -o-transform: rotate(180deg);
    transform: rotate(180deg);
 }
 
@@ -3146,8 +3137,7 @@ img.ImgNoResize,
 .navbar-toggle .icon-search {
    display: inline-block;
    float: left;
-   background: transparent url("images/ResponsiveHeaderSprite.png") 0 0px
-      no-repeat;
+   background: transparent url("images/ResponsiveHeaderSprite.png") 0 -22px no-repeat;
    width: 22px;
    height: 19px;
    margin: 0;
@@ -3257,7 +3247,6 @@ img.ImgNoResize,
    font-size: 78%;
    line-height: 1;
    padding: 0 2px 1px;
-   -webkit-box-shadow: -1px 1px 0 rgba(34, 34, 34, 0.6);
    box-shadow: -1px 1px 0 rgba(34, 34, 34, 0.6);
 }
 
@@ -3397,10 +3386,7 @@ a.ste-toggle:focus {
       background-color: transparent;
       border: none;
       margin: 0 0 0 -5px;
-      -webkit-transition: width;
-      -o-transition: width;
       transition: width;
-      -webkit-transition-duration: 1s;
       transition-duration: 1s;
    }
 
@@ -3426,10 +3412,7 @@ a.ste-toggle:focus {
    background-color: transparent;
    border: none;
    margin: 0 0 0 -5px;
-   -webkit-transition: width;
-   -o-transition: width;
    transition: width;
-   -webkit-transition-duration: 1s;
    transition-duration: 1s;
 }
 
@@ -3541,8 +3524,6 @@ a:focus .obo-action.obo-clear {
    vertical-align: top;
    opacity: 0.7;
    filter: alpha(opacity=70);
-   -webkit-transition: opacity 0.2s ease-out;
-   -o-transition: opacity 0.2s ease-out;
    transition: opacity 0.2s ease-out;
 }
 
@@ -3760,10 +3741,7 @@ input[type="color"],
    color: #555555;
    border: 1px solid #ccc;
    border-radius: 0px;
-   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-   -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-   -o-transition: border linear 0.2s, box-shadow linear 0.2s;
    transition: border linear 0.2s, box-shadow linear 0.2s;
 }
 
@@ -3786,8 +3764,6 @@ input[type="color"]:focus,
 .uneditable-input:focus {
    border-color: #66afe9;
    outline: 0;
-   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
-      0 0 8px rgba(102, 175, 233, 0.6);
    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
       0 0 8px rgba(102, 175, 233, 0.6);
 }
@@ -3898,10 +3874,7 @@ input[type="color"]::-webkit-input-placeholder,
    line-height: 1.7;
    border: 1px solid #ccc;
    border-radius: 0px;
-   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-   -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-   -o-transition: border linear 0.2s, box-shadow linear 0.2s;
    transition: border linear 0.2s, box-shadow linear 0.2s;
 }
 
@@ -3912,8 +3885,6 @@ input[type="color"]::-webkit-input-placeholder,
 .RadComboBox.RadComboBox_MetroTouch .rcbFocused {
    border-color: #66afe9;
    outline: 0;
-   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
-      0 0 8px rgba(102, 175, 233, 0.6);
    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
       0 0 8px rgba(102, 175, 233, 0.6);
 }
@@ -3972,7 +3943,6 @@ input[type="color"]::-webkit-input-placeholder,
 #EventDescriptionDiv .ContentHtmlEditor {
    border: 1px solid #ccc;
    border-radius: 0px;
-   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
@@ -3991,10 +3961,7 @@ input[type="color"]::-webkit-input-placeholder,
    min-height: 39px;
    border-radius: 0px;
    border-color: #ccc;
-   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-   -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-   -o-transition: border linear 0.2s, box-shadow linear 0.2s;
    transition: border linear 0.2s, box-shadow linear 0.2s;
    background-image: none;
 }
@@ -4010,8 +3977,6 @@ input[type="color"]::-webkit-input-placeholder,
 .chosen-container-active .chosen-choices {
    border-color: #66afe9;
    outline: 0;
-   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
-      0 0 8px rgba(102, 175, 233, 0.6);
    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
       0 0 8px rgba(102, 175, 233, 0.6);
 }
@@ -4089,8 +4054,6 @@ input[type="checkbox"]:focus {
    -ms-user-select: none;
    -o-user-select: none;
    user-select: none;
-   -webkit-transition: background 0.2s ease-out;
-   -o-transition: background 0.2s ease-out;
    transition: background 0.2s ease-out;
 }
 
@@ -4141,7 +4104,6 @@ input[type="checkbox"]:focus {
 #masterHeaderActionArea a.active {
    outline: 0;
    background-image: none;
-   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 
@@ -4172,7 +4134,6 @@ fieldset[disabled] #masterHeaderActionArea a,
    pointer-events: none;
    opacity: 0.55;
    filter: alpha(opacity=55);
-   -webkit-box-shadow: none;
    box-shadow: none;
 }
 
@@ -5223,7 +5184,6 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected:hover {
 
 .RadWindow.RadWindow_Metro .rwControlButtons a:focus {
    /* give the refresh, expand, close buttons an outline when focused */
-   -webkit-box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.7);
    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.7);
    /* needed for IE9 compability */
    border-collapse: separate;
@@ -5869,7 +5829,6 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected:hover {
    font-family: "Source Sans Pro", sans-serif;
    top: 43px;
    text-align: left !important;
-   width: 900px;
 }
 
 @media (min-width: 768px) {
@@ -6078,7 +6037,6 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected:hover {
 .CommunityCommentItem {
    background: #f2f2f2;
    border-left: 10px solid #ddd;
-   -webkit-box-shadow: 1px 1px 28px 3px #e3e3e3;
    box-shadow: 1px 1px 28px 3px #e3e3e3;
 }
 
@@ -6089,7 +6047,6 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected:hover {
 /* For adding comments */
 .CommunityWikiReplyForm {
    background: #f2f2f2;
-   -webkit-box-shadow: 1px 1px 28px 3px #e3e3e3;
    box-shadow: 1px 1px 28px 3px #e3e3e3;
 }
 
@@ -6448,8 +6405,6 @@ h1.BigHeader,
 
 /* Use class FeatureActionLink on a link to call attention to it */
 a.FeatureActionLink {
-   -webkit-transition: all 0.2s ease 0;
-   -o-transition: all 0.2s ease 0;
    transition: all 0.2s ease 0;
    font-family: "Source Sans Pro", sans-serif;
    font-size: 110%;
@@ -6506,8 +6461,6 @@ a.FeatureActionLink:hover {
 }
 
 .Spotlight a img {
-   -webkit-transition: opacity 0.2s;
-   -o-transition: opacity 0.2s;
    transition: opacity 0.2s;
 }
 
@@ -6771,7 +6724,6 @@ a.FeatureActionLink:hover {
 }
 
 .RelatedItemsHorizontalEffect li:hover {
-   -webkit-transform: scale(1.06);
    transform: scale(1.06);
    border-radius: 0;
    background-color: transparent;
@@ -7263,274 +7215,3 @@ ul.RelatedItemsHorizontal li,
 .bg-evergreen {
    background-color: #004851;
 }
-
-h1.mobileShow {
-   display: none;
-}
-
-@media only screen and (max-width: 768px) {
-   h1.mobileShow {
-      display: block;
-   }
-}
-
-/* Alt background colors
-   ========================================================================== */
-.AltBgColor1 {
-   background-color: #fff;
-   padding: 10px;
-}
-
-.AltBgColor2 > .panel,
-.AltBgColor2 > .panel h2,
-.AltBgColor3 > .panel,
-.AltBgColor3 > .panel h2,
-.AltBgColor4 > .panel,
-.AltBgColor4 > .panel h2,
-.AltBgColor5 > .panel,
-.AltBgColor5 > .panel h2,
-.AltBgColor6 > .panel,
-.AltBgColor6 > .panel h2,
-.AltBgColor7 > .panel,
-.AltBgColor7 > .panel h2,
-.AltBgColor8 > .panel,
-.AltBgColor8 > .panel h2,
-.AltBgColor9 > .panel,
-.AltBgColor9 > .panel h2,
-.AltBgColor10 > .panel,
-.AltBgColor10 > .panel h2,
-.AltBgColor11 > .panel,
-.AltBgColor11 > .panel h2,
-.AltBgColor12 > .panel,
-.AltBgColor12 > .panel h2,
-.AltBgColor13 > .panel,
-.AltBgColor13 > .panel h2,
-.AltBgColor14 > .panel,
-.AltBgColor14 > .panel h2,
-.AltBgColor15 > .panel,
-.AltBgColor15 > .panel h2 {
-   color: #fff;
-}
-
-.AltBgColor2 > .panel a,
-.AltBgColor2 > .panel a:hover,
-.AltBgColor2 > .panel a:active,
-.AltBgColor2 > .panel a:focus,
-.AltBgColor2 > .panel a:visited,
-.AltBgColor3 > .panel a,
-.AltBgColor3 > .panel a:hover,
-.AltBgColor3 > .panel a:active,
-.AltBgColor3 > .panel a:focus,
-.AltBgColor3 > .panel a:visited,
-.AltBgColor4 > .panel a,
-.AltBgColor4 > .panel a:hover,
-.AltBgColor4 > .panel a:active,
-.AltBgColor4 > .panel a:focus,
-.AltBgColor4 > .panel a:visited,
-.AltBgColor5 > .panel a,
-.AltBgColor5 > .panel a:hover,
-.AltBgColor5 > .panel a:active,
-.AltBgColor5 > .panel a:focus,
-.AltBgColor5 > .panel a:visited,
-.AltBgColor6 > .panel a,
-.AltBgColor6 > .panel a:hover,
-.AltBgColor6 > .panel a:active,
-.AltBgColor6 > .panel a:focus,
-.AltBgColor6 > .panel a:visited,
-.AltBgColor7 > .panel a,
-.AltBgColor7 > .panel a:hover,
-.AltBgColor7 > .panel a:active,
-.AltBgColor7 > .panel a:focus,
-.AltBgColor7 > .panel a:visited,
-.AltBgColor8 > .panel a,
-.AltBgColor8 > .panel a:hover,
-.AltBgColor8 > .panel a:active,
-.AltBgColor8 > .panel a:focus,
-.AltBgColor8 > .panel a:visited,
-.AltBgColor9 > .panel a,
-.AltBgColor9 > .panel a:hover,
-.AltBgColor9 > .panel a:active,
-.AltBgColor9 > .panel a:focus,
-.AltBgColor9 > .panel a:visited,
-.AltBgColor10 > .panel a,
-.AltBgColor10 > .panel a:hover,
-.AltBgColor10 > .panel a:active,
-.AltBgColor10 > .panel a:focus,
-.AltBgColor10 > .panel a:visited,
-.AltBgColor11 > .panel a,
-.AltBgColor11 > .panel a:hover,
-.AltBgColor11 > .panel a:active,
-.AltBgColor11 > .panel a:focus,
-.AltBgColor11 > .panel a:visited .AltBgColor12 > .panel a,
-.AltBgColor12 > .panel a:hover,
-.AltBgColor12 > .panel a:active,
-.AltBgColor12 > .panel a:focus,
-.AltBgColor12 > .panel a:visited,
-.AltBgColor13 > .panel a,
-.AltBgColor13 > .panel a:hover,
-.AltBgColor13 > .panel a:active,
-.AltBgColor13 > .panel a:focus,
-.AltBgColor13 > .panel a:visited,
-.AltBgColor14 > .panel a,
-.AltBgColor14 > .panel a:hover,
-.AltBgColor14 > .panel a:active,
-.AltBgColor14 > .panel a:focus,
-.AltBgColor14 > .panel a:visited,
-.AltBgColor15 > .panel a,
-.AltBgColor15 > .panel a:hover,
-.AltBgColor15 > .panel a:active,
-.AltBgColor15 > .panel a:focus,
-.AltBgColor15 > .panel a:visited {
-   color: #fff;
-   text-decoration: underline;
-}
-
-.AltBgColor2 > .panel .ProgressBar > span,
-.AltBgColor3 > .panel .ProgressBar > span,
-.AltBgColor4 > .panel .ProgressBar > span,
-.AltBgColor5 > .panel .ProgressBar > span,
-.AltBgColor6 > .panel .ProgressBar > span,
-.AltBgColor7 > .panel .ProgressBar > span,
-.AltBgColor8 > .panel .ProgressBar > span,
-.AltBgColor9 > .panel .ProgressBar > span,
-.AltBgColor10 > .panel .ProgressBar > span,
-.AltBgColor11 > .panel .ProgressBar > span,
-.AltBgColor12 > .panel .ProgressBar > span,
-.AltBgColor13 > .panel .ProgressBar > span,
-.AltBgColor14 > .panel .ProgressBar > span,
-.AltBgColor15 > .panel .ProgressBar > span {
-   /* Make the progress tracker indicator use a white bar instead of default */
-   background-color: #fff;
-}
-
-.AltBgColor2 > .panel {
-   background-color: #00abbe;
-}
-
-.AltBgColor2 > .panel.panel-border {
-   border-color: #0094a5;
-}
-
-.AltBgColor3 > .panel {
-   background-color: #5dae3f;
-}
-
-.AltBgColor3 > .panel.panel-border {
-   border-color: #539b38;
-}
-
-.AltBgColor4 > .panel {
-   background-color: #e98300;
-}
-
-.AltBgColor4 > .panel.panel-border {
-   border-color: #d07500;
-}
-
-.AltBgColor5 > .panel {
-   background-color: #8e51ae;
-}
-
-.AltBgColor5 > .panel.panel-border {
-   border-color: #80499d;
-}
-
-/* Goals: Total Members, Retained and New Active (orange) – Sea foam #CBCABA */
-.AltBgColor6 > .panel {
-   background-color: #6bcaba;
-}
-
-.AltBgColor6 > .panel.panel-border {
-   border-color: #6bcaba;
-}
-
-/*
-Active & Delinquent Members (orange) – Evergreen #004851
- */
-.AltBgColor7 > .panel {
-   background-color: #004851;
-}
-
-.AltBgColor7 > .panel.panel-border {
-   border-color: #004851;
-}
-
-/* Full-Student members (blue) – Black #000 */
-.AltBgColor8 > .panel {
-   background-color: #000;
-}
-
-.AltBgColor8 > .panel.panel-border {
-   border-color: #000;
-}
-
-/*
-WAMPAC (purple) – Leaf #1B806D
- */
-.AltBgColor9 > .panel {
-   background-color: #1b806d;
-}
-
-.AltBgColor9 > .panel.panel-border {
-   border-color: #1b806d;
-}
-
-/*
-Foundation (purple) – Mountain #330072
- */
-.AltBgColor10 > .panel {
-   background-color: #330072;
-}
-
-.AltBgColor10 > .panel.panel-border {
-   border-color: #330072;
-}
-
-/* Bar Graphs – Rain (I like the blue) #0068A5 */
-.AltBgColor11 > .panel {
-   background-color: #0068a5;
-}
-
-.AltBgColor11 > .panel.panel-border {
-   border-color: #0068a5;
-}
-
-/* Sand Color #cc9f53 */
-.AltBgColor12 > .panel {
-   background-color: #cc9f53;
-}
-
-.AltBgColor12 > .panel.panel-border {
-   border-color: #cc9f53;
-}
-
-/* Sun Color #f0d283 */
-.AltBgColor13 > .panel {
-   background-color: #f0d283;
-}
-
-.AltBgColor13 > .panel.panel-border {
-   border-color: #f0d283;
-}
-
-/* Stone-A Color #BFB7B0 */
-.AltBgColor14 > .panel {
-   background-color: #bfb7b0;
-}
-
-.AltBgColor14 > .panel.panel-border {
-   border-color: #bfb7b0;
-}
-
-/* Stone-B Color #ACA199 */
-.AltBgColor15 > .panel {
-   background-color: #aca199;
-}
-
-.AltBgColor15 > .panel.panel-border {
-   border-color: #aca199;
-}
-
-/* Pie Graph – Sea Foam, Evergreen, Rain, Sea, Leaf, Slate */
-
-/*# sourceMappingURL=99-WSMA.css.map */
