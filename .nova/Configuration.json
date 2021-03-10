@@ -1,4 +1,5 @@
 {
   "workspace.color" : 4,
-  "workspace.preview_url" : "http:\/\/localhost:8888"
+  "workspace.preview_server_allow_external" : false,
+  "workspace.preview_url" : "http:\/\/wsma.local:8888"
 }
