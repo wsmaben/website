@@ -1,26 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<title>Find a Doctor</title>
-		<link rel="stylesheet" href="https://wsma.org/Assets/css/10-UltraWaveResponsive.css" />
-		<link href="https://wsma.org/App_Themes/WSMA/99-WSMA.css" type="text/css" rel="stylesheet" />
-		<link href="https://wsma.org/App_Themes/WSMA/images/elegant-icons.css" type="text/css" rel="stylesheet" />
-		<link href="https://wsma.org/App_Themes/WSMA/zzCustom.css" type="text/css" rel="stylesheet" />
-	</head>
-	<body>
-		<!-- ************************************** SECTION ******************************************* -->
-		<!-- Find a Doctor -->
-		<!-- !Description: Search from over 11,000 physicians and physician assistants from Washington state to find the provider nearest your desired location and specialty. -->
-		<!-- !Keywords: -->
-		<!-- !Layout: Single Column -->
-		<!-- http://wsma.org/WSMA/Resources/Find_a_Doctor/Find_a_Doctor.aspx -->
-		<!-- !iPART - Content HTML *************************************************** -->
-		<h1 class="mobileShow">Find a Doctor</h1>
-		<p><strong>Search our member database of physicians and physician assistants from all specialties throughout Washington state to find the provider nearest your desired location and specialty. Search by name, location, specialty or any combination of criteria.</strong></p>
-		<!-- !iPART - Content HTML *************************************************** -->
-		<!-- 
-iPart - Query Menu
+  <head>
+    <meta charset="utf-8" />
+    <title>Find a Doctor</title>
+    <link
+      rel="stylesheet"
+      href="https://wsma.org/Assets/css/10-UltraWaveResponsive.css"
+    />
+    <link
+      href="https://wsma.org/App_Themes/WSMA/99-WSMA.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://wsma.org/App_Themes/WSMA/images/elegant-icons.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://wsma.org/App_Themes/WSMA/zzCustom.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <!-- !JavaScript ********************************************************* -->
+    <script src="https://wsma.org/AsiCommon/scripts/Asi.js"></script>
+    <script src="https://wsma.org/AsiCommon/Scripts/Asi.Web.js"></script>
+    <script src="https://wsma.org/AsiCommon/Scripts/Jquery/jquery-migrate-3.0.1.min.js"></script>
+    <script src="https://wsma.org/AsiCommon/Scripts/Jquery/jquery-ui.custom.min.js"></script>
+    <script src="https://wsma.org/AsiCommon/Scripts/Jquery/Jquery.min.js"></script>
+    <script src="https://wsma.org/AsiCommon/Scripts/Modernizr/Modernizr.min.js"></script>
+    <!-- !META **************************************************************** -->
+    <!-- Find a Doctor -->
+    <!-- !Description: Search from over 11,000 physicians and physician assistants from Washington state to find the provider nearest your desired location and specialty. -->
+    <!-- !Keywords: -->
+    <!-- !Layout: Single Column -->
+    <!-- http://wsma.org/WSMA/Resources/Find_a_Doctor/Find_a_Doctor.aspx -->
+  </head>
+  <body>
+    <!-- !Banner ******************************************************* -->
+    <!-- Page container CSS class:  imgBanner -->
+    <!-- Zone CSS class: inner-banner -->
+    <div class="secondaryHero row">
+      <div class="hero2banner">
+        <svg
+          id="Layer_1"
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewbox="0 0 650 314"
+        >
+          <defs>
+            <lineargradient
+              id="linear-gradient"
+              x1="0"
+              y1="154.5"
+              x2="650"
+              y2="154.5"
+              gradientunits="userSpaceOnUse"
+            >
+              <stop offset="0" stop-color="#fff"></stop>
+              <stop offset="0"></stop>
+              <stop offset="0.03" stop-color="#060606"></stop>
+              <stop offset="0.06" stop-color="#161616"></stop>
+              <stop offset="0.1" stop-color="#313131"></stop>
+              <stop offset="0.14" stop-color="#565656"></stop>
+              <stop offset="0.19" stop-color="#868686"></stop>
+              <stop offset="0.24" stop-color="silver"></stop>
+              <stop offset="0.28" stop-color="#fff"></stop>
+              <stop offset="0.68" stop-color="#fff"></stop>
+              <stop offset="0.71" stop-color="#e7e7e7"></stop>
+              <stop offset="0.82" stop-color="#858585"></stop>
+              <stop offset="0.9" stop-color="#3d3d3d"></stop>
+              <stop offset="0.97" stop-color="#111"></stop>
+              <stop offset="1"></stop>
+            </lineargradient>
+            <mask
+              id="mask"
+              x="0"
+              y="0"
+              width="650"
+              height="314"
+              maskunits="userSpaceOnUse"
+            >
+              <rect class="cls-1" x="0" y="0" width="650" height="314"></rect>
+            </mask>
+          </defs>
+          <g class="cls-2">
+            <image
+              width="650"
+              height="314"
+              href="/images/resources/find-a-doctor/banner-find-a-doctor-650x314.jpg"
+            ></image>
+          </g>
+        </svg>
+        <img
+          alt="physicians standing in rows on the steps of a building"
+          width="650"
+          height="314"
+          src="/images/resources/find-a-doctor/banner-find-a-doctor-650x314.jpg"
+        />
+      </div>
+      <div class="col-md-6">
+        Find a physician or physician assistant near you by searching our
+        database of more than 11,000 members.
+      </div>
+    </div>
+    <script>
+      // Next two lines are for secondary Hero
+      jQuery('.hero2banner').appendTo('.hero2after');
+      jQuery('.secondaryHero').appendTo('#ctl01_BreadCrumb');
+    </script>
+    <!-- !Find a Doctor - iPART - Content HTML ******************************************** -->
+    <h1>Find a Doctor</h1>
+    <p>
+      <strong
+        >Search our member database of physicians and physician assistants from
+        all specialties throughout Washington state to find the provider nearest
+        your desired location and specialty. Search by name, location, specialty
+        or any combination of criteria.</strong
+      >
+    </p>
+    <!-- !iPart - Query Menu *************************************************** -->
+    <!--
 Name: Find a Doctor
 Title Find a Doctor
 Source query or folder: $/ContactManagement/DefaultSystem/Queries/Directory/Physician search
@@ -28,6 +129,6 @@ Menu Label: Select a query
 Results to display per page: 20
 Results display style: Advanced
  -->
-		<!-- !HTML FOOTER ************************************** -->
-	</body>
+    <!-- !HTML FOOTER ************************************** -->
+  </body>
 </html>

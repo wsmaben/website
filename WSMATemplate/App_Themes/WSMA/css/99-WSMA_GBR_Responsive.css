@@ -35,6 +35,7 @@
 .SliderPage1 a,
 .carousel-link a {
   text-decoration: none;
+  color: #499a89;
 }
 
 .container:before, .container:after,
