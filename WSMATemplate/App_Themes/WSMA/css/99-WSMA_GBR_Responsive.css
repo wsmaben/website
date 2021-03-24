@@ -624,6 +624,11 @@ html.t-safari .ruFileInput {
   margin-bottom: 60px;
 }
 
+.Spotlight .MembershipBox {
+  padding: 0 20px 20px 20px;
+  position: relative;
+}
+
 .MembershipBoxLabel {
   margin: 0 0 0.2em;
   line-height: 28px;
@@ -878,7 +883,7 @@ div.PanelTitle,
 @media (min-width: 768px) {
   .body-container .breadcrumb-obo-container {
     height: 155px;
-    background-image: url(images/banners/Banner2.jpg);
+    background-image: url(images/banner2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
@@ -933,7 +938,7 @@ div.PanelTitle,
 }
 .no-mqs .body-container .breadcrumb-obo-container {
   height: 155px;
-  background-image: url(images/banners/Banner2.jpg);
+  background-image: url(images/banner2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
@@ -1467,20 +1472,20 @@ div.ShowFieldset fieldset,
 }
 
 /**
-   * This automatically resizes images when they're too large to fit in their container.
-   * It may override any user-defined width/height on images. If the behavior is unwanted,
-   * consider changing this declaration to a class (e.g. '.img-responsive') which you can
-   * apply as desired.
-   */
+    * This automatically resizes images when they're too large to fit in their container.
+    * It may override any user-defined width/height on images. If the behavior is unwanted,
+    * consider changing this declaration to a class (e.g. '.img-responsive') which you can
+    * apply as desired.
+    */
 img {
   max-width: 100%;
   height: auto !important;
 }
 
 /**
-   * Sometimes images should not be resized. This class can be used as a wrapper or directly
-   * on the image to avoid the resizing.
-   */
+    * Sometimes images should not be resized. This class can be used as a wrapper or directly
+    * on the image to avoid the resizing.
+    */
 img.ImgNoResize,
 .ImgNoResize img {
   max-width: none;

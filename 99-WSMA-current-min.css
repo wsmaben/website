@@ -510,6 +510,7 @@ html:not(.t-safari) .ruFileInput {
   font-size: 18px !important;
   transition: all 0.2s ease-in-out !important;
   margin: 0;
+  -webkit-transform: scale(0.94);
   transform: scale(0.94);
 }
 .btn:hover,
@@ -518,6 +519,7 @@ html:not(.t-safari) .ruFileInput {
 .TextButton:focus,
 .ruButton:hover,
 .ruButton:focus {
+  -webkit-transform: scale(1);
   transform: scale(1);
 }
 
@@ -610,7 +612,6 @@ html.t-safari .ruFileInput {
 }
 .Spotlight .spLnk {
   background: none !important;
-  /* font-weight: bold; */
   display: block;
   margin-top: 15px;
   font-size: 100%;
@@ -638,8 +639,10 @@ html.t-safari .ruFileInput {
 }
 
 .row.row-eq-height {
+  display: -webkit-flex;
   display: -webkit-inline-box;
   display: flex;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 .row.row-eq-height > div {
@@ -883,7 +886,7 @@ div.PanelTitle,
 @media (min-width: 768px) {
   .body-container .breadcrumb-obo-container {
     height: 155px;
-    background-image: url(images/Banner2.jpg);
+    background-image: url(images/banner2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
@@ -939,7 +942,7 @@ div.PanelTitle,
 }
 .no-mqs .body-container .breadcrumb-obo-container {
   height: 155px;
-  background-image: url(images/Banner2.jpg);
+  background-image: url(images/banner2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
@@ -1131,7 +1134,6 @@ footer#ft {
     display: -webkit-box;
     line-height: 25.2px;
     max-height: 260px;
-    /* -webkit-line-clamp: 8; */
     -webkit-box-orient: vertical;
   }
   .NewsFeed #NewsDisplay .newsBody H2 {
@@ -1162,7 +1164,6 @@ footer#ft {
   display: -webkit-box;
   line-height: 25.2px;
   max-height: 260px;
-  /* -webkit-line-clamp: 8; */
   -webkit-box-orient: vertical;
 }
 .no-mqs .NewsFeed #NewsDisplay .newsBody H2 {
@@ -1193,7 +1194,6 @@ footer#ft {
     display: -webkit-box;
     line-height: 25.2px;
     max-height: 475px;
-    /* -webkit-line-clamp: 8; */
     -webkit-box-orient: vertical;
   }
   .NewsFeed #NewsDisplay .newsBody H2 {
@@ -1481,7 +1481,7 @@ div.ShowFieldset fieldset,
   color: #0064cd;
 }
 
-/* Used for highlighting designated text in sand color #CC9F53 */
+/* Used for highlighting designated text in sand color #cc9f53 */
 .HighlightText {
   color: #cc9f53;
 }
@@ -1517,17 +1517,6 @@ img.ImgNoResize,
   margin-bottom: 20px;
 }
 
-/* ol {
-  counter-reset: item;
-  padding: 0; }
-  ol li {
-    display: block; }
-    ol li:before {
-      content: counter(item) ". ";
-      counter-increment: item;
-      color: #F0D283;
-      padding-right: 1em; }
- */
 /* ==========================================================================
    MASTERPAGE ELEMENTS
    ========================================================================== */
@@ -2203,6 +2192,7 @@ img.ImgNoResize,
 }
 .RadMenu.RadMenu_WSMA .rmExpanded > .rmLink > .rmToggle > .rmIcon,
 .RadMenu.RadMenu_WSMA .rmExpanded > .rmToggle > .rmIcon {
+  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
@@ -2660,6 +2650,7 @@ img.ImgNoResize,
     color: #313e48;
   }
   .header-container .nav-auxiliary .NavigationListItem {
+    display: -webkit-inline-flex;
     display: inline-flex;
     color: #313e48;
   }
@@ -2696,6 +2687,7 @@ img.ImgNoResize,
   color: #313e48;
 }
 .no-mqs .header-container .nav-auxiliary .NavigationListItem {
+  display: -webkit-inline-flex;
   display: inline-flex;
   color: #313e48;
 }
@@ -2736,6 +2728,7 @@ img.ImgNoResize,
     color: #fff;
   }
   .header-container .nav-auxiliary .NavigationListItem {
+    display: -webkit-inline-flex;
     display: inline-flex;
     color: #313e48;
   }
@@ -6094,6 +6087,7 @@ a.FeatureActionLink:hover {
 }
 
 .RelatedItemsHorizontalEffect li:hover {
+  -webkit-transform: scale(1.06);
   transform: scale(1.06);
   border-radius: 0;
   background-color: transparent;
@@ -6414,6 +6408,7 @@ ul.RelatedItemsHorizontal li,
   border-bottom: 1px solid #6bcaba;
   margin-bottom: 15px;
   margin-top: 25px;
+  display: -webkit-flex;
   display: flex;
 }
 .expander-container .expander .expander-head {
@@ -6432,6 +6427,7 @@ ul.RelatedItemsHorizontal li,
   display: none;
 }
 .expander-container .expander-switch {
+  display: -webkit-flex;
   display: flex;
 }
 .expander-container .expander-switch button {
