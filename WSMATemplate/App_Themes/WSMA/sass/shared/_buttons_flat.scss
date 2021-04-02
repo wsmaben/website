@@ -72,6 +72,13 @@
     $btn-default-shadow
   );
 }
+
+a.TextButton {
+  color: $btn-default-color !important;
+  background-color: $btn-default-bg;
+  border-color: transparent;
+}
+
 /* some Telerik overrides */
 .ruButton {
   background-color: $btn-default-bg !important;

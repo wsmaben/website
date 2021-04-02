@@ -3600,6 +3600,12 @@ fieldset[disabled] .RadGrid input.TextButton:active,
   border-color: transparent;
 }
 
+a.TextButton {
+  color: #fff !important;
+  background-color: #6bcaba;
+  border-color: transparent;
+}
+
 /* some Telerik overrides */
 .ruButton {
   background-color: #6bcaba !important;
