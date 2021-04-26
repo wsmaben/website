@@ -96,7 +96,7 @@ h1 {
     background: #f5f7f7; //$color-alt-bg2 url(images/FullWidthArea_Bg4.jpg) center top no-repeat;
     color: $black;
     font-family: $headings-font-family;
-    padding: 20px 1%;
+    padding: 40px 1%;
     line-height: 1.5;
     blockquote {
       font-size: 250%;
@@ -950,8 +950,9 @@ footer#ft {
       width: 100%;
       padding: 0;
       img {
-        margin: 0;
-        padding-bottom: 15px;
+        margin: 0px 0 15px 0;
+        // padding-bottom: 15px;
+        border: 1px solid #ddd;
       }
     }
   }

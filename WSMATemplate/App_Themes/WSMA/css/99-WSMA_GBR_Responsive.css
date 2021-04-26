@@ -35,7 +35,6 @@
 .SliderPage1 a,
 .carousel-link a {
   text-decoration: none;
-  color: #499a89;
 }
 
 .container:before, .container:after,
@@ -261,7 +260,7 @@
 .Wrapper-HomePage .FullWidthArea-StyleBg3,
 .Wrapper-HomePage .FullWidthArea-StyleBg4,
 .Wrapper-HomePage .FullWidthArea-StyleBg5 {
-  padding: 20px 1%;
+  padding: 5px 1%;
 }
 @media (min-width: 768px) {
   .Wrapper-HomePage .header-top-container {
@@ -451,7 +450,7 @@ h1 {
   background: #f5f7f7;
   color: #313e48;
   font-family: "Source Sans Pro", sans-serif;
-  padding: 20px 1%;
+  padding: 40px 1%;
   line-height: 1.5;
 }
 .Wrapper-HomePage .FullWidthArea-StyleBg4 blockquote {
@@ -1273,8 +1272,8 @@ footer#ft {
 }
 .newsWidget .newsBody div img,
 .newsWidget .newsBody div > div img {
-  margin: 0;
-  padding-bottom: 15px;
+  margin: 0px 0 15px 0;
+  border: 1px solid #ddd;
 }
 
 /***********************************
@@ -5954,3 +5953,5 @@ ul.RelatedItemsHorizontal li, .RelatedItemsHorizontal ul.rrItemsList li {
   width: 75%;
   margin: 0 auto;
 }
+
+/*# sourceMappingURL=99-WSMA_GBR_Responsive.css.map */
