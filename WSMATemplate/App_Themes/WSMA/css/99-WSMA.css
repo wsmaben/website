@@ -2,10 +2,10 @@
 /* Responsive NaturalHeritage theme */
 /* Not in use by family's themes, may be used by Ultrawave. */
 /*progress tracker */
-@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro|Source+Serif+Pro&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro|Source+Serif+Pro&display=swap');
 @font-face {
-  font-family: "elegant-icons";
-  src: url("https://cdn.rawgit.com/mdentinho/elegant-icons-sass/e48e7df0/fonts/ElegantIcons.woff");
+  font-family: 'elegant-icons';
+  src: url('https://cdn.rawgit.com/mdentinho/elegant-icons-sass/e48e7df0/fonts/ElegantIcons.woff');
 }
 /* left, center, right */
 /*lighten($nav-secondary-header-bg,70%) !default;*/
@@ -37,10 +37,11 @@
   text-decoration: none;
 }
 
-.container:before, .container:after,
+.container:before,
+.container:after,
 .body-container:before,
 .body-container:after {
-  content: " ";
+  content: ' ';
   display: table;
 }
 .container:after,
@@ -104,7 +105,7 @@
 }
 @media (min-width: 768px) {
   .search-container,
-.auth-link-container {
+  .auth-link-container {
     display: none;
   }
 }
@@ -119,7 +120,7 @@
 }
 @media (min-width: 768px) {
   .search-container-sm,
-.auth-link-container-sm {
+  .auth-link-container-sm {
     display: inline-block !important;
   }
 }
@@ -336,7 +337,7 @@
   font-weight: bold;
 }
 .obo-label span:after {
-  content: ":";
+  content: ':';
 }
 
 /* This applies to the button area at the bottom of the page (e.g., Save, Cancel) */
@@ -353,7 +354,7 @@
   right: 10px;
   margin-right: 10px;
   z-index: 1;
-  background: transparent url("images/ThemeIconsSprite.png") -2px 0 no-repeat !important;
+  background: transparent url('images/ThemeIconsSprite.png') -2px 0 no-repeat !important;
   width: 45px;
   height: 45px;
 }
@@ -449,7 +450,7 @@ h1 {
 .Wrapper-HomePage .FullWidthArea-StyleBg4 {
   background: #f5f7f7;
   color: #313e48;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   padding: 40px 1%;
   line-height: 1.5;
 }
@@ -511,7 +512,8 @@ html:not(.t-safari) .ruFileInput {
   -webkit-transform: scale(0.94);
   transform: scale(0.94);
 }
-.btn:hover, .btn:focus,
+.btn:hover,
+.btn:focus,
 .TextButton:hover,
 .TextButton:focus,
 .ruButton:hover,
@@ -550,14 +552,17 @@ html.t-safari .ruFileInput {
   margin: 0 2%;
   padding: 0 !important;
 }
-.BigButtonPanelArea1 a[href*=PrintProfile] {
-  background: transparent url("images/ThemeIconsSprite.png") -2px -595px no-repeat !important;
+.BigButtonPanelArea1 a[href*='PrintProfile'] {
+  background: transparent url('images/ThemeIconsSprite.png') -2px -595px
+    no-repeat !important;
 }
-.BigButtonPanelArea1 a[href*="Profile.aspx"] {
-  background: transparent url("images/ThemeIconsSprite.png") -2px -380px no-repeat !important;
+.BigButtonPanelArea1 a[href*='Profile.aspx'] {
+  background: transparent url('images/ThemeIconsSprite.png') -2px -380px
+    no-repeat !important;
 }
-.BigButtonPanelArea1 a[href*="Duplicate_Merge.aspx"] {
-  background: transparent url("images/ThemeIconsSprite.png") -2px -487px no-repeat !important;
+.BigButtonPanelArea1 a[href*='Duplicate_Merge.aspx'] {
+  background: transparent url('images/ThemeIconsSprite.png') -2px -487px
+    no-repeat !important;
 }
 .BigButtonPanelArea1 .btn:hover,
 .BigButtonPanelArea1 .btn:focus {
@@ -571,11 +576,11 @@ html.t-safari .ruFileInput {
 
 @media (min-width: 768px) {
   .nav-auxiliary .nav-aux-button.nav-aux-account .nav-text {
-    background: transparent url("images/ResponsiveHeaderSprite.png") 0 -100px no-repeat !important;
+    background: transparent url('images/ResponsiveHeaderSprite.png') 0 -100px no-repeat !important;
   }
 }
 .no-mqs .nav-auxiliary .nav-aux-button.nav-aux-account .nav-text {
-  background: transparent url("images/ResponsiveHeaderSprite.png") 0 -100px no-repeat !important;
+  background: transparent url('images/ResponsiveHeaderSprite.png') 0 -100px no-repeat !important;
 }
 
 .Spotlight .SectionLabel,
@@ -638,7 +643,7 @@ html.t-safari .ruFileInput {
   display: -webkit-inline-box;
   display: flex;
   -webkit-flex-wrap: wrap;
-          flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .row.row-eq-height > div {
   padding-bottom: 30px;
@@ -656,10 +661,15 @@ html.t-safari .ruFileInput {
 .row.row-eq-height > div > .ContentItemContainer .ContentItemButtonPanel {
   height: 100%;
 }
-.row.row-eq-height > div > .ContentItemContainer .ContentItemButtonPanel .WebPartZone {
+.row.row-eq-height
+  > div
+  > .ContentItemContainer
+  .ContentItemButtonPanel
+  .WebPartZone {
   height: 100%;
 }
-.row.row-eq-height:before, .row.row-eq-height:after {
+.row.row-eq-height:before,
+.row.row-eq-height:after {
   content: normal;
 }
 
@@ -673,7 +683,7 @@ html.t-safari .ruFileInput {
 }
 .TestimonialArea img {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 150px;
   height: 150px !important;
   border-radius: 50% 50%;
@@ -681,7 +691,7 @@ html.t-safari .ruFileInput {
   display: block;
 }
 .TestimonialArea blockquote:before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   width: 10%;
@@ -706,7 +716,7 @@ html.t-safari .ruFileInput {
 
 @media (min-width: 768px) {
   .UpcomingEventsHome ul.RelatedItemsHorizontal li,
-.UpcomingEventsHome .RelatedItemsHorizontal ul.rrItemsList li {
+  .UpcomingEventsHome .RelatedItemsHorizontal ul.rrItemsList li {
     width: 225px;
     height: auto;
     margin: 9px 2%;
@@ -773,13 +783,13 @@ html.t-safari .ruFileInput {
   color: #313e48;
 }
 .Wrapper-HomePage .ProgressTracker2 span.count:before {
-  content: "";
+  content: '';
   display: block;
   float: left;
   margin: 0 15px 0 0;
   width: 90px;
   height: 90px;
-  background: transparent url("images/ThemeIconsSprite.png") -65px 0px no-repeat !important;
+  background: transparent url('images/ThemeIconsSprite.png') -65px 0px no-repeat !important;
 }
 .Wrapper-HomePage .ProgressTracker2 span.count strong {
   font-size: 250%;
@@ -836,7 +846,7 @@ div.PanelTitle,
   text-align: center;
 }
 .CalloutPart2 .SectionLabel:after {
-  content: "";
+  content: '';
   display: block;
   bottom: 0;
   width: 45%;
@@ -898,13 +908,13 @@ div.PanelTitle,
     margin-top: 60px;
   }
   .body-container .breadcrumb a,
-.body-container .breadcrumb span {
+  .body-container .breadcrumb span {
     font-size: 11px;
     font-weight: 300;
     color: white;
   }
   .body-container .breadcrumb a:visited,
-.body-container .breadcrumb span:visited {
+  .body-container .breadcrumb span:visited {
     color: white;
   }
   .body-container .hero2banner svg {
@@ -916,14 +926,14 @@ div.PanelTitle,
   }
   .body-container .hero2banner svg .cls-2 {
     -webkit-mask: url(#mask);
-            mask: url(#mask);
+    mask: url(#mask);
   }
   .body-container .hero2after {
     display: block;
     overflow: hidden;
     max-height: 314px;
   }
-  .body-container .hero2after span[id$=_BreadCrumb] {
+  .body-container .hero2after span[id$='_BreadCrumb'] {
     position: absolute;
   }
   .body-container .hero2after .hero2banner {
@@ -972,14 +982,14 @@ div.PanelTitle,
 }
 .no-mqs .body-container .hero2banner svg .cls-2 {
   -webkit-mask: url(#mask);
-          mask: url(#mask);
+  mask: url(#mask);
 }
 .no-mqs .body-container .hero2after {
   display: block;
   overflow: hidden;
   max-height: 314px;
 }
-.no-mqs .body-container .hero2after span[id$=_BreadCrumb] {
+.no-mqs .body-container .hero2after span[id$='_BreadCrumb'] {
   position: absolute;
 }
 .no-mqs .body-container .hero2after .hero2banner {
@@ -1020,7 +1030,7 @@ div.PanelTitle,
 
 .hero2banner img {
   -webkit-mask: url(#mask);
-          mask: url(#mask);
+  mask: url(#mask);
 }
 
 /***********************************
@@ -1086,7 +1096,9 @@ footer#ft {
   padding: 2px 0;
   display: block;
 }
-.aux-nav a:hover, .aux-nav a:focus, .aux-nav a:active {
+.aux-nav a:hover,
+.aux-nav a:focus,
+.aux-nav a:active {
   color: #ffffff;
   text-decoration: underline;
   background-color: #6bcaba;
@@ -1286,7 +1298,7 @@ footer#ft {
    Basic setup
    ========================================================================== */
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
   line-height: 1.7;
   color: #313e48;
@@ -1299,37 +1311,49 @@ a {
 a:visited {
   color: #7ed1c3;
 }
-a:hover, a:focus, a:active {
+a:hover,
+a:focus,
+a:active {
   color: #45bda8;
   text-decoration: underline;
 }
-a.aspNetDisabled, a.aspNetDisabled:hover, a.aspNetDisabled:focus, a.aspNetDisabled:active, a.aspNetDisabled:visited {
+a.aspNetDisabled,
+a.aspNetDisabled:hover,
+a.aspNetDisabled:focus,
+a.aspNetDisabled:active,
+a.aspNetDisabled:visited {
   color: #999999;
 }
 
 .RadGrid a,
 .RadToolTip a {
-  color: #6bcaba  !important;
+  color: #6bcaba !important;
   text-decoration: underline;
 }
 .RadGrid a:visited,
 .RadToolTip a:visited {
-  color: #7ed1c3  !important;
+  color: #7ed1c3 !important;
 }
-.RadGrid a:hover, .RadGrid a:focus, .RadGrid a:active,
+.RadGrid a:hover,
+.RadGrid a:focus,
+.RadGrid a:active,
 .RadToolTip a:hover,
 .RadToolTip a:focus,
 .RadToolTip a:active {
-  color: #45bda8  !important;
+  color: #45bda8 !important;
   text-decoration: underline;
 }
-.RadGrid a.aspNetDisabled, .RadGrid a.aspNetDisabled:hover, .RadGrid a.aspNetDisabled:focus, .RadGrid a.aspNetDisabled:active, .RadGrid a.aspNetDisabled:visited,
+.RadGrid a.aspNetDisabled,
+.RadGrid a.aspNetDisabled:hover,
+.RadGrid a.aspNetDisabled:focus,
+.RadGrid a.aspNetDisabled:active,
+.RadGrid a.aspNetDisabled:visited,
 .RadToolTip a.aspNetDisabled,
 .RadToolTip a.aspNetDisabled:hover,
 .RadToolTip a.aspNetDisabled:focus,
 .RadToolTip a.aspNetDisabled:active,
 .RadToolTip a.aspNetDisabled:visited {
-  color: #999999  !important;
+  color: #999999 !important;
 }
 
 .RadGrid a.TextButton {
@@ -1348,7 +1372,7 @@ h1,
 h2,
 .h2,
 .PanelTitle {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
   color: #333;
 }
@@ -1393,7 +1417,7 @@ div.PanelTitle,
 
 h3,
 .h3 {
-  font-family: "Source Serif Pro", serif;
+  font-family: 'Source Serif Pro', serif;
   font-weight: 300;
   font-size: 140%;
   line-height: 38px;
@@ -1503,7 +1527,7 @@ img.ImgNoResize,
 
 /* Universal search control */
 .search-field {
-  background: #fff url("images/ResponsiveHeaderSprite.png") no-repeat;
+  background: #fff url('images/ResponsiveHeaderSprite.png') no-repeat;
   background-position: 7px -16px;
   padding-left: 28px !important;
   color: #777;
@@ -1563,7 +1587,7 @@ img.ImgNoResize,
 }
 
 #masterDonorHeaderImage {
-  background-image: url("images/DonorHeaderLogo.png");
+  background-image: url('images/DonorHeaderLogo.png');
   background-repeat: no-repeat;
   width: 60%;
   height: 60px;
@@ -1591,7 +1615,8 @@ img.ImgNoResize,
 .ProxyPanelContact {
   background-color: #333;
 }
-.ProxyPanelContact, .ProxyPanelContact .obo-label {
+.ProxyPanelContact,
+.ProxyPanelContact .obo-label {
   color: #fff;
 }
 .ProxyPanelContact a {
@@ -1608,7 +1633,7 @@ img.ImgNoResize,
 .SubNavPanelHead {
   background-color: #f0edf2;
   color: #313e48;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
 }
 
@@ -1644,8 +1669,9 @@ img.ImgNoResize,
   padding: 0 15px 1em;
 }
 
-.footer-nav-copyright:before, .footer-nav-copyright:after {
-  content: " ";
+.footer-nav-copyright:before,
+.footer-nav-copyright:after {
+  content: ' ';
   display: table;
 }
 .footer-nav-copyright:after {
@@ -1723,10 +1749,11 @@ img.ImgNoResize,
   /* rgba fallback */
   background-color: rgba(0, 0, 0, 0.5);
   padding: 15px;
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.075), 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.075),
+    0 1px 0 rgba(255, 255, 255, 0.1);
 }
 .footer-promo-container .lead {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
   margin-bottom: 0.25em;
   font-size: 150%;
@@ -1761,10 +1788,12 @@ img.ImgNoResize,
   background-color: transparent;
   color: rgba(0, 0, 0, 0.31);
 }
-.footer-nav-copyright a, .footer-nav-copyright a:visited {
+.footer-nav-copyright a,
+.footer-nav-copyright a:visited {
   color: rgba(0, 0, 0, 0.31);
 }
-.footer-nav-copyright a:hover, .footer-nav-copyright a:active {
+.footer-nav-copyright a:hover,
+.footer-nav-copyright a:active {
   color: rgba(26, 26, 26, 0.31);
 }
 
@@ -1782,7 +1811,7 @@ img.ImgNoResize,
 }
 #ft h4 {
   color: #000;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
 }
 
@@ -1802,7 +1831,8 @@ img.ImgNoResize,
 #masterFooterNavigation a:visited {
   color: #000;
 }
-#masterFooterContent a:hover, #masterFooterContent a:active,
+#masterFooterContent a:hover,
+#masterFooterContent a:active,
 #masterFooterCopyright a:hover,
 #masterFooterCopyright a:active,
 #masterFooterNavigation a:hover,
@@ -1854,18 +1884,21 @@ img.ImgNoResize,
   }
 }
 
-.navbar-collapse, .searchbar-collapse {
+.navbar-collapse,
+.searchbar-collapse {
   background-color: #ffffff;
 }
 @media (min-width: 768px) {
-  .navbar-collapse, .searchbar-collapse {
+  .navbar-collapse,
+  .searchbar-collapse {
     padding-left: 0;
     padding-right: 0;
     border: none;
     background: none;
   }
 }
-.no-mqs .navbar-collapse, .no-mqs .searchbar-collapse {
+.no-mqs .navbar-collapse,
+.no-mqs .searchbar-collapse {
   padding-left: 0;
   padding-right: 0;
   border: none;
@@ -1900,14 +1933,23 @@ img.ImgNoResize,
 .RadMenu.RadMenu_WSMA:focus {
   outline: none;
 }
-.RadMenu.RadMenu_WSMA .rmGroup, .RadMenu.RadMenu_WSMA .rmRootGroup, .RadMenu.RadMenu_WSMA .rmMultiColumn, .RadMenu.RadMenu_WSMA .rmRootGroup > .rmItem {
+.RadMenu.RadMenu_WSMA .rmGroup,
+.RadMenu.RadMenu_WSMA .rmRootGroup,
+.RadMenu.RadMenu_WSMA .rmMultiColumn,
+.RadMenu.RadMenu_WSMA .rmRootGroup > .rmItem {
   border: none;
 }
-.RadMenu.RadMenu_WSMA .rmVertical .rmToggle .rmIcon:before, .RadMenu.RadMenu_WSMA .rmVertical .rmExpand:before, .RadMenu.RadMenu_WSMA .rmRightArrow .rmIcon:before,
-.RadMenu.RadMenu_WSMA .rmHorizontal .rmToggle .rmIcon:before, .RadMenu.RadMenu_WSMA .rmHorizontal .rmExpand:before, .RadMenu.RadMenu_WSMA .rmBottomArrow .rmIcon:before {
+.RadMenu.RadMenu_WSMA .rmVertical .rmToggle .rmIcon:before,
+.RadMenu.RadMenu_WSMA .rmVertical .rmExpand:before,
+.RadMenu.RadMenu_WSMA .rmRightArrow .rmIcon:before,
+.RadMenu.RadMenu_WSMA .rmHorizontal .rmToggle .rmIcon:before,
+.RadMenu.RadMenu_WSMA .rmHorizontal .rmExpand:before,
+.RadMenu.RadMenu_WSMA .rmBottomArrow .rmIcon:before {
   content: none;
 }
-.RadMenu.RadMenu_WSMA .rmItem, .RadMenu.RadMenu_WSMA .rmHorizontal > .rmItem, .RadMenu.RadMenu_WSMA .rmHorizontal > .rmRootScrollGroup > .rmItem,
+.RadMenu.RadMenu_WSMA .rmItem,
+.RadMenu.RadMenu_WSMA .rmHorizontal > .rmItem,
+.RadMenu.RadMenu_WSMA .rmHorizontal > .rmRootScrollGroup > .rmItem,
 .RadMenu.RadMenu_WSMA .rmLink {
   float: none;
 }
@@ -1918,26 +1960,34 @@ img.ImgNoResize,
   display: inline-block;
   vertical-align: top;
 }
-.RadMenu.RadMenu_WSMA .rmRootGroup .rmRootLink .rmToggle, .RadMenu.RadMenu_WSMA .rmToggle {
+.RadMenu.RadMenu_WSMA .rmRootGroup .rmRootLink .rmToggle,
+.RadMenu.RadMenu_WSMA .rmToggle {
   width: auto;
 }
-.RadMenu.RadMenu_WSMA .rmToggle, .RadMenu.RadMenu_WSMA .rmToggle .rmIcon, .RadMenu.RadMenu_WSMA .rmRootGroup .rmRootLink .rmToggle {
+.RadMenu.RadMenu_WSMA .rmToggle,
+.RadMenu.RadMenu_WSMA .rmToggle .rmIcon,
+.RadMenu.RadMenu_WSMA .rmRootGroup .rmRootLink .rmToggle {
   position: static;
 }
-.RadMenu.RadMenu_WSMA .rmGroup .rmContent, .RadMenu.RadMenu_WSMA .rmRootGroup .rmContent {
+.RadMenu.RadMenu_WSMA .rmGroup .rmContent,
+.RadMenu.RadMenu_WSMA .rmRootGroup .rmContent {
   padding: 0;
 }
-.RadMenu.RadMenu_WSMA .RadSiteMap, .RadMenu.RadMenu_WSMA .RadSiteMap .rsmItem, .RadMenu.RadMenu_WSMA .RadSiteMap .rsmTwoLevels .rsmItem {
+.RadMenu.RadMenu_WSMA .RadSiteMap,
+.RadMenu.RadMenu_WSMA .RadSiteMap .rsmItem,
+.RadMenu.RadMenu_WSMA .RadSiteMap .rsmTwoLevels .rsmItem {
   font-size: inherit;
 }
 .RadMenu.RadMenu_WSMA ul {
   margin: 0;
   padding: 0;
 }
-.RadMenu.RadMenu_WSMA .rmItem, .RadMenu.RadMenu_WSMA .rsmItem {
+.RadMenu.RadMenu_WSMA .rmItem,
+.RadMenu.RadMenu_WSMA .rsmItem {
   list-style: none;
 }
-.RadMenu.RadMenu_WSMA .rmDisabled > a, .RadMenu.RadMenu_WSMA .rsmDisabled > a {
+.RadMenu.RadMenu_WSMA .rmDisabled > a,
+.RadMenu.RadMenu_WSMA .rsmDisabled > a {
   cursor: default;
 }
 .RadMenu.RadMenu_WSMA .rmItem {
@@ -1952,8 +2002,8 @@ img.ImgNoResize,
 }
 @media (max-width: 991px) {
   .RadMenu.RadMenu_WSMA .rmText,
-.RadMenu.RadMenu_WSMA .rmHorizontal .rmText,
-.RadMenu.RadMenu_WSMA .rmSlide .rmText {
+  .RadMenu.RadMenu_WSMA .rmHorizontal .rmText,
+  .RadMenu.RadMenu_WSMA .rmSlide .rmText {
     padding: 8px 8px;
   }
 }
@@ -2034,7 +2084,8 @@ img.ImgNoResize,
   position: relative;
   /* required for the menu to work in IE */
 }
-.RadMenu.RadMenu_WSMA .rsmColumnWrap .rsmLevel1 .rsmLink, .RadMenu.RadMenu_WSMA .rsmColumnWrap .rsmLevel1 .rsmTemplate {
+.RadMenu.RadMenu_WSMA .rsmColumnWrap .rsmLevel1 .rsmLink,
+.RadMenu.RadMenu_WSMA .rsmColumnWrap .rsmLevel1 .rsmTemplate {
   padding: 0;
   margin: 0;
 }
@@ -2053,7 +2104,8 @@ img.ImgNoResize,
   font-size: 150%;
   font-weight: 300;
 }
-.RadMenu.RadMenu_WSMA .rsmTwoLevels > .rsmItem > .rsmLink:active, .RadMenu.RadMenu_WSMA .rsmTwoLevels > .rsmItem > .rsmLink::visited,
+.RadMenu.RadMenu_WSMA .rsmTwoLevels > .rsmItem > .rsmLink:active,
+.RadMenu.RadMenu_WSMA .rsmTwoLevels > .rsmItem > .rsmLink::visited,
 .RadMenu.RadMenu_WSMA .rsmThreeLevels > .rsmItem > .rsmLink:active,
 .RadMenu.RadMenu_WSMA .rsmThreeLevels > .rsmItem > .rsmLink::visited {
   color: #6bcaba;
@@ -2072,7 +2124,8 @@ img.ImgNoResize,
 .RadMenu.RadMenu_WSMA .rsmDisabled > .rsmLink {
   color: #333;
 }
-.RadMenu.RadMenu_WSMA .rmDisabled > .rmLink:hover, .RadMenu.RadMenu_WSMA .rmDisabled > .rmLink:active,
+.RadMenu.RadMenu_WSMA .rmDisabled > .rmLink:hover,
+.RadMenu.RadMenu_WSMA .rmDisabled > .rmLink:active,
 .RadMenu.RadMenu_WSMA .rsmDisabled > .rsmLink:hover,
 .RadMenu.RadMenu_WSMA .rsmDisabled > .rsmLink:active {
   background-color: transparent;
@@ -2083,7 +2136,7 @@ img.ImgNoResize,
 }
 .RadMenu.RadMenu_WSMA .rmRootGroup > .rmItem > .rmLink {
   color: #313e48;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 100%;
   font-weight: 400;
   letter-spacing: 1px;
@@ -2093,7 +2146,12 @@ img.ImgNoResize,
     color: #313e48;
   }
 }
-.Wrapper-HomePage .no-mqs .RadMenu.RadMenu_WSMA .rmRootGroup > .rmItem > .rmLink {
+.Wrapper-HomePage
+  .no-mqs
+  .RadMenu.RadMenu_WSMA
+  .rmRootGroup
+  > .rmItem
+  > .rmLink {
   color: #313e48;
 }
 @media (max-width: 991px) {
@@ -2101,12 +2159,14 @@ img.ImgNoResize,
     font-size: 100%;
   }
 }
-.RadMenu.RadMenu_WSMA .rmToggle, .RadMenu.RadMenu_WSMA .rmRootGroup .rmRootLink .rmToggle {
+.RadMenu.RadMenu_WSMA .rmToggle,
+.RadMenu.RadMenu_WSMA .rmRootGroup .rmRootLink .rmToggle {
   /* a clickable target to expand multi-level navigaiton */
   display: inline-block;
   height: 100%;
 }
-.RadMenu.RadMenu_WSMA .rmToggle .rmIcon, .RadMenu.RadMenu_WSMA .rmRootGroup .rmRootLink .rmToggle .rmIcon {
+.RadMenu.RadMenu_WSMA .rmToggle .rmIcon,
+.RadMenu.RadMenu_WSMA .rmRootGroup .rmRootLink .rmToggle .rmIcon {
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
@@ -2115,7 +2175,7 @@ img.ImgNoResize,
   display: block;
   width: 23px;
   height: 15px;
-  background-image: url("images/responsivenav.png");
+  background-image: url('images/responsivenav.png');
   background-repeat: no-repeat;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -2153,7 +2213,7 @@ img.ImgNoResize,
 .RadMenu_WSMA .rmSlide .rmLink,
 .RadMenu_WSMA .rmSlide .rsmLink {
   color: #333;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 124%;
   font-weight: normal;
 }
@@ -2162,7 +2222,8 @@ img.ImgNoResize,
 .RadMenu_WSMA .rmSlide .MegaDropDownMenuSeperator > .rsmLink {
   border-bottom: 1px solid #ffffff;
 }
-.RadMenu_WSMA .rmSlide .rmSeparator, .RadMenu_WSMA .rmSlide .rmVertical > .rmSeparator {
+.RadMenu_WSMA .rmSlide .rmSeparator,
+.RadMenu_WSMA .rmSlide .rmVertical > .rmSeparator {
   margin: 0 15px;
 }
 .RadMenu_WSMA .rmSlide .rmFocused > .rmLink,
@@ -2172,13 +2233,36 @@ img.ImgNoResize,
   background-color: transparent;
   color: #6bcaba;
 }
-.RadMenu_WSMA .rmSlide .rmLink:hover, .RadMenu_WSMA .rmSlide .rmLink:focus, .RadMenu_WSMA .rmSlide .rmLink.rmFocused,
+.RadMenu_WSMA .rmSlide .rmLink:hover,
+.RadMenu_WSMA .rmSlide .rmLink:focus,
+.RadMenu_WSMA .rmSlide .rmLink.rmFocused,
 .RadMenu_WSMA .rmSlide .rsmLink:hover,
 .RadMenu_WSMA .rmSlide .rsmLink:focus,
 .RadMenu_WSMA .rmSlide .rsmLink.rmFocused,
-.RadMenu_WSMA .rmSlide .rsmTwoLevels > .rsmItem > .rsmLink .rsmThreeLevels > .rsmItem > .rsmLink:hover,
-.RadMenu_WSMA .rmSlide .rsmTwoLevels > .rsmItem > .rsmLink .rsmThreeLevels > .rsmItem > .rsmLink:focus,
-.RadMenu_WSMA .rmSlide .rsmTwoLevels > .rsmItem > .rsmLink .rsmThreeLevels > .rsmItem > .rsmLink.rmFocused {
+.RadMenu_WSMA
+  .rmSlide
+  .rsmTwoLevels
+  > .rsmItem
+  > .rsmLink
+  .rsmThreeLevels
+  > .rsmItem
+  > .rsmLink:hover,
+.RadMenu_WSMA
+  .rmSlide
+  .rsmTwoLevels
+  > .rsmItem
+  > .rsmLink
+  .rsmThreeLevels
+  > .rsmItem
+  > .rsmLink:focus,
+.RadMenu_WSMA
+  .rmSlide
+  .rsmTwoLevels
+  > .rsmItem
+  > .rsmLink
+  .rsmThreeLevels
+  > .rsmItem
+  > .rsmLink.rmFocused {
   background-color: transparent;
   color: #6bcaba;
   text-decoration: none;
@@ -2188,8 +2272,9 @@ img.ImgNoResize,
    * we want to indent the nav to give separation */
   margin-left: 0;
 }
-.RadMenu_WSMA .rmSlide .rmExpandRight, .RadMenu_WSMA .rmSlide .rmGroup a.rmLink.rmExpandRight {
-  background-image: url("images/ResponsiveNav.png");
+.RadMenu_WSMA .rmSlide .rmExpandRight,
+.RadMenu_WSMA .rmSlide .rmGroup a.rmLink.rmExpandRight {
+  background-image: url('images/ResponsiveNav.png');
   background-position: 110% -200px;
   background-repeat: no-repeat;
 }
@@ -2209,7 +2294,9 @@ img.ImgNoResize,
     width: 100% !important;
     left: 0 !important;
   }
-  .RadMenu_WSMA .rmSlide ul.rmVertical, .RadMenu_WSMA .rmSlide ul.rmHorizontal, .RadMenu_WSMA .rmSlide ul.rmRootScrollGroup {
+  .RadMenu_WSMA .rmSlide ul.rmVertical,
+  .RadMenu_WSMA .rmSlide ul.rmHorizontal,
+  .RadMenu_WSMA .rmSlide ul.rmRootScrollGroup {
     float: none;
   }
   .RadMenu_WSMA .rmSlide .rmSlide {
@@ -2222,7 +2309,7 @@ img.ImgNoResize,
     padding-right: 15px;
   }
   .RadMenu_WSMA .rmSlide .rmToggleHandles .rmExpandRight,
-.RadMenu_WSMA .rmSlide .rmToggleHandles .rmGroup a.rmText.rmExpandRight {
+  .RadMenu_WSMA .rmSlide .rmToggleHandles .rmGroup a.rmText.rmExpandRight {
     /* if toggle handles are on we don't want to display the arrow twice*/
     background-image: none;
   }
@@ -2252,10 +2339,10 @@ img.ImgNoResize,
     border-bottom: 4px solid transparent;
   }
   .RadMenu.RadMenu_WSMA .rmRootLink.rmSelected,
-.RadMenu.RadMenu_WSMA .rmRootLink.rmExpanded,
-.RadMenu.RadMenu_WSMA .rmRootLink:hover,
-.RadMenu.RadMenu_WSMA .rmRootLink:focus,
-.RadMenu.RadMenu_WSMA .rmRootLink.rmFocused {
+  .RadMenu.RadMenu_WSMA .rmRootLink.rmExpanded,
+  .RadMenu.RadMenu_WSMA .rmRootLink:hover,
+  .RadMenu.RadMenu_WSMA .rmRootLink:focus,
+  .RadMenu.RadMenu_WSMA .rmRootLink.rmFocused {
     border-bottom: 4px solid #6bcaba;
   }
   .RadMenu.RadMenu_WSMA .rmSlide {
@@ -2273,7 +2360,8 @@ img.ImgNoResize,
   .RadMenu.RadMenu_WSMA .rmSlide .rmLink {
     margin: 0;
   }
-  .RadMenu.RadMenu_WSMA .rmToggle, .RadMenu.RadMenu_WSMA .rmRootGroup .rmRootLink .rmToggle {
+  .RadMenu.RadMenu_WSMA .rmToggle,
+  .RadMenu.RadMenu_WSMA .rmRootGroup .rmRootLink .rmToggle {
     display: none;
   }
   .RadMenu.RadMenu_WSMA .rsmTwoLevels {
@@ -2286,10 +2374,12 @@ img.ImgNoResize,
     padding-top: 20px;
     color: #004851;
   }
-  .RadMenu.RadMenu_WSMA .rsmLevel1 > .rsmItem > .rsmLink:hover, .RadMenu.RadMenu_WSMA .rsmLevel1 > .rsmItem > .rsmLink:active, .RadMenu.RadMenu_WSMA .rsmLevel1 > .rsmItem > .rsmLink:focus,
-.RadMenu.RadMenu_WSMA .rsmLevel2 > .rsmItem > .rsmLink:hover,
-.RadMenu.RadMenu_WSMA .rsmLevel2 > .rsmItem > .rsmLink:active,
-.RadMenu.RadMenu_WSMA .rsmLevel2 > .rsmItem > .rsmLink:focus {
+  .RadMenu.RadMenu_WSMA .rsmLevel1 > .rsmItem > .rsmLink:hover,
+  .RadMenu.RadMenu_WSMA .rsmLevel1 > .rsmItem > .rsmLink:active,
+  .RadMenu.RadMenu_WSMA .rsmLevel1 > .rsmItem > .rsmLink:focus,
+  .RadMenu.RadMenu_WSMA .rsmLevel2 > .rsmItem > .rsmLink:hover,
+  .RadMenu.RadMenu_WSMA .rsmLevel2 > .rsmItem > .rsmLink:active,
+  .RadMenu.RadMenu_WSMA .rsmLevel2 > .rsmItem > .rsmLink:focus {
     color: #6bcaba;
   }
 }
@@ -2337,7 +2427,8 @@ img.ImgNoResize,
 .no-mqs .RadMenu.RadMenu_WSMA .rmSlide .rmLink {
   margin: 0;
 }
-.no-mqs .RadMenu.RadMenu_WSMA .rmToggle, .no-mqs .RadMenu.RadMenu_WSMA .rmRootGroup .rmRootLink .rmToggle {
+.no-mqs .RadMenu.RadMenu_WSMA .rmToggle,
+.no-mqs .RadMenu.RadMenu_WSMA .rmRootGroup .rmRootLink .rmToggle {
   display: none;
 }
 .no-mqs .RadMenu.RadMenu_WSMA .rsmTwoLevels {
@@ -2350,7 +2441,9 @@ img.ImgNoResize,
   padding-top: 20px;
   color: #004851;
 }
-.no-mqs .RadMenu.RadMenu_WSMA .rsmLevel1 > .rsmItem > .rsmLink:hover, .no-mqs .RadMenu.RadMenu_WSMA .rsmLevel1 > .rsmItem > .rsmLink:active, .no-mqs .RadMenu.RadMenu_WSMA .rsmLevel1 > .rsmItem > .rsmLink:focus,
+.no-mqs .RadMenu.RadMenu_WSMA .rsmLevel1 > .rsmItem > .rsmLink:hover,
+.no-mqs .RadMenu.RadMenu_WSMA .rsmLevel1 > .rsmItem > .rsmLink:active,
+.no-mqs .RadMenu.RadMenu_WSMA .rsmLevel1 > .rsmItem > .rsmLink:focus,
 .no-mqs .RadMenu.RadMenu_WSMA .rsmLevel2 > .rsmItem > .rsmLink:hover,
 .no-mqs .RadMenu.RadMenu_WSMA .rsmLevel2 > .rsmItem > .rsmLink:active,
 .no-mqs .RadMenu.RadMenu_WSMA .rsmLevel2 > .rsmItem > .rsmLink:focus {
@@ -2390,7 +2483,9 @@ img.ImgNoResize,
 .RadTreeView.RadTreeView_WSMA .rtBot .rtSelected {
   border-left: 5px solid #8cdbd0;
 }
-.RadTreeView.RadTreeView_WSMA .rtTop:hover, .RadTreeView.RadTreeView_WSMA .rtTop:active, .RadTreeView.RadTreeView_WSMA .rtTop:focus,
+.RadTreeView.RadTreeView_WSMA .rtTop:hover,
+.RadTreeView.RadTreeView_WSMA .rtTop:active,
+.RadTreeView.RadTreeView_WSMA .rtTop:focus,
 .RadTreeView.RadTreeView_WSMA .rtMid:hover,
 .RadTreeView.RadTreeView_WSMA .rtMid:active,
 .RadTreeView.RadTreeView_WSMA .rtMid:focus,
@@ -2411,7 +2506,9 @@ img.ImgNoResize,
   color: #313e48;
   border-bottom: 1px solid white;
 }
-.RadTreeView.RadTreeView_WSMA .rtSelected > a.rtIn:hover, .RadTreeView.RadTreeView_WSMA .rtSelected > a.rtIn:active, .RadTreeView.RadTreeView_WSMA .rtSelected > a.rtIn:focus {
+.RadTreeView.RadTreeView_WSMA .rtSelected > a.rtIn:hover,
+.RadTreeView.RadTreeView_WSMA .rtSelected > a.rtIn:active,
+.RadTreeView.RadTreeView_WSMA .rtSelected > a.rtIn:focus {
   background-color: transparent;
 }
 .RadTreeView.RadTreeView_WSMA .rtUL {
@@ -2447,7 +2544,9 @@ img.ImgNoResize,
   margin: 0 20px 0 15px;
   border-bottom: 1px solid white;
 }
-.RadTreeView.RadTreeView_WSMA a.rtIn:hover, .RadTreeView.RadTreeView_WSMA a.rtIn:active, .RadTreeView.RadTreeView_WSMA a.rtIn:focus {
+.RadTreeView.RadTreeView_WSMA a.rtIn:hover,
+.RadTreeView.RadTreeView_WSMA a.rtIn:active,
+.RadTreeView.RadTreeView_WSMA a.rtIn:focus {
   border-bottom: 1px solid white;
   color: #313e48;
 }
@@ -2513,7 +2612,8 @@ img.ImgNoResize,
 .navbar-toggle.collapsed {
   background-color: #333;
 }
-.navbar-toggle:hover, .navbar-toggle:focus {
+.navbar-toggle:hover,
+.navbar-toggle:focus {
   background-color: #666;
 }
 .navbar-toggle .icon-bar {
@@ -2531,17 +2631,22 @@ img.ImgNoResize,
   font-weight: bold;
   padding-top: 5px;
 }
-.header-container .nav-auxiliary .UtilityAuthentication a:hover, .header-container .nav-auxiliary .UtilityAuthentication a:focus {
+.header-container .nav-auxiliary .UtilityAuthentication a:hover,
+.header-container .nav-auxiliary .UtilityAuthentication a:focus {
   text-decoration: underline;
 }
 @media (min-width: 768px) {
   .header-container .nav-auxiliary .header-social .SocialSprite,
-.header-container .nav-auxiliary .auth-link {
+  .header-container .nav-auxiliary .auth-link {
     padding: 5px 20px 5px 0;
     color: #313e48;
   }
-  .Wrapper-HomePage .header-container .nav-auxiliary .header-social .SocialSprite,
-.Wrapper-HomePage .header-container .nav-auxiliary .auth-link {
+  .Wrapper-HomePage
+    .header-container
+    .nav-auxiliary
+    .header-social
+    .SocialSprite,
+  .Wrapper-HomePage .header-container .nav-auxiliary .auth-link {
     color: #313e48;
   }
   .header-container .nav-auxiliary .NavigationListItem {
@@ -2572,7 +2677,12 @@ img.ImgNoResize,
   padding: 5px 20px 5px 0;
   color: #313e48;
 }
-.Wrapper-HomePage .no-mqs .header-container .nav-auxiliary .header-social .SocialSprite,
+.Wrapper-HomePage
+  .no-mqs
+  .header-container
+  .nav-auxiliary
+  .header-social
+  .SocialSprite,
 .Wrapper-HomePage .no-mqs .header-container .nav-auxiliary .auth-link {
   color: #313e48;
 }
@@ -2589,7 +2699,11 @@ img.ImgNoResize,
   font-size: 18px !important;
   border: none;
 }
-.no-mqs .header-container .nav-auxiliary .NavigationListItem.btn .NavigationLink {
+.no-mqs
+  .header-container
+  .nav-auxiliary
+  .NavigationListItem.btn
+  .NavigationLink {
   color: #fff;
 }
 .no-mqs .header-container .nav-auxiliary .auth-link-container-sm {
@@ -2600,13 +2714,17 @@ img.ImgNoResize,
 }
 @media (max-width: 991px) {
   .header-container .nav-auxiliary .header-social .SocialSprite,
-.header-container .nav-auxiliary .auth-link {
+  .header-container .nav-auxiliary .auth-link {
     padding: 5px 7px 5px 0;
     line-height: 2.1;
     color: #313e48;
   }
-  .Wrapper-HomePage .header-container .nav-auxiliary .header-social .SocialSprite,
-.Wrapper-HomePage .header-container .nav-auxiliary .auth-link {
+  .Wrapper-HomePage
+    .header-container
+    .nav-auxiliary
+    .header-social
+    .SocialSprite,
+  .Wrapper-HomePage .header-container .nav-auxiliary .auth-link {
     color: #fff;
   }
   .header-container .nav-auxiliary .NavigationListItem {
@@ -2648,10 +2766,10 @@ img.ImgNoResize,
  * This is overwritten when the class "nav-aux-cart" is applied.
  */
 .cartCenter span:before {
-  content: "(";
+  content: '(';
 }
 .cartCenter span:after {
-  content: ")";
+  content: ')';
 }
 
 /* Auxiliary toggle buttons
@@ -2671,7 +2789,8 @@ img.ImgNoResize,
 .navbar-toggle .icon-search {
   display: inline-block;
   float: left;
-  background: transparent url("images/ResponsiveHeaderSprite.png") 0 0px no-repeat;
+  background: transparent url('images/ResponsiveHeaderSprite.png') 0 0px
+    no-repeat;
   width: 22px;
   height: 19px;
   margin: 0;
@@ -2694,7 +2813,8 @@ img.ImgNoResize,
   border: 1px solid transparent;
   border-radius: 0px;
 }
-.nav-auxiliary .nav-aux-button .NavigationLink:hover, .nav-auxiliary .nav-aux-button .NavigationLink:focus {
+.nav-auxiliary .nav-aux-button .NavigationLink:hover,
+.nav-auxiliary .nav-aux-button .NavigationLink:focus {
   background-color: #666;
 }
 .nav-auxiliary .nav-aux-button .NavigationLink:active {
@@ -2704,7 +2824,8 @@ img.ImgNoResize,
   position: relative;
   /* this is required for the cart indicator placement */
 }
-.nav-auxiliary .nav-aux-button.nav-aux-account .nav-text, .nav-auxiliary .nav-aux-button.nav-aux-cart .nav-text {
+.nav-auxiliary .nav-aux-button.nav-aux-account .nav-text,
+.nav-auxiliary .nav-aux-button.nav-aux-cart .nav-text {
   /* hide the cart text on small devices */
   display: inline-block;
   white-space: nowrap;
@@ -2715,7 +2836,7 @@ img.ImgNoResize,
   padding-left: 22px;
 }
 .nav-auxiliary .nav-aux-button.nav-aux-account .nav-text {
-  background: transparent url("images/ResponsiveHeaderSprite.png") 0 -125px no-repeat;
+  background: transparent url('images/ResponsiveHeaderSprite.png') 0 -125px no-repeat;
 }
 @media (min-width: 768px) {
   .nav-auxiliary .nav-aux-button.nav-aux-account .NavigationLink {
@@ -2723,7 +2844,7 @@ img.ImgNoResize,
     padding: 0;
   }
   .nav-auxiliary .nav-aux-button.nav-aux-account a:hover .nav-text,
-.nav-auxiliary .nav-aux-button.nav-aux-account a:focus .nav-text {
+  .nav-auxiliary .nav-aux-button.nav-aux-account a:focus .nav-text {
     text-decoration: underline;
   }
   .nav-auxiliary .nav-aux-button.nav-aux-account .nav-text {
@@ -2746,7 +2867,7 @@ img.ImgNoResize,
   width: auto;
 }
 .nav-auxiliary .nav-aux-button.nav-aux-cart .nav-text {
-  background: transparent url("images/ResponsiveHeaderSprite.png") 0 -75px no-repeat;
+  background: transparent url('images/ResponsiveHeaderSprite.png') 0 -75px no-repeat;
 }
 .nav-auxiliary .nav-aux-button.nav-aux-cart .cartFull {
   /* left postion is padding plus placement */
@@ -2830,8 +2951,8 @@ a.ste-toggle:focus {
 }
 @media (min-width: 768px) {
   .obo-toggle,
-.obo-toggle:hover,
-.obo-toggle:focus {
+  .obo-toggle:hover,
+  .obo-toggle:focus {
     margin-top: 2px;
   }
 }
@@ -2937,17 +3058,17 @@ a.ste-toggle:focus {
  */
 @media (max-width: 767px) {
   .nav-auxiliary .nav-aux-primary-switch,
-tr.nav-auxiliary .nav-aux-primary-switch,
-th.nav-auxiliary .nav-aux-primary-switch,
-td.nav-auxiliary .nav-aux-primary-switch {
+  tr.nav-auxiliary .nav-aux-primary-switch,
+  th.nav-auxiliary .nav-aux-primary-switch,
+  td.nav-auxiliary .nav-aux-primary-switch {
     display: none !important;
   }
 }
 @media (min-width: 768px) {
   .nav-primary .nav-aux-primary-switch,
-tr.nav-primary .nav-aux-primary-switch,
-th.nav-primary .nav-aux-primary-switch,
-td.nav-primary .nav-aux-primary-switch {
+  tr.nav-primary .nav-aux-primary-switch,
+  th.nav-primary .nav-aux-primary-switch,
+  td.nav-primary .nav-aux-primary-switch {
     display: none !important;
   }
 }
@@ -2975,20 +3096,34 @@ td.nav-primary .nav-aux-primary-switch {
    ON BEHALF OF ICONS
    ========================================================================== */
 .obo-action {
-  background-image: url("images/OboSprite.png");
+  background-image: url('images/OboSprite.png');
 }
 
-.obo-action.obo-change-contact, .obo-action.obo-change-contact[disabled]:hover, .obo-action.obo-change-contact.Disabled:hover, .obo-action.obo-change-contact.aspNetDisabled:hover, a.aspNetDisabled:hover .obo-action.obo-change-contact {
+.obo-action.obo-change-contact,
+.obo-action.obo-change-contact[disabled]:hover,
+.obo-action.obo-change-contact.Disabled:hover,
+.obo-action.obo-change-contact.aspNetDisabled:hover,
+a.aspNetDisabled:hover .obo-action.obo-change-contact {
   background-position: 0px 0;
 }
-.obo-action.obo-change-contact:hover, .obo-action.obo-change-contact:focus, a:hover .obo-action.obo-change-contact, a:focus .obo-action.obo-change-contact {
+.obo-action.obo-change-contact:hover,
+.obo-action.obo-change-contact:focus,
+a:hover .obo-action.obo-change-contact,
+a:focus .obo-action.obo-change-contact {
   background-position: 0px -35px;
 }
 
-.obo-action.obo-clear, .obo-action.obo-clear[disabled]:hover, .obo-action.obo-clear.Disabled:hover, .obo-action.obo-clear.aspNetDisabled:hover, a.aspNetDisabled:hover .obo-action.obo-clear {
+.obo-action.obo-clear,
+.obo-action.obo-clear[disabled]:hover,
+.obo-action.obo-clear.Disabled:hover,
+.obo-action.obo-clear.aspNetDisabled:hover,
+a.aspNetDisabled:hover .obo-action.obo-clear {
   background-position: -35px 0;
 }
-.obo-action.obo-clear:hover, .obo-action.obo-clear:focus, a:hover .obo-action.obo-clear, a:focus .obo-action.obo-clear {
+.obo-action.obo-clear:hover,
+.obo-action.obo-clear:focus,
+a:hover .obo-action.obo-clear,
+a:focus .obo-action.obo-clear {
   background-position: -35px -35px;
 }
 
@@ -3009,64 +3144,162 @@ td.nav-primary .nav-aux-primary-switch {
   width: 32px;
   height: 32px;
 }
-.SocialSprite:hover, .SocialSprite:focus, .SocialSprite:active {
+.SocialSprite:hover,
+.SocialSprite:focus,
+.SocialSprite:active {
   opacity: 1;
   filter: alpha(opacity=100);
 }
-.SocialSprite.FacebookIcon, .SocialSprite.FacebookIcon:hover, a:hover .SocialSprite.FacebookIcon, .SocialSprite.FacebookIcon:focus, a:focus .SocialSprite.FacebookIcon, .SocialSprite.FacebookIcon:active, a:active .SocialSprite.FacebookIcon {
+.SocialSprite.FacebookIcon,
+.SocialSprite.FacebookIcon:hover,
+a:hover .SocialSprite.FacebookIcon,
+.SocialSprite.FacebookIcon:focus,
+a:focus .SocialSprite.FacebookIcon,
+.SocialSprite.FacebookIcon:active,
+a:active .SocialSprite.FacebookIcon {
   background-position: 0 0;
   background-color: #3b5998;
 }
-.SocialSprite.FacebookIcon.LargeButtons, .SocialSprite.FacebookIcon.LargeButtons:hover, a:hover .SocialSprite.FacebookIcon.LargeButtons, .SocialSprite.FacebookIcon.LargeButtons:focus, a:focus .SocialSprite.FacebookIcon.LargeButtons, .SocialSprite.FacebookIcon.LargeButtons:active, a:active .SocialSprite.FacebookIcon.LargeButtons {
+.SocialSprite.FacebookIcon.LargeButtons,
+.SocialSprite.FacebookIcon.LargeButtons:hover,
+a:hover .SocialSprite.FacebookIcon.LargeButtons,
+.SocialSprite.FacebookIcon.LargeButtons:focus,
+a:focus .SocialSprite.FacebookIcon.LargeButtons,
+.SocialSprite.FacebookIcon.LargeButtons:active,
+a:active .SocialSprite.FacebookIcon.LargeButtons {
   background-position: 0 -80px;
 }
-.SocialSprite.TwitterIcon, .SocialSprite.TwitterIcon:hover, a:hover .SocialSprite.TwitterIcon, .SocialSprite.TwitterIcon:focus, a:focus .SocialSprite.TwitterIcon, .SocialSprite.TwitterIcon:active, a:active .SocialSprite.TwitterIcon {
+.SocialSprite.TwitterIcon,
+.SocialSprite.TwitterIcon:hover,
+a:hover .SocialSprite.TwitterIcon,
+.SocialSprite.TwitterIcon:focus,
+a:focus .SocialSprite.TwitterIcon,
+.SocialSprite.TwitterIcon:active,
+a:active .SocialSprite.TwitterIcon {
   background-position: -40px 0;
   background-color: #00a0d1;
 }
-.SocialSprite.TwitterIcon.LargeButtons, .SocialSprite.TwitterIcon.LargeButtons:hover, a:hover .SocialSprite.TwitterIcon.LargeButtons, .SocialSprite.TwitterIcon.LargeButtons:focus, a:focus .SocialSprite.TwitterIcon.LargeButtons, .SocialSprite.TwitterIcon.LargeButtons:active, a:active .SocialSprite.TwitterIcon.LargeButtons {
+.SocialSprite.TwitterIcon.LargeButtons,
+.SocialSprite.TwitterIcon.LargeButtons:hover,
+a:hover .SocialSprite.TwitterIcon.LargeButtons,
+.SocialSprite.TwitterIcon.LargeButtons:focus,
+a:focus .SocialSprite.TwitterIcon.LargeButtons,
+.SocialSprite.TwitterIcon.LargeButtons:active,
+a:active .SocialSprite.TwitterIcon.LargeButtons {
   background-position: -40px -80px;
 }
-.SocialSprite.LinkedInIcon, .SocialSprite.LinkedInIcon:hover, a:hover .SocialSprite.LinkedInIcon, .SocialSprite.LinkedInIcon:focus, a:focus .SocialSprite.LinkedInIcon, .SocialSprite.LinkedInIcon:active, a:active .SocialSprite.LinkedInIcon {
+.SocialSprite.LinkedInIcon,
+.SocialSprite.LinkedInIcon:hover,
+a:hover .SocialSprite.LinkedInIcon,
+.SocialSprite.LinkedInIcon:focus,
+a:focus .SocialSprite.LinkedInIcon,
+.SocialSprite.LinkedInIcon:active,
+a:active .SocialSprite.LinkedInIcon {
   background-position: -80px 0;
   background-color: #0e76a8;
 }
-.SocialSprite.LinkedInIcon.LargeButtons, .SocialSprite.LinkedInIcon.LargeButtons:hover, a:hover .SocialSprite.LinkedInIcon.LargeButtons, .SocialSprite.LinkedInIcon.LargeButtons:focus, a:focus .SocialSprite.LinkedInIcon.LargeButtons, .SocialSprite.LinkedInIcon.LargeButtons:active, a:active .SocialSprite.LinkedInIcon.LargeButtons {
+.SocialSprite.LinkedInIcon.LargeButtons,
+.SocialSprite.LinkedInIcon.LargeButtons:hover,
+a:hover .SocialSprite.LinkedInIcon.LargeButtons,
+.SocialSprite.LinkedInIcon.LargeButtons:focus,
+a:focus .SocialSprite.LinkedInIcon.LargeButtons,
+.SocialSprite.LinkedInIcon.LargeButtons:active,
+a:active .SocialSprite.LinkedInIcon.LargeButtons {
   background-position: -80px -80px;
 }
-.SocialSprite.YouTubeIcon, .SocialSprite.YouTubeIcon:hover, a:hover .SocialSprite.YouTubeIcon, .SocialSprite.YouTubeIcon:focus, a:focus .SocialSprite.YouTubeIcon, .SocialSprite.YouTubeIcon:active, a:active .SocialSprite.YouTubeIcon {
+.SocialSprite.YouTubeIcon,
+.SocialSprite.YouTubeIcon:hover,
+a:hover .SocialSprite.YouTubeIcon,
+.SocialSprite.YouTubeIcon:focus,
+a:focus .SocialSprite.YouTubeIcon,
+.SocialSprite.YouTubeIcon:active,
+a:active .SocialSprite.YouTubeIcon {
   background-position: -120px 0;
   background-color: #c4302b;
 }
-.SocialSprite.YouTubeIcon.LargeButtons, .SocialSprite.YouTubeIcon.LargeButtons:hover, a:hover .SocialSprite.YouTubeIcon.LargeButtons, .SocialSprite.YouTubeIcon.LargeButtons:focus, a:focus .SocialSprite.YouTubeIcon.LargeButtons, .SocialSprite.YouTubeIcon.LargeButtons:active, a:active .SocialSprite.YouTubeIcon.LargeButtons {
+.SocialSprite.YouTubeIcon.LargeButtons,
+.SocialSprite.YouTubeIcon.LargeButtons:hover,
+a:hover .SocialSprite.YouTubeIcon.LargeButtons,
+.SocialSprite.YouTubeIcon.LargeButtons:focus,
+a:focus .SocialSprite.YouTubeIcon.LargeButtons,
+.SocialSprite.YouTubeIcon.LargeButtons:active,
+a:active .SocialSprite.YouTubeIcon.LargeButtons {
   background-position: -120px -80px;
 }
-.SocialSprite.EmailIcon, .SocialSprite.EmailIcon:hover, a:hover .SocialSprite.EmailIcon, .SocialSprite.EmailIcon:focus, a:focus .SocialSprite.EmailIcon, .SocialSprite.EmailIcon:active, a:active .SocialSprite.EmailIcon {
+.SocialSprite.EmailIcon,
+.SocialSprite.EmailIcon:hover,
+a:hover .SocialSprite.EmailIcon,
+.SocialSprite.EmailIcon:focus,
+a:focus .SocialSprite.EmailIcon,
+.SocialSprite.EmailIcon:active,
+a:active .SocialSprite.EmailIcon {
   background-position: -160px 0;
   background-color: #0a629a;
 }
-.SocialSprite.EmailIcon.LargeButtons, .SocialSprite.EmailIcon.LargeButtons:hover, a:hover .SocialSprite.EmailIcon.LargeButtons, .SocialSprite.EmailIcon.LargeButtons:focus, a:focus .SocialSprite.EmailIcon.LargeButtons, .SocialSprite.EmailIcon.LargeButtons:active, a:active .SocialSprite.EmailIcon.LargeButtons {
+.SocialSprite.EmailIcon.LargeButtons,
+.SocialSprite.EmailIcon.LargeButtons:hover,
+a:hover .SocialSprite.EmailIcon.LargeButtons,
+.SocialSprite.EmailIcon.LargeButtons:focus,
+a:focus .SocialSprite.EmailIcon.LargeButtons,
+.SocialSprite.EmailIcon.LargeButtons:active,
+a:active .SocialSprite.EmailIcon.LargeButtons {
   background-position: -160px -80px;
 }
-.SocialSprite.PinterestIcon, .SocialSprite.PinterestIcon:hover, a:hover .SocialSprite.PinterestIcon, .SocialSprite.PinterestIcon:focus, a:focus .SocialSprite.PinterestIcon, .SocialSprite.PinterestIcon:active, a:active .SocialSprite.PinterestIcon {
+.SocialSprite.PinterestIcon,
+.SocialSprite.PinterestIcon:hover,
+a:hover .SocialSprite.PinterestIcon,
+.SocialSprite.PinterestIcon:focus,
+a:focus .SocialSprite.PinterestIcon,
+.SocialSprite.PinterestIcon:active,
+a:active .SocialSprite.PinterestIcon {
   background-position: -200px 0;
   background-color: #0a629a;
 }
-.SocialSprite.PinterestIcon.LargeButtons, .SocialSprite.PinterestIcon.LargeButtons:hover, a:hover .SocialSprite.PinterestIcon.LargeButtons, .SocialSprite.PinterestIcon.LargeButtons:focus, a:focus .SocialSprite.PinterestIcon.LargeButtons, .SocialSprite.PinterestIcon.LargeButtons:active, a:active .SocialSprite.PinterestIcon.LargeButtons {
+.SocialSprite.PinterestIcon.LargeButtons,
+.SocialSprite.PinterestIcon.LargeButtons:hover,
+a:hover .SocialSprite.PinterestIcon.LargeButtons,
+.SocialSprite.PinterestIcon.LargeButtons:focus,
+a:focus .SocialSprite.PinterestIcon.LargeButtons,
+.SocialSprite.PinterestIcon.LargeButtons:active,
+a:active .SocialSprite.PinterestIcon.LargeButtons {
   background-position: -200px -80px;
 }
-.SocialSprite.GPlusIcon, .SocialSprite.GPlusIcon:hover, a:hover .SocialSprite.GPlusIcon, .SocialSprite.GPlusIcon:focus, a:focus .SocialSprite.GPlusIcon, .SocialSprite.GPlusIcon:active, a:active .SocialSprite.GPlusIcon {
+.SocialSprite.GPlusIcon,
+.SocialSprite.GPlusIcon:hover,
+a:hover .SocialSprite.GPlusIcon,
+.SocialSprite.GPlusIcon:focus,
+a:focus .SocialSprite.GPlusIcon,
+.SocialSprite.GPlusIcon:active,
+a:active .SocialSprite.GPlusIcon {
   background-position: -240px 0;
   background-color: #db4a39;
 }
-.SocialSprite.GPlusIcon.LargeButtons, .SocialSprite.GPlusIcon.LargeButtons:hover, a:hover .SocialSprite.GPlusIcon.LargeButtons, .SocialSprite.GPlusIcon.LargeButtons:focus, a:focus .SocialSprite.GPlusIcon.LargeButtons, .SocialSprite.GPlusIcon.LargeButtons:active, a:active .SocialSprite.GPlusIcon.LargeButtons {
+.SocialSprite.GPlusIcon.LargeButtons,
+.SocialSprite.GPlusIcon.LargeButtons:hover,
+a:hover .SocialSprite.GPlusIcon.LargeButtons,
+.SocialSprite.GPlusIcon.LargeButtons:focus,
+a:focus .SocialSprite.GPlusIcon.LargeButtons,
+.SocialSprite.GPlusIcon.LargeButtons:active,
+a:active .SocialSprite.GPlusIcon.LargeButtons {
   background-position: -240px -80px;
 }
-.SocialSprite.SkypeIcon, .SocialSprite.SkypeIcon:hover, a:hover .SocialSprite.SkypeIcon, .SocialSprite.SkypeIcon:focus, a:focus .SocialSprite.SkypeIcon, .SocialSprite.SkypeIcon:active, a:active .SocialSprite.SkypeIcon {
+.SocialSprite.SkypeIcon,
+.SocialSprite.SkypeIcon:hover,
+a:hover .SocialSprite.SkypeIcon,
+.SocialSprite.SkypeIcon:focus,
+a:focus .SocialSprite.SkypeIcon,
+.SocialSprite.SkypeIcon:active,
+a:active .SocialSprite.SkypeIcon {
   background-position: -280px 0;
   background-color: #00aff0;
 }
-.SocialSprite.SkypeIcon.LargeButtons, .SocialSprite.SkypeIcon.LargeButtons:hover, a:hover .SocialSprite.SkypeIcon.LargeButtons, .SocialSprite.SkypeIcon.LargeButtons:focus, a:focus .SocialSprite.SkypeIcon.LargeButtons, .SocialSprite.SkypeIcon.LargeButtons:active, a:active .SocialSprite.SkypeIcon.LargeButtons {
+.SocialSprite.SkypeIcon.LargeButtons,
+.SocialSprite.SkypeIcon.LargeButtons:hover,
+a:hover .SocialSprite.SkypeIcon.LargeButtons,
+.SocialSprite.SkypeIcon.LargeButtons:focus,
+a:focus .SocialSprite.SkypeIcon.LargeButtons,
+.SocialSprite.SkypeIcon.LargeButtons:active,
+a:active .SocialSprite.SkypeIcon.LargeButtons {
   background-position: -280px -80px;
 }
 
@@ -3075,26 +3308,26 @@ input,
 button,
 select,
 textarea {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   outline: none;
 }
 
 select,
 textarea,
-input[type=text],
-input[type=password],
-input[type=datetime],
-input[type=datetime-local],
-input[type=date],
-input[type=month],
-input[type=time],
-input[type=week],
-input[type=number],
-input[type=email],
-input[type=url],
-input[type=search],
-input[type=tel],
-input[type=color],
+input[type='text'],
+input[type='password'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='date'],
+input[type='month'],
+input[type='time'],
+input[type='week'],
+input[type='number'],
+input[type='email'],
+input[type='url'],
+input[type='search'],
+input[type='tel'],
+input[type='color'],
 .uneditable-input {
   display: inline-block;
   height: 39px;
@@ -3109,103 +3342,104 @@ input[type=color],
 }
 select:focus,
 textarea:focus,
-input[type=text]:focus,
-input[type=password]:focus,
-input[type=datetime]:focus,
-input[type=datetime-local]:focus,
-input[type=date]:focus,
-input[type=month]:focus,
-input[type=time]:focus,
-input[type=week]:focus,
-input[type=number]:focus,
-input[type=email]:focus,
-input[type=url]:focus,
-input[type=search]:focus,
-input[type=tel]:focus,
-input[type=color]:focus,
+input[type='text']:focus,
+input[type='password']:focus,
+input[type='datetime']:focus,
+input[type='datetime-local']:focus,
+input[type='date']:focus,
+input[type='month']:focus,
+input[type='time']:focus,
+input[type='week']:focus,
+input[type='number']:focus,
+input[type='email']:focus,
+input[type='url']:focus,
+input[type='search']:focus,
+input[type='tel']:focus,
+input[type='color']:focus,
 .uneditable-input:focus {
   border-color: #66afe9;
   outline: 0;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 8px rgba(102, 175, 233, 0.6);
 }
 select:-moz-placeholder,
 textarea:-moz-placeholder,
-input[type=text]:-moz-placeholder,
-input[type=password]:-moz-placeholder,
-input[type=datetime]:-moz-placeholder,
-input[type=datetime-local]:-moz-placeholder,
-input[type=date]:-moz-placeholder,
-input[type=month]:-moz-placeholder,
-input[type=time]:-moz-placeholder,
-input[type=week]:-moz-placeholder,
-input[type=number]:-moz-placeholder,
-input[type=email]:-moz-placeholder,
-input[type=url]:-moz-placeholder,
-input[type=search]:-moz-placeholder,
-input[type=tel]:-moz-placeholder,
-input[type=color]:-moz-placeholder,
+input[type='text']:-moz-placeholder,
+input[type='password']:-moz-placeholder,
+input[type='datetime']:-moz-placeholder,
+input[type='datetime-local']:-moz-placeholder,
+input[type='date']:-moz-placeholder,
+input[type='month']:-moz-placeholder,
+input[type='time']:-moz-placeholder,
+input[type='week']:-moz-placeholder,
+input[type='number']:-moz-placeholder,
+input[type='email']:-moz-placeholder,
+input[type='url']:-moz-placeholder,
+input[type='search']:-moz-placeholder,
+input[type='tel']:-moz-placeholder,
+input[type='color']:-moz-placeholder,
 .uneditable-input:-moz-placeholder {
   color: #999999;
 }
 select::-moz-placeholder,
 textarea::-moz-placeholder,
-input[type=text]::-moz-placeholder,
-input[type=password]::-moz-placeholder,
-input[type=datetime]::-moz-placeholder,
-input[type=datetime-local]::-moz-placeholder,
-input[type=date]::-moz-placeholder,
-input[type=month]::-moz-placeholder,
-input[type=time]::-moz-placeholder,
-input[type=week]::-moz-placeholder,
-input[type=number]::-moz-placeholder,
-input[type=email]::-moz-placeholder,
-input[type=url]::-moz-placeholder,
-input[type=search]::-moz-placeholder,
-input[type=tel]::-moz-placeholder,
-input[type=color]::-moz-placeholder,
+input[type='text']::-moz-placeholder,
+input[type='password']::-moz-placeholder,
+input[type='datetime']::-moz-placeholder,
+input[type='datetime-local']::-moz-placeholder,
+input[type='date']::-moz-placeholder,
+input[type='month']::-moz-placeholder,
+input[type='time']::-moz-placeholder,
+input[type='week']::-moz-placeholder,
+input[type='number']::-moz-placeholder,
+input[type='email']::-moz-placeholder,
+input[type='url']::-moz-placeholder,
+input[type='search']::-moz-placeholder,
+input[type='tel']::-moz-placeholder,
+input[type='color']::-moz-placeholder,
 .uneditable-input::-moz-placeholder {
   color: #999999;
 }
 select:-ms-input-placeholder,
 textarea:-ms-input-placeholder,
-input[type=text]:-ms-input-placeholder,
-input[type=password]:-ms-input-placeholder,
-input[type=datetime]:-ms-input-placeholder,
-input[type=datetime-local]:-ms-input-placeholder,
-input[type=date]:-ms-input-placeholder,
-input[type=month]:-ms-input-placeholder,
-input[type=time]:-ms-input-placeholder,
-input[type=week]:-ms-input-placeholder,
-input[type=number]:-ms-input-placeholder,
-input[type=email]:-ms-input-placeholder,
-input[type=url]:-ms-input-placeholder,
-input[type=search]:-ms-input-placeholder,
-input[type=tel]:-ms-input-placeholder,
-input[type=color]:-ms-input-placeholder,
+input[type='text']:-ms-input-placeholder,
+input[type='password']:-ms-input-placeholder,
+input[type='datetime']:-ms-input-placeholder,
+input[type='datetime-local']:-ms-input-placeholder,
+input[type='date']:-ms-input-placeholder,
+input[type='month']:-ms-input-placeholder,
+input[type='time']:-ms-input-placeholder,
+input[type='week']:-ms-input-placeholder,
+input[type='number']:-ms-input-placeholder,
+input[type='email']:-ms-input-placeholder,
+input[type='url']:-ms-input-placeholder,
+input[type='search']:-ms-input-placeholder,
+input[type='tel']:-ms-input-placeholder,
+input[type='color']:-ms-input-placeholder,
 .uneditable-input:-ms-input-placeholder {
   color: #999999;
 }
 select::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder,
-input[type=text]::-webkit-input-placeholder,
-input[type=password]::-webkit-input-placeholder,
-input[type=datetime]::-webkit-input-placeholder,
-input[type=datetime-local]::-webkit-input-placeholder,
-input[type=date]::-webkit-input-placeholder,
-input[type=month]::-webkit-input-placeholder,
-input[type=time]::-webkit-input-placeholder,
-input[type=week]::-webkit-input-placeholder,
-input[type=number]::-webkit-input-placeholder,
-input[type=email]::-webkit-input-placeholder,
-input[type=url]::-webkit-input-placeholder,
-input[type=search]::-webkit-input-placeholder,
-input[type=tel]::-webkit-input-placeholder,
-input[type=color]::-webkit-input-placeholder,
+input[type='text']::-webkit-input-placeholder,
+input[type='password']::-webkit-input-placeholder,
+input[type='datetime']::-webkit-input-placeholder,
+input[type='datetime-local']::-webkit-input-placeholder,
+input[type='date']::-webkit-input-placeholder,
+input[type='month']::-webkit-input-placeholder,
+input[type='time']::-webkit-input-placeholder,
+input[type='week']::-webkit-input-placeholder,
+input[type='number']::-webkit-input-placeholder,
+input[type='email']::-webkit-input-placeholder,
+input[type='url']::-webkit-input-placeholder,
+input[type='search']::-webkit-input-placeholder,
+input[type='tel']::-webkit-input-placeholder,
+input[type='color']::-webkit-input-placeholder,
 .uneditable-input::-webkit-input-placeholder {
   color: #999999;
 }
 
-/* RadComboBox needs the same styles as normal inputs, 
+/* RadComboBox needs the same styles as normal inputs,
  * but has to be done separately due to its structure */
 .RadComboBox.RadComboBox_MetroTouch {
   color: #555555;
@@ -3214,7 +3448,12 @@ input[type=color]::-webkit-input-placeholder,
   line-height: inherit;
   font-weight: inherit;
 }
-.RadComboBox.RadComboBox_MetroTouch .rcbInner, .RadComboBox.RadComboBox_MetroTouch .rcbInner .rcbInput, .RadComboBox.RadComboBox_MetroTouch .rcbFocused, .RadComboBox.RadComboBox_MetroTouch .rcbFocused .rcbInput, .RadComboBox.RadComboBox_MetroTouch .rcbHovered, .RadComboBox.RadComboBox_MetroTouch .rcbHovered .rcbInput {
+.RadComboBox.RadComboBox_MetroTouch .rcbInner,
+.RadComboBox.RadComboBox_MetroTouch .rcbInner .rcbInput,
+.RadComboBox.RadComboBox_MetroTouch .rcbFocused,
+.RadComboBox.RadComboBox_MetroTouch .rcbFocused .rcbInput,
+.RadComboBox.RadComboBox_MetroTouch .rcbHovered,
+.RadComboBox.RadComboBox_MetroTouch .rcbHovered .rcbInput {
   color: #555555;
 }
 .RadComboBox.RadComboBox_MetroTouch .rcbInner {
@@ -3233,7 +3472,8 @@ input[type=color]::-webkit-input-placeholder,
 .RadComboBox.RadComboBox_MetroTouch .rcbFocused {
   border-color: #66afe9;
   outline: 0;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 8px rgba(102, 175, 233, 0.6);
 }
 .RadComboBox.RadComboBox_MetroTouch .rcbInput {
   height: 100%;
@@ -3253,19 +3493,24 @@ input[type=color]::-webkit-input-placeholder,
 .RadComboBoxDropDown.RadComboBoxDropDown_MetroTouch {
   font: inherit;
 }
-.RadComboBoxDropDown.RadComboBoxDropDown_MetroTouch .rcbItem, .RadComboBoxDropDown.RadComboBoxDropDown_MetroTouch .rcbHovered, .RadComboBoxDropDown.RadComboBoxDropDown_MetroTouch .rcbDisabled, .RadComboBoxDropDown.RadComboBoxDropDown_MetroTouch .rcbLoading {
+.RadComboBoxDropDown.RadComboBoxDropDown_MetroTouch .rcbItem,
+.RadComboBoxDropDown.RadComboBoxDropDown_MetroTouch .rcbHovered,
+.RadComboBoxDropDown.RadComboBoxDropDown_MetroTouch .rcbDisabled,
+.RadComboBoxDropDown.RadComboBoxDropDown_MetroTouch .rcbLoading {
   padding-top: 5px;
   padding-bottom: 5px;
 }
 
-.RadInput.RadInput.riSingle .riTextBox, .RadInput.RadInput .riTextBox {
+.RadInput.RadInput.riSingle .riTextBox,
+.RadInput.RadInput .riTextBox {
   height: 39px;
   padding: 5px 10px;
   border-color: #ccc;
   font: inherit;
   color: #555555;
 }
-.RadInput.RadInput.riSingle .riTextBox:focus, .RadInput.RadInput .riTextBox:focus {
+.RadInput.RadInput.riSingle .riTextBox:focus,
+.RadInput.RadInput .riTextBox:focus {
   border-color: #66afe9;
 }
 
@@ -3281,7 +3526,8 @@ input[type=color]::-webkit-input-placeholder,
   border-radius: 0px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
-#EventDescriptionDiv iframe, #EventDescriptionDiv td {
+#EventDescriptionDiv iframe,
+#EventDescriptionDiv td {
   background-color: transparent;
 }
 
@@ -3310,27 +3556,28 @@ input[type=color]::-webkit-input-placeholder,
 .chosen-container-active .chosen-choices {
   border-color: #66afe9;
   outline: 0;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 8px rgba(102, 175, 233, 0.6);
 }
 
-input[type=radio],
-input[type=checkbox] {
+input[type='radio'],
+input[type='checkbox'] {
   margin: 4px 0 0;
   *margin-top: 0;
   /* IE7 */
-  margin-top: 1px \9 ;
+  margin-top: 1px \9;
   /* IE8-9 */
   line-height: normal;
   cursor: pointer;
 }
 
-input[type=file],
-input[type=image],
-input[type=submit],
-input[type=reset],
-input[type=button],
-input[type=radio],
-input[type=checkbox] {
+input[type='file'],
+input[type='image'],
+input[type='submit'],
+input[type='reset'],
+input[type='button'],
+input[type='radio'],
+input[type='checkbox'] {
   width: auto;
 }
 
@@ -3349,9 +3596,9 @@ select[size] {
 }
 
 select:focus,
-input[type=file]:focus,
-input[type=radio]:focus,
-input[type=checkbox]:focus {
+input[type='file']:focus,
+input[type='radio']:focus,
+input[type='checkbox']:focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
@@ -3398,7 +3645,9 @@ input[type=checkbox]:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-.btn:hover, .btn:focus, .btn:visited,
+.btn:hover,
+.btn:focus,
+.btn:visited,
 .TextButton:hover,
 .TextButton:focus,
 .TextButton:visited,
@@ -3417,7 +3666,8 @@ input[type=checkbox]:focus {
   color: #fff;
   text-decoration: none;
 }
-.btn:active, .btn.active,
+.btn:active,
+.btn.active,
 .TextButton:active,
 .TextButton.active,
 .TextButtonWithImage:active,
@@ -3432,7 +3682,10 @@ input[type=checkbox]:focus {
   background-image: none;
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
-.btn.disabled, .btn[disabled], fieldset[disabled] .btn, .btn.aspNetDisabled,
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn,
+.btn.aspNetDisabled,
 .TextButton.disabled,
 .TextButton[disabled],
 fieldset[disabled] .TextButton,
@@ -3470,7 +3723,10 @@ fieldset[disabled] #masterHeaderActionArea a,
   background-color: #6bcaba;
   border-color: transparent;
 }
-.btn:hover, .btn:focus, .btn:active, .btn:visited,
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn:visited,
 .TextButton:hover,
 .TextButton:focus,
 .TextButton:active,
@@ -3503,7 +3759,18 @@ fieldset[disabled] #masterHeaderActionArea a,
 .RadGrid input.TextButton:active {
   background-image: none;
 }
-.btn[disabled], .btn[disabled]:hover, .btn[disabled]:focus, .btn[disabled]:active, fieldset[disabled] .btn, fieldset[disabled] .btn:hover, fieldset[disabled] .btn:focus, fieldset[disabled] .btn:active, .btn.aspNetDisabled, .btn.aspNetDisabled:hover, .btn.aspNetDisabled:focus, .btn.aspNetDisabled:active,
+.btn[disabled],
+.btn[disabled]:hover,
+.btn[disabled]:focus,
+.btn[disabled]:active,
+fieldset[disabled] .btn,
+fieldset[disabled] .btn:hover,
+fieldset[disabled] .btn:focus,
+fieldset[disabled] .btn:active,
+.btn.aspNetDisabled,
+.btn.aspNetDisabled:hover,
+.btn.aspNetDisabled:focus,
+.btn.aspNetDisabled:active,
 .TextButton[disabled],
 .TextButton[disabled]:hover,
 .TextButton[disabled]:focus,
@@ -3602,7 +3869,10 @@ a.TextButton {
   background-color: #004851;
   border-color: transparent;
 }
-.PrimaryButton:hover, .PrimaryButton:focus, .PrimaryButton:active, .PrimaryButton:visited,
+.PrimaryButton:hover,
+.PrimaryButton:focus,
+.PrimaryButton:active,
+.PrimaryButton:visited,
 .SaveAndClose:hover,
 .SaveAndClose:focus,
 .SaveAndClose:active,
@@ -3640,7 +3910,18 @@ a.TextButton {
 .RadGrid input.PrimaryButton:active {
   background-image: none;
 }
-.PrimaryButton[disabled], .PrimaryButton[disabled]:hover, .PrimaryButton[disabled]:focus, .PrimaryButton[disabled]:active, fieldset[disabled] .PrimaryButton, fieldset[disabled] .PrimaryButton:hover, fieldset[disabled] .PrimaryButton:focus, fieldset[disabled] .PrimaryButton:active, .PrimaryButton.aspNetDisabled, .PrimaryButton.aspNetDisabled:hover, .PrimaryButton.aspNetDisabled:focus, .PrimaryButton.aspNetDisabled:active,
+.PrimaryButton[disabled],
+.PrimaryButton[disabled]:hover,
+.PrimaryButton[disabled]:focus,
+.PrimaryButton[disabled]:active,
+fieldset[disabled] .PrimaryButton,
+fieldset[disabled] .PrimaryButton:hover,
+fieldset[disabled] .PrimaryButton:focus,
+fieldset[disabled] .PrimaryButton:active,
+.PrimaryButton.aspNetDisabled,
+.PrimaryButton.aspNetDisabled:hover,
+.PrimaryButton.aspNetDisabled:focus,
+.PrimaryButton.aspNetDisabled:active,
 .SaveAndClose[disabled],
 .SaveAndClose[disabled]:hover,
 .SaveAndClose[disabled]:focus,
@@ -3723,7 +4004,10 @@ fieldset[disabled] .RadGrid input.PrimaryButton:active,
   background-color: #3b5998;
   border-color: #2d4373;
 }
-.TextButton.Facebook:hover, .TextButton.Facebook:focus, .TextButton.Facebook:active, .TextButton.Facebook:visited {
+.TextButton.Facebook:hover,
+.TextButton.Facebook:focus,
+.TextButton.Facebook:active,
+.TextButton.Facebook:visited {
   color: #fff;
   background-color: #30487b;
   border-color: #1c2a47;
@@ -3731,7 +4015,18 @@ fieldset[disabled] .RadGrid input.PrimaryButton:active,
 .TextButton.Facebook:active {
   background-image: none;
 }
-.TextButton.Facebook[disabled], .TextButton.Facebook[disabled]:hover, .TextButton.Facebook[disabled]:focus, .TextButton.Facebook[disabled]:active, fieldset[disabled] .TextButton.Facebook, fieldset[disabled] .TextButton.Facebook:hover, fieldset[disabled] .TextButton.Facebook:focus, fieldset[disabled] .TextButton.Facebook:active, .TextButton.Facebook.aspNetDisabled, .TextButton.Facebook.aspNetDisabled:hover, .TextButton.Facebook.aspNetDisabled:focus, .TextButton.Facebook.aspNetDisabled:active {
+.TextButton.Facebook[disabled],
+.TextButton.Facebook[disabled]:hover,
+.TextButton.Facebook[disabled]:focus,
+.TextButton.Facebook[disabled]:active,
+fieldset[disabled] .TextButton.Facebook,
+fieldset[disabled] .TextButton.Facebook:hover,
+fieldset[disabled] .TextButton.Facebook:focus,
+fieldset[disabled] .TextButton.Facebook:active,
+.TextButton.Facebook.aspNetDisabled,
+.TextButton.Facebook.aspNetDisabled:hover,
+.TextButton.Facebook.aspNetDisabled:focus,
+.TextButton.Facebook.aspNetDisabled:active {
   background-color: #3b5998;
   border-color: #2d4373;
 }
@@ -3742,7 +4037,10 @@ fieldset[disabled] .RadGrid input.PrimaryButton:active,
   background-color: #0077b5;
   border-color: #005582;
 }
-.SignInButton.LinkedIn:hover, .SignInButton.LinkedIn:focus, .SignInButton.LinkedIn:active, .SignInButton.LinkedIn:visited {
+.SignInButton.LinkedIn:hover,
+.SignInButton.LinkedIn:focus,
+.SignInButton.LinkedIn:active,
+.SignInButton.LinkedIn:visited {
   color: #fff;
   background-color: #005c8c;
   border-color: #002d45;
@@ -3750,7 +4048,18 @@ fieldset[disabled] .RadGrid input.PrimaryButton:active,
 .SignInButton.LinkedIn:active {
   background-image: none;
 }
-.SignInButton.LinkedIn[disabled], .SignInButton.LinkedIn[disabled]:hover, .SignInButton.LinkedIn[disabled]:focus, .SignInButton.LinkedIn[disabled]:active, fieldset[disabled] .SignInButton.LinkedIn, fieldset[disabled] .SignInButton.LinkedIn:hover, fieldset[disabled] .SignInButton.LinkedIn:focus, fieldset[disabled] .SignInButton.LinkedIn:active, .SignInButton.LinkedIn.aspNetDisabled, .SignInButton.LinkedIn.aspNetDisabled:hover, .SignInButton.LinkedIn.aspNetDisabled:focus, .SignInButton.LinkedIn.aspNetDisabled:active {
+.SignInButton.LinkedIn[disabled],
+.SignInButton.LinkedIn[disabled]:hover,
+.SignInButton.LinkedIn[disabled]:focus,
+.SignInButton.LinkedIn[disabled]:active,
+fieldset[disabled] .SignInButton.LinkedIn,
+fieldset[disabled] .SignInButton.LinkedIn:hover,
+fieldset[disabled] .SignInButton.LinkedIn:focus,
+fieldset[disabled] .SignInButton.LinkedIn:active,
+.SignInButton.LinkedIn.aspNetDisabled,
+.SignInButton.LinkedIn.aspNetDisabled:hover,
+.SignInButton.LinkedIn.aspNetDisabled:focus,
+.SignInButton.LinkedIn.aspNetDisabled:active {
   background-color: #0077b5;
   border-color: #005582;
 }
@@ -3778,7 +4087,9 @@ fieldset[disabled] .RadGrid input.PrimaryButton:active,
   color: #fff;
   background-color: #333;
 }
-.CalloutArea1 .btn.PrimaryButton:hover, .CalloutArea1 .btn.PrimaryButton:active, .CalloutArea1 .btn.PrimaryButton:focus,
+.CalloutArea1 .btn.PrimaryButton:hover,
+.CalloutArea1 .btn.PrimaryButton:active,
+.CalloutArea1 .btn.PrimaryButton:focus,
 .CalloutArea1 .TextButton.PrimaryButton:hover,
 .CalloutArea1 .TextButton.PrimaryButton:active,
 .CalloutArea1 .TextButton.PrimaryButton:focus,
@@ -3812,12 +4123,17 @@ fieldset[disabled] .RadGrid input.PrimaryButton:active,
 .RadTreeView.GLE .rtLI {
   margin-bottom: 0.3em;
 }
-.RadTreeView.GLE .rtIn, .RadTreeView.GLE .rtHover .rtIn, .RadTreeView.GLE .rtSelected .rtIn {
+.RadTreeView.GLE .rtIn,
+.RadTreeView.GLE .rtHover .rtIn,
+.RadTreeView.GLE .rtSelected .rtIn {
   background-color: transparent;
   border: none;
   color: #6bcaba;
 }
-.RadTreeView.GLE a:hover, .RadTreeView.GLE a:focus, .RadTreeView.GLE span[onclick]:hover, .RadTreeView.GLE span[onclick]:focus {
+.RadTreeView.GLE a:hover,
+.RadTreeView.GLE a:focus,
+.RadTreeView.GLE span[onclick]:hover,
+.RadTreeView.GLE span[onclick]:focus {
   background-color: #1a1a1a;
   color: #fff;
 }
@@ -3839,7 +4155,7 @@ fieldset[disabled] .RadGrid input.PrimaryButton:active,
 
 .SearchField label {
   font-size: 120%;
-  color: #004851;
+  color: #fff;
 }
 
 .SearchResultSummary .ListItemTitle a {
@@ -3879,7 +4195,7 @@ fieldset[disabled] .RadGrid input.PrimaryButton:active,
 }
 .ProgramGroup .PanelTitle,
 .ProgramGroup .panel-title {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: bold;
   font-size: 120%;
   line-height: 2em;
@@ -3910,8 +4226,9 @@ fieldset[disabled] .RadGrid input.PrimaryButton:active,
 .ProgressTracker2 .ProgressTrackerPanel {
   background-color: #474747;
 }
-.ProgressTracker2 .ProgressTrackerPanel:before, .ProgressTracker2 .ProgressTrackerPanel:after {
-  content: " ";
+.ProgressTracker2 .ProgressTrackerPanel:before,
+.ProgressTracker2 .ProgressTrackerPanel:after {
+  content: ' ';
   display: table;
 }
 .ProgressTracker2 .ProgressTrackerPanel:after {
@@ -3919,7 +4236,7 @@ fieldset[disabled] .RadGrid input.PrimaryButton:active,
 }
 .ProgressTracker2 .ProgressTrackerPanel .count {
   color: #fff;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
 }
 .ProgressTracker2 div p {
@@ -4003,25 +4320,33 @@ fieldset[disabled] .RadGrid input.PrimaryButton:active,
    ========================================================================== */
 /* RadTabStrip
    ========================================================================== */
-.RadTabStripTop_Metro .rtsLevel1, .RadTabStripTop_Metro .rtsLevel1 .rtsUL,
+.RadTabStripTop_Metro .rtsLevel1,
+.RadTabStripTop_Metro .rtsLevel1 .rtsUL,
 .RadTabStrip_Metro .rtsLevel1,
 .RadTabStrip_Metro .rtsLevel1 .rtsUL {
   background-color: #333 !important;
 }
-.RadTabStripTop_Metro .rtsLevel1 .rtsLink, .RadTabStripTop_Metro .rtsLevel1 .rtsUL .rtsLink,
+.RadTabStripTop_Metro .rtsLevel1 .rtsLink,
+.RadTabStripTop_Metro .rtsLevel1 .rtsUL .rtsLink,
 .RadTabStrip_Metro .rtsLevel1 .rtsLink,
 .RadTabStrip_Metro .rtsLevel1 .rtsUL .rtsLink {
   text-transform: none;
   border-color: #333;
 }
-.RadTabStripTop_Metro .rtsLevel1 .rtsSelected, .RadTabStripTop_Metro .rtsLevel1 .rtsLink:hover, .RadTabStripTop_Metro .rtsLevel1 .rtsUL .rtsSelected, .RadTabStripTop_Metro .rtsLevel1 .rtsUL .rtsLink:hover,
+.RadTabStripTop_Metro .rtsLevel1 .rtsSelected,
+.RadTabStripTop_Metro .rtsLevel1 .rtsLink:hover,
+.RadTabStripTop_Metro .rtsLevel1 .rtsUL .rtsSelected,
+.RadTabStripTop_Metro .rtsLevel1 .rtsUL .rtsLink:hover,
 .RadTabStrip_Metro .rtsLevel1 .rtsSelected,
 .RadTabStrip_Metro .rtsLevel1 .rtsLink:hover,
 .RadTabStrip_Metro .rtsLevel1 .rtsUL .rtsSelected,
 .RadTabStrip_Metro .rtsLevel1 .rtsUL .rtsLink:hover {
   border-color: #fff;
 }
-.RadTabStripTop_Metro .rtsLevel1 .rtsDisabled, .RadTabStripTop_Metro .rtsLevel1 .rtsDisabled:hover, .RadTabStripTop_Metro .rtsLevel1 .rtsUL .rtsDisabled, .RadTabStripTop_Metro .rtsLevel1 .rtsUL .rtsDisabled:hover,
+.RadTabStripTop_Metro .rtsLevel1 .rtsDisabled,
+.RadTabStripTop_Metro .rtsLevel1 .rtsDisabled:hover,
+.RadTabStripTop_Metro .rtsLevel1 .rtsUL .rtsDisabled,
+.RadTabStripTop_Metro .rtsLevel1 .rtsUL .rtsDisabled:hover,
 .RadTabStrip_Metro .rtsLevel1 .rtsDisabled,
 .RadTabStrip_Metro .rtsLevel1 .rtsDisabled:hover,
 .RadTabStrip_Metro .rtsLevel1 .rtsUL .rtsDisabled,
@@ -4031,12 +4356,13 @@ fieldset[disabled] .RadGrid input.PrimaryButton:active,
 }
 
 .RadTabStrip.RadTabStrip_MetroTouch {
-  font-family: "Source Sans Pro", sans-serif !important;
+  font-family: 'Source Sans Pro', sans-serif !important;
   font-weight: inherit;
   font-size: 20px !important;
   clear: both;
 }
-html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected:hover {
+html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected,
+html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected:hover {
   border-color: #333;
   background-color: #333;
 }
@@ -4044,7 +4370,9 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   border-bottom-color: #333;
 }
 @media (max-width: 600px) {
-  .RadTabStrip.RadTabStrip_MetroTouch .rtsLI, .RadTabStrip.RadTabStrip_MetroTouch .rtsLink, .RadTabStrip.RadTabStrip_MetroTouch .rtsUL {
+  .RadTabStrip.RadTabStrip_MetroTouch .rtsLI,
+  .RadTabStrip.RadTabStrip_MetroTouch .rtsLink,
+  .RadTabStrip.RadTabStrip_MetroTouch .rtsUL {
     float: none;
     width: 100%;
     display: block;
@@ -4054,7 +4382,8 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   }
 }
 
-.RadTabStrip, .RadTabStripVertical {
+.RadTabStrip,
+.RadTabStripVertical {
   padding: 10px 10px 0 10px;
 }
 
@@ -4071,8 +4400,10 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
 .RadGrid.RadGrid_Metro .rgMasterTable {
   background-color: #fff;
 }
-.RadGrid.RadGrid_MetroTouch .rgHeader, .RadGrid.RadGrid_MetroTouch .rgRow td,
-.RadGrid.RadGrid_MetroTouch .rgAltRow td, .RadGrid.RadGrid_MetroTouch .rgEditRow td,
+.RadGrid.RadGrid_MetroTouch .rgHeader,
+.RadGrid.RadGrid_MetroTouch .rgRow td,
+.RadGrid.RadGrid_MetroTouch .rgAltRow td,
+.RadGrid.RadGrid_MetroTouch .rgEditRow td,
 .RadGrid.RadGrid_Metro .rgHeader,
 .RadGrid.RadGrid_Metro .rgRow td,
 .RadGrid.RadGrid_Metro .rgAltRow td,
@@ -4083,11 +4414,22 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
 .RadGrid.RadGrid_Metro td.rgPagerCell {
   border-width: 0;
 }
-.RadGrid.RadGrid_MetroTouch .rgHeader, .RadGrid.RadGrid_MetroTouch .rgHeader:first-child, .RadGrid.RadGrid_MetroTouch th.rgResizeCol, .RadGrid.RadGrid_MetroTouch th.rgResizeCol:first-child, .RadGrid.RadGrid_MetroTouch .rgRow td, .RadGrid.RadGrid_MetroTouch .rgRow td:first-child,
+.RadGrid.RadGrid_MetroTouch .rgHeader,
+.RadGrid.RadGrid_MetroTouch .rgHeader:first-child,
+.RadGrid.RadGrid_MetroTouch th.rgResizeCol,
+.RadGrid.RadGrid_MetroTouch th.rgResizeCol:first-child,
+.RadGrid.RadGrid_MetroTouch .rgRow td,
+.RadGrid.RadGrid_MetroTouch .rgRow td:first-child,
 .RadGrid.RadGrid_MetroTouch .rgAltRow td,
-.RadGrid.RadGrid_MetroTouch .rgAltRow td:first-child, .RadGrid.RadGrid_MetroTouch .rgEditRow td, .RadGrid.RadGrid_MetroTouch .rgEditRow td:first-child, .RadGrid.RadGrid_MetroTouch .rgFooter td, .RadGrid.RadGrid_MetroTouch .rgFooter td:first-child,
+.RadGrid.RadGrid_MetroTouch .rgAltRow td:first-child,
+.RadGrid.RadGrid_MetroTouch .rgEditRow td,
+.RadGrid.RadGrid_MetroTouch .rgEditRow td:first-child,
+.RadGrid.RadGrid_MetroTouch .rgFooter td,
+.RadGrid.RadGrid_MetroTouch .rgFooter td:first-child,
 .RadGrid.RadGrid_MetroTouch .rgFilterRow td,
-.RadGrid.RadGrid_MetroTouch .rgFilterRow td:first-child, .RadGrid.RadGrid_MetroTouch .rgNoRecords td, .RadGrid.RadGrid_MetroTouch .rgNoRecords td:first-child,
+.RadGrid.RadGrid_MetroTouch .rgFilterRow td:first-child,
+.RadGrid.RadGrid_MetroTouch .rgNoRecords td,
+.RadGrid.RadGrid_MetroTouch .rgNoRecords td:first-child,
 .RadGrid.RadGrid_Metro .rgHeader,
 .RadGrid.RadGrid_Metro .rgHeader:first-child,
 .RadGrid.RadGrid_Metro th.rgResizeCol,
@@ -4106,7 +4448,10 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
 .RadGrid.RadGrid_Metro .rgNoRecords td:first-child {
   padding: 7px 12px;
 }
-.RadGrid.RadGrid_MetroTouch .rgRow td.rgExpandCol, .RadGrid.RadGrid_MetroTouch .rgRow td.rgExpandCol:first-child, .RadGrid.RadGrid_MetroTouch .rgAltRow td.rgExpandCol, .RadGrid.RadGrid_MetroTouch .rgAltRow td.rgExpandCol:first-child,
+.RadGrid.RadGrid_MetroTouch .rgRow td.rgExpandCol,
+.RadGrid.RadGrid_MetroTouch .rgRow td.rgExpandCol:first-child,
+.RadGrid.RadGrid_MetroTouch .rgAltRow td.rgExpandCol,
+.RadGrid.RadGrid_MetroTouch .rgAltRow td.rgExpandCol:first-child,
 .RadGrid.RadGrid_Metro .rgRow td.rgExpandCol,
 .RadGrid.RadGrid_Metro .rgRow td.rgExpandCol:first-child,
 .RadGrid.RadGrid_Metro .rgAltRow td.rgExpandCol,
@@ -4119,8 +4464,12 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
 .RadGrid.RadGrid_Metro .rgCommandRow {
   background-color: transparent;
 }
-.RadGrid.RadGrid_MetroTouch .rgNumPart a.rgCurrentPage, .RadGrid.RadGrid_MetroTouch .rgNumPart a.rgCurrentPage:hover,
-.RadGrid.RadGrid_MetroTouch .rgPagePrev:active, .RadGrid.RadGrid_MetroTouch .rgPageNext:active, .RadGrid.RadGrid_MetroTouch .rgPageFirst:active, .RadGrid.RadGrid_MetroTouch .rgPageLast:active,
+.RadGrid.RadGrid_MetroTouch .rgNumPart a.rgCurrentPage,
+.RadGrid.RadGrid_MetroTouch .rgNumPart a.rgCurrentPage:hover,
+.RadGrid.RadGrid_MetroTouch .rgPagePrev:active,
+.RadGrid.RadGrid_MetroTouch .rgPageNext:active,
+.RadGrid.RadGrid_MetroTouch .rgPageFirst:active,
+.RadGrid.RadGrid_MetroTouch .rgPageLast:active,
 .RadGrid.RadGrid_MetroTouch .rgPager .rgPagerButton,
 .RadGrid.RadGrid_Metro .rgNumPart a.rgCurrentPage,
 .RadGrid.RadGrid_Metro .rgNumPart a.rgCurrentPage:hover,
@@ -4158,13 +4507,16 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
 .RadGrid.RadGrid_Metro th.rgSorted a {
   color: #fff !important;
 }
-.RadGrid.RadGrid_MetroTouch .rgGroupPanel, .RadGrid.RadGrid_MetroTouch .rgGroupPanel caption,
+.RadGrid.RadGrid_MetroTouch .rgGroupPanel,
+.RadGrid.RadGrid_MetroTouch .rgGroupPanel caption,
 .RadGrid.RadGrid_Metro .rgGroupPanel,
 .RadGrid.RadGrid_Metro .rgGroupPanel caption {
   background-color: #333;
 }
-.RadGrid.RadGrid_MetroTouch .rgActiveRow td, .RadGrid.RadGrid_MetroTouch .rgActiveRow td.rgSorted,
-.RadGrid.RadGrid_MetroTouch .rgSelectedRow td, .RadGrid.RadGrid_MetroTouch .rgSelectedRow td.rgSorted,
+.RadGrid.RadGrid_MetroTouch .rgActiveRow td,
+.RadGrid.RadGrid_MetroTouch .rgActiveRow td.rgSorted,
+.RadGrid.RadGrid_MetroTouch .rgSelectedRow td,
+.RadGrid.RadGrid_MetroTouch .rgSelectedRow td.rgSorted,
 .RadGrid.RadGrid_MetroTouch .rgMasterTable .rgActiveCell,
 .RadGrid.RadGrid_Metro .rgActiveRow td,
 .RadGrid.RadGrid_Metro .rgActiveRow td.rgSorted,
@@ -4205,7 +4557,7 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
 /* RadComboBox
    ========================================================================= */
 .RadComboBox .rcbActionButton .t-font-icon {
-  font: 16px/1 "TelerikWebUI";
+  font: 16px/1 'TelerikWebUI';
 }
 
 /* RadDataPager
@@ -4215,8 +4567,12 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   border: none;
   background-color: transparent;
 }
-.RadDataPager.RadDataPager_MetroTouch .rdpNumPart a.rdpCurrentPage, .RadDataPager.RadDataPager_MetroTouch .rdpNumPart a.rdpCurrentPage:hover,
-.RadDataPager.RadDataPager_MetroTouch .rdpPageFirst:hover, .RadDataPager.RadDataPager_MetroTouch .rdpPagePrev:hover, .RadDataPager.RadDataPager_MetroTouch .rdpPageNext:hover, .RadDataPager.RadDataPager_MetroTouch .rdpPageLast:hover,
+.RadDataPager.RadDataPager_MetroTouch .rdpNumPart a.rdpCurrentPage,
+.RadDataPager.RadDataPager_MetroTouch .rdpNumPart a.rdpCurrentPage:hover,
+.RadDataPager.RadDataPager_MetroTouch .rdpPageFirst:hover,
+.RadDataPager.RadDataPager_MetroTouch .rdpPagePrev:hover,
+.RadDataPager.RadDataPager_MetroTouch .rdpPageNext:hover,
+.RadDataPager.RadDataPager_MetroTouch .rdpPageLast:hover,
 .RadDataPager.RadDataPager_MetroTouch .rdpPagerButton,
 .RadDataPager.RadDataPager_Metro .rdpNumPart a.rdpCurrentPage,
 .RadDataPager.RadDataPager_Metro .rdpNumPart a.rdpCurrentPage:hover,
@@ -4242,7 +4598,7 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   border-color: #333;
 }
 .RadScheduler.RadScheduler_Metro .rsHeader h2 {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: bold;
   color: #fff;
   text-transform: none;
@@ -4251,7 +4607,8 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
 
 /* RadMenu
    ========================================================================== */
-.RadMenu.RadMenu_Metro, .RadMenu.RadMenu_Metro .rmRootLink,
+.RadMenu.RadMenu_Metro,
+.RadMenu.RadMenu_Metro .rmRootLink,
 .RadMenu.RadMenu_MetroTouch,
 .RadMenu.RadMenu_MetroTouch .rmRootLink {
   text-transform: none;
@@ -4266,12 +4623,14 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
 .RadMenu.RadMenu_MetroTouch .rmRootLink {
   border-color: #004851;
 }
-.RadMenu.RadMenu_Metro .rmDisabled, .RadMenu.RadMenu_Metro .rmDisabled:hover,
+.RadMenu.RadMenu_Metro .rmDisabled,
+.RadMenu.RadMenu_Metro .rmDisabled:hover,
 .RadMenu.RadMenu_MetroTouch .rmDisabled,
 .RadMenu.RadMenu_MetroTouch .rmDisabled:hover {
   border-color: #004851;
 }
-.RadMenu.RadMenu_Metro .rmGroup .rmFocused, .RadMenu.RadMenu_Metro .rmGroup .rmFocused:hover,
+.RadMenu.RadMenu_Metro .rmGroup .rmFocused,
+.RadMenu.RadMenu_Metro .rmGroup .rmFocused:hover,
 .RadMenu.RadMenu_Metro .rmGroup .rmSelected,
 .RadMenu.RadMenu_Metro .rmGroup .rmSelected:hover,
 .RadMenu.RadMenu_Metro .rmGroup .rmLink.rmSelected,
@@ -4301,10 +4660,19 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
 
 /* RadWindow
    ========================================================================== */
-.RadWindow.RadWindow_MetroTouch .rwTitleRow .rwTitlebar, .RadWindow.RadWindow_MetroTouch .rwTitleRow .rwTopLeft, .RadWindow.RadWindow_MetroTouch .rwTitleRow .rwTopRight {
+.RadWindow.RadWindow_MetroTouch .rwTitleRow .rwTitlebar,
+.RadWindow.RadWindow_MetroTouch .rwTitleRow .rwTopLeft,
+.RadWindow.RadWindow_MetroTouch .rwTitleRow .rwTopRight {
   background-color: #333;
 }
-.RadWindow.RadWindow_MetroTouch .rwTitleRow td.rwWindowContent a.rwPopupButton:active, .RadWindow.RadWindow_MetroTouch .rwTitleRow td.rwWindowContent a.rwPopupButton:focus {
+.RadWindow.RadWindow_MetroTouch
+  .rwTitleRow
+  td.rwWindowContent
+  a.rwPopupButton:active,
+.RadWindow.RadWindow_MetroTouch
+  .rwTitleRow
+  td.rwWindowContent
+  a.rwPopupButton:focus {
   border-color: #333;
   background-color: #333;
 }
@@ -4315,7 +4683,9 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   outline: none;
 }
 
-.RadWindow.RadWindow_Metro .rwTitlebar, .RadWindow.RadWindow_Metro .rwTopLeft, .RadWindow.RadWindow_Metro .rwTopRight,
+.RadWindow.RadWindow_Metro .rwTitlebar,
+.RadWindow.RadWindow_Metro .rwTopLeft,
+.RadWindow.RadWindow_Metro .rwTopRight,
 .RadWindow.RadWindow_Metro .rwTopResize,
 .RadWindow.RadWindow_Metro .rwControlButtons a {
   background-color: #333;
@@ -4340,7 +4710,8 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
 .RadTreeView.RadTreeView_Vista .rtLI {
   padding: 0;
 }
-.RadTreeView.RadTreeView_Vista .rtPlus, .RadTreeView.RadTreeView_Vista .rtMinus {
+.RadTreeView.RadTreeView_Vista .rtPlus,
+.RadTreeView.RadTreeView_Vista .rtMinus {
   margin: 5px 6px 0 -17px;
   width: 11px;
   height: 11px;
@@ -4352,20 +4723,27 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
 /* RadPicker
    ========================================================================== */
 /* Date and Time selectors */
-.RadCalendar.RadCalendar_Metro, .RadCalendar.RadCalendar_Metro .rcMainTable,
+.RadCalendar.RadCalendar_Metro,
+.RadCalendar.RadCalendar_Metro .rcMainTable,
 .RadCalendar.RadCalendar_MetroTouch,
 .RadCalendar.RadCalendar_MetroTouch .rcMainTable {
   font-family: inherit;
   font-weight: inherit;
 }
-.RadCalendar.RadCalendar_Metro .rcFastPrev:hover, .RadCalendar.RadCalendar_Metro .rcPrev:hover, .RadCalendar.RadCalendar_Metro .rcNext:hover, .RadCalendar.RadCalendar_Metro .rcFastNext:hover,
+.RadCalendar.RadCalendar_Metro .rcFastPrev:hover,
+.RadCalendar.RadCalendar_Metro .rcPrev:hover,
+.RadCalendar.RadCalendar_Metro .rcNext:hover,
+.RadCalendar.RadCalendar_Metro .rcFastNext:hover,
 .RadCalendar.RadCalendar_MetroTouch .rcFastPrev:hover,
 .RadCalendar.RadCalendar_MetroTouch .rcPrev:hover,
 .RadCalendar.RadCalendar_MetroTouch .rcNext:hover,
 .RadCalendar.RadCalendar_MetroTouch .rcFastNext:hover {
   border-color: #333;
 }
-.RadCalendar.RadCalendar_Metro .rcFastPrev:hover:before, .RadCalendar.RadCalendar_Metro .rcPrev:hover:before, .RadCalendar.RadCalendar_Metro .rcNext:hover:before, .RadCalendar.RadCalendar_Metro .rcFastNext:hover:before,
+.RadCalendar.RadCalendar_Metro .rcFastPrev:hover:before,
+.RadCalendar.RadCalendar_Metro .rcPrev:hover:before,
+.RadCalendar.RadCalendar_Metro .rcNext:hover:before,
+.RadCalendar.RadCalendar_Metro .rcFastNext:hover:before,
 .RadCalendar.RadCalendar_MetroTouch .rcFastPrev:hover:before,
 .RadCalendar.RadCalendar_MetroTouch .rcPrev:hover:before,
 .RadCalendar.RadCalendar_MetroTouch .rcNext:hover:before,
@@ -4382,7 +4760,8 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   background: #333;
 }
 
-.RadCalendar.RadCalendar_MetroTouch .rcRow a, .RadCalendar.RadCalendar_MetroTouch .rcRow span {
+.RadCalendar.RadCalendar_MetroTouch .rcRow a,
+.RadCalendar.RadCalendar_MetroTouch .rcRow span {
   /* The Sunday column is not rendering correctly because it's in a <th>
      instead of a <td>. This corrects the issue. */
   display: block;
@@ -4395,7 +4774,8 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   padding: 0;
 }
 
-.RadCalendar.RadCalendar_Metro .rcRow a, .RadCalendar.RadCalendar_Metro .rcRow span {
+.RadCalendar.RadCalendar_Metro .rcRow a,
+.RadCalendar.RadCalendar_Metro .rcRow span {
   display: block;
   padding: 0 0.6em;
   text-decoration: none;
@@ -4405,7 +4785,8 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   padding: 0;
 }
 
-.RadCalendarMonthView.RadCalendarMonthView_Metro, .RadCalendarMonthView.RadCalendarMonthView_Metro .rcButtons input,
+.RadCalendarMonthView.RadCalendarMonthView_Metro,
+.RadCalendarMonthView.RadCalendarMonthView_Metro .rcButtons input,
 .RadCalendarMonthView.RadCalendarMonthView_MetroTouch,
 .RadCalendarMonthView.RadCalendarMonthView_MetroTouch .rcButtons input {
   font-family: inherit;
@@ -4432,7 +4813,12 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   background: #333;
 }
 
-.RadPicker.RadPicker_Metro .rcCalPopup:hover, .RadPicker.RadPicker_Metro .rcCalPopup:focus, .RadPicker.RadPicker_Metro .rcCalPopup:active, .RadPicker.RadPicker_Metro .rcTimePopup:hover, .RadPicker.RadPicker_Metro .rcTimePopup:focus, .RadPicker.RadPicker_Metro .rcTimePopup:active,
+.RadPicker.RadPicker_Metro .rcCalPopup:hover,
+.RadPicker.RadPicker_Metro .rcCalPopup:focus,
+.RadPicker.RadPicker_Metro .rcCalPopup:active,
+.RadPicker.RadPicker_Metro .rcTimePopup:hover,
+.RadPicker.RadPicker_Metro .rcTimePopup:focus,
+.RadPicker.RadPicker_Metro .rcTimePopup:active,
 .RadPicker.RadPicker_MetroTouch .rcCalPopup:hover,
 .RadPicker.RadPicker_MetroTouch .rcCalPopup:focus,
 .RadPicker.RadPicker_MetroTouch .rcCalPopup:active,
@@ -4443,7 +4829,8 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   background-color: #333;
 }
 
-.RadPicker .rcCalPopup, .RadPicker .rcTimePopup {
+.RadPicker .rcCalPopup,
+.RadPicker .rcTimePopup {
   width: inherit;
   text-indent: inherit;
   border-bottom-right-radius: 0px;
@@ -4464,8 +4851,17 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   /* if borders are not turned on don't leave the space for them */
   border-width: 0;
 }
-.HomePageFullWidthArea .ContentItemContainer .panel .panel-body-container .panel-body,
-.HomePageFullWidthArea .ContentItemContainer div .panel .panel-body-container .panel-body {
+.HomePageFullWidthArea
+  .ContentItemContainer
+  .panel
+  .panel-body-container
+  .panel-body,
+.HomePageFullWidthArea
+  .ContentItemContainer
+  div
+  .panel
+  .panel-body-container
+  .panel-body {
   /* Turn off the padding on iPart panels */
   padding: 0;
 }
@@ -4595,7 +4991,8 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
 .jumbotron .jumbotron-content {
   max-height: 100%;
 }
-.jumbotron.home, .jumbotron.interior {
+.jumbotron.home,
+.jumbotron.interior {
   position: relative;
   background-position: center center;
   background-repeat: no-repeat;
@@ -4663,8 +5060,9 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   font-size: 150%;
   margin-bottom: 0;
 }
-.jumbotron.interior p:before, .jumbotron.interior p:after {
-  content: " ";
+.jumbotron.interior p:before,
+.jumbotron.interior p:after {
+  content: ' ';
   display: table;
 }
 .jumbotron.interior p:after {
@@ -4760,7 +5158,7 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
 .carousel h5 {
   font-weight: bold;
   display: block;
-  font-family: "Source Pro", serif;
+  font-family: 'Source Pro', serif;
 }
 @media (min-width: 1200px) {
   .carousel h1 {
@@ -4827,7 +5225,7 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
 }
 @media (max-width: 991px) {
   .carousel h1,
-.carousel h2 {
+  .carousel h2 {
     font-size: 160%;
     line-height: 30px;
   }
@@ -4838,7 +5236,7 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
 
 .carousel-control .icon-prev::before,
 .carousel-control .icon-next::before {
-  content: "";
+  content: '';
   display: block;
   width: 30px;
   height: 30px;
@@ -4848,20 +5246,21 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   margin-left: -10px;
 }
 .carousel-control .icon-prev::before {
-  background: url("images/ResponsiveHeaderSprite.png") 0 -150px no-repeat;
+  background: url('images/ResponsiveHeaderSprite.png') 0 -150px no-repeat;
 }
 
 .carousel-control .icon-next {
   margin-right: -10px;
 }
 .carousel-control .icon-next::before {
-  background: url("images/ResponsiveHeaderSprite.png") 0 -200px no-repeat;
+  background: url('images/ResponsiveHeaderSprite.png') 0 -200px no-repeat;
 }
 
 .carousel-control {
   width: 5%;
 }
-.carousel-control.right, .carousel-control.left {
+.carousel-control.right,
+.carousel-control.left {
   background-image: none;
 }
 
@@ -4870,7 +5269,7 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
 }
 
 .carousel-caption {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   top: 43px;
   text-align: left !important;
   width: 900px;
@@ -4993,7 +5392,7 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   }
 }
 .Wrapper-HomePage .HomePageFullWidthArea .carousel-inner:before {
-  content: "";
+  content: '';
   display: block;
   height: 6em;
   width: 100%;
@@ -5028,7 +5427,8 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   color: #313e48;
   text-decoration: none;
 }
-.CommunityLinksBlock a.CommunityLinksSelected, .CommunityLinksBlock a.CommunityLinksSelected:hover {
+.CommunityLinksBlock a.CommunityLinksSelected,
+.CommunityLinksBlock a.CommunityLinksSelected:hover {
   background-color: #004851;
   color: White;
   font-weight: bold;
@@ -5086,27 +5486,33 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
 }
 
 .DonorBannerInteriorBackground1 {
-  background: #67895e url(../../images/SampleSites/Donor/bearbanner.jpg) no-repeat;
+  background: #67895e url(../../images/SampleSites/Donor/bearbanner.jpg)
+    no-repeat;
 }
 
 .DonorBannerInteriorBackground2 {
-  background: #95bb19 url(../../images/SampleSites/Donor/butterflybanner.jpg) no-repeat;
+  background: #95bb19 url(../../images/SampleSites/Donor/butterflybanner.jpg)
+    no-repeat;
 }
 
 .DonorBannerInteriorBackground3 {
-  background: #764c31 url(../../images/SampleSites/Donor/catbanner.jpg) no-repeat;
+  background: #764c31 url(../../images/SampleSites/Donor/catbanner.jpg)
+    no-repeat;
 }
 
 .DonorBannerInteriorBackground4 {
-  background: #416a26 url(../../images/SampleSites/Donor/frogbanner.jpg) no-repeat;
+  background: #416a26 url(../../images/SampleSites/Donor/frogbanner.jpg)
+    no-repeat;
 }
 
 .DonorBannerInteriorBackground5 {
-  background: #696f44 url(../../images/SampleSites/Donor/numbatbanner.jpg) no-repeat;
+  background: #696f44 url(../../images/SampleSites/Donor/numbatbanner.jpg)
+    no-repeat;
 }
 
 .DonorBannerInteriorBackground6 {
-  background: #3c683d url(../../images/SampleSites/Donor/squirrelbanner.jpg) no-repeat;
+  background: #3c683d url(../../images/SampleSites/Donor/squirrelbanner.jpg)
+    no-repeat;
 }
 
 .DonorBannerTextBackgroundHome {
@@ -5127,14 +5533,16 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   margin: 20px;
 }
 
-.DonorBannerTextBackgroundHome h1, .DonorBannerTextBackgroundInterior h1 {
+.DonorBannerTextBackgroundHome h1,
+.DonorBannerTextBackgroundInterior h1 {
   color: #fff;
   font-size: 280%;
   background: none;
   margin: 0.4em;
 }
 
-.DonorBannerTextBackgroundHome p, .DonorBannerTextBackgroundInterior p {
+.DonorBannerTextBackgroundHome p,
+.DonorBannerTextBackgroundInterior p {
   color: #fff;
   font-size: 120%;
   line-height: 1.6em;
@@ -5148,7 +5556,8 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
    ========================================================================== */
 /* Classes that can be used for iParts and HTML content */
 /* Titles */
-h1.BigHeader, .h1.BigHeader {
+h1.BigHeader,
+.h1.BigHeader {
   background-color: transparent;
   color: #333;
 }
@@ -5194,7 +5603,7 @@ h1.BigHeader, .h1.BigHeader {
   padding: 4px;
 }
 
-.InputXLargeWrapper input[type=text] {
+.InputXLargeWrapper input[type='text'] {
   width: 100%;
 }
 
@@ -5268,7 +5677,7 @@ h1.BigHeader, .h1.BigHeader {
 .Quote {
   margin: 1.5em 0.7em 1.5em 0;
   padding: 1.5em 0.7em;
-  quotes: "“" "”" "“" "”";
+  quotes: '“' '”' '“' '”';
   font-weight: normal;
 }
 .Quote:before {
@@ -5288,7 +5697,7 @@ h1.BigHeader, .h1.BigHeader {
   font-style: italic;
 }
 .Quote cite:before {
-  content: "— ";
+  content: '— ';
 }
 @media (min-width: 768px) {
   .Quote {
@@ -5329,7 +5738,7 @@ h1.BigHeader, .h1.BigHeader {
 .CalloutPanelField1.PanelField label:first-child:after,
 .CalloutPanelField1 .PanelField .Label:first-child:after,
 .CalloutPanelField1.PanelField .Label:first-child:after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -8px;
   /* value = - border-top-width - border-bottom-width */
@@ -5367,7 +5776,9 @@ h1.BigHeader, .h1.BigHeader {
 }
 
 /* Add zone style "TitleBarNoBorder" to remove the bottom border from the title bar caption */
-.TitleBarNoBorder .TitleBarCaption, .TitleBarNoBorder .PanelHead.Distinguish, .TitleBarNoBorder .panel-heading.Distinguish {
+.TitleBarNoBorder .TitleBarCaption,
+.TitleBarNoBorder .PanelHead.Distinguish,
+.TitleBarNoBorder .panel-heading.Distinguish {
   border-bottom: none;
 }
 
@@ -5383,14 +5794,15 @@ h1.BigHeader, .h1.BigHeader {
   text-align: center;
 }
 
-.FullWidthButtons .btn, .FullWidthButtons .TextButton {
+.FullWidthButtons .btn,
+.FullWidthButtons .TextButton {
   display: block;
 }
 
 /* Use class FeatureActionLink on a link to call attention to it */
 a.FeatureActionLink {
   transition: all 0.2s ease 0;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 110%;
   font-weight: 300;
   line-height: 1.5em;
@@ -5415,7 +5827,8 @@ a.FeatureActionLink:hover {
 .Spotlight {
   text-align: center;
 }
-.Spotlight img, .Spotlight h4 {
+.Spotlight img,
+.Spotlight h4 {
   text-align: center;
 }
 @media (min-width: 768px) {
@@ -5426,7 +5839,8 @@ a.FeatureActionLink:hover {
 .no-mqs .Spotlight .ImageWrapper {
   height: 160px;
 }
-.Spotlight .TextButton, .Spotlight .btn {
+.Spotlight .TextButton,
+.Spotlight .btn {
   margin-top: 1em;
 }
 .Spotlight p {
@@ -5444,8 +5858,9 @@ a.FeatureActionLink:hover {
 .SpotlightRow {
   margin-bottom: 1.2em;
 }
-.SpotlightRow:before, .SpotlightRow:after {
-  content: " ";
+.SpotlightRow:before,
+.SpotlightRow:after {
+  content: ' ';
   display: table;
 }
 .SpotlightRow:after {
@@ -5464,7 +5879,10 @@ a.FeatureActionLink:hover {
 .feature-link-with-image {
   margin-bottom: 1em;
 }
-.feature-link-with-image, .feature-link-with-image:hover, .feature-link-with-image:active, .feature-link-with-image:visited {
+.feature-link-with-image,
+.feature-link-with-image:hover,
+.feature-link-with-image:active,
+.feature-link-with-image:visited {
   text-decoration: none;
   color: #fff;
 }
@@ -5488,7 +5906,11 @@ a.FeatureActionLink:hover {
 .no-mqs .feature-link-with-image .feature-link-text {
   width: 45%;
 }
-.feature-link-with-image .feature-link-text h1, .feature-link-with-image .feature-link-text h2, .feature-link-with-image .feature-link-text h3, .feature-link-with-image .feature-link-text h4, .feature-link-with-image .feature-link-text h5 {
+.feature-link-with-image .feature-link-text h1,
+.feature-link-with-image .feature-link-text h2,
+.feature-link-with-image .feature-link-text h3,
+.feature-link-with-image .feature-link-text h4,
+.feature-link-with-image .feature-link-text h5 {
   margin-top: 0;
 }
 .feature-link-with-image.feature-link-1 .feature-link-text {
@@ -5522,10 +5944,13 @@ a.FeatureActionLink:hover {
 .header-link a {
   text-decoration: none;
 }
-.header-link a, .header-link a:visited {
+.header-link a,
+.header-link a:visited {
   color: #313e48;
 }
-.header-link a:hover, .header-link a:active, .header-link a:focus {
+.header-link a:hover,
+.header-link a:active,
+.header-link a:focus {
   color: #6bcaba;
 }
 
@@ -5534,68 +5959,69 @@ a.FeatureActionLink:hover {
 /* use these classes to get a particular background image on an element */
 .bg-img-conference-tall {
   background-color: #081337;
-  background-image: url("../../images/SampleSites/conferencebannertall.jpg");
+  background-image: url('../../images/SampleSites/conferencebannertall.jpg');
 }
 
 .bg-img-conference-small {
   background-color: #081337;
-  background-image: url("../../images/SampleSites/Member/cairnsnight.jpg");
+  background-image: url('../../images/SampleSites/Member/cairnsnight.jpg');
 }
 
 .bg-img-tiger-tall {
   background-color: #04080b;
-  background-image: url("../../images/ImageLibrary/tiger-tall.jpg");
+  background-image: url('../../images/ImageLibrary/tiger-tall.jpg');
   background-position: center center;
 }
 
 .bg-img-red-panda {
   background-color: #57574b;
-  background-image: url("../../images/SampleSites/Donor/red-panda.jpg");
+  background-image: url('../../images/SampleSites/Donor/red-panda.jpg');
 }
 
 .bg-img-tiger-swimming {
   background-color: #1c1705;
-  background-image: url("../../images/SampleSites/Donor/tiger-swimming.jpg");
+  background-image: url('../../images/SampleSites/Donor/tiger-swimming.jpg');
 }
 
 .bg-img-highland-cow {
   background-color: #e4e0cd;
-  background-image: url("../../images/SampleSites/Donor/highland-cow.jpg");
+  background-image: url('../../images/SampleSites/Donor/highland-cow.jpg');
 }
 
 .bg-img-volunteer-canoes {
   background-color: #8aa15b;
-  background-image: url("../../images/SampleSites/Donor/volunteer-canoes.jpg");
+  background-image: url('../../images/SampleSites/Donor/volunteer-canoes.jpg');
 }
 
 .bg-img-elephant-with-mountains {
   background-color: #748610;
-  background-image: url("../../images/SampleSites/Donor/elephant-with-mountains.jpg");
+  background-image: url('../../images/SampleSites/Donor/elephant-with-mountains.jpg');
 }
 
 .bg-img-wildlife-refuge {
   background-color: #6d7f2d;
-  background-image: url("../../images/SampleSites/Donor/wildlife-refuge.jpg");
+  background-image: url('../../images/SampleSites/Donor/wildlife-refuge.jpg');
 }
 
 .bg-img-poplar-trees {
   background-color: #737e23;
-  background-image: url("../../images/SampleSites/Donor/poplar-trees.jpg");
+  background-image: url('../../images/SampleSites/Donor/poplar-trees.jpg');
   background-position: top center !important;
 }
 
 .bg-img-swamp {
   background-color: #bbbdb8;
-  background-image: url("../../images/SampleSites/Donor/swamp.jpg");
+  background-image: url('../../images/SampleSites/Donor/swamp.jpg');
 }
 
 .bg-img-roseate-terns {
   background-color: #8f9949;
-  background-image: url("../../images/SampleSites/Donor/roseate-terns.jpg");
+  background-image: url('../../images/SampleSites/Donor/roseate-terns.jpg');
   background-position: center 88% !important;
 }
 
-.banner-tall, .banner-short {
+.banner-tall,
+.banner-short {
   text-decoration: none;
   display: block;
   background-repeat: no-repeat;
@@ -5603,7 +6029,18 @@ a.FeatureActionLink:hover {
   position: relative;
   border-radius: 0;
 }
-.banner-tall, .banner-tall:visited, .banner-tall:active, .banner-tall:hover, .banner-tall:focus, .banner-tall h2, .banner-short, .banner-short:visited, .banner-short:active, .banner-short:hover, .banner-short:focus, .banner-short h2 {
+.banner-tall,
+.banner-tall:visited,
+.banner-tall:active,
+.banner-tall:hover,
+.banner-tall:focus,
+.banner-tall h2,
+.banner-short,
+.banner-short:visited,
+.banner-short:active,
+.banner-short:hover,
+.banner-short:focus,
+.banner-short h2 {
   color: #fff;
 }
 
@@ -5661,7 +6098,8 @@ a.FeatureActionLink:hover {
 }
 
 /* Fix product name overlapping other content */
-ul.RelatedItemsHorizontal li, .RelatedItemsHorizontal ul.rrItemsList li {
+ul.RelatedItemsHorizontal li,
+.RelatedItemsHorizontal ul.rrItemsList li {
   height: auto;
 }
 
@@ -5691,7 +6129,8 @@ ul.RelatedItemsHorizontal li, .RelatedItemsHorizontal ul.rrItemsList li {
   margin: 0;
   padding: 0;
 }
-.ProgressTracker2 ul, .ProgressTracker2 li,
+.ProgressTracker2 ul,
+.ProgressTracker2 li,
 .ProgressTracker_Dashboard ul,
 .ProgressTracker_Dashboard li,
 .ProgressTracker_Dashboard_Overview ul,
@@ -6021,7 +6460,10 @@ ul.RelatedItemsHorizontal li, .RelatedItemsHorizontal ul.rrItemsList li {
   background-color: #004851;
   padding: 30px 0 30px 0;
 }
-.FullWidthFt h1, .FullWidthFt h2, .FullWidthFt h3, .FullWidthFt p {
+.FullWidthFt h1,
+.FullWidthFt h2,
+.FullWidthFt h3,
+.FullWidthFt p {
   color: #94d4ca;
 }
 .FullWidthFt h1 {
@@ -6084,5 +6526,258 @@ ul.RelatedItemsHorizontal li, .RelatedItemsHorizontal ul.rrItemsList li {
 .bg-evergreen {
   background-color: #004851;
 }
+
+h1.mobileShow {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  h1.mobileShow {
+    display: block;
+  }
+}
+
+/* Alt background colors
+   ========================================================================== */
+.AltBgColor1 {
+  background-color: #fff;
+  padding: 10px;
+}
+
+.AltBgColor2 > .panel,
+.AltBgColor2 > .panel h2,
+.AltBgColor3 > .panel,
+.AltBgColor3 > .panel h2,
+.AltBgColor4 > .panel,
+.AltBgColor4 > .panel h2,
+.AltBgColor5 > .panel,
+.AltBgColor5 > .panel h2,
+.AltBgColor6 > .panel,
+.AltBgColor6 > .panel h2,
+.AltBgColor7 > .panel,
+.AltBgColor7 > .panel h2,
+.AltBgColor8 > .panel,
+.AltBgColor8 > .panel h2,
+.AltBgColor9 > .panel,
+.AltBgColor9 > .panel h2,
+.AltBgColor10 > .panel,
+.AltBgColor10 > .panel h2,
+.AltBgColor11 > .panel,
+.AltBgColor11 > .panel h2,
+.AltBgColor12 > .panel,
+.AltBgColor12 > .panel h2,
+.AltBgColor13 > .panel,
+.AltBgColor13 > .panel h2,
+.AltBgColor14 > .panel,
+.AltBgColor14 > .panel h2,
+.AltBgColor15 > .panel,
+.AltBgColor15 > .panel h2 {
+  color: #fff;
+}
+.AltBgColor2 > .panel a,
+.AltBgColor2 > .panel a:hover,
+.AltBgColor2 > .panel a:active,
+.AltBgColor2 > .panel a:focus,
+.AltBgColor2 > .panel a:visited,
+.AltBgColor3 > .panel a,
+.AltBgColor3 > .panel a:hover,
+.AltBgColor3 > .panel a:active,
+.AltBgColor3 > .panel a:focus,
+.AltBgColor3 > .panel a:visited,
+.AltBgColor4 > .panel a,
+.AltBgColor4 > .panel a:hover,
+.AltBgColor4 > .panel a:active,
+.AltBgColor4 > .panel a:focus,
+.AltBgColor4 > .panel a:visited,
+.AltBgColor5 > .panel a,
+.AltBgColor5 > .panel a:hover,
+.AltBgColor5 > .panel a:active,
+.AltBgColor5 > .panel a:focus,
+.AltBgColor5 > .panel a:visited,
+.AltBgColor6 > .panel a,
+.AltBgColor6 > .panel a:hover,
+.AltBgColor6 > .panel a:active,
+.AltBgColor6 > .panel a:focus,
+.AltBgColor6 > .panel a:visited,
+.AltBgColor7 > .panel a,
+.AltBgColor7 > .panel a:hover,
+.AltBgColor7 > .panel a:active,
+.AltBgColor7 > .panel a:focus,
+.AltBgColor7 > .panel a:visited,
+.AltBgColor8 > .panel a,
+.AltBgColor8 > .panel a:hover,
+.AltBgColor8 > .panel a:active,
+.AltBgColor8 > .panel a:focus,
+.AltBgColor8 > .panel a:visited,
+.AltBgColor9 > .panel a,
+.AltBgColor9 > .panel a:hover,
+.AltBgColor9 > .panel a:active,
+.AltBgColor9 > .panel a:focus,
+.AltBgColor9 > .panel a:visited,
+.AltBgColor10 > .panel a,
+.AltBgColor10 > .panel a:hover,
+.AltBgColor10 > .panel a:active,
+.AltBgColor10 > .panel a:focus,
+.AltBgColor10 > .panel a:visited,
+.AltBgColor11 > .panel a,
+.AltBgColor11 > .panel a:hover,
+.AltBgColor11 > .panel a:active,
+.AltBgColor11 > .panel a:focus,
+.AltBgColor11 > .panel a:visited .AltBgColor12 > .panel a,
+.AltBgColor12 > .panel a:hover,
+.AltBgColor12 > .panel a:active,
+.AltBgColor12 > .panel a:focus,
+.AltBgColor12 > .panel a:visited,
+.AltBgColor13 > .panel a,
+.AltBgColor13 > .panel a:hover,
+.AltBgColor13 > .panel a:active,
+.AltBgColor13 > .panel a:focus,
+.AltBgColor13 > .panel a:visited,
+.AltBgColor14 > .panel a,
+.AltBgColor14 > .panel a:hover,
+.AltBgColor14 > .panel a:active,
+.AltBgColor14 > .panel a:focus,
+.AltBgColor14 > .panel a:visited,
+.AltBgColor15 > .panel a,
+.AltBgColor15 > .panel a:hover,
+.AltBgColor15 > .panel a:active,
+.AltBgColor15 > .panel a:focus,
+.AltBgColor15 > .panel a:visited {
+  color: #fff;
+  text-decoration: underline;
+}
+.AltBgColor2 > .panel .ProgressBar > span,
+.AltBgColor3 > .panel .ProgressBar > span,
+.AltBgColor4 > .panel .ProgressBar > span,
+.AltBgColor5 > .panel .ProgressBar > span,
+.AltBgColor6 > .panel .ProgressBar > span,
+.AltBgColor7 > .panel .ProgressBar > span,
+.AltBgColor8 > .panel .ProgressBar > span,
+.AltBgColor9 > .panel .ProgressBar > span,
+.AltBgColor10 > .panel .ProgressBar > span,
+.AltBgColor11 > .panel .ProgressBar > span,
+.AltBgColor12 > .panel .ProgressBar > span,
+.AltBgColor13 > .panel .ProgressBar > span,
+.AltBgColor14 > .panel .ProgressBar > span,
+.AltBgColor15 > .panel .ProgressBar > span {
+  /* Make the progress tracker indicator use a white bar instead of default */
+  background-color: #fff;
+}
+
+.AltBgColor2 > .panel {
+  background-color: #00abbe;
+}
+.AltBgColor2 > .panel.panel-border {
+  border-color: #0094a5;
+}
+
+.AltBgColor3 > .panel {
+  background-color: #5dae3f;
+}
+.AltBgColor3 > .panel.panel-border {
+  border-color: #539b38;
+}
+
+.AltBgColor4 > .panel {
+  background-color: #e98300;
+}
+.AltBgColor4 > .panel.panel-border {
+  border-color: #d07500;
+}
+
+.AltBgColor5 > .panel {
+  background-color: #8e51ae;
+}
+.AltBgColor5 > .panel.panel-border {
+  border-color: #80499d;
+}
+
+/* Goals: Total Members, Retained and New Active (orange) – Sea foam #CBCABA */
+.AltBgColor6 > .panel {
+  background-color: #6bcaba;
+}
+.AltBgColor6 > .panel.panel-border {
+  border-color: #6bcaba;
+}
+
+/*
+Active & Delinquent Members (orange) – Evergreen #004851
+ */
+.AltBgColor7 > .panel {
+  background-color: #004851;
+}
+.AltBgColor7 > .panel.panel-border {
+  border-color: #004851;
+}
+
+/* Full-Student members (blue) – Black #000 */
+.AltBgColor8 > .panel {
+  background-color: #000;
+}
+.AltBgColor8 > .panel.panel-border {
+  border-color: #000;
+}
+
+/*
+WAMPAC (purple) – Leaf #1B806D
+ */
+.AltBgColor9 > .panel {
+  background-color: #1b806d;
+}
+.AltBgColor9 > .panel.panel-border {
+  border-color: #1b806d;
+}
+
+/*
+Foundation (purple) – Mountain #330072
+ */
+.AltBgColor10 > .panel {
+  background-color: #330072;
+}
+.AltBgColor10 > .panel.panel-border {
+  border-color: #330072;
+}
+
+/* Bar Graphs – Rain (I like the blue) #0068A5 */
+.AltBgColor11 > .panel {
+  background-color: #0068a5;
+}
+.AltBgColor11 > .panel.panel-border {
+  border-color: #0068a5;
+}
+
+/* Sand Color #CC9F53 */
+.AltBgColor12 > .panel {
+  background-color: #cc9f53;
+}
+.AltBgColor12 > .panel.panel-border {
+  border-color: #cc9f53;
+}
+
+/* Sun Color #F0D283 */
+.AltBgColor13 > .panel {
+  background-color: #f0d283;
+}
+.AltBgColor13 > .panel.panel-border {
+  border-color: #f0d283;
+}
+
+/* Stone-A Color #BFB7B0 */
+.AltBgColor14 > .panel {
+  background-color: #bfb7b0;
+}
+.AltBgColor14 > .panel.panel-border {
+  border-color: #bfb7b0;
+}
+
+/* Stone-B Color #ACA199 */
+.AltBgColor15 > .panel {
+  background-color: #aca199;
+}
+.AltBgColor15 > .panel.panel-border {
+  border-color: #aca199;
+}
+
+/* Pie Graph – Sea Foam, Evergreen, Rain, Sea, Leaf, Slate */
 
 /*# sourceMappingURL=99-WSMA.css.map */

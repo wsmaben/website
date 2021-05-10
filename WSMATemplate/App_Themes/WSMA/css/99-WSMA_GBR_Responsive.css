@@ -3870,7 +3870,7 @@ fieldset[disabled] .RadGrid input.PrimaryButton:active,
 
 .SearchField label {
   font-size: 120%;
-  color: #004851;
+  color: #fff;
 }
 
 .SearchResultSummary .ListItemTitle a {
