@@ -1,53 +1,52 @@
-/* Responsive NaturalHeritage theme */
+/* !Responsive NaturalHeritage theme */
 
-// Core variables and mixins
-@import "breakpoint"; // Sass plugin used to generate responsive media queries
-@import "mixins";
+/* !Core variables and mixins */
+@import 'breakpoint'; // Sass plugin used to generate responsive media queries
+@import 'mixins';
 
-@import "NaturalHeritageSites/variables/variables_WSMA";
-// import base variables after theme variables so calculations of dependent variables
-// are based on the theme's variable settings
-@import "variables";
-@import "breakpoint-setup";
+@import 'NaturalHeritageSites/variables/variables_WSMA';
+/* import base variables after theme variables so calculations of dependent variables
+ are based on the theme's variable settings */
+@import 'variables';
+@import 'breakpoint-setup';
 
-// Master page layout
-@import "NaturalHeritageSites/layouts/_naturalHeritageSites-mp.scss";
+/* !Master page layout */
+@import 'NaturalHeritageSites/layouts/_naturalHeritageSites-mp.scss';
 
-// Skin-specific styles
-@import "NaturalHeritageSites/_WSMA";
+/* !Skin-specific styles */
+@import 'NaturalHeritageSites/_WSMA';
 
-// Typography and other basic setup
-@import "shared/basics";
+/* !Typography and other basic setup */
+@import 'shared/basics';
 
-// Master page elements
-@import "shared/masterpage_styles";
-@import "shared/modules/footer";
+/* !Master page elements */
+@import 'shared/masterpage_styles';
+@import 'shared/modules/footer';
 
-// Navigation controls
-@import "NaturalHeritageSites/navigation/primary-responsive";
-@import "NaturalHeritageSites/navigation/secondary-responsive";
-@import "NaturalHeritageSites/navigation/auxiliary-responsive";
+/* !Navigation controls */
+@import 'NaturalHeritageSites/navigation/primary-responsive';
+@import 'NaturalHeritageSites/navigation/secondary-responsive';
+@import 'NaturalHeritageSites/navigation/auxiliary-responsive';
 //@import "NaturalHeritageSites/navigation/navs"; // This isn't part of the template. It breaks things. Don't know why...
 
-// Other components
-@import "shared/icon_sprite";
-@import "shared/forms";
-@import "shared/buttons_flat";
-@import "shared/modules/other-iParts";
-@import "shared/modules/search";
-@import "shared/modules/events-products";
-@import "shared/modules/progress-tracker";
-@import "shared/modules/query-menu";
-@import "shared/modules/cart-charges";
-@import "NaturalHeritageSites/telerik_overrides";
-@import "NaturalHeritageSites/jumbotron";
-@import "shared/modules/communities";
-@import "shared/donor_site";
-@import "NaturalHeritageSites/misc";
-@import "shared/panel_callouts";
-@import "shared/dashboards";
-@import "shared/svg";
-
+/* !Other components */
+@import 'shared/icon_sprite';
+@import 'shared/forms';
+@import 'shared/buttons_flat';
+@import 'shared/modules/other-iParts';
+@import 'shared/modules/search';
+@import 'shared/modules/events-products';
+@import 'shared/modules/progress-tracker';
+@import 'shared/modules/query-menu';
+@import 'shared/modules/cart-charges';
+@import 'NaturalHeritageSites/telerik_overrides';
+@import 'NaturalHeritageSites/jumbotron';
+@import 'shared/modules/communities';
+@import 'shared/donor_site';
+@import 'NaturalHeritageSites/misc';
+@import 'shared/panel_callouts';
+@import 'shared/dashboards';
+@import 'shared/svg';
 
 // #masterHeaderImage {
 //     margin-top: 32px;
@@ -55,163 +54,186 @@
 // }
 
 .header-containger {
-    @include respond-to('grid large') {
-        .carousel-caption {
-            top: 170px;
-        }
-
-        .UtilityNavigation {
-            text-align: right;
-            padding-bottom: 55px;
-            @include respond-to('large') {
-                padding-bottom: 0;
-            }
-        }
-
-
-        .RadMenu {
-            a.rmLink {
-                color: $color-black;
-            }
-            a:visited {
-                color: $color-black;
-            }
-        }
-
-        .Wrapper-HomePage {
-            .RadMenu {
-                a.rmLink.rmRootLink {
-                    color: $color-white!important;
-                }
-                // a:visited {
-                //     color: $color-white!important;
-                // }
-            }
-        }
-
-        .ProgressTracker2 {
-            font-size: 135%;
-            width: 75%;
-            margin: 0 auto;
-        }
-
-        .ste-section {
-            display: inline-block;
-            position: absolute;
-            top: 0;
-            right: 0;
-            z-index: 1000;
-        }
+  @include respond-to('grid large') {
+    .carousel-caption {
+      top: 170px;
     }
+
+    .UtilityNavigation {
+      text-align: right;
+      padding-bottom: 55px;
+      @include respond-to('large') {
+        padding-bottom: 0;
+      }
+    }
+
+    .RadMenu {
+      a.rmLink {
+        color: $color-black;
+      }
+      a:visited {
+        color: $color-black;
+      }
+    }
+
+    .Wrapper-HomePage {
+      .RadMenu {
+        a.rmLink.rmRootLink {
+          color: $color-white !important;
+        }
+        // a:visited {
+        //     color: $color-white!important;
+        // }
+      }
+    }
+
+    .ProgressTracker2 {
+      font-size: 135%;
+      width: 75%;
+      margin: 0 auto;
+    }
+
+    .ste-section {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1000;
+    }
+  }
 }
-/*************************
-***  Expander
-**************************/
+/* !Expander
+************************* */
 
 .RadWindow {
-    .expander-container {
-        .expander-body {
-            display:block;
-        }
+  .expander-container {
+    .expander-body {
+      display: block;
     }
+  }
 }
 
 .expander-container {
-    .expander {
-        background-color: #eeeeee;
-        border-bottom: 1px solid #6bcaba;
-        margin-bottom: 15px;
-        margin-top: 25px;
-        display: flex;
-        .expander-head {
-            padding: 40px 35px;
-        }
-        &.active {
-            background-color: #f3f3f3;
-            .expander-switch {
-                button {
-                    background-image: url(images/minus.svg);
-                    // background-position: center;
-                    // background-size: 25%;
-                    // background-repeat: no-repeat;
-                }
-            }
-            
-            & + div {
-                display: block;
-            }
-        }
+  .expander {
+    background-color: #eeeeee;
+    border-bottom: 1px solid #6bcaba;
+    margin-bottom: 15px;
+    margin-top: 25px;
+    display: flex;
+    .expander-head {
+      padding: 40px 35px;
     }
-    .expander-body {
-        display: none;
-    }
-    .expander-switch {
-        display: flex;
+    &.active {
+      background-color: #f3f3f3;
+      .expander-switch {
         button {
-        background-image: url(images/plus.svg);
-        background-position: center;
-        background-size: 25%;
-        background-repeat: no-repeat;
-        border: none;
-        color: transparent;
-        background-color: transparent;
-        width: 100%;
+          background-image: url(images/minus.svg);
+          // background-position: center;
+          // background-size: 25%;
+          // background-repeat: no-repeat;
         }
+      }
+
+      & + div {
+        display: block;
+      }
     }
+  }
+  .expander-body {
+    display: none;
+  }
+  .expander-switch {
+    display: flex;
+    button {
+      background-image: url(images/plus.svg);
+      background-position: center;
+      background-size: 25%;
+      background-repeat: no-repeat;
+      border: none;
+      color: transparent;
+      background-color: transparent;
+      width: 100%;
+    }
+  }
 }
 
-
-/****************************************
-/** FullWidthFt
-/***************************************/
+/* !FullWidthFt
+************************************** */
 
 .FullWidthFt {
-    background-color: $color-wsma-evergreen;
-    padding: 30px 0 30px 0;
-    h1, h2, h3, p {
-        color: $color-wsma-ltseafoam;
+  background-color: $color-wsma-evergreen;
+  padding: 30px 0 30px 0;
+  h1,
+  h2,
+  h3,
+  p {
+    color: $color-wsma-ltseafoam;
+  }
+  h1 {
+    font-size: 285%;
+    //display: inline;
+  }
+  .ContentItemContainer {
+    button {
+      background: $color-wsma-dkgrey;
+      border: 2px solid $color-wsma-ltgrey;
+      //border-radius: 5px;
+      color: white;
+      padding: 15px 30px;
+      float: right;
     }
-    h1 {
-        font-size: 285%;
-        //display: inline;
-    }
-    .ContentItemContainer {
-        button {
-            background: $color-wsma-dkgrey;
-            border: 2px solid $color-wsma-ltgrey;
-            //border-radius: 5px;
-            color: white;
-            padding: 15px 30px;
-            float: right;
-        }
-    }
+  }
 }
 
-//**************************************
-// Colors
+/* !Colors */
 
-.dkgrey {color:$color-wsma-dkgrey;}
-.mdgrey {color:$color-wsma-mdgrey;}
-.ltgrey {color:$color-wsma-ltgrey;}
+.dkgrey {
+  color: $color-wsma-dkgrey;
+}
+.mdgrey {
+  color: $color-wsma-mdgrey;
+}
+.ltgrey {
+  color: $color-wsma-ltgrey;
+}
 //.red {color:$color-wsma-red;}
 //.forest {color:$color-wsma-forest;}
 //.teal {color:$color-wsma-teal;}
 //.ltteal {color:$color-wsma-ltteal;}
-.seafoam {color:$color-wsma-seafoam;}
-.ltseafoam {color:$color-wsma-ltseafoam;}
-.evergreen {color:$color-wsma-evergreen;}
+.seafoam {
+  color: $color-wsma-seafoam;
+}
+.ltseafoam {
+  color: $color-wsma-ltseafoam;
+}
+.evergreen {
+  color: $color-wsma-evergreen;
+}
 
-.bg-dkgrey {background-color:$color-wsma-dkgrey;color:#fff;}
-.bg-mdgrey {background-color:$color-wsma-mdgrey;color:#fff;}
-.bg-ltgrey {background-color:$color-wsma-ltgrey;}
+.bg-dkgrey {
+  background-color: $color-wsma-dkgrey;
+  color: #fff;
+}
+.bg-mdgrey {
+  background-color: $color-wsma-mdgrey;
+  color: #fff;
+}
+.bg-ltgrey {
+  background-color: $color-wsma-ltgrey;
+}
 //.bg-red {background-color:$color-wsma-red;color:#fff;}
 //.bg-forest {background-color:$color-wsma-forest;color:#fff;}
 //.bg-teal {background-color:$color-wsma-teal;}
 //.bg-ltteal {background-color:$color-wsma-ltteal;}
-.bg-seafoam {background-color:$color-wsma-seafoam;}
-.bg-ltseafoam {background-color:$color-wsma-ltseafoam;}
-.bg-evergreen {background-color:$color-wsma-evergreen;}
-
+.bg-seafoam {
+  background-color: $color-wsma-seafoam;
+}
+.bg-ltseafoam {
+  background-color: $color-wsma-ltseafoam;
+}
+.bg-evergreen {
+  background-color: $color-wsma-evergreen;
+}
 
 // $color-wsma-dkgrey:         #36424a !default; //From style guide
 // $color-wsma-mdgrey:         #6c6f70 !default; //From style guide
@@ -225,9 +247,6 @@
 // $color-wsma-ltseafoam:		#C5F0E8 !default;
 // $color-wsma-green:          #8fd400 !default; //From style guide
 
-
-
-
 //**************************************
 // TEST
 
@@ -237,28 +256,297 @@
 //             width: 5px;  // @media (min-width: 480px) { #testofbreakpoints .img { width: 5px; } }
 //         }
 //     }
-    
+
 //     @include respond-to('tablets and up') {
 //         .img {
-//             width: 10px;// @media (min-width: 768px) { #testofbreakpoints .img { width: 10px; } 
+//             width: 10px;// @media (min-width: 768px) { #testofbreakpoints .img { width: 10px; }
 //         }
 //     }
-    
+
 //     @include respond-to('desktops and up') {
 //         .img {
-//             width: 15px;// @media (min-width: 992px) { #testofbreakpoints .img { width: 15px; } 
+//             width: 15px;// @media (min-width: 992px) { #testofbreakpoints .img { width: 15px; }
 //         }
 //     }
-    
+
 //     @include respond-to('grid large') {
 //         .img {
 //             width: 20px;// @media (min-width: 768px) { #testofbreakpoints .img { width: 20px; } }
 //         }
 //     }
-    
+
 //     @include respond-to('large') {
 //         .img {
 //             width: 25px;// @media (min-width: 1200px) { #testofbreakpoints .img { width: 25px; } }
 //         }
 //     }
 // }
+
+//**************************************
+// TODO: Added In (Integrate into full SASS later)
+
+h1.mobileShow {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  h1.mobileShow {
+    display: block;
+  }
+}
+
+/* !Alt background colors
+   ========================================================================== */
+.AltBgColor1 {
+  background-color: #fff;
+  padding: 10px;
+}
+
+.AltBgColor2 > .panel,
+.AltBgColor2 > .panel h2,
+.AltBgColor3 > .panel,
+.AltBgColor3 > .panel h2,
+.AltBgColor4 > .panel,
+.AltBgColor4 > .panel h2,
+.AltBgColor5 > .panel,
+.AltBgColor5 > .panel h2,
+.AltBgColor6 > .panel,
+.AltBgColor6 > .panel h2,
+.AltBgColor7 > .panel,
+.AltBgColor7 > .panel h2,
+.AltBgColor8 > .panel,
+.AltBgColor8 > .panel h2,
+.AltBgColor9 > .panel,
+.AltBgColor9 > .panel h2,
+.AltBgColor10 > .panel,
+.AltBgColor10 > .panel h2,
+.AltBgColor11 > .panel,
+.AltBgColor11 > .panel h2,
+.AltBgColor12 > .panel,
+.AltBgColor12 > .panel h2,
+.AltBgColor13 > .panel,
+.AltBgColor13 > .panel h2,
+.AltBgColor14 > .panel,
+.AltBgColor14 > .panel h2,
+.AltBgColor15 > .panel,
+.AltBgColor15 > .panel h2 {
+  color: #fff;
+}
+.AltBgColor2 > .panel a,
+.AltBgColor2 > .panel a:hover,
+.AltBgColor2 > .panel a:active,
+.AltBgColor2 > .panel a:focus,
+.AltBgColor2 > .panel a:visited,
+.AltBgColor3 > .panel a,
+.AltBgColor3 > .panel a:hover,
+.AltBgColor3 > .panel a:active,
+.AltBgColor3 > .panel a:focus,
+.AltBgColor3 > .panel a:visited,
+.AltBgColor4 > .panel a,
+.AltBgColor4 > .panel a:hover,
+.AltBgColor4 > .panel a:active,
+.AltBgColor4 > .panel a:focus,
+.AltBgColor4 > .panel a:visited,
+.AltBgColor5 > .panel a,
+.AltBgColor5 > .panel a:hover,
+.AltBgColor5 > .panel a:active,
+.AltBgColor5 > .panel a:focus,
+.AltBgColor5 > .panel a:visited,
+.AltBgColor6 > .panel a,
+.AltBgColor6 > .panel a:hover,
+.AltBgColor6 > .panel a:active,
+.AltBgColor6 > .panel a:focus,
+.AltBgColor6 > .panel a:visited,
+.AltBgColor7 > .panel a,
+.AltBgColor7 > .panel a:hover,
+.AltBgColor7 > .panel a:active,
+.AltBgColor7 > .panel a:focus,
+.AltBgColor7 > .panel a:visited,
+.AltBgColor8 > .panel a,
+.AltBgColor8 > .panel a:hover,
+.AltBgColor8 > .panel a:active,
+.AltBgColor8 > .panel a:focus,
+.AltBgColor8 > .panel a:visited,
+.AltBgColor9 > .panel a,
+.AltBgColor9 > .panel a:hover,
+.AltBgColor9 > .panel a:active,
+.AltBgColor9 > .panel a:focus,
+.AltBgColor9 > .panel a:visited,
+.AltBgColor10 > .panel a,
+.AltBgColor10 > .panel a:hover,
+.AltBgColor10 > .panel a:active,
+.AltBgColor10 > .panel a:focus,
+.AltBgColor10 > .panel a:visited,
+.AltBgColor11 > .panel a,
+.AltBgColor11 > .panel a:hover,
+.AltBgColor11 > .panel a:active,
+.AltBgColor11 > .panel a:focus,
+.AltBgColor11 > .panel a:visited .AltBgColor12 > .panel a,
+.AltBgColor12 > .panel a:hover,
+.AltBgColor12 > .panel a:active,
+.AltBgColor12 > .panel a:focus,
+.AltBgColor12 > .panel a:visited,
+.AltBgColor13 > .panel a,
+.AltBgColor13 > .panel a:hover,
+.AltBgColor13 > .panel a:active,
+.AltBgColor13 > .panel a:focus,
+.AltBgColor13 > .panel a:visited,
+.AltBgColor14 > .panel a,
+.AltBgColor14 > .panel a:hover,
+.AltBgColor14 > .panel a:active,
+.AltBgColor14 > .panel a:focus,
+.AltBgColor14 > .panel a:visited,
+.AltBgColor15 > .panel a,
+.AltBgColor15 > .panel a:hover,
+.AltBgColor15 > .panel a:active,
+.AltBgColor15 > .panel a:focus,
+.AltBgColor15 > .panel a:visited {
+  color: #fff;
+  text-decoration: underline;
+}
+.AltBgColor2 > .panel .ProgressBar > span,
+.AltBgColor3 > .panel .ProgressBar > span,
+.AltBgColor4 > .panel .ProgressBar > span,
+.AltBgColor5 > .panel .ProgressBar > span,
+.AltBgColor6 > .panel .ProgressBar > span,
+.AltBgColor7 > .panel .ProgressBar > span,
+.AltBgColor8 > .panel .ProgressBar > span,
+.AltBgColor9 > .panel .ProgressBar > span,
+.AltBgColor10 > .panel .ProgressBar > span,
+.AltBgColor11 > .panel .ProgressBar > span,
+.AltBgColor12 > .panel .ProgressBar > span,
+.AltBgColor13 > .panel .ProgressBar > span,
+.AltBgColor14 > .panel .ProgressBar > span,
+.AltBgColor15 > .panel .ProgressBar > span {
+  /* Make the progress tracker indicator use a white bar instead of default */
+  background-color: #fff;
+}
+
+.AltBgColor2 > .panel {
+  background-color: #00abbe;
+}
+.AltBgColor2 > .panel.panel-border {
+  border-color: #0094a5;
+}
+
+.AltBgColor3 > .panel {
+  background-color: #5dae3f;
+}
+.AltBgColor3 > .panel.panel-border {
+  border-color: #539b38;
+}
+
+.AltBgColor4 > .panel {
+  background-color: #e98300;
+}
+.AltBgColor4 > .panel.panel-border {
+  border-color: #d07500;
+}
+
+.AltBgColor5 > .panel {
+  background-color: #8e51ae;
+}
+.AltBgColor5 > .panel.panel-border {
+  border-color: #80499d;
+}
+
+/* Goals: Total Members, Retained and New Active (orange) – Sea foam #CBCABA */
+.AltBgColor6 > .panel {
+  background-color: #6bcaba;
+}
+.AltBgColor6 > .panel.panel-border {
+  border-color: #6bcaba;
+}
+
+/*
+Active & Delinquent Members (orange) – Evergreen #004851
+ */
+.AltBgColor7 > .panel {
+  background-color: #004851;
+}
+.AltBgColor7 > .panel.panel-border {
+  border-color: #004851;
+}
+
+/* Full-Student members (blue) – Black #000 */
+.AltBgColor8 > .panel {
+  background-color: #000;
+}
+.AltBgColor8 > .panel.panel-border {
+  border-color: #000;
+}
+
+/*
+WAMPAC (purple) – Leaf #1B806D
+ */
+.AltBgColor9 > .panel {
+  background-color: #1b806d;
+}
+.AltBgColor9 > .panel.panel-border {
+  border-color: #1b806d;
+}
+
+/*
+Foundation (purple) – Mountain #330072
+ */
+.AltBgColor10 > .panel {
+  background-color: #330072;
+}
+.AltBgColor10 > .panel.panel-border {
+  border-color: #330072;
+}
+
+/* Bar Graphs – Rain (I like the blue) #0068A5 */
+.AltBgColor11 > .panel {
+  background-color: #0068a5;
+}
+.AltBgColor11 > .panel.panel-border {
+  border-color: #0068a5;
+}
+
+/* Sand Color #CC9F53 */
+.AltBgColor12 > .panel {
+  background-color: #cc9f53;
+}
+.AltBgColor12 > .panel.panel-border {
+  border-color: #cc9f53;
+}
+
+/* Sun Color #F0D283 */
+.AltBgColor13 > .panel {
+  background-color: #f0d283;
+}
+.AltBgColor13 > .panel.panel-border {
+  border-color: #f0d283;
+}
+
+/* Stone-A Color #BFB7B0 */
+.AltBgColor14 > .panel {
+  background-color: #bfb7b0;
+}
+.AltBgColor14 > .panel.panel-border {
+  border-color: #bfb7b0;
+}
+
+/* Stone-B Color #ACA199 */
+.AltBgColor15 > .panel {
+  background-color: #aca199;
+}
+.AltBgColor15 > .panel.panel-border {
+  border-color: #aca199;
+}
+
+/* Pie Graph – Sea Foam, Evergreen, Rain, Sea, Leaf, Slate */
+
+// Front page search box bottom text "Please enter your search criteria to the view results."
+.ListSearchPrompt {
+  padding: 4px 0px;
+  color: #ffffff;
+}
+
+//This is the rule that determines the spacing above the banner on the home page (change mobile)
+.Wrapper-HomePage .HomePageFullWidthArea,
+.TemplateManagerArea .HomePageFullWidthArea {
+  display: block;
+  margin-top: 159px;
+}

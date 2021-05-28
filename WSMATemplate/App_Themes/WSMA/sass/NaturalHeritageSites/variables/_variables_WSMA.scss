@@ -7,75 +7,76 @@ $theme-family: NaturalHeritageSites !default;
 $theme-name: WSMA !default;
 $view-type: Responsive !default;
 
-// Sprites
+/* !Sprites */
 // -------------------------
-$header-sprite-path: "images/ResponsiveHeaderSprite.png" !default; /* Not in use by family's themes, may be used by Ultrawave. */
-$theme-icons-sprite-path: "images/ThemeIconsSprite.png" !default;
+$header-sprite-path: 'images/ResponsiveHeaderSprite.png' !default; /* Not in use by family's themes, may be used by Ultrawave. */
+$theme-icons-sprite-path: 'images/ThemeIconsSprite.png' !default;
 
-// Color Palette
+/* !Color Palette */
 // -------------------------
-$color-black: #313e48 !default;
+$color-black: #313e48 !default; // primary font color for body text, menus, etc.
 $color-white: #ffffff !default;
-//$color-wsma-dkgrey:       #36424a !default; From style guide
-//$color-wsma-mdgrey:       #6c6f70 !default; From style guide
-//$color-wsma-ltgrey:         #d0cfcb !default; From style guide
-//$color-wsma-red:            #a22a2e !default; This is the one they used in their design files
-//$color-wsma-red:			#a62d38 !default; //From style guide
-//$color-wsma-forest:         #00837e !default; From style guide
-//$color-wsma-teal:           #4bc8b6 !default;
-//$color-wsma-ltteal:		  #ecf9f7 !default;
-//$color-wsma-green:          #8fd400 !default; //From style guide
-
+// ----------------------------------------------------------------------------------------
 //Journey Group rebrand
 //PRIMARY WEB PALETTE
-$color-wsma-seafoam: #6bcaba !default; //From style guide
-$color-wsma-evergreen: #004851 !default; //From style guide
-$color-wsma-sun: #f0d283 !default; //From style guide
-$color-wsma-black: #000 !default; //From style guide
-$color-wsma-white: #fff !default; //From style guide
-$color-wsma-ltseafoam: #94d4ca !default; //From style guide
+$color-wsma-seafoam: #6bcaba !default; // also used by Teal Interface Palette
+$color-wsma-evergreen: #004851 !default; // also used by Teal Interface Palette
+$color-wsma-sun: #f0d283 !default; // also used by Secondary Web Palette
+$color-wsma-black: #000 !default;
+//$color-wsma-white: #fff !default; same as $color-white from standard Color Palette above
+$color-wsma-ltseafoam: #94d4ca !default; // also used by Teal Interface Palette
 
 //SECONDARY WEB PALETTE
-$color-wsma-mountain: #330072 !default; //From style guide
-$color-wsma-sky: #77c5d5 !default; //From style guide
-//$color-wsma-sun:			#f0d283 !default; Reference, duplicate of primary
-$color-wsma-stone-a: #bfb7b0 !default; //From style guide
-$color-wsma-stone-b: #aca199 !default; //From style guide
-$color-wsma-sea: #012169 !default; //From style guide
-$color-wsma-rain: #0068a5 !default; //From style guide
-$color-wsma-sand: #cc9f53 !default; //From style guide
-$color-wsma-leaf: #1b806d !default; //From style guide
+$color-wsma-mountain: #330072 !default; // also used by Foundation Primary Palette
+$color-wsma-sky: #77c5d5 !default; // also used by Foundation Primary Palette
+//$color-wsma-sun: #f0d283 !default; duplicate of primary
+$color-wsma-stone-a: #bfb7b0 !default;
+$color-wsma-stone-b: #aca199 !default;
+$color-wsma-sea: #012169 !default;
+$color-wsma-rain: #0068a5 !default;
+$color-wsma-sand: #cc9f53 !default;
+$color-wsma-leaf: #1b806d !default;
 
-//COLOR INTERFACE PALETTE
+// ----------------------------------------------------------------------------------------
+//INTERFACE PALETTE
 //Teal
-//$color-wsma-ltseafoam:	#94d4ca !default; Reference, duplicate of primary
-//$color-wsma-seafoam:      #6bcaba !default; Reference, duplicate of primary
-//$color-wsma-evergreen:    #004851 !default; Reference, duplicate of primary
-$color-wsma-dkevergreen: #00282d !default; //From style guide
-//Dark
-//$color-wsma-black: 		#000	!default; Reference, duplicate of primary
-$color-wsma-charcoal: #222 !default; //From style guide
-$color-wsma-charcoal: #222 !default; //From style guide
-$color-wsma-dkgrey: #333 !default; //From style guide
-$color-wsma-mdgrey: #666 !default; //From style guide
-//Light
-$color-wsma-grey: #ddd !default; //From style guide
-$color-wsma-ltgrey: #eee !default; //From style guide
-$color-wsma-palegrey: #f3f3f3 !default; //From style guide
-//$color-wsma-white: 		#fff	!default; Reference, duplicate of primary
+//$color-wsma-ltseafoam: #94d4ca !default; duplicate of Primary Web Palette
+//$color-wsma-seafoam: #6bcaba !default; duplicate of Primary Web Palette
+//$color-wsma-evergreen: #004851 !default; duplicate of Primary Web Palette
+$color-wsma-dkevergreen: #00282d !default;
+$color-wsma-linkfoam: #499a89 !default;
 
+//Dark
+//$color-wsma-black: #000	!default; duplicate of Primary Web Palette black
+$color-wsma-charcoal: #222 !default;
+$color-wsma-charcoal: #222 !default;
+$color-wsma-dkgrey: #333 !default;
+$color-wsma-mdgrey: #666 !default;
+
+//Light
+$color-wsma-grey: #ddd !default;
+$color-wsma-ltgrey: #eee !default;
+$color-wsma-palegrey: #f3f3f3 !default;
+//$color-wsma-white: #fff	!default; same as $color-white from standard Color Palette above
+
+// ----------------------------------------------------------------------------------------
 //COLOR SUB-BRANDS
+
 //Foundation Primary
-//$color-wsma-mountain:     #330072 !default; Reference, duplicate of secondary
-//$color-wsma-sky:			#77C5D5 !default; Reference, duplicate of secondary
+//$color-wsma-mountain: #330072 !default; duplicate of Secondary Web Palette
+//$color-wsma-sky: #77C5D5 !default; duplicate of Secondary Web Palette
+
 //CAMS Primary
-//color-wsma-sea:			#012169 !default; Reference, duplicate of secondary
-//$color-wsma-stone-a: 		#BFB7B0 !default; Reference, duplicate of secondary
-//$color-wsma-stone-b: 		#ACA199 !default; Reference, duplicate of secondary
+//color-wsma-sea:	#012169 !default; duplicate of Secondary Web Palette
+//$color-wsma-stone-a: #BFB7B0 !default; duplicate of Secondary Web Palette
+//$color-wsma-stone-b: #ACA199 !default; duplicate of Secondary Web Palette
+
 //Complete CME
-$color-wsma-slate: #243746 !default; //From style guide
-//$color-wsma-sun:			#f0d283 !default; Reference, duplicate of primary
-//$color-wsma-sand:			#cc9f53 !default; Reference, duplicate of secondary
+$color-wsma-slate: #243746 !default;
+//$color-wsma-sun: #f0d283 !default; duplicate of Primary Web Palette
+//$color-wsma-sand: #cc9f53 !default; duplicate of Secondary Web Palette
+
+// ----------------------------------------------------------------------------------------
 
 $color-base: $color-wsma-dkgrey !default;
 $color-callout: $color-wsma-sun !default;
@@ -97,37 +98,37 @@ $white: #fff !default;
 
 $hover-highlight: lighten($color-base, 8%) !default; /*progress tracker */
 
-// Social colors
+/* !Social colors */
 $color-facebook: #3b5998 !default;
 $color-linkedin: #0077b5 !default;
 
-// Scaffolding
+/* !Scaffolding */
 // -------------------------
 $grid-gutter-width: 30px !default;
 $border-style: solid !default;
 
-// Links
+/* !Links */
 // -------------------------
-$link-color: $color-wsma-seafoam; //darken($color-secondary-b, 2%) !default;
+$link-color: $color-wsma-linkfoam; // #499A89, defined in the Teal Interface Palette above
 
-// Typography
-// -------------------------
-$font-family-base: "Source Sans Pro", sans-serif !default;
-$font-family-icons: "elegant-icons";
+/* !Typography - Fonts */
+// ---------------------------------------------------------------------------
+$font-family-base: 'Source Sans Pro', sans-serif !default;
+$font-family-icons: 'elegant-icons';
 $font-size-base: 16px !default;
 $line-height-base: 1.7 !default;
 $line-height-computed: floor($font-size-base * $line-height-base) !default;
 $text-color: $color-black !default;
 
-$headings-font-family: "Source Sans Pro", sans-serif !default;
+$headings-font-family: 'Source Sans Pro', sans-serif !default;
 $headings-font-weight: 300 !default;
 $headings-color: $color-neutral !default;
 
-@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro|Source+Serif+Pro&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro|Source+Serif+Pro&display=swap');
 
 @font-face {
-   font-family: "elegant-icons";
-   src: url("https://cdn.rawgit.com/mdentinho/elegant-icons-sass/e48e7df0/fonts/ElegantIcons.woff");
+  font-family: 'elegant-icons';
+  src: url('https://cdn.rawgit.com/mdentinho/elegant-icons-sass/e48e7df0/fonts/ElegantIcons.woff');
 }
 
 $font-size-h1: 250% !default;
@@ -137,11 +138,11 @@ $font-size-h4: 100% !default;
 $font-size-h5: 100% !default;
 $font-size-h6: 85% !default;
 
-$h1-color: $color-neutral !default;
-$h4-color: $color-secondary-b !default;
-$h5-color: $color-secondary-b !default;
+$h1-color: $color-neutral !default; //$color-wsma-dkgrey #333
+$h4-color: $color-secondary-b !default; //$color-wsma-evergreen #004851
+$h5-color: $color-secondary-b !default; //$color-wsma-dkgrey #333
 
-// Components
+/* !Components */
 // -------------------------
 $padding-base-vertical: 5px !default;
 $padding-base-horizontal: 10px !default;
@@ -152,13 +153,13 @@ $border-radius-small: 0px !default;
 $component-active-color: $color-wsma-sun !default;
 $component-active-bg: $color-secondary-a !default;
 
-// Forms
+/* !Forms */
 // -------------------------
 $input-height-base: (
-   $line-height-computed + ($padding-base-vertical * 2) + 2
+  $line-height-computed + ($padding-base-vertical * 2) + 2
 ) !default;
 
-// Buttons
+/* !Buttons */
 // -------------------------
 $btn-style: flat !default;
 $btn-default-color: #fff;
@@ -174,7 +175,7 @@ $btn-primary-shadow: $btn-primary-border !default;
 $btn-facebook-border: darken($color-facebook, 10%) !default;
 $btn-linkedin-border: darken($color-linkedin, 10%) !default;
 
-// Navbar
+/* !Navbar */
 // -------------------------
 $navbar-top-height: 46px !default;
 $navbar-height: 65px !default;
@@ -194,11 +195,11 @@ $navbar-default-link-letter-spacing: 1px !default;
 $navbar-default-link-font-size: 100% !default;
 $navbar-default-link-font-family: $headings-font-family;
 
-// Callout link
+/* !Callout link */
 $navbar-feature-link-color: #fff !default;
 $navbar-feature-link-bg: $color-callout !default;
 
-// Mobile buttons
+/* !Mobile buttons */
 $navbar-default-toggle-bg: $color-wsma-dkgrey; //rgba(#fff, 0.8)!default;
 $navbar-default-toggle-hover-bg: $color-wsma-mdgrey;
 $navbar-default-toggle-active-bg: $navbar-default-toggle-bg;
@@ -221,42 +222,42 @@ $navbar-default-dropdown-link-font-family: $font-family-base;
 $navbar-default-dropdown-link-font-size: 124%;
 $navbar-default-dropdown-link-font-weight: normal;
 
-// Navs
+//* !Navs */
 // -------------------------
 
-// Secondary (internal)
+/* !Secondary (internal) */
 $nav-secondary-header-bg: $navbar-default-bg !default;
 $nav-secondary-header-color: $navbar-default-color !default;
 $nav-secondary-bg: $color-wsma-ltseafoam; /*lighten($nav-secondary-header-bg,70%) !default;*/
 $nav-secondary-link-color: $color-wsma-mdgrey;
 $nav-secondar-divider-bg: #fff !default;
 
-// Cart icon
+/* !Cart icon */
 //-------------------------
 $cart-count-color: $color-base !default;
 $cart-count-xs-color: $color-base !default;
 $cart-count-bg: $color-secondary-a;
 $cart-count-xs-bg: $cart-count-bg !default;
 
-// Communities
+/* !Communities */
 // -------------------------
 $communities-nav-hover-bg: $hover-highlight !default;
 $communities-nav-select-bg: $component-active-bg !default;
 $communities-link-hover-bg: $communities-nav-select-bg !default;
 $communities-alt-bg: hsl(
-   hue($color-neutral),
-   saturation($color-neutral),
-   95%
+  hue($color-neutral),
+  saturation($color-neutral),
+  95%
 ) !default;
 
-// CalloutPanelFields
+/* !CalloutPanelFields */
 // -------------------------
 $callout1-bg: #222122 !default;
 
-// Logo
+/* !Logo */
 // -------------------------
 $logo-default-position-md: 0 0px !default;
-$logo-default-url: url("images/wsma-logo.svg") !default;
+$logo-default-url: url('images/wsma-logo.svg') !default;
 $logo-default-url-2x: null !default;
 $logo-default-position-md: null !default;
 //$logo-default-width-sm:         300px !default;
@@ -267,11 +268,11 @@ $logo-default-width-md: 300px !default;
 $logo-default-height-md: null !default;
 $logo-default-margin-top: 0 !default;
 
-$logo-donor-url: url("images/DonorHeaderLogo.png") !default;
+$logo-donor-url: url('images/DonorHeaderLogo.png') !default;
 $logo-donor-position-md: null !default;
 $logo-donor-width-md: 169px !default;
 
-// Jumbotron
+/* !Jumbotron */
 // -------------------------
 $jumbotron-background-url: url(images/HomeBanner.jpg) !default;
 $jumbotron-home-height: 525px !default;
@@ -280,7 +281,7 @@ $jumbotron-home-height-sm: 210px !default;
 $jumbotron-h1-size-xs: 200% !default;
 $jumbotron-h1-size: 250% !default;
 
-// Carousel
+/* !Carousel */
 // -------------------------
 $carousel-caption-color: #fff;
 $carousel-caption-text-alignment: left;
@@ -288,7 +289,7 @@ $carousel-caption-bg-color: null;
 $carousel-caption-font-family: $headings-font-family;
 $carousel-caption-font-size: $font-size-base + 4;
 
-// Footer
+/* !Footer */
 // -------------------------
 $footer-top-color: #000 !default;
 $footer-top-link-color: $footer-top-color !default; /*hsl(hue($link-color), saturation($link-color), 80%) !default;*/
@@ -299,9 +300,9 @@ $footer-bottom-color: rgba(0, 0, 0, 0.31) !default;
 $footer-bottom-link-color: $footer-bottom-color !default;
 $footer-bottom-bg: transparent !default; //$color-secondary-a !default;
 
-// Telerik controls
+/* !Telerik controls */
 // --------------------------
 $radmenu-bg: $color-secondary-a !default;
 
-// Overwrite Ultrawave variables
+/* !Overwrite Ultrawave variables */
 $radwindow-header-bg: $color-base;

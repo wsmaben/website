@@ -10,56 +10,55 @@
  */
 .HomePageFullWidthArea .ContentItemContainer .panel,
 .HomePageFullWidthArea .ContentItemContainer div .panel {
-   &:not(.panel-border) {
-      /* if borders are not turned on don't leave the space for them */
-      border-width: 0;
-   }
+  &:not(.panel-border) {
+    /* if borders are not turned on don't leave the space for them */
+    border-width: 0;
+  }
 
-   .panel-body-container .panel-body {
-      /* Turn off the padding on iPart panels */
-      padding: 0;
-   }
+  .panel-body-container .panel-body {
+    /* Turn off the padding on iPart panels */
+    padding: 0;
+  }
 }
 
-/* Mobile Hero Area
+/* !Mobile Hero Area
    ========================================================================== */
 .HeroArea {
-   height: 350px;
-   width: 100%;
-   position: relative;
+  height: 350px;
+  width: 100%;
+  position: relative;
 }
 
 .HeroBackground {
-   height: 100%;
-   background: #009fd9 url(images/MobileCairnsBanner.jpg) bottom center
-      no-repeat;
-   background-size: cover;
+  height: 100%;
+  background: #009fd9 url(images/MobileCairnsBanner.jpg) bottom center no-repeat;
+  background-size: cover;
 }
 
 .HeroContent {
-   position: absolute;
-   bottom: 0;
-   width: 100%;
-   padding: 8px 0;
-   background-color: $black; /* Fallback for IE8, which doesn't support rgba */
-   background-color: fade-out($black, 0.25);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 8px 0;
+  background-color: $black; /* Fallback for IE8, which doesn't support rgba */
+  background-color: fade-out($black, 0.25);
 
-   h1,
-   h2,
-   h3,
-   h4,
-   h5,
-   .HeroText {
-      color: $white;
-      margin: 0 8px 8px 8px;
-   }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  .HeroText {
+    color: $white;
+    margin: 0 8px 8px 8px;
+  }
 
-   .TextButton {
-      float: right;
-   }
+  .TextButton {
+    float: right;
+  }
 }
 
-/* Responsive Hero Content
+/* !Responsive Hero Content
    ========================================================================== */
 /* This header is used in the out-of-the-box Member, Member Responsive
  * and Annual Conference sample sites */
@@ -68,415 +67,415 @@
  */
 
 .Slider.FullWidth {
-   height: $jumbotron-home-height;
-   background-image: $jumbotron-background-url;
-   @include bg-img-cover();
-   position: relative;
+  height: $jumbotron-home-height;
+  background-image: $jumbotron-background-url;
+  @include bg-img-cover();
+  position: relative;
 
-   h1 {
-      font-size: $jumbotron-h1-size-xs;
-      @include respond-to("tablets and up") {
-         font-size: $jumbotron-h1-size;
+  h1 {
+    font-size: $jumbotron-h1-size-xs;
+    @include respond-to('tablets and up') {
+      font-size: $jumbotron-h1-size;
+    }
+  }
+
+  .SliderPage1 {
+    height: 100%;
+
+    h1 {
+      color: $white;
+      margin-top: 0;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .SliderContent {
+      /* remove the margins put on by the container */
+      margin-left: -($grid-gutter-width / 2);
+      margin-right: -($grid-gutter-width / 2);
+      /* then add it back on */
+      padding: ($grid-gutter-width / 2);
+      /* Fallback for IE8, which doesn't support rgba */
+      background-color: #000;
+      background-color: fade-out(#000, 0.25);
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      max-height: 100%;
+      overflow: auto;
+
+      @include respond-to('tablets and up') {
+        @if ($border-radius-large > 0) {
+          border-radius: $border-radius-large;
+        }
+        position: inherit;
+        float: right;
+        width: 36em;
+        margin: 1em;
+        // max-height: $jumbotron-home-height - 2em;
       }
-   }
+    }
 
-   .SliderPage1 {
-      height: 100%;
-
-      h1 {
-         color: $white;
-         margin-top: 0;
-         margin-bottom: 20px;
-         line-height: 1.2;
+    .SliderText {
+      overflow-y: auto;
+      line-height: 1.7em;
+      color: $white;
+      h2,
+      h3,
+      h4,
+      h5 {
+        color: inherit;
       }
+    }
 
-      .SliderContent {
-         /* remove the margins put on by the container */
-         margin-left: -($grid-gutter-width / 2);
-         margin-right: -($grid-gutter-width / 2);
-         /* then add it back on */
-         padding: ($grid-gutter-width / 2);
-         /* Fallback for IE8, which doesn't support rgba */
-         background-color: #000;
-         background-color: fade-out(#000, 0.25);
-         width: 100%;
-         position: absolute;
-         bottom: 0;
-         max-height: 100%;
-         overflow: auto;
+    p:last-child {
+      margin-bottom: 0;
+    }
 
-         @include respond-to("tablets and up") {
-            @if ($border-radius-large > 0) {
-               border-radius: $border-radius-large;
-            }
-            position: inherit;
-            float: right;
-            width: 36em;
-            margin: 1em;
-            // max-height: $jumbotron-home-height - 2em;
-         }
-      }
-
-      .SliderText {
-         overflow-y: auto;
-         line-height: 1.7em;
-         color: $white;
-         h2,
-         h3,
-         h4,
-         h5 {
-            color: inherit;
-         }
-      }
-
-      p:last-child {
-         margin-bottom: 0;
-      }
-
-      .ActionButton {
-         margin-top: 1em;
-         text-align: right;
-      }
-   }
+    .ActionButton {
+      margin-top: 1em;
+      text-align: right;
+    }
+  }
 }
 
-/* Responsive "Jumbotron"
+/* !Responsive "Jumbotron"
    ========================================================================== */
 /* This header is used in the out-of-the-box Donor sample site */
 
 .jumbotron {
-   .jumbotron-content {
-      max-height: 100%;
-   }
+  .jumbotron-content {
+    max-height: 100%;
+  }
 
-   &.home,
-   &.interior {
-      position: relative;
-      @include bg-img-cover();
+  &.home,
+  &.interior {
+    position: relative;
+    @include bg-img-cover();
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+  }
+
+  &.home {
+    height: $jumbotron-home-height;
+
+    h1 span,
+    .ActionButton {
+      display: block;
+      @include container-fixed();
+      max-width: $container-lg;
+    }
+    h1 {
       color: #fff;
-      text-shadow: 1px 1px 1px #000;
-   }
+      margin-top: 0;
+      padding-top: 0.3em;
+      padding-bottom: 0.3em;
+      text-align: center;
+      font-weight: normal;
+      font-size: $jumbotron-h1-size-xs;
+      background-color: #000;
+      background-color: fade-out(#000, 0.55);
+      @include respond-to('tablets and up') {
+        font-size: $jumbotron-h1-size;
+      }
+    }
+    h1 span {
+      @include respond-to('tablets and up') {
+        padding-left: 8%;
+        padding-right: 8%;
+      }
+    }
+    .ActionButton {
+      text-align: right;
+      @include respond-to('tablets and up') {
+        padding-right: 12%;
+      }
+    }
+  }
+  &.interior {
+    height: 20em;
 
-   &.home {
-      height: $jumbotron-home-height;
+    p {
+      @include clearfix();
+      padding: 1.5em 1em 0.8em;
+      font-size: 150%;
+      margin-bottom: 0;
+    }
 
-      h1 span,
-      .ActionButton {
-         display: block;
-         @include container-fixed();
-         max-width: $container-lg;
+    .ActionButton {
+      clear: both;
+      padding-left: 3em;
+      padding-right: 3em;
+    }
+
+    @include respond-to('smartphones and down') {
+      .jumbotron-content {
+        height: 100%;
+        background-color: #000;
+        background-color: fade-out(#000, 0.35);
+        text-align: center;
       }
-      h1 {
-         color: #fff;
-         margin-top: 0;
-         padding-top: 0.3em;
-         padding-bottom: 0.3em;
-         text-align: center;
-         font-weight: normal;
-         font-size: $jumbotron-h1-size-xs;
-         background-color: #000;
-         background-color: fade-out(#000, 0.55);
-         @include respond-to("tablets and up") {
-            font-size: $jumbotron-h1-size;
-         }
+    }
+
+    @include respond-to('smartphones and up') {
+      p {
+        font-size: 170%;
       }
-      h1 span {
-         @include respond-to("tablets and up") {
-            padding-left: 8%;
-            padding-right: 8%;
-         }
-      }
-      .ActionButton {
-         text-align: right;
-         @include respond-to("tablets and up") {
-            padding-right: 12%;
-         }
-      }
-   }
-   &.interior {
-      height: 20em;
+    }
+
+    @include respond-to('tablets and up') {
+      height: 25em;
 
       p {
-         @include clearfix();
-         padding: 1.5em 1em 0.8em;
-         font-size: 150%;
-         margin-bottom: 0;
+        font-size: 200%;
       }
 
-      .ActionButton {
-         clear: both;
-         padding-left: 3em;
-         padding-right: 3em;
+      .jumbotron-text span {
+        background-color: #000;
+        background-color: fade-out(#000, 0.45);
+        padding: 0 0.45em;
+        margin-bottom: 0.2em;
+        float: left;
+        clear: left;
       }
 
-      @include respond-to("smartphones and down") {
-         .jumbotron-content {
-            height: 100%;
-            background-color: #000;
-            background-color: fade-out(#000, 0.35);
-            text-align: center;
-         }
+      &.AlignRight .jumbotron-text span {
+        float: right;
+        clear: right;
       }
-
-      @include respond-to("smartphones and up") {
-         p {
-            font-size: 170%;
-         }
-      }
-
-      @include respond-to("tablets and up") {
-         height: 25em;
-
-         p {
-            font-size: 200%;
-         }
-
-         .jumbotron-text span {
-            background-color: #000;
-            background-color: fade-out(#000, 0.45);
-            padding: 0 0.45em;
-            margin-bottom: 0.2em;
-            float: left;
-            clear: left;
-         }
-
-         &.AlignRight .jumbotron-text span {
-            float: right;
-            clear: right;
-         }
-      }
-   }
+    }
+  }
 }
 
 .jumbotron,
 .carousel {
-   .img-copyright {
-      position: absolute;
-      bottom: 0.5em;
-      right: 1em;
-      font-size: 70%;
+  .img-copyright {
+    position: absolute;
+    bottom: 0.5em;
+    right: 1em;
+    font-size: 70%;
 
-      a,
-      a:hover,
-      a:focus,
-      a:visited,
-      a:active {
-         color: #fff;
-      }
-   }
+    a,
+    a:hover,
+    a:focus,
+    a:visited,
+    a:active {
+      color: #fff;
+    }
+  }
 }
 
-/* Carousel
+/* !Carousel
    ========================================================================== */
 /* Used by the Slideshow iPart */
 
 .carousel {
-   h1,
-   h2,
-   h3,
-   h4,
-   h5 {
-      font-weight: $font-weight-bold;
-      display: block;
-      font-family: "Source Pro", serif;
-   }
-   h1 {
-      @include respond-to("large") {
-         font-weight: 300;
-         font-size: 380%;
-         margin-bottom: 0px;
-         line-height: 52px;
-      }
-      @include respond-to("grid large") {
-         font-weight: 300;
-         font-size: 260%;
-         margin-bottom: 0px;
-         line-height: 40px;
-      }
-   }
-   h2 {
-      @include respond-to("large") {
-         font-weight: 600;
-         font-size: 380%;
-         color: $color-white;
-         margin-bottom: 0px;
-         line-height: 52px;
-      }
-      @include respond-to("grid large") {
-         font-weight: 600;
-         font-size: 260%;
-         color: $color-wsma-seafoam;
-         margin-bottom: 0px;
-         line-height: 40px;
-      }
-   }
-   p {
-      font-size: 100%;
-   }
-   //clip-path: polygon(100% 0, 100% 68%, 58% 100%, 0% 78%, 0 0);
-   @include respond-to("tablets and down") {
-      h1,
-      h2 {
-         font-size: 160%;
-         line-height: 30px;
-      }
-      p {
-         display: none;
-      }
-   }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: $font-weight-bold;
+    display: block;
+    font-family: 'Source Pro', serif;
+  }
+  h1 {
+    @include respond-to('large') {
+      font-weight: 300;
+      font-size: 380%;
+      margin-bottom: 0px;
+      line-height: 52px;
+    }
+    @include respond-to('grid large') {
+      font-weight: 300;
+      font-size: 260%;
+      margin-bottom: 0px;
+      line-height: 40px;
+    }
+  }
+  h2 {
+    @include respond-to('large') {
+      font-weight: 600;
+      font-size: 380%;
+      color: $color-white;
+      margin-bottom: 0px;
+      line-height: 52px;
+    }
+    @include respond-to('grid large') {
+      font-weight: 600;
+      font-size: 260%;
+      color: $color-wsma-seafoam;
+      margin-bottom: 0px;
+      line-height: 40px;
+    }
+  }
+  p {
+    font-size: 100%;
+  }
+  //clip-path: polygon(100% 0, 100% 68%, 58% 100%, 0% 78%, 0 0);
+  @include respond-to('tablets and down') {
+    h1,
+    h2 {
+      font-size: 160%;
+      line-height: 30px;
+    }
+    p {
+      display: none;
+    }
+  }
 }
 
 .carousel-control .icon-prev::before,
 .carousel-control .icon-next::before {
-   content: "";
-   display: block;
-   @include size(30px, 30px);
+  content: '';
+  display: block;
+  @include size(30px, 30px);
 }
 .carousel-control .icon-prev {
-   margin-left: -10px;
-   &::before {
-      background: url($header-sprite-path) 0 -150px no-repeat;
-   }
+  margin-left: -10px;
+  &::before {
+    background: url($header-sprite-path) 0 -150px no-repeat;
+  }
 }
 .carousel-control .icon-next {
-   margin-right: -10px;
-   &::before {
-      background: url($header-sprite-path) 0 -200px no-repeat;
-   }
+  margin-right: -10px;
+  &::before {
+    background: url($header-sprite-path) 0 -200px no-repeat;
+  }
 }
 .carousel-control {
-   width: 5%;
-   &.right,
-   &.left {
-      background-image: none;
-      //background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.0001) 100%);
-   }
+  width: 5%;
+  &.right,
+  &.left {
+    background-image: none;
+    //background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.0001) 100%);
+  }
 }
 
 .carousel-indicators {
-   display: none;
+  display: none;
 }
 .carousel-caption {
-   @include respond-to("grid large") {
-      left: auto;
-      right: auto;
-      padding-top: 7%;
-      button {
-         background-color: $color-wsma-seafoam;
-         color: white;
-         border: none;
-         padding: 5px 20px;
-         margin: 20px 0;
-         //border-radius: 5px;
-      }
-   }
-   @include respond-to("tablets and down") {
-      padding-left: 40px;
-      // h1, h2, .h1, .h2, .PageTitle {
-      //     line-height: 30px;
-      //     font-size: 180%;
-      // }
-      p {
-         font-size: 16px;
-      }
-   }
-   @include respond-to("smartphones and down") {
-      padding-left: 0;
-      top: 0;
-      // h1, h2, .h1, .h2, .PageTitle {
-      //     line-height: 30px;
-      //     font-size: 130%;
-      // }
-      p {
-         display: none;
-      }
-   }
-   //padding: 15px;
-   font-family: $carousel-caption-font-family;
-   top: $navbar-height + $navbar-padding-vertical - 30;
-   background-color: $carousel-caption-bg-color;
-   text-align: $carousel-caption-text-alignment !important;
-   width: 900px;
-   h1:after {
+  @include respond-to('grid large') {
+    left: auto;
+    right: auto;
+    padding-top: 7%;
+    button {
+      background-color: $color-wsma-seafoam;
+      color: white;
+      border: none;
+      padding: 5px 20px;
+      margin: 20px 0;
+      //border-radius: 5px;
+    }
+  }
+  @include respond-to('tablets and down') {
+    padding-left: 40px;
+    // h1, h2, .h1, .h2, .PageTitle {
+    //     line-height: 30px;
+    //     font-size: 180%;
+    // }
+    p {
+      font-size: 16px;
+    }
+  }
+  @include respond-to('smartphones and down') {
+    padding-left: 0;
+    top: 0;
+    // h1, h2, .h1, .h2, .PageTitle {
+    //     line-height: 30px;
+    //     font-size: 130%;
+    // }
+    p {
       display: none;
-   }
-   p {
-      font-size: $carousel-caption-font-size;
-      line-height: 28px;
-   }
+    }
+  }
+  //padding: 15px;
+  font-family: $carousel-caption-font-family;
+  top: $navbar-height + $navbar-padding-vertical - 30;
+  background-color: $carousel-caption-bg-color;
+  text-align: $carousel-caption-text-alignment !important;
+  width: 900px;
+  h1:after {
+    display: none;
+  }
+  p {
+    font-size: $carousel-caption-font-size;
+    line-height: 28px;
+  }
 }
 
 /* Internal page carousel */
 .InternalHeaderArea {
-   //background: $navbar-default-bg;
-   background-image: url(images/banner2.png);
-   background-size: contain;
-   background-repeat: no-repeat;
-   height: 250px;
-   overflow: hidden;
-   .carousel {
-      @include respond-to("grid large") {
-         height: 200px;
-      }
-      @include respond-to("grid small") {
-         height: 0px;
-      }
-   }
-   .panel-body {
-      padding: 0;
-   }
-   .carousel-inner {
-      -webkit-filter: blur(5px);
-      filter: blur(5px);
-      width: 100%;
-   }
-   .carousel-control,
-   .carousel-inner > .item .carousel-link {
-      display: none !important;
-   }
+  //background: $navbar-default-bg;
+  background-image: url(images/banner2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 250px;
+  overflow: hidden;
+  .carousel {
+    @include respond-to('grid large') {
+      height: 200px;
+    }
+    @include respond-to('grid small') {
+      height: 0px;
+    }
+  }
+  .panel-body {
+    padding: 0;
+  }
+  .carousel-inner {
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    width: 100%;
+  }
+  .carousel-control,
+  .carousel-inner > .item .carousel-link {
+    display: none !important;
+  }
 }
 
 .Wrapper-HomePage .HomePageFullWidthArea {
-   /* Overwrite slideshow height setting on homepage only */
-   .carousel-inner .item {
-      @include respond-to("grid large") {
-         height: $jumbotron-home-height !important;
-      }
-      @include respond-to("tablets and down") {
-         height: $jumbotron-home-height-md !important;
-      }
-      @include respond-to("grid small") {
-         height: $jumbotron-home-height-sm !important;
-      }
+  /* Overwrite slideshow height setting on homepage only */
+  .carousel-inner .item {
+    @include respond-to('grid large') {
+      height: $jumbotron-home-height !important;
+    }
+    @include respond-to('tablets and down') {
+      height: $jumbotron-home-height-md !important;
+    }
+    @include respond-to('grid small') {
+      height: $jumbotron-home-height-sm !important;
+    }
 
-      /*Make one for small width*/
+    /*Make one for small width*/
+    background-color: #ffffff;
+  }
+
+  @media all {
+    .carousel-inner .item {
+      height: $jumbotron-home-height-sm;
       background-color: #ffffff;
-   }
-
-   @media all {
-      .carousel-inner .item {
-         height: $jumbotron-home-height-sm;
-         background-color: #ffffff;
-      }
-   }
-   /* darker gradient to improve legibility of auxiliary nav */
-   .carousel-inner:before {
-      content: "";
-      display: block;
-      //@include gradient-vertical(rgba(0,0,0,0.5), rgba(0,0,0,0), 0, 100%);
-      height: 6em;
-      width: 100%;
-      position: absolute;
-      z-index: 665;
-   }
+    }
+  }
+  /* darker gradient to improve legibility of auxiliary nav */
+  .carousel-inner:before {
+    content: '';
+    display: block;
+    //@include gradient-vertical(rgba(0,0,0,0.5), rgba(0,0,0,0), 0, 100%);
+    height: 6em;
+    width: 100%;
+    position: absolute;
+    z-index: 665;
+  }
 }
 /* There seems to be an issue when choosing to display the FullWidthArea on the homepage only.
     The container div remains on internal pages although its content is hidden. */
 .HomePageFullWidthArea {
-   display: none;
+  display: none;
 }
 .Wrapper-HomePage .HomePageFullWidthArea,
 .TemplateManagerArea .HomePageFullWidthArea {
-   display: block;
-   margin-top: 159px;
+  display: block;
+  margin-top: 159px;
 }

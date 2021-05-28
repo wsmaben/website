@@ -171,7 +171,7 @@ Results display style: NextPrevAndNumerica
 
       // result is an array of objects -- ar
 
-      // generate markup for index and sidbar nav
+      // generate markup for index and sidebar nav
       function rtnMarkup(news) {
         var markup =
           '<div class="Tag' +
@@ -201,9 +201,9 @@ Results display style: NextPrevAndNumerica
       }
 
       // Add a header
-      jQuery('#BaseDirectory').append('<h1>News Links</h1><br>');
+      jQuery('#BaseDirectory').append('<h2>Memo Articles</h2>');
 
-      // loop through the newss (object = news) and output the markup
+      // loop through the news (object = news) and output the markup
       for (i = 0; i < ar.length; i++) {
         var b = ar[i];
         var g = rtnMarkup(b);

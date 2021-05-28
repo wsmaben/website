@@ -1,15 +1,37 @@
 @charset "UTF-8";
 /* Responsive NaturalHeritage theme */
+/* !Sprites */
 /* Not in use by family's themes, may be used by Ultrawave. */
+/* !Color Palette */
 /*progress tracker */
+/* !Social colors */
+/* !Scaffolding */
+/* !Links */
+/* !Typography - Fonts */
 @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro|Source+Serif+Pro&display=swap");
 @font-face {
   font-family: "elegant-icons";
   src: url("https://cdn.rawgit.com/mdentinho/elegant-icons-sass/e48e7df0/fonts/ElegantIcons.woff");
 }
+/* !Components */
+/* !Forms */
+/* !Buttons */
+/* !Navbar */
 /* left, center, right */
+/* !Callout link */
+/* !Mobile buttons */
+/* !Secondary (internal) */
 /*lighten($nav-secondary-header-bg,70%) !default;*/
+/* !Cart icon */
+/* !Communities */
+/* !CalloutPanelFields */
+/* !Logo */
+/* !Jumbotron */
+/* !Carousel */
+/* !Footer */
 /*hsl(hue($link-color), saturation($link-color), 80%) !default;*/
+/* !Telerik controls */
+/* !Overwrite Ultrawave variables */
 /* ==========================================================================
    MASTER PAGE LAYOUT
    ========================================================================== */
@@ -1134,7 +1156,7 @@ footer#ft {
     color: #6bcaba;
     text-decoration: none;
     font-weight: 500;
-    padding-top: 15px;
+    padding-top: 0px;
   }
   .NewsFeed #NewsDisplay .readMore a {
     color: #6bcaba;
@@ -1145,7 +1167,7 @@ footer#ft {
     margin: 30px 0;
   }
   .NewsFeed #NewsDisplay .readMore span {
-    color: #6bcaba;
+    color: #f0d283;
   }
 }
 .no-mqs .NewsFeed #NewsDisplay .newsBody {
@@ -1164,7 +1186,7 @@ footer#ft {
   color: #6bcaba;
   text-decoration: none;
   font-weight: 500;
-  padding-top: 15px;
+  padding-top: 0px;
 }
 .no-mqs .NewsFeed #NewsDisplay .readMore a {
   color: #6bcaba;
@@ -1175,7 +1197,7 @@ footer#ft {
   margin: 30px 0;
 }
 .no-mqs .NewsFeed #NewsDisplay .readMore span {
-  color: #6bcaba;
+  color: #f0d283;
 }
 @media (max-width: 767px) {
   .NewsFeed #NewsDisplay .newsBody {
@@ -1296,14 +1318,14 @@ body {
 }
 
 a {
-  color: #6bcaba;
+  color: #499a89;
   text-decoration: underline;
 }
 a:visited {
-  color: #7ed1c3;
+  color: #51ab98;
 }
 a:hover, a:focus, a:active {
-  color: #45bda8;
+  color: #39776a;
   text-decoration: underline;
 }
 a.aspNetDisabled, a.aspNetDisabled:hover, a.aspNetDisabled:focus, a.aspNetDisabled:active, a.aspNetDisabled:visited {
@@ -1312,18 +1334,18 @@ a.aspNetDisabled, a.aspNetDisabled:hover, a.aspNetDisabled:focus, a.aspNetDisabl
 
 .RadGrid a,
 .RadToolTip a {
-  color: #6bcaba  !important;
+  color: #499a89  !important;
   text-decoration: underline;
 }
 .RadGrid a:visited,
 .RadToolTip a:visited {
-  color: #7ed1c3  !important;
+  color: #51ab98  !important;
 }
 .RadGrid a:hover, .RadGrid a:focus, .RadGrid a:active,
 .RadToolTip a:hover,
 .RadToolTip a:focus,
 .RadToolTip a:active {
-  color: #45bda8  !important;
+  color: #39776a  !important;
   text-decoration: underline;
 }
 .RadGrid a.aspNetDisabled, .RadGrid a.aspNetDisabled:hover, .RadGrid a.aspNetDisabled:focus, .RadGrid a.aspNetDisabled:active, .RadGrid a.aspNetDisabled:visited,
@@ -1601,7 +1623,7 @@ img.ImgNoResize,
   color: #fff;
 }
 .ProxyPanelContact a {
-  color: white;
+  color: #c9e6e0;
 }
 
 /* Sub (Left) Navigation
@@ -3846,7 +3868,7 @@ fieldset[disabled] .RadGrid input.PrimaryButton:active,
 .RadTreeView.GLE .rtIn, .RadTreeView.GLE .rtHover .rtIn, .RadTreeView.GLE .rtSelected .rtIn {
   background-color: transparent;
   border: none;
-  color: #6bcaba;
+  color: #499a89;
 }
 .RadTreeView.GLE a:hover, .RadTreeView.GLE a:focus, .RadTreeView.GLE span[onclick]:hover, .RadTreeView.GLE span[onclick]:focus {
   background-color: #1a1a1a;
@@ -3870,7 +3892,7 @@ fieldset[disabled] .RadGrid input.PrimaryButton:active,
 
 .SearchField label {
   font-size: 120%;
-  color: #fff;
+  color: #ffffff;
 }
 
 .SearchResultSummary .ListItemTitle a {
@@ -4502,7 +4524,7 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   padding: 0;
 }
 
-/* Mobile Hero Area
+/* !Mobile Hero Area
    ========================================================================== */
 .HeroArea {
   height: 350px;
@@ -4538,7 +4560,7 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   float: right;
 }
 
-/* Responsive Hero Content
+/* !Responsive Hero Content
    ========================================================================== */
 /* This header is used in the out-of-the-box Member, Member Responsive
  * and Annual Conference sample sites */
@@ -4621,7 +4643,7 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   text-align: right;
 }
 
-/* Responsive "Jumbotron"
+/* !Responsive "Jumbotron"
    ========================================================================== */
 /* This header is used in the out-of-the-box Donor sample site */
 .jumbotron .jumbotron-content {
@@ -4782,7 +4804,7 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   color: #fff;
 }
 
-/* Carousel
+/* !Carousel
    ========================================================================== */
 /* Used by the Slideshow iPart */
 .carousel h1,
@@ -5564,7 +5586,7 @@ a.FeatureActionLink:hover {
   color: #313e48;
 }
 .header-link a:hover, .header-link a:active, .header-link a:focus {
-  color: #6bcaba;
+  color: #499a89;
 }
 
 /* Image Banners
