@@ -1,8 +1,7 @@
-﻿/* ==========================================================================
-   BUTTONS
-   ========================================================================== */
-
-/* set up button base styles */
+﻿/*****************************************************/
+/*            !BUTTONS                               */
+/*****************************************************/
+/* !set up button base styles */
 .btn,
 .TextButton,
 .TextButtonWithImage,
@@ -57,7 +56,9 @@
   }
 }
 
-/* default button */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*           !Default button => BUTTONS                     */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .btn,
 .TextButton,
 .TextButtonWithImage,
@@ -79,7 +80,9 @@ a.TextButton {
   border-color: transparent;
 }
 
-/* some Telerik overrides */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*           !Telerik overrides => BUTTONS                  */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .ruButton {
   background-color: $btn-default-bg !important;
   color: $btn-default-color !important;
@@ -95,7 +98,9 @@ a.TextButton {
   border-radius: $btn-border-radius;
 }
 
-/* primary button */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*           !Primary button  => BUTTONS                    */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .PrimaryButton,
 .SaveAndClose,
 .SaveAs,
@@ -112,7 +117,9 @@ a.TextButton {
   );
 }
 
-/* Facebook sign in button */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*           !Facebook sign in button  => BUTTONS           */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .TextButton.Facebook {
   @include button-variant(
     $btn-facebook-color,
@@ -123,7 +130,9 @@ a.TextButton {
   );
 }
 
-/* LinkedIn sign in button */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*           !LinkedIn sign in button => BUTTONS            */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .SignInButton.LinkedIn {
   @include button-variant(
     $btn-linkedin-color,

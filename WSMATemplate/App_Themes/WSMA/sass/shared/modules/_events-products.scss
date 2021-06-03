@@ -1,41 +1,47 @@
-/* Event Display
-   ========================================================================== */
+/*****************************************************/
+/*               !EVENTS & PRODUCTS                  */
+/*****************************************************/
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*           !Event Display  => EVENTS & PRODUCTS           */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .EventSummary {
-    //background-color: $color-alt-bg;
-    .PhotoArea {
-        padding: 2em;
-        img {
-            border: 1px solid #ccc !important;
-        }
+  //background-color: $color-alt-bg;
+  .PhotoArea {
+    padding: 2em;
+    img {
+      border: 1px solid #ccc !important;
     }
-    .Description {
-        padding: 0 2em 2em;
+  }
+  .Description {
+    padding: 0 2em 2em;
 
-        @include breakpoint($screen-sm-min, $no-query: $no-query-default) {
-            padding: 2em;
-        }
+    @include breakpoint($screen-sm-min, $no-query: $no-query-default) {
+      padding: 2em;
     }
-} 
-
-.ProgramGroup {
-    .PanelHead,
-    .panel-heading {
-        background-color: $hover-highlight;
-    }
-    .PanelTitle,
-    .panel-title {
-        font-family: $font-family-base;
-        font-weight: bold;
-        font-size: 120%;
-        line-height: 2em;
-        padding-left: .5em;
-        color: white;
-    }
+  }
 }
 
-/* Product Display
-   ========================================================================== */
+.ProgramGroup {
+  .PanelHead,
+  .panel-heading {
+    background-color: $hover-highlight;
+  }
+  .PanelTitle,
+  .panel-title {
+    font-family: $font-family-base;
+    font-weight: bold;
+    font-size: 120%;
+    line-height: 2em;
+    padding-left: 0.5em;
+    color: white;
+  }
+}
+
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*           !Product Display  => EVENTS & PRODUCTS         */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .ProductDisplay {
-    //background-color: $color-alt-bg;
-    padding: 1em;
+  //background-color: $color-alt-bg;
+  padding: 1em;
 }

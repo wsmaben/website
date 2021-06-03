@@ -1,548 +1,580 @@
-/* ==========================================================================
-   PRIMARY NAVIGATION
-   ========================================================================== */
+/*****************************************************/
+/*            !PRIMARY NAVIGATION                    */
+/*****************************************************/
 
 .primary-navigation-area .MegaDropDownMenuOuter {
-    @include respond-to('grid large') {
-        text-align: $navbar-horizontal-alignment;
-        //width: 1170px!important;
-    }           
+  @include respond-to('grid large') {
+    text-align: $navbar-horizontal-alignment;
+    //width: 1170px!important;
+  }
 }
 
 .header-bottom-container {
-    @include respond-to('grid large') {
-        //background-color: rgba($navbar-default-bg, 0.8 );
-        //position:absolute;
-        display: none;
-        bottom:0;
-        left:0;
-        right:0;
-        z-index:555;
-    }
+  @include respond-to('grid large') {
+    //background-color: rgba($navbar-default-bg, 0.8 );
+    //position:absolute;
+    display: none;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 555;
+  }
 }
 .navbar {
-    min-height: 0px;
-    @include respond-to ('grid small') {
-        background-color: $navbar-default-bg;
-    }
+  min-height: 0px;
+  @include respond-to('grid small') {
+    background-color: $navbar-default-bg;
+  }
 }
 
-.navbar-collapse, .searchbar-collapse {
-    background-color: $navbar-default-bg;
-    @include respond-to('grid large') {
-        padding-left: 0;
-        padding-right: 0;
-        border: none;
-        background:none;
-    }
+.navbar-collapse,
+.searchbar-collapse {
+  background-color: $navbar-default-bg;
+  @include respond-to('grid large') {
+    padding-left: 0;
+    padding-right: 0;
+    border: none;
+    background: none;
+  }
 }
 
 .navbar-collapse.collapse {
-    @include respond-to('grid large') {
-        float: right;
-        margin-top: 45px;
-    }
+  @include respond-to('grid large') {
+    float: right;
+    margin-top: 45px;
+  }
 }
 
 .auth-link-container {
-    /* container for the sign in link when the browser is <768px wide */
-    padding: $navbar-padding-vertical $navbar-padding-horizontal;
-    text-align: center;
-    background-color: darken($navbar-default-bg, 7%);    
+  /* container for the sign in link when the browser is <768px wide */
+  padding: $navbar-padding-vertical $navbar-padding-horizontal;
+  text-align: center;
+  background-color: darken($navbar-default-bg, 7%);
 }
 
 /* Reset some Telerik defaults */
 .RadMenu.RadMenu_#{$theme-name} {
+  float: none;
+  z-index: $zindex-navbar !important;
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+  .rmGroup,
+  .rmRootGroup,
+  .rmMultiColumn,
+  .rmRootGroup > .rmItem {
+    border: none;
+  }
+
+  .rmVertical .rmToggle .rmIcon:before,
+  .rmVertical .rmExpand:before,
+  .rmRightArrow .rmIcon:before,
+  .rmHorizontal .rmToggle .rmIcon:before,
+  .rmHorizontal .rmExpand:before,
+  .rmBottomArrow .rmIcon:before {
+    content: none;
+  }
+
+  .rmItem,
+  .rmHorizontal > .rmItem,
+  .rmHorizontal > .rmRootScrollGroup > .rmItem,
+  .rmLink {
     float: none;
-    z-index: $zindex-navbar !important;
+  }
+
+  .rmLink {
+    padding: 0px;
+  }
+  .rmText {
+    display: inline-block;
+    vertical-align: top;
+    //float:left;
+  }
+
+  .rmRootGroup .rmRootLink .rmToggle,
+  .rmToggle {
+    width: auto;
+  }
+
+  .rmToggle,
+  .rmToggle .rmIcon,
+  .rmRootGroup .rmRootLink .rmToggle {
+    position: static;
+  }
+
+  .rmGroup .rmContent,
+  .rmRootGroup .rmContent {
+    padding: 0;
+  }
+
+  .RadSiteMap {
+    &,
+    .rsmItem,
+    .rsmTwoLevels .rsmItem {
+      font-size: inherit;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  .rmItem,
+  .rsmItem {
+    list-style: none;
+  }
+
+  .rmDisabled > a,
+  .rsmDisabled > a {
+    cursor: default;
+  }
+
+  .rmItem {
+    width: auto;
+    clear: both;
+    text-align: left;
+  }
+
+  .rmText,
+  .rmHorizontal .rmText,
+  .rmSlide .rmText {
+    padding: 8px 15px; //$navbar-padding-vertical $navbar-padding-horizontal;
+    //text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    @include respond-to('tablets and down') {
+      padding: 8px 8px;
+    }
+  }
+
+  .rmSlide .MegaDropDownMenuOuter > .rmText {
+    /* when mega menus are on, don't add padding around the rmText */
+    padding: 0;
+  }
+
+  .rmSlide .rmText {
+    /* give space for the expand arrow */
+    padding-right: ($navbar-padding-horizontal + 25px);
+  }
+
+  .rmSlide .rmGroup {
     position: relative;
+    box-shadow: 1px 2px 5px #cccccc;
+  }
 
-    &:focus {
-        outline: none;
+  .rsmItem {
+    padding: 10px 15px; //($navbar-padding-vertical / 2) $navbar-padding-horizontal;
+    margin: 0;
+  }
+
+  .rsmLink,
+  .rsmOneLevel .rsmItem .rsmLink {
+    padding: 0;
+  }
+
+  .rsmTwoLevels .rsmItem .rsmItem,
+  .rsmTwoLevels .rsmLevel1 .rsmLink,
+  .rsmThreeLevels .rsmItem .rsmItem,
+  .rsmThreeLevels .rsmLevel1 .rsmLink {
+    /* make sure second-level rsm items are lined up properly */
+    padding-left: 0;
+    margin-right: $navbar-padding-horizontal;
+    font-weight: 500;
+    font-size: 110%;
+  }
+
+  .rsmTwoLevels .rsmItem .rsmItem,
+  .rsmTwoLevels .rsmLevel2 .rsmLink,
+  .rsmThreeLevels .rsmItem .rsmItem,
+  .rsmThreeLevels .rsmLevel2 .rsmLink {
+    /* make sure second-level rsm items are lined up properly */
+    padding-left: 0;
+    margin-right: $navbar-padding-horizontal;
+    font-weight: 300;
+    font-size: 100%;
+  }
+
+  .rsmTwoLevels .rsmLink {
+    margin-bottom: 0;
+  }
+
+  .rsmColumn {
+    /* for multiple columns on the mega menu */
+    display: inline-block;
+    vertical-align: top;
+    padding-right: ($navbar-padding-vertical / 2);
+
+    @include breakpoint(max-width $screen-xs-min, $no-query: $no-query-mobile) {
+      /* on very small screens drop mega menu columns to one */
+      width: 100% !important;
     }
-    .rmGroup, .rmRootGroup, .rmMultiColumn, .rmRootGroup > .rmItem {
-        border: none;
+  }
+
+  .rsmColumnWrap {
+    margin-bottom: 0;
+  }
+
+  .rsmThreeLevels .rsmLevel1 .rsmLink,
+  .rsmThreeLevels .rsmLevel1 .rsmTemplate,
+  .rsmTwoLevels .rsmLevel1 .rsmLink,
+  .rsmTwoLevels .rsmLevel1 .rsmTemplate,
+  .rsmOneLevel .rsmItem .rsmLink,
+  .rsmOneLevel .rsmItem .rsmTemplate {
+    display: block;
+  }
+
+  .rsmOneLevel .rsmItem .rsmLink,
+  .rsmOneLevel .rsmItem .rsmTemplate {
+    white-space: nowrap;
+  }
+
+  .rmLink,
+  .rsmLink {
+    text-decoration: none;
+    display: block;
+    position: relative; /* required for the menu to work in IE */
+  }
+  .rsmColumnWrap .rsmLevel1 .rsmLink,
+  .rsmColumnWrap .rsmLevel1 .rsmTemplate {
+    padding: 0;
+    margin: 0;
+  }
+
+  .rmGroup .rmText {
+    margin: 0;
+  }
+
+  .rmRootLink.rmSelected {
+    /* root item selected styles */
+    color: $navbar-default-link-active-color;
+    background-color: $navbar-default-link-active-bg;
+  }
+
+  /*Move this*/
+  .rsmTwoLevels > .rsmItem > .rsmLink,
+  .rsmThreeLevels > .rsmItem > .rsmLink {
+    color: $color-wsma-seafoam;
+    border: none;
+    font-size: 150%;
+    font-weight: 300;
+    &:active,
+    &::visited {
+      color: $color-wsma-seafoam;
+    }
+  }
+
+  .rmRootLink.rmExpanded,
+  .rmRootLink:hover,
+  .rmRootLink.rmFocused {
+    /* root item hover and focus styles */
+    background-color: $navbar-default-link-hover-bg;
+    color: $navbar-default-link-hover-color;
+  }
+
+  .rmGroup {
+    background-color: $navbar-default-dropdown-bg;
+  }
+
+  .rmDisabled > .rmLink,
+  .rsmDisabled > .rsmLink {
+    color: $navbar-default-dropdown-link-disabled-color;
+
+    &:hover,
+    &:active {
+      background-color: transparent;
+      color: $navbar-default-dropdown-link-disabled-color;
+    }
+  }
+
+  .rmRootGroup {
+    > .rmItem {
+      position: relative;
     }
 
-    .rmVertical .rmToggle .rmIcon:before, .rmVertical .rmExpand:before, .rmRightArrow .rmIcon:before,
-    .rmHorizontal .rmToggle .rmIcon:before, .rmHorizontal .rmExpand:before, .rmBottomArrow .rmIcon:before {
-        content: none;
-    }
-
-    .rmItem, .rmHorizontal>.rmItem, .rmHorizontal>.rmRootScrollGroup>.rmItem,
-    .rmLink {
-        float: none;
-    }
-
-    .rmLink {
-        padding: 0px;      
-    }
-    .rmText {
-        display: inline-block;
-        vertical-align: top;
-        //float:left;
-    }
-
-    .rmRootGroup .rmRootLink .rmToggle, .rmToggle {
-        width: auto;
-    }
-
-    .rmToggle, .rmToggle .rmIcon, .rmRootGroup .rmRootLink .rmToggle {
-        position: static;
-    }
-
-    .rmGroup .rmContent, .rmRootGroup .rmContent {
-        padding: 0;
-    }
-
-    .RadSiteMap {
-        &, .rsmItem, .rsmTwoLevels .rsmItem {
-            font-size: inherit;
+    > .rmItem > .rmLink {
+      //text-transform: capitalize;
+      color: $navbar-default-color;
+      font-family: $navbar-default-link-font-family;
+      font-size: $navbar-default-link-font-size;
+      font-weight: $navbar-default-link-weight;
+      letter-spacing: $navbar-default-link-letter-spacing;
+      @include respond-to('grid large') {
+        .Wrapper-HomePage & {
+          color: #313e48;
         }
-    }
-
-    ul {
-        margin: 0;
-        padding: 0;
-    }
-    .rmItem, .rsmItem { list-style: none; }
-    
-    .rmDisabled > a, .rsmDisabled > a {
-        cursor: default;
-    }
-
-    .rmItem {
-        width: auto;
-        clear: both;
-        text-align: left;
-    }
-
-    .rmText, 
-    .rmHorizontal .rmText,
-    .rmSlide .rmText {
-        padding: 8px 15px; //$navbar-padding-vertical $navbar-padding-horizontal;
-        //text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-        @include respond-to('tablets and down') {
-            padding: 8px 8px;
-        }
-    }
-
-    .rmSlide .MegaDropDownMenuOuter > .rmText {
-        /* when mega menus are on, don't add padding around the rmText */
-        padding: 0;
-    }
-
-    .rmSlide .rmText {
-        /* give space for the expand arrow */
-        padding-right: ($navbar-padding-horizontal + 25px);
-    }
-    
-    .rmSlide .rmGroup {
-        position: relative;
-        box-shadow: 1px 2px 5px #cccccc;
-    }
-
-    .rsmItem { 
-        padding: 10px 15px; //($navbar-padding-vertical / 2) $navbar-padding-horizontal;
-        margin: 0;
-    }
-
-    .rsmLink,
-    .rsmOneLevel .rsmItem .rsmLink {
-        padding: 0;
-    }
-
-    .rsmTwoLevels .rsmItem .rsmItem,
-    .rsmTwoLevels .rsmLevel1 .rsmLink,
-    .rsmThreeLevels .rsmItem .rsmItem,
-    .rsmThreeLevels .rsmLevel1 .rsmLink, {
-        /* make sure second-level rsm items are lined up properly */
-        padding-left: 0;
-        margin-right: $navbar-padding-horizontal;
-        font-weight: 500;
-        font-size: 110%;
-    }
-
-    .rsmTwoLevels .rsmItem .rsmItem,
-    .rsmTwoLevels .rsmLevel2 .rsmLink,
-    .rsmThreeLevels .rsmItem .rsmItem,
-    .rsmThreeLevels .rsmLevel2 .rsmLink, {
-        /* make sure second-level rsm items are lined up properly */
-        padding-left: 0;
-        margin-right: $navbar-padding-horizontal;
-        font-weight: 300;
+      }
+      @include respond-to('tablets and down') {
         font-size: 100%;
+      }
     }
+  }
 
-    .rsmTwoLevels .rsmLink {
-        margin-bottom: 0;
-    }
+  .rmToggle,
+  .rmRootGroup .rmRootLink .rmToggle {
+    /* a clickable target to expand multi-level navigaiton */
+    display: inline-block;
+    //margin: (-$navbar-padding-vertical) (-$navbar-padding-horizontal);
+    //float: right;
+    height: 100%;
 
-    .rsmColumn {
-        /* for multiple columns on the mega menu */
-        display: inline-block;
-        vertical-align: top;
-        padding-right: ($navbar-padding-vertical / 2);
-        
-        @include breakpoint(max-width $screen-xs-min, $no-query: $no-query-mobile) {
-            /* on very small screens drop mega menu columns to one */
-            width: 100% !important;
-        }
+    .rmIcon {
+      @include text-hide();
+      display: block;
+      @include size(23px, 15px);
+      background-image: url('images/responsivenav.png');
+      background-repeat: no-repeat;
+      @include vertical-align(15px, 45px);
+      margin-right: $navbar-padding-horizontal;
+      margin-left: $navbar-padding-horizontal;
     }
+  }
 
-    .rsmColumnWrap {
-        margin-bottom: 0;
+  .rmLink:hover,
+  .rmLink.rmFocused,
+  .rmSelected > .rmLink,
+  .rmFocused > .rmLink.rmRootLink,
+  .rmExpanded > .rmLink,
+  .rmSlide .rmLink {
+    .rmToggle > .rmIcon {
+      background-position: 0 -26px;
     }
+  }
 
-    .rsmThreeLevels .rsmLevel1 .rsmLink, 
-    .rsmThreeLevels .rsmLevel1 .rsmTemplate, 
-    .rsmTwoLevels .rsmLevel1 .rsmLink, 
-    .rsmTwoLevels .rsmLevel1 .rsmTemplate, 
-    .rsmOneLevel .rsmItem .rsmLink, 
-    .rsmOneLevel .rsmItem .rsmTemplate {
-        display: block;
-    }
-
-    .rsmOneLevel .rsmItem .rsmLink, 
-    .rsmOneLevel .rsmItem .rsmTemplate {
-        white-space: nowrap;
-    }
-
-    .rmLink,
-    .rsmLink {        
-        text-decoration: none;
-        display: block;
-        position: relative; /* required for the menu to work in IE */        
-    }
-    .rsmColumnWrap .rsmLevel1 .rsmLink, .rsmColumnWrap .rsmLevel1 .rsmTemplate {
-        padding: 0;
-        margin: 0;
-    }
-
-    .rmGroup .rmText {
-        margin: 0;
-    }
-
-    .rmRootLink.rmSelected {
-        /* root item selected styles */
-        color: $navbar-default-link-active-color;
-        background-color: $navbar-default-link-active-bg;
-    }
-
-
-    /*Move this*/ 
-    .rsmTwoLevels > .rsmItem > .rsmLink,
-    .rsmThreeLevels > .rsmItem > .rsmLink {
-        color: $color-wsma-seafoam;
-        border: none;
-        font-size: 150%;
-        font-weight: 300;
-        &:active, &::visited {
-            color: $color-wsma-seafoam;
-        }
-    }
-        
-    .rmRootLink.rmExpanded,
-    .rmRootLink:hover,
-    .rmRootLink.rmFocused {
-        /* root item hover and focus styles */
-        background-color: $navbar-default-link-hover-bg;
-        color: $navbar-default-link-hover-color;       
-    }
-    
-    .rmGroup {
-        background-color: $navbar-default-dropdown-bg;
-    }
-
-    .rmDisabled > .rmLink,
-    .rsmDisabled > .rsmLink {
-        color: $navbar-default-dropdown-link-disabled-color;
-
-        &:hover,
-        &:active {
-            background-color: transparent;
-            color: $navbar-default-dropdown-link-disabled-color;
-        }
-    }
-
-    .rmRootGroup {
-        > .rmItem {
-            position: relative;
-        }
-
-        > .rmItem > .rmLink {
-            //text-transform: capitalize;
-            color: $navbar-default-color;
-            font-family: $navbar-default-link-font-family;
-            font-size: $navbar-default-link-font-size;
-            font-weight: $navbar-default-link-weight;
-            letter-spacing: $navbar-default-link-letter-spacing;
-            @include respond-to('grid large') {
-                            .Wrapper-HomePage & {
-                    color: #313e48;
-                }
-            }
-            @include respond-to('tablets and down') {
-                font-size: 100%;
-            }
-        }
-    }
-
-    .rmToggle, .rmRootGroup .rmRootLink .rmToggle {
-        /* a clickable target to expand multi-level navigaiton */
-        display: inline-block;
-        //margin: (-$navbar-padding-vertical) (-$navbar-padding-horizontal); 
-        //float: right;
-        height: 100%;
-         
-        .rmIcon { 
-            @include text-hide(); 
-            display: block;
-            @include size(23px, 15px);
-            background-image: url('images/responsivenav.png');
-            background-repeat: no-repeat;
-            @include vertical-align(15px, 45px);
-            margin-right: $navbar-padding-horizontal;
-            margin-left: $navbar-padding-horizontal;
-        }
-    }
-    
-    .rmLink:hover,
-    .rmLink.rmFocused,
-    .rmSelected > .rmLink,
-    .rmFocused > .rmLink.rmRootLink,
-    .rmExpanded > .rmLink,
-    .rmSlide .rmLink {
-        .rmToggle > .rmIcon { background-position: 0 -26px; }
-    }
-
-    .rmExpanded > .rmLink > .rmToggle > .rmIcon,
-    .rmExpanded > .rmToggle > .rmIcon {
-        @include rotate(180deg);
-    }
+  .rmExpanded > .rmLink > .rmToggle > .rmIcon,
+  .rmExpanded > .rmToggle > .rmIcon {
+    @include rotate(180deg);
+  }
 }
-
-/*2nd and 3rd level navigation (dropdown menus)*/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/* !2nd and 3rd level navigation (dropdown menus) => PRIMARY NAVIGATION    */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 .RadMenu_#{$theme-name} .rmSlide {
-    display: none; /* hide the sub nav until requested */
-    position: absolute;
-    height: auto !important;
+  display: none; /* hide the sub nav until requested */
+  position: absolute;
+  height: auto !important;
 
-    .rmItem {
-        float: none;
-        display: block;
+  .rmItem {
+    float: none;
+    display: block;
+  }
+
+  .rmText {
+    float: none;
+  }
+
+  .rmLink,
+  .rsmLink {
+    color: $navbar-default-dropdown-link-color;
+    font-family: $navbar-default-dropdown-link-font-family;
+    font-size: $navbar-default-dropdown-link-font-size;
+    font-weight: $navbar-default-dropdown-link-font-weight;
+  }
+
+  .rmSeparator,
+  .rmVertical > .rmSeparator,
+  .MegaDropDownMenuSeperator > .rsmLink {
+    border-bottom: 1px $border-style $navbar-default-separator-color;
+  }
+
+  .rmSeparator,
+  .rmVertical > .rmSeparator {
+    margin: 0 $navbar-padding-horizontal;
+  }
+
+  .rmFocused > .rmLink,
+  .rmSelected > .rmLink,
+  .rsmSelected > .rsmLink,
+  .rsmTwoLevels > .rsmItem.rsmSelected > .rsmLink {
+    background-color: $navbar-default-dropdown-link-active-bg;
+    color: $navbar-default-dropdown-link-active-color;
+  }
+
+  .rmLink,
+  .rsmLink,
+  .rsmTwoLevels > .rsmItem > .rsmLink .rsmThreeLevels > .rsmItem > .rsmLink {
+    &:hover,
+    &:focus,
+    &.rmFocused {
+      background-color: $navbar-default-dropdown-link-hover-bg;
+      color: $navbar-default-dropdown-link-hover-color;
+      text-decoration: none;
     }
+  }
 
-    .rmText { float: none; }
-
-    .rmLink, 
-    .rsmLink {
-        color: $navbar-default-dropdown-link-color;
-        font-family: $navbar-default-dropdown-link-font-family;
-        font-size: $navbar-default-dropdown-link-font-size;
-        font-weight: $navbar-default-dropdown-link-font-weight;
-    }
-
-    .rmSeparator, 
-    .rmVertical > .rmSeparator,
-    .MegaDropDownMenuSeperator > .rsmLink {
-        border-bottom: 1px $border-style $navbar-default-separator-color;
-    }
-
-    .rmSeparator, .rmVertical > .rmSeparator {
-        margin: 0 $navbar-padding-horizontal;
-    }
-
-    .rmFocused > .rmLink, 
-    .rmSelected > .rmLink,
-    .rsmSelected > .rsmLink,
-    .rsmTwoLevels > .rsmItem.rsmSelected > .rsmLink {
-        background-color: $navbar-default-dropdown-link-active-bg;
-        color: $navbar-default-dropdown-link-active-color;
-    }
-
-    .rmLink,
-    .rsmLink,
-    .rsmTwoLevels > .rsmItem > .rsmLink
-    .rsmThreeLevels > .rsmItem > .rsmLink {
-        &:hover, 
-        &:focus,
-        &.rmFocused {
-            background-color: $navbar-default-dropdown-link-hover-bg;
-            color: $navbar-default-dropdown-link-hover-color;
-            text-decoration: none;
-        }
-    }
-
-    &.rmLevel1 .rmGroup {
-        /* for second-level sub-nav and beyond,
+  &.rmLevel1 .rmGroup {
+    /* for second-level sub-nav and beyond,
          * we want to indent the nav to give separation */
-        margin-left: 0; 
+    margin-left: 0;
+  }
+
+  .rmExpandRight,
+  .rmGroup a.rmLink.rmExpandRight {
+    background-image: url('images/ResponsiveNav.png');
+    background-position: 110% -200px;
+    background-repeat: no-repeat;
+  }
+
+  .MegaDropDownMenu {
+    padding-top: 25px; //($navbar-padding-vertical / 2);
+    padding-left: 20px;
+    padding-bottom: 45px; //($navbar-padding-vertical / 2);
+  }
+
+  .rsmTwoLevels {
+    > .rsmItem {
+      margin-bottom: 0.5em;
     }
 
-    .rmExpandRight, .rmGroup a.rmLink.rmExpandRight {
-        background-image: url('images/ResponsiveNav.png');
-        background-position: 110% -200px;
-        background-repeat: no-repeat;
+    //> .rsmItem > .rsmLink,
+    //> .rsmItem.rsmDisabled > .rsmLink:hover
+    //> .rsmItem.rsmDisabled > .rsmLink:focus
+    // {
+    //     text-transform: capitalize;
+    //     color: $navbar-default-dropdown-header-color;
+    //     font-weight: $navbar-default-link-weight;
+    //     letter-spacing: $navbar-default-link-letter-spacing;
+    // }
+  }
+
+  .MegaDropDownMenuSeperator .rsmLink {
+    padding: 0;
+  }
+
+  @include respond-to('grid small') {
+    width: 100% !important;
+    left: 0 !important;
+
+    ul.rmVertical,
+    ul.rmHorizontal,
+    ul.rmRootScrollGroup {
+      float: none;
     }
 
-    .MegaDropDownMenu {
-        padding-top: 25px;      //($navbar-padding-vertical / 2);
-        padding-left: 20px;
-        padding-bottom: 45px        //($navbar-padding-vertical / 2);
+    .rmSlide {
+      /* for right expanded items, expand below on extra small screens */
+      left: 0 !important;
+      margin-top: ($navbar-height - 1px);
     }
 
-    .rsmTwoLevels {
-        > .rsmItem {
-            margin-bottom: .5em;
-        }
-
-        //> .rsmItem > .rsmLink,
-        //> .rsmItem.rsmDisabled > .rsmLink:hover
-        //> .rsmItem.rsmDisabled > .rsmLink:focus 
-        // {
-        //     text-transform: capitalize;
-        //     color: $navbar-default-dropdown-header-color;
-        //     font-weight: $navbar-default-link-weight;
-        //     letter-spacing: $navbar-default-link-letter-spacing;
-        // }
+    .rmToggleHandles .rmSlide .rmText {
+      /* if we have toggles on we don't want to add the extra padding */
+      padding-right: $navbar-padding-horizontal;
     }
 
-    .MegaDropDownMenuSeperator .rsmLink {
-        padding: 0;
+    .rmToggleHandles .rmExpandRight,
+    .rmToggleHandles .rmGroup a.rmText.rmExpandRight {
+      /* if toggle handles are on we don't want to display the arrow twice*/
+      background-image: none;
     }
-
-    @include respond-to('grid small') {
-        width: 100% !important;
-        left: 0 !important;
-            
-        ul.rmVertical, ul.rmHorizontal, ul.rmRootScrollGroup {
-            float: none;
-        }
-
-        .rmSlide {
-            /* for right expanded items, expand below on extra small screens */
-            left: 0 !important;
-            margin-top: ($navbar-height - 1px);
-        }
-
-        .rmToggleHandles .rmSlide .rmText {
-            /* if we have toggles on we don't want to add the extra padding */
-            padding-right: $navbar-padding-horizontal;
-        }
-
-        .rmToggleHandles .rmExpandRight, 
-        .rmToggleHandles .rmGroup a.rmText.rmExpandRight {
-            /* if toggle handles are on we don't want to display the arrow twice*/
-            background-image: none;
-        }
-    }
+  }
 }
 
 .RadMenu.RadMenu_#{$theme-name} {
-    @include respond-to('grid large') {
-        float: right;
-        .rmItem { 
-            white-space: nowrap; 
-        }
-        .rmRootGroup {
-            width: auto;
-            display: inline-block;
-            > .rmItem {
-                float: left;
-                clear: none;
-                // This sets the spac below the menu
-                > .rmLink {
-                    margin: 0 0 -8px 0;
-                    padding-bottom: 16px;
-                }
-            }
-        }
-        .rmRootLink{
-            border-bottom: 4px solid transparent;
-        }
-        .rmRootLink.rmSelected,
-        .rmRootLink.rmExpanded,
-        .rmRootLink:hover,
-        .rmRootLink:focus,
-        .rmRootLink.rmFocused {
-             border-bottom: 4px solid $navbar-default-link-hover-color;
-        }
-
-        .rmSlide {
-            margin-top:8px;
-            min-width: 1170px;
-            right: 0!important;
-
-            .rmGroup {
-                margin: 0;
-            }
-
-            .rmItem {
-                float: none;
-                display: block;
-            }
-
-            .rmLink {
-                margin: 0;
-            }
-        }
-
-        .rmToggle, .rmRootGroup .rmRootLink .rmToggle {
-            display: none;
-        }
-
-        /* Make sure mega menus with two levels are an adequate width */
-        .rsmTwoLevels {
-            /*Standard Width*/
-            min-width: 1170px !important;
-        }
-
-        // .rsmThreeLevels {
-        //     /*Standard Width*/
-        //     //min-width: 1170px !important;
-        // }
-
-        // .LargerWidth10 {
-        //     /*minimum width for more than menu items with 10-13 chars*/
-        //     //min-width: 210px !important;
-        // }
-
-        // .LargerWidth14 {
-        //     /*minimum width for more than menu items with 14-17 chars*/
-        //     //min-width: 280px !important;
-        // }
-
-        // .LargerWidth18 {
-        //     /*minimum width for more than menu items with 18-21 chars*/
-        //     //min-width: 350px !important;
-        // }
-
-        // .LargerWidth22 {
-        //     /*minimum width for more than menu items with 22+ chars*/
-        //     //min-width: 450px !important;
-        // }
-
-        .rsmLevel1 > .rsmItem > .rsmLink {
-            font-weight: 600!important;
-            padding-bottom: 0px;
-            padding-top: 20px;
-            color: $color-wsma-evergreen;
-            
-            //line-height: 20px;
-        }
-
-        .rsmLevel1 > .rsmItem > .rsmLink,
-        .rsmLevel2 > .rsmItem > .rsmLink {
-            &:hover, &:active, &:focus {
-                color: $color-wsma-seafoam;
-            }
-        }
+  @include respond-to('grid large') {
+    float: right;
+    .rmItem {
+      white-space: nowrap;
     }
-}
+    .rmRootGroup {
+      width: auto;
+      display: inline-block;
+      > .rmItem {
+        float: left;
+        clear: none;
+        // This sets the spac below the menu
+        > .rmLink {
+          margin: 0 0 -8px 0;
+          padding-bottom: 16px;
+        }
+      }
+    }
+    .rmRootLink {
+      border-bottom: 4px solid transparent;
+    }
+    .rmRootLink.rmSelected,
+    .rmRootLink.rmExpanded,
+    .rmRootLink:hover,
+    .rmRootLink:focus,
+    .rmRootLink.rmFocused {
+      border-bottom: 4px solid $navbar-default-link-hover-color;
+    }
 
+    .rmSlide {
+      margin-top: 8px;
+      min-width: 1170px;
+      right: 0 !important;
+
+      .rmGroup {
+        margin: 0;
+      }
+
+      .rmItem {
+        float: none;
+        display: block;
+      }
+
+      .rmLink {
+        margin: 0;
+      }
+    }
+
+    .rmToggle,
+    .rmRootGroup .rmRootLink .rmToggle {
+      display: none;
+    }
+
+    /* Make sure mega menus with two levels are an adequate width */
+    .rsmTwoLevels {
+      /*Standard Width*/
+      min-width: 1170px !important;
+    }
+
+    // .rsmThreeLevels {
+    //     /*Standard Width*/
+    //     //min-width: 1170px !important;
+    // }
+
+    // .LargerWidth10 {
+    //     /*minimum width for more than menu items with 10-13 chars*/
+    //     //min-width: 210px !important;
+    // }
+
+    // .LargerWidth14 {
+    //     /*minimum width for more than menu items with 14-17 chars*/
+    //     //min-width: 280px !important;
+    // }
+
+    // .LargerWidth18 {
+    //     /*minimum width for more than menu items with 18-21 chars*/
+    //     //min-width: 350px !important;
+    // }
+
+    // .LargerWidth22 {
+    //     /*minimum width for more than menu items with 22+ chars*/
+    //     //min-width: 450px !important;
+    // }
+
+    .rsmLevel1 > .rsmItem > .rsmLink {
+      font-weight: 600 !important;
+      padding-bottom: 0px;
+      padding-top: 20px;
+      color: $color-wsma-evergreen;
+
+      //line-height: 20px;
+    }
+
+    .rsmLevel1 > .rsmItem > .rsmLink,
+    .rsmLevel2 > .rsmItem > .rsmLink {
+      &:hover,
+      &:active,
+      &:focus {
+        color: $color-wsma-seafoam;
+      }
+    }
+  }
+}
 
 // Dropdowns with icons
 .RadMenu_Default .rmSlide .rmItem span.rmText {
-    margin-left: 30px;
-  }
+  margin-left: 30px;
+}

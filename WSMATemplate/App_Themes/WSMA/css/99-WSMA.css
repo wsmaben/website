@@ -1,45 +1,20 @@
 @charset "UTF-8";
-/* !Responsive NaturalHeritage theme */
-/* !Core variables and mixins */
-/* !Sprites */
-/* Not in use by family's themes, may be used by Ultrawave. */
-/* !Color Palette */
-/*progress tracker */
-/* !Social colors */
-/* !Scaffolding */
-/* !Links */
-/* !Typography - Fonts */
+/* !SASS: breakpoint ==================================================================== */
+/* !SASS: mixins ======================================================================== */
+/* !SASS: NaturalHeritageSites/variables/variables_WSMA ================================= */
 @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro|Source+Serif+Pro&display=swap");
 @font-face {
   font-family: "elegant-icons";
   src: url("https://cdn.rawgit.com/mdentinho/elegant-icons-sass/e48e7df0/fonts/ElegantIcons.woff");
 }
-/* !Components */
-/* !Forms */
-/* !Buttons */
-/* !Navbar */
-/* left, center, right */
-/* !Callout link */
-/* !Mobile buttons */
-/* !Secondary (internal) */
-/*lighten($nav-secondary-header-bg,70%) !default;*/
-/* !Cart icon */
-/* !Communities */
-/* !CalloutPanelFields */
-/* !Logo */
-/* !Jumbotron */
-/* !Carousel */
-/* !Footer */
 /*hsl(hue($link-color), saturation($link-color), 80%) !default;*/
-/* !Telerik controls */
-/* !Overwrite Ultrawave variables */
-/* import base variables after theme variables so calculations of dependent variables
- are based on the theme's variable settings */
-/* !Master page layout */
-/* ==========================================================================
-   MASTER PAGE LAYOUT
-   ========================================================================== */
-/* Class used to contain the various pieces of the master page */
+/* !SASS: variables ===================================================================== */
+/* !SASS: breakpoint-setup ============================================================== */
+/* !SASS: NaturalHeritageSites/layouts/_naturalHeritageSites-mp.scss ===================== */
+/*****************************************************/
+/*            !MASTER PAGE LAYOUT                    */
+/*****************************************************/
+/* !Class used to contain the various pieces of the master page */
 .container,
 .header-container,
 .SliderPage1,
@@ -74,7 +49,7 @@
   clear: both;
 }
 
-/* handle secondary column layout */
+/* !Handle secondary column layout */
 @media (min-width: 992px) {
   .has-secondary-col .col-primary {
     width: 76%;
@@ -118,8 +93,9 @@
   float: left;
 }
 
-/* Header
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/*            !Header => MASTER PAGE LAYOUT          */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 /**
  * The following declarations are required to reposition the search bar and
  * Sign In/Out link at different sizes via appendAround
@@ -244,8 +220,9 @@
   }
 }
 
-/* Main
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/*            !Main => MASTER PAGE LAYOUT            */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 @media (max-width: 767px) {
   #masterContentArea {
     margin-top: 20px;
@@ -331,7 +308,9 @@
   fill: #f0d283;
 }
 
-/***** Proxy Panel Styling *****/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/*    !Proxy Panel Styling => MASTER PAGE LAYOUT     */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 /* This applies to the on behalf of (proxy) area */
 .obo-container {
   float: right;
@@ -389,8 +368,9 @@
   }
 }
 
-/* Sticky Footer
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/*        !Sticky Footer  => MASTER PAGE LAYOUT      */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 /**
  * Responsive sticky footer.
  * See http://www.joshrcook.com/a-responsive-sticky-footer/
@@ -453,10 +433,13 @@
   background: none;
 }
 
-/* !Skin-specific styles */
-/* ==========================================================================
-   Great Barrier Reef Skin Specific Styles
-   ========================================================================== */
+/* !SASS: NaturalHeritageSites/_WSMA ===================================================== */
+/*****************************************************/
+/*        !WSMA SKIN-SPECIFIC STYLES FOR GBR         */
+/*****************************************************/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/* !Page Titles => WSMA SKIN-SPECIFIC STYLES FOR GBR */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 h1 {
   position: relative;
   display: table;
@@ -467,6 +450,9 @@ h1 {
   display: table;
 }
 
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/*  !Homepage Full Width Areas => WSMA SKIN-SPECIFIC STYLES FOR GBR  */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 .Wrapper-HomePage {
   /* Arrow shaped containers for nice browsers only. */
 }
@@ -506,6 +492,9 @@ h1 {
   }
 }
 
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*   !Buttons => WSMA SKIN-SPECIFIC STYLES FOR GBR    */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 /* Diamond shaped button, excluding Safari */
 html:not(.t-safari) .btn,
 html:not(.t-safari) .TextButton {
@@ -528,7 +517,7 @@ html:not(.t-safari) .ruFileInput {
   color: #fff !important;
 }
 
-/* Button styles for all browsers */
+/* !Button styles for all browsers */
 .btn,
 .TextButton,
 .ruButton {
@@ -547,7 +536,7 @@ html:not(.t-safari) .ruFileInput {
   transform: scale(1);
 }
 
-/* Button styles for Safari only */
+/* !Button styles for Safari only */
 html.t-safari .PrimaryButton,
 html.t-safari .SaveAndClose,
 html.t-safari .SaveAs,
@@ -605,6 +594,9 @@ html.t-safari .ruFileInput {
   background: transparent url("images/ResponsiveHeaderSprite.png") 0 -100px no-repeat !important;
 }
 
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*  !Spotlight Sections => WSMA SKIN-SPECIFIC STYLES FOR GBR    */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 .Spotlight .SectionLabel,
 .Spotlight h4 {
   display: block;
@@ -644,6 +636,9 @@ html.t-safari .ruFileInput {
   margin-bottom: 60px;
 }
 
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*   !Membership Box => WSMA SKIN-SPECIFIC STYLES FOR GBR       */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 .Spotlight .MembershipBox {
   padding: 0 20px 20px 20px;
   position: relative;
@@ -690,6 +685,9 @@ html.t-safari .ruFileInput {
   content: normal;
 }
 
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*    !Testimonial Area => WSMA SKIN-SPECIFIC STYLES FOR GBR    */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 @media (min-width: 768px) {
   .TestimonialArea {
     width: 70%;
@@ -731,6 +729,9 @@ html.t-safari .ruFileInput {
   margin-top: 1em;
 }
 
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*  !Upcoming Events => WSMA SKIN-SPECIFIC STYLES FOR GBR       */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 @media (min-width: 768px) {
   .UpcomingEventsHome ul.RelatedItemsHorizontal li,
 .UpcomingEventsHome .RelatedItemsHorizontal ul.rrItemsList li {
@@ -762,6 +763,9 @@ html.t-safari .ruFileInput {
   line-break: normal;
 }
 
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*  !Progress Tracker => WSMA SKIN-SPECIFIC STYLES FOR GBR      */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 .ProgressTracker2 {
   text-align: center;
 }
@@ -814,12 +818,15 @@ html.t-safari .ruFileInput {
   padding-bottom: 15px;
 }
 
-/* Search Results */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*  !Telerik Overrides  => WSMA SKIN-SPECIFIC STYLES FOR GBR    */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/* !Search Results */
 .SearchResultSummary .ListItemTitle a {
   background: none !important;
 }
 
-/* RadStrip Tabs */
+/* !RadStrip Tabs */
 .RadTabStrip.RadTabStrip_MetroTouch {
   background: #333;
   padding: 10px 10px 0 10px !important;
@@ -855,6 +862,9 @@ div.PanelTitle,
   border: none !important;
 }
 
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*  !Account Mini Profile => WSMA SKIN-SPECIFIC STYLES FOR GBR  */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 .CalloutPart2 {
   background-color: #f0edf2;
   text-align: center;
@@ -895,11 +905,9 @@ div.PanelTitle,
   border-bottom: 5px solid #6bcaba;
 }
 
-/***************************************
-/*
-/* Interior Banner
-/*
-/**************************************/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*  !Interior Banner => WSMA SKIN-SPECIFIC STYLES FOR GBR       */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 @media (min-width: 768px) {
   .body-container .breadcrumb-obo-container {
     height: 155px;
@@ -1013,9 +1021,9 @@ div.PanelTitle,
   float: right;
 }
 
-/****************************************
-/** imgBanner
-/***************************************/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*     !imgBanner => WSMA SKIN-SPECIFIC STYLES FOR GBR          */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 .imgBanner .breadcrumb-obo-container {
   background-color: #004851;
   background-image: none;
@@ -1050,9 +1058,9 @@ div.PanelTitle,
           mask: url(#mask);
 }
 
-/***********************************
-/ Footer Nav
-/**********************************/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*      !Footer Nav  => WSMA SKIN-SPECIFIC STYLES FOR GBR       */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 footer#ft {
   float: left;
   width: 100%;
@@ -1077,11 +1085,9 @@ footer#ft {
   display: block;
 }
 
-/**********************************
-/
-/ Panels
-/
-/**********************************/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*        !Panels => WSMA SKIN-SPECIFIC STYLES FOR GBR          */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 .panel {
   border: none;
 }
@@ -1090,11 +1096,9 @@ footer#ft {
   width: -webkit-fill-available;
 }
 
-/**********************************
-/
-/ Aux Nav
-/
-/**********************************/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*        !Aux Nav => WSMA SKIN-SPECIFIC STYLES FOR GBR         */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 .aux-nav {
   padding: 20px;
 }
@@ -1119,11 +1123,9 @@ footer#ft {
   background-color: #6bcaba;
 }
 
-/**********************************
-/
-/ News & Events
-/
-/**********************************/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*    !News & Events => WSMA SKIN-SPECIFIC STYLES FOR GBR       */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 .NewsFullWidth {
   background-color: #f5f7f8;
   padding: 60px 0;
@@ -1257,16 +1259,9 @@ footer#ft {
   margin-bottom: 30px;
 }
 
-/***********************************
-/
-/ News Collapse
-/
-/**********************************/
-/***********************************
-/
-/ News Widget
-/
-/**********************************/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*      !News Widget => WSMA SKIN-SPECIFIC STYLES FOR GBR       */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 .newsWidget .NewsFullWidth {
   background-color: transparent;
 }
@@ -1300,19 +1295,17 @@ footer#ft {
   border: 1px solid #ddd;
 }
 
-/***********************************
-/
-/ Misc
-/
-/**********************************/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*        !Misc => WSMA SKIN-SPECIFIC STYLES FOR GBR            */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 .Hidden {
   display: none;
 }
 
-/* !Typography and other basic setup */
-/* ==========================================================================
-   Basic setup
-   ========================================================================== */
+/* !SASS: shared/basics ================================================================== */
+/*****************************************************/
+/*            !Basic Setup                           */
+/*****************************************************/
 body {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 16px;
@@ -1521,16 +1514,18 @@ img.ImgNoResize,
   margin-bottom: 20px;
 }
 
-/* !Master page elements */
-/* ==========================================================================
-   MASTERPAGE ELEMENTS
-   ========================================================================== */
+/* !SASS: shared/masterpage_styles ======================================================= */
+/*****************************************************/
+/*            !MASTERPAGE ELEMENTS                   */
+/*****************************************************/
 /* This applies to the loading bar at the top of the page */
 .ProgressDiv {
   background-color: #ffdd6f;
 }
 
-/* Universal search control */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*    !Universal search control => MASTERPAGE ELEMENTS      */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .search-field {
   background: #fff url("images/ResponsiveHeaderSprite.png") no-repeat;
   background-position: 7px -16px;
@@ -1543,7 +1538,9 @@ img.ImgNoResize,
   display: none;
 }
 
-/* header logo */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*         !Header Logo => MASTERPAGE ELEMENTS              */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 #masterHeaderImage {
   max-width: 300px;
   position: absolute;
@@ -1610,25 +1607,29 @@ img.ImgNoResize,
   width: 169px;
 }
 
-/* Used in the donor site header logo content area */
+/* !Used in the donor site header logo content area */
 #masterHeaderActionArea a {
   display: block;
   text-align: center;
 }
 
-/* On Behalf Of with target set */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*   !On Behalf Of with target set  => MASTERPAGE ELEMENTS  */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .ProxyPanelContact {
   background-color: #333;
 }
-.ProxyPanelContact, .ProxyPanelContact .obo-label {
+.ProxyPanelContact,
+.ProxyPanelContact .obo-label {
   color: #fff;
 }
 .ProxyPanelContact a {
   color: #c9e6e0;
 }
 
-/* Sub (Left) Navigation
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*   !Sub (Left) Navigation  => MASTERPAGE ELEMENTS         */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 #pagesubnav {
   border-right: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
@@ -1650,9 +1651,10 @@ img.ImgNoResize,
   margin: 0;
 }
 
-/* ==========================================================================
-   Footer
-   ========================================================================== */
+/* !SASS: shared/modules/footer ========================================================== */
+/*****************************************************/
+/*            !Footer                                */
+/*****************************************************/
 .footer-nav-copyright {
   padding-top: 1em;
   padding-bottom: 0.35em;
@@ -1790,15 +1792,16 @@ img.ImgNoResize,
   background-color: transparent;
   color: rgba(0, 0, 0, 0.31);
 }
-.footer-nav-copyright a, .footer-nav-copyright a:visited {
+.footer-nav-copyright a,
+.footer-nav-copyright a:visited {
   color: rgba(0, 0, 0, 0.31);
 }
-.footer-nav-copyright a:hover, .footer-nav-copyright a:active {
+.footer-nav-copyright a:hover,
+.footer-nav-copyright a:active {
   color: rgba(26, 26, 26, 0.31);
 }
 
-/* Compatibility Footer
-   ========================================================================== */
+/* !Compatibility Footer */
 /* Old-style footer (pre-responsive) */
 #ft {
   background-color: #ffffff;
@@ -1845,10 +1848,10 @@ img.ImgNoResize,
   border-top: 1px solid rgba(221, 221, 221, 0.5);
 }
 
-/* !Navigation controls */
-/* ==========================================================================
-   PRIMARY NAVIGATION
-   ========================================================================== */
+/* !SASS: NaturalHeritageSites/navigation/primary-responsive ============================ */
+/*****************************************************/
+/*            !PRIMARY NAVIGATION                    */
+/*****************************************************/
 @media (min-width: 768px) {
   .primary-navigation-area .MegaDropDownMenuOuter {
     text-align: right;
@@ -1884,18 +1887,21 @@ img.ImgNoResize,
   }
 }
 
-.navbar-collapse, .searchbar-collapse {
+.navbar-collapse,
+.searchbar-collapse {
   background-color: #ffffff;
 }
 @media (min-width: 768px) {
-  .navbar-collapse, .searchbar-collapse {
+  .navbar-collapse,
+.searchbar-collapse {
     padding-left: 0;
     padding-right: 0;
     border: none;
     background: none;
   }
 }
-.no-mqs .navbar-collapse, .no-mqs .searchbar-collapse {
+.no-mqs .navbar-collapse,
+.no-mqs .searchbar-collapse {
   padding-left: 0;
   padding-right: 0;
   border: none;
@@ -1930,14 +1936,23 @@ img.ImgNoResize,
 .RadMenu.RadMenu_WSMA:focus {
   outline: none;
 }
-.RadMenu.RadMenu_WSMA .rmGroup, .RadMenu.RadMenu_WSMA .rmRootGroup, .RadMenu.RadMenu_WSMA .rmMultiColumn, .RadMenu.RadMenu_WSMA .rmRootGroup > .rmItem {
+.RadMenu.RadMenu_WSMA .rmGroup,
+.RadMenu.RadMenu_WSMA .rmRootGroup,
+.RadMenu.RadMenu_WSMA .rmMultiColumn,
+.RadMenu.RadMenu_WSMA .rmRootGroup > .rmItem {
   border: none;
 }
-.RadMenu.RadMenu_WSMA .rmVertical .rmToggle .rmIcon:before, .RadMenu.RadMenu_WSMA .rmVertical .rmExpand:before, .RadMenu.RadMenu_WSMA .rmRightArrow .rmIcon:before,
-.RadMenu.RadMenu_WSMA .rmHorizontal .rmToggle .rmIcon:before, .RadMenu.RadMenu_WSMA .rmHorizontal .rmExpand:before, .RadMenu.RadMenu_WSMA .rmBottomArrow .rmIcon:before {
+.RadMenu.RadMenu_WSMA .rmVertical .rmToggle .rmIcon:before,
+.RadMenu.RadMenu_WSMA .rmVertical .rmExpand:before,
+.RadMenu.RadMenu_WSMA .rmRightArrow .rmIcon:before,
+.RadMenu.RadMenu_WSMA .rmHorizontal .rmToggle .rmIcon:before,
+.RadMenu.RadMenu_WSMA .rmHorizontal .rmExpand:before,
+.RadMenu.RadMenu_WSMA .rmBottomArrow .rmIcon:before {
   content: none;
 }
-.RadMenu.RadMenu_WSMA .rmItem, .RadMenu.RadMenu_WSMA .rmHorizontal > .rmItem, .RadMenu.RadMenu_WSMA .rmHorizontal > .rmRootScrollGroup > .rmItem,
+.RadMenu.RadMenu_WSMA .rmItem,
+.RadMenu.RadMenu_WSMA .rmHorizontal > .rmItem,
+.RadMenu.RadMenu_WSMA .rmHorizontal > .rmRootScrollGroup > .rmItem,
 .RadMenu.RadMenu_WSMA .rmLink {
   float: none;
 }
@@ -1948,26 +1963,34 @@ img.ImgNoResize,
   display: inline-block;
   vertical-align: top;
 }
-.RadMenu.RadMenu_WSMA .rmRootGroup .rmRootLink .rmToggle, .RadMenu.RadMenu_WSMA .rmToggle {
+.RadMenu.RadMenu_WSMA .rmRootGroup .rmRootLink .rmToggle,
+.RadMenu.RadMenu_WSMA .rmToggle {
   width: auto;
 }
-.RadMenu.RadMenu_WSMA .rmToggle, .RadMenu.RadMenu_WSMA .rmToggle .rmIcon, .RadMenu.RadMenu_WSMA .rmRootGroup .rmRootLink .rmToggle {
+.RadMenu.RadMenu_WSMA .rmToggle,
+.RadMenu.RadMenu_WSMA .rmToggle .rmIcon,
+.RadMenu.RadMenu_WSMA .rmRootGroup .rmRootLink .rmToggle {
   position: static;
 }
-.RadMenu.RadMenu_WSMA .rmGroup .rmContent, .RadMenu.RadMenu_WSMA .rmRootGroup .rmContent {
+.RadMenu.RadMenu_WSMA .rmGroup .rmContent,
+.RadMenu.RadMenu_WSMA .rmRootGroup .rmContent {
   padding: 0;
 }
-.RadMenu.RadMenu_WSMA .RadSiteMap, .RadMenu.RadMenu_WSMA .RadSiteMap .rsmItem, .RadMenu.RadMenu_WSMA .RadSiteMap .rsmTwoLevels .rsmItem {
+.RadMenu.RadMenu_WSMA .RadSiteMap,
+.RadMenu.RadMenu_WSMA .RadSiteMap .rsmItem,
+.RadMenu.RadMenu_WSMA .RadSiteMap .rsmTwoLevels .rsmItem {
   font-size: inherit;
 }
 .RadMenu.RadMenu_WSMA ul {
   margin: 0;
   padding: 0;
 }
-.RadMenu.RadMenu_WSMA .rmItem, .RadMenu.RadMenu_WSMA .rsmItem {
+.RadMenu.RadMenu_WSMA .rmItem,
+.RadMenu.RadMenu_WSMA .rsmItem {
   list-style: none;
 }
-.RadMenu.RadMenu_WSMA .rmDisabled > a, .RadMenu.RadMenu_WSMA .rsmDisabled > a {
+.RadMenu.RadMenu_WSMA .rmDisabled > a,
+.RadMenu.RadMenu_WSMA .rsmDisabled > a {
   cursor: default;
 }
 .RadMenu.RadMenu_WSMA .rmItem {
@@ -2064,7 +2087,8 @@ img.ImgNoResize,
   position: relative;
   /* required for the menu to work in IE */
 }
-.RadMenu.RadMenu_WSMA .rsmColumnWrap .rsmLevel1 .rsmLink, .RadMenu.RadMenu_WSMA .rsmColumnWrap .rsmLevel1 .rsmTemplate {
+.RadMenu.RadMenu_WSMA .rsmColumnWrap .rsmLevel1 .rsmLink,
+.RadMenu.RadMenu_WSMA .rsmColumnWrap .rsmLevel1 .rsmTemplate {
   padding: 0;
   margin: 0;
 }
@@ -2131,12 +2155,14 @@ img.ImgNoResize,
     font-size: 100%;
   }
 }
-.RadMenu.RadMenu_WSMA .rmToggle, .RadMenu.RadMenu_WSMA .rmRootGroup .rmRootLink .rmToggle {
+.RadMenu.RadMenu_WSMA .rmToggle,
+.RadMenu.RadMenu_WSMA .rmRootGroup .rmRootLink .rmToggle {
   /* a clickable target to expand multi-level navigaiton */
   display: inline-block;
   height: 100%;
 }
-.RadMenu.RadMenu_WSMA .rmToggle .rmIcon, .RadMenu.RadMenu_WSMA .rmRootGroup .rmRootLink .rmToggle .rmIcon {
+.RadMenu.RadMenu_WSMA .rmToggle .rmIcon,
+.RadMenu.RadMenu_WSMA .rmRootGroup .rmRootLink .rmToggle .rmIcon {
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
@@ -2166,7 +2192,9 @@ img.ImgNoResize,
   transform: rotate(180deg);
 }
 
-/*2nd and 3rd level navigation (dropdown menus)*/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/* !2nd and 3rd level navigation (dropdown menus) => PRIMARY NAVIGATION    */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 .RadMenu_WSMA .rmSlide {
   display: none;
   /* hide the sub nav until requested */
@@ -2192,7 +2220,8 @@ img.ImgNoResize,
 .RadMenu_WSMA .rmSlide .MegaDropDownMenuSeperator > .rsmLink {
   border-bottom: 1px solid #ffffff;
 }
-.RadMenu_WSMA .rmSlide .rmSeparator, .RadMenu_WSMA .rmSlide .rmVertical > .rmSeparator {
+.RadMenu_WSMA .rmSlide .rmSeparator,
+.RadMenu_WSMA .rmSlide .rmVertical > .rmSeparator {
   margin: 0 15px;
 }
 .RadMenu_WSMA .rmSlide .rmFocused > .rmLink,
@@ -2215,10 +2244,11 @@ img.ImgNoResize,
 }
 .RadMenu_WSMA .rmSlide.rmLevel1 .rmGroup {
   /* for second-level sub-nav and beyond,
-   * we want to indent the nav to give separation */
+       * we want to indent the nav to give separation */
   margin-left: 0;
 }
-.RadMenu_WSMA .rmSlide .rmExpandRight, .RadMenu_WSMA .rmSlide .rmGroup a.rmLink.rmExpandRight {
+.RadMenu_WSMA .rmSlide .rmExpandRight,
+.RadMenu_WSMA .rmSlide .rmGroup a.rmLink.rmExpandRight {
   background-image: url("images/ResponsiveNav.png");
   background-position: 110% -200px;
   background-repeat: no-repeat;
@@ -2239,7 +2269,9 @@ img.ImgNoResize,
     width: 100% !important;
     left: 0 !important;
   }
-  .RadMenu_WSMA .rmSlide ul.rmVertical, .RadMenu_WSMA .rmSlide ul.rmHorizontal, .RadMenu_WSMA .rmSlide ul.rmRootScrollGroup {
+  .RadMenu_WSMA .rmSlide ul.rmVertical,
+.RadMenu_WSMA .rmSlide ul.rmHorizontal,
+.RadMenu_WSMA .rmSlide ul.rmRootScrollGroup {
     float: none;
   }
   .RadMenu_WSMA .rmSlide .rmSlide {
@@ -2303,7 +2335,8 @@ img.ImgNoResize,
   .RadMenu.RadMenu_WSMA .rmSlide .rmLink {
     margin: 0;
   }
-  .RadMenu.RadMenu_WSMA .rmToggle, .RadMenu.RadMenu_WSMA .rmRootGroup .rmRootLink .rmToggle {
+  .RadMenu.RadMenu_WSMA .rmToggle,
+.RadMenu.RadMenu_WSMA .rmRootGroup .rmRootLink .rmToggle {
     display: none;
   }
   .RadMenu.RadMenu_WSMA .rsmTwoLevels {
@@ -2367,7 +2400,8 @@ img.ImgNoResize,
 .no-mqs .RadMenu.RadMenu_WSMA .rmSlide .rmLink {
   margin: 0;
 }
-.no-mqs .RadMenu.RadMenu_WSMA .rmToggle, .no-mqs .RadMenu.RadMenu_WSMA .rmRootGroup .rmRootLink .rmToggle {
+.no-mqs .RadMenu.RadMenu_WSMA .rmToggle,
+.no-mqs .RadMenu.RadMenu_WSMA .rmRootGroup .rmRootLink .rmToggle {
   display: none;
 }
 .no-mqs .RadMenu.RadMenu_WSMA .rsmTwoLevels {
@@ -2391,9 +2425,10 @@ img.ImgNoResize,
   margin-left: 30px;
 }
 
-/* ==========================================================================
-   SECONDARY NAVIGATION
-   ========================================================================== */
+/* !SASS: NaturalHeritageSites/navigation/secondary-responsive ========================== */
+/*****************************************************/
+/*            !Secondary Navigation                  */
+/*****************************************************/
 /**** Telerik overrides ****/
 .RadTreeView.RadTreeView_WSMA {
   white-space: normal;
@@ -2506,9 +2541,10 @@ img.ImgNoResize,
   color: #666;
 }
 
-/* ==========================================================================
-   AUXILIARY NAVIGATION
-   ========================================================================== */
+/* !SASS: NaturalHeritageSites/navigation/auxiliary-responsive ========================== */
+/*****************************************************/
+/*            !AUXILIARY NAVIGATION                  */
+/*****************************************************/
 .navbar-header {
   float: right;
 }
@@ -2672,8 +2708,9 @@ img.ImgNoResize,
   padding-right: 8px;
 }
 
-/* Cart item count
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*     !Cart item count => AUXILIARY NAVIGATION             */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 /* By default, put parentheses around the cart item count.
  * This is overwritten when the class "nav-aux-cart" is applied.
  */
@@ -2684,8 +2721,9 @@ img.ImgNoResize,
   content: ")";
 }
 
-/* Auxiliary toggle buttons
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*  !Auxiliary toggle buttons => AUXILIARY NAVIGATION       */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 /* Toggles that display on x-small screens to display the primary nav and search */
 .navbar-toggle {
   float: none;
@@ -2708,8 +2746,9 @@ img.ImgNoResize,
   /* this makes it line up properly with the hamburger */
 }
 
-/* Auxiliary button links
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*     !Auxiliary button links => AUXILIARY NAVIGATION      */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 /* These links are styled like the toggles (search & hamburger buttons) */
 .nav-auxiliary .nav-aux-button {
   /* Cart Item Flag indicating how many items are in your cart */
@@ -2814,6 +2853,9 @@ img.ImgNoResize,
   }
 }
 
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*     !Utility Account Area => AUXILIARY NAVIGATION        */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .UtilityAccountArea {
   float: left;
   margin-top: 3px;
@@ -2839,6 +2881,9 @@ img.ImgNoResize,
   }
 }
 
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/* !Easy Edit & On Behalf of toggles => AUXILIARY NAVIGATION*/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 a.ste-toggle,
 a.ste-toggle:hover,
 a.ste-toggle:focus {
@@ -2957,8 +3002,9 @@ a.ste-toggle:focus {
   width: 200px;
 }
 
-/* Auxiliary/Primary switch
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*     !Auxiliary/Primary switch => AUXILIARY NAVIGATION    */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 /**
  * A class that allows a navigation to display in the primary nav on xs screens
  * and the auxiliary nav on wider screens.
@@ -3001,10 +3047,13 @@ td.nav-primary .nav-aux-primary-switch {
     text-align: right;
   }
 }
-/* !Other components */
-/* ==========================================================================
-   ON BEHALF OF ICONS
-   ========================================================================== */
+/* !SASS: shared/icon_sprite ============================================================= */
+/*****************************************************/
+/*                    !ICONS                         */
+/*****************************************************/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/*            !On Behalf Of Icons => Icons           */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 .obo-action {
   background-image: url("images/OboSprite.png");
 }
@@ -3023,9 +3072,9 @@ td.nav-primary .nav-aux-primary-switch {
   background-position: -35px -35px;
 }
 
-/* ==========================================================================
-   SOCIAL ICONS
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/*            !Social Icons => Icons                 */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 .SocialSprite {
   background-image: url(images/SocialSprite.png);
   background-repeat: no-repeat;
@@ -3101,7 +3150,13 @@ td.nav-primary .nav-aux-primary-switch {
   background-position: -280px -80px;
 }
 
-/**** End Social Netowrking Icon Styling ****/
+/* !SASS: shared/forms ====================================================================*/
+/*****************************************************/
+/*                      !FORMS                       */
+/*****************************************************/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/*            !General Styles => Icons               */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 input,
 button,
 select,
@@ -3110,6 +3165,9 @@ textarea {
   outline: none;
 }
 
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/*            !Form Controls => Icons                */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 select,
 textarea,
 input[type=text],
@@ -3236,7 +3294,10 @@ input[type=color]::-webkit-input-placeholder,
   color: #999999;
 }
 
-/* RadComboBox needs the same styles as normal inputs, 
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/*            !RadComboBox => Icons                  */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/* RadComboBox needs the same styles as normal inputs,
  * but has to be done separately due to its structure */
 .RadComboBox.RadComboBox_MetroTouch {
   color: #555555;
@@ -3245,7 +3306,12 @@ input[type=color]::-webkit-input-placeholder,
   line-height: inherit;
   font-weight: inherit;
 }
-.RadComboBox.RadComboBox_MetroTouch .rcbInner, .RadComboBox.RadComboBox_MetroTouch .rcbInner .rcbInput, .RadComboBox.RadComboBox_MetroTouch .rcbFocused, .RadComboBox.RadComboBox_MetroTouch .rcbFocused .rcbInput, .RadComboBox.RadComboBox_MetroTouch .rcbHovered, .RadComboBox.RadComboBox_MetroTouch .rcbHovered .rcbInput {
+.RadComboBox.RadComboBox_MetroTouch .rcbInner,
+.RadComboBox.RadComboBox_MetroTouch .rcbInner .rcbInput,
+.RadComboBox.RadComboBox_MetroTouch .rcbFocused,
+.RadComboBox.RadComboBox_MetroTouch .rcbFocused .rcbInput,
+.RadComboBox.RadComboBox_MetroTouch .rcbHovered,
+.RadComboBox.RadComboBox_MetroTouch .rcbHovered .rcbInput {
   color: #555555;
 }
 .RadComboBox.RadComboBox_MetroTouch .rcbInner {
@@ -3284,19 +3350,24 @@ input[type=color]::-webkit-input-placeholder,
 .RadComboBoxDropDown.RadComboBoxDropDown_MetroTouch {
   font: inherit;
 }
-.RadComboBoxDropDown.RadComboBoxDropDown_MetroTouch .rcbItem, .RadComboBoxDropDown.RadComboBoxDropDown_MetroTouch .rcbHovered, .RadComboBoxDropDown.RadComboBoxDropDown_MetroTouch .rcbDisabled, .RadComboBoxDropDown.RadComboBoxDropDown_MetroTouch .rcbLoading {
+.RadComboBoxDropDown.RadComboBoxDropDown_MetroTouch .rcbItem,
+.RadComboBoxDropDown.RadComboBoxDropDown_MetroTouch .rcbHovered,
+.RadComboBoxDropDown.RadComboBoxDropDown_MetroTouch .rcbDisabled,
+.RadComboBoxDropDown.RadComboBoxDropDown_MetroTouch .rcbLoading {
   padding-top: 5px;
   padding-bottom: 5px;
 }
 
-.RadInput.RadInput.riSingle .riTextBox, .RadInput.RadInput .riTextBox {
+.RadInput.RadInput.riSingle .riTextBox,
+.RadInput.RadInput .riTextBox {
   height: 39px;
   padding: 5px 10px;
   border-color: #ccc;
   font: inherit;
   color: #555555;
 }
-.RadInput.RadInput.riSingle .riTextBox:focus, .RadInput.RadInput .riTextBox:focus {
+.RadInput.RadInput.riSingle .riTextBox:focus,
+.RadInput.RadInput .riTextBox:focus {
   border-color: #66afe9;
 }
 
@@ -3312,15 +3383,22 @@ input[type=color]::-webkit-input-placeholder,
   border-radius: 0px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
-#EventDescriptionDiv iframe, #EventDescriptionDiv td {
+#EventDescriptionDiv iframe,
+#EventDescriptionDiv td {
   background-color: transparent;
 }
 
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/*            !RadPicker => Icons                    */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 /* RadPicker - Make sure there's some space between the picker and the time zone label*/
 .RadPicker + .TimeZoneLabel {
   margin-left: 0.5em;
 }
 
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/*            !Chosen multi-select  => Icons         */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 /* Chosen multi-select */
 .chosen-container-multi .chosen-choices {
   min-height: 39px;
@@ -3388,10 +3466,11 @@ input[type=checkbox]:focus {
   outline-offset: -2px;
 }
 
-/* ==========================================================================
-   BUTTONS
-   ========================================================================== */
-/* set up button base styles */
+/* !SASS: shared/buttons_flat ============================================================ */
+/*****************************************************/
+/*            !BUTTONS                               */
+/*****************************************************/
+/* !set up button base styles */
 .btn,
 .TextButton,
 .TextButtonWithImage,
@@ -3490,7 +3569,9 @@ fieldset[disabled] #masterHeaderActionArea a,
   box-shadow: none;
 }
 
-/* default button */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*           !Default button => BUTTONS                     */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .btn,
 .TextButton,
 .TextButtonWithImage,
@@ -3605,7 +3686,9 @@ a.TextButton {
   border-color: transparent;
 }
 
-/* some Telerik overrides */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*           !Telerik overrides => BUTTONS                  */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .ruButton {
   background-color: #6bcaba !important;
   color: #fff !important;
@@ -3621,7 +3704,9 @@ a.TextButton {
   border-radius: 0px;
 }
 
-/* primary button */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*           !Primary button  => BUTTONS                    */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .PrimaryButton,
 .SaveAndClose,
 .SaveAs,
@@ -3748,7 +3833,9 @@ fieldset[disabled] .RadGrid input.PrimaryButton:active,
   border-color: transparent;
 }
 
-/* Facebook sign in button */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*           !Facebook sign in button  => BUTTONS           */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .TextButton.Facebook {
   color: #fff;
   background-color: #3b5998;
@@ -3767,7 +3854,9 @@ fieldset[disabled] .RadGrid input.PrimaryButton:active,
   border-color: #2d4373;
 }
 
-/* LinkedIn sign in button */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*           !LinkedIn sign in button => BUTTONS            */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .SignInButton.LinkedIn {
   color: #fff;
   background-color: #0077b5;
@@ -3829,38 +3918,48 @@ fieldset[disabled] .RadGrid input.PrimaryButton:active,
   background-color: #141414;
 }
 
-/* ==========================================================================
-   CONTENT ITEMS
-   ========================================================================== */
-/* Open Invoices
-   ========================================================================== */
+/* !SASS: shared/modules/other-iParts ==================================================== */
+/*****************************************************/
+/*            !CONTENT ITEMS                        */
+/*****************************************************/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*           !Open Invoices  => CONTENT ITEMS               */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .OpenInvoicesTotals .SelectedTotal .PanelFieldValue {
   color: #f0d283;
 }
 
-/* Group List Editor
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*           !Group List Editor => CONTENT ITEMS            */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .RadTreeView.GLE .rtLI {
   margin-bottom: 0.3em;
 }
-.RadTreeView.GLE .rtIn, .RadTreeView.GLE .rtHover .rtIn, .RadTreeView.GLE .rtSelected .rtIn {
+.RadTreeView.GLE .rtIn,
+.RadTreeView.GLE .rtHover .rtIn,
+.RadTreeView.GLE .rtSelected .rtIn {
   background-color: transparent;
   border: none;
   color: #499a89;
 }
-.RadTreeView.GLE a:hover, .RadTreeView.GLE a:focus, .RadTreeView.GLE span[onclick]:hover, .RadTreeView.GLE span[onclick]:focus {
+.RadTreeView.GLE a:hover, .RadTreeView.GLE a:focus,
+.RadTreeView.GLE span[onclick]:hover,
+.RadTreeView.GLE span[onclick]:focus {
   background-color: #1a1a1a;
   color: #fff;
 }
 
-/* Communiaction Preferences
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*    !Communication Preferences  => CONTENT ITEMS          */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .CommunicationPreferencesSection {
   background-color: #f0edf2;
 }
 
-/* Search Results
-   ========================================================================== */
+/* !SASS: shared/modules/search ========================================================== */
+/*****************************************************/
+/*            !SEARCH RESULTS                        */
+/*****************************************************/
 .SearchField,
 .SearchResultSummary .ListItemTitle a {
   display: block;
@@ -3884,8 +3983,13 @@ fieldset[disabled] .RadGrid input.PrimaryButton:active,
   text-decoration: underline;
 }
 
-/* Event Display
-   ========================================================================== */
+/* !SASS: shared/modules/events-products ================================================= */
+/*****************************************************/
+/*               !EVENTS & PRODUCTS                  */
+/*****************************************************/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*           !Event Display  => EVENTS & PRODUCTS           */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .EventSummary .PhotoArea {
   padding: 2em;
 }
@@ -3918,16 +4022,21 @@ fieldset[disabled] .RadGrid input.PrimaryButton:active,
   color: white;
 }
 
-/* Product Display
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*           !Product Display  => EVENTS & PRODUCTS         */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .ProductDisplay {
   padding: 1em;
 }
 
-/* Progress Tracker
-   ========================================================================== */
+/* !SASS: shared/modules/progress-tracker ================================================ */
+/*****************************************************/
+/*            !PROGRESS TRACKER                      */
+/*****************************************************/
 /* These are overrides for the colors and styles defined in 10-UltraWave.css */
-/* <Progress Tracker (Default)> */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*     !Progress Tracker (Default)  => PROGRESS TRACKER     */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .ProgressTracker .count {
   font-weight: bold;
 }
@@ -3936,8 +4045,9 @@ fieldset[disabled] .RadGrid input.PrimaryButton:active,
   background-color: #333;
 }
 
-/* </Progress Tracker > */
-/* <Progress Tracker 2> */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*          !Progress Tracker 2  => PROGRESS TRACKER        */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .ProgressTracker2 .ProgressTrackerPanel {
   background-color: #474747;
 }
@@ -3969,9 +4079,10 @@ fieldset[disabled] .RadGrid input.PrimaryButton:active,
   color: #313e48;
 }
 
-/* </Progress Tracker 2> */
-/* Filter Panel (Query Menu)
-   ========================================================================== */
+/* !SASS: shared/modules/query-menu ====================================================== */
+/*****************************************************/
+/*            !Filter Panel (Query Menu)             */
+/*****************************************************/
 /* This is an alternate style for the Query Menu filter panel */
 .FilterPanel {
   background-color: transparent;
@@ -4006,8 +4117,10 @@ fieldset[disabled] .RadGrid input.PrimaryButton:active,
   color: white;
 }
 
-/* Cart Charges
-   ========================================================================== */
+/* !SASS: shared/modules/cart-charges =================================================== */
+/*****************************************************/
+/*            !Cart Charges                          */
+/*****************************************************/
 .CartCharges {
   background-color: #f0edf2;
 }
@@ -4029,30 +4142,40 @@ fieldset[disabled] .RadGrid input.PrimaryButton:active,
   color: #f0d283;
 }
 
-/* ==========================================================================
-   TELERIK OVERRIDES
-   ========================================================================== */
-/* RadTabStrip
-   ========================================================================== */
-.RadTabStripTop_Metro .rtsLevel1, .RadTabStripTop_Metro .rtsLevel1 .rtsUL,
+/* !SASS: NaturalHeritageSites/telerik_overrides ======================================== */
+/*****************************************************/
+/*            !TELERIK OVERRIDES                     */
+/*****************************************************/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*            !RadTabStrip  => TELERIK OVERRIDES            */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+.RadTabStripTop_Metro .rtsLevel1,
+.RadTabStripTop_Metro .rtsLevel1 .rtsUL,
 .RadTabStrip_Metro .rtsLevel1,
 .RadTabStrip_Metro .rtsLevel1 .rtsUL {
   background-color: #333 !important;
 }
-.RadTabStripTop_Metro .rtsLevel1 .rtsLink, .RadTabStripTop_Metro .rtsLevel1 .rtsUL .rtsLink,
+.RadTabStripTop_Metro .rtsLevel1 .rtsLink,
+.RadTabStripTop_Metro .rtsLevel1 .rtsUL .rtsLink,
 .RadTabStrip_Metro .rtsLevel1 .rtsLink,
 .RadTabStrip_Metro .rtsLevel1 .rtsUL .rtsLink {
   text-transform: none;
   border-color: #333;
 }
-.RadTabStripTop_Metro .rtsLevel1 .rtsSelected, .RadTabStripTop_Metro .rtsLevel1 .rtsLink:hover, .RadTabStripTop_Metro .rtsLevel1 .rtsUL .rtsSelected, .RadTabStripTop_Metro .rtsLevel1 .rtsUL .rtsLink:hover,
+.RadTabStripTop_Metro .rtsLevel1 .rtsSelected,
+.RadTabStripTop_Metro .rtsLevel1 .rtsLink:hover,
+.RadTabStripTop_Metro .rtsLevel1 .rtsUL .rtsSelected,
+.RadTabStripTop_Metro .rtsLevel1 .rtsUL .rtsLink:hover,
 .RadTabStrip_Metro .rtsLevel1 .rtsSelected,
 .RadTabStrip_Metro .rtsLevel1 .rtsLink:hover,
 .RadTabStrip_Metro .rtsLevel1 .rtsUL .rtsSelected,
 .RadTabStrip_Metro .rtsLevel1 .rtsUL .rtsLink:hover {
   border-color: #fff;
 }
-.RadTabStripTop_Metro .rtsLevel1 .rtsDisabled, .RadTabStripTop_Metro .rtsLevel1 .rtsDisabled:hover, .RadTabStripTop_Metro .rtsLevel1 .rtsUL .rtsDisabled, .RadTabStripTop_Metro .rtsLevel1 .rtsUL .rtsDisabled:hover,
+.RadTabStripTop_Metro .rtsLevel1 .rtsDisabled,
+.RadTabStripTop_Metro .rtsLevel1 .rtsDisabled:hover,
+.RadTabStripTop_Metro .rtsLevel1 .rtsUL .rtsDisabled,
+.RadTabStripTop_Metro .rtsLevel1 .rtsUL .rtsDisabled:hover,
 .RadTabStrip_Metro .rtsLevel1 .rtsDisabled,
 .RadTabStrip_Metro .rtsLevel1 .rtsDisabled:hover,
 .RadTabStrip_Metro .rtsLevel1 .rtsUL .rtsDisabled,
@@ -4075,7 +4198,9 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   border-bottom-color: #333;
 }
 @media (max-width: 600px) {
-  .RadTabStrip.RadTabStrip_MetroTouch .rtsLI, .RadTabStrip.RadTabStrip_MetroTouch .rtsLink, .RadTabStrip.RadTabStrip_MetroTouch .rtsUL {
+  .RadTabStrip.RadTabStrip_MetroTouch .rtsLI,
+.RadTabStrip.RadTabStrip_MetroTouch .rtsLink,
+.RadTabStrip.RadTabStrip_MetroTouch .rtsUL {
     float: none;
     width: 100%;
     display: block;
@@ -4085,19 +4210,22 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   }
 }
 
-.RadTabStrip, .RadTabStripVertical {
+.RadTabStrip,
+.RadTabStripVertical {
   padding: 10px 10px 0 10px;
 }
 
-/* RadToolTip
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*            !RadToolTip  => TELERIK OVERRIDES             */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 /* Currently used by the QueryMenu iPart */
 .RadToolTip_Telerik a:hover {
   background-color: #474747;
 }
 
-/* RadGrid
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*            !RadGrid  => TELERIK OVERRIDES                */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .RadGrid.RadGrid_MetroTouch .rgMasterTable,
 .RadGrid.RadGrid_Metro .rgMasterTable {
   background-color: #fff;
@@ -4233,14 +4361,16 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   background-color: #fff;
 }
 
-/* RadComboBox
-   ========================================================================= */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*            !RadComboBox  => TELERIK OVERRIDES            */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .RadComboBox .rcbActionButton .t-font-icon {
   font: 16px/1 "TelerikWebUI";
 }
 
-/* RadDataPager
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*            !RadDataPager  => TELERIK OVERRIDES           */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .RadDataPager.RadDataPager_MetroTouch,
 .RadDataPager.RadDataPager_Metro {
   border: none;
@@ -4260,8 +4390,9 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   border-color: #333;
 }
 
-/* RadScheduler
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*            !RadScheduler  => TELERIK OVERRIDES           */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .RadScheduler.RadScheduler_Metro .rsAptIn {
   border-top: none;
 }
@@ -4280,8 +4411,9 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   border-bottom: none;
 }
 
-/* RadMenu
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*            !RadMenu  => TELERIK OVERRIDES                */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .RadMenu.RadMenu_Metro, .RadMenu.RadMenu_Metro .rmRootLink,
 .RadMenu.RadMenu_MetroTouch,
 .RadMenu.RadMenu_MetroTouch .rmRootLink {
@@ -4330,8 +4462,9 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   border-style: none;
 }
 
-/* RadWindow
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*              !RadWindow => TELERIK OVERRIDES             */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .RadWindow.RadWindow_MetroTouch .rwTitleRow .rwTitlebar, .RadWindow.RadWindow_MetroTouch .rwTitleRow .rwTopLeft, .RadWindow.RadWindow_MetroTouch .rwTitleRow .rwTopRight {
   background-color: #333;
 }
@@ -4366,12 +4499,14 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   text-transform: none;
 }
 
-/* RadTreeView
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*            !RadTreeView  => TELERIK OVERRIDES            */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .RadTreeView.RadTreeView_Vista .rtLI {
   padding: 0;
 }
-.RadTreeView.RadTreeView_Vista .rtPlus, .RadTreeView.RadTreeView_Vista .rtMinus {
+.RadTreeView.RadTreeView_Vista .rtPlus,
+.RadTreeView.RadTreeView_Vista .rtMinus {
   margin: 5px 6px 0 -17px;
   width: 11px;
   height: 11px;
@@ -4380,23 +4515,31 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   top: auto;
 }
 
-/* RadPicker
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*            !RadPicker  => TELERIK OVERRIDES              */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 /* Date and Time selectors */
-.RadCalendar.RadCalendar_Metro, .RadCalendar.RadCalendar_Metro .rcMainTable,
+.RadCalendar.RadCalendar_Metro,
+.RadCalendar.RadCalendar_Metro .rcMainTable,
 .RadCalendar.RadCalendar_MetroTouch,
 .RadCalendar.RadCalendar_MetroTouch .rcMainTable {
   font-family: inherit;
   font-weight: inherit;
 }
-.RadCalendar.RadCalendar_Metro .rcFastPrev:hover, .RadCalendar.RadCalendar_Metro .rcPrev:hover, .RadCalendar.RadCalendar_Metro .rcNext:hover, .RadCalendar.RadCalendar_Metro .rcFastNext:hover,
+.RadCalendar.RadCalendar_Metro .rcFastPrev:hover,
+.RadCalendar.RadCalendar_Metro .rcPrev:hover,
+.RadCalendar.RadCalendar_Metro .rcNext:hover,
+.RadCalendar.RadCalendar_Metro .rcFastNext:hover,
 .RadCalendar.RadCalendar_MetroTouch .rcFastPrev:hover,
 .RadCalendar.RadCalendar_MetroTouch .rcPrev:hover,
 .RadCalendar.RadCalendar_MetroTouch .rcNext:hover,
 .RadCalendar.RadCalendar_MetroTouch .rcFastNext:hover {
   border-color: #333;
 }
-.RadCalendar.RadCalendar_Metro .rcFastPrev:hover:before, .RadCalendar.RadCalendar_Metro .rcPrev:hover:before, .RadCalendar.RadCalendar_Metro .rcNext:hover:before, .RadCalendar.RadCalendar_Metro .rcFastNext:hover:before,
+.RadCalendar.RadCalendar_Metro .rcFastPrev:hover:before,
+.RadCalendar.RadCalendar_Metro .rcPrev:hover:before,
+.RadCalendar.RadCalendar_Metro .rcNext:hover:before,
+.RadCalendar.RadCalendar_Metro .rcFastNext:hover:before,
 .RadCalendar.RadCalendar_MetroTouch .rcFastPrev:hover:before,
 .RadCalendar.RadCalendar_MetroTouch .rcPrev:hover:before,
 .RadCalendar.RadCalendar_MetroTouch .rcNext:hover:before,
@@ -4413,9 +4556,10 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   background: #333;
 }
 
-.RadCalendar.RadCalendar_MetroTouch .rcRow a, .RadCalendar.RadCalendar_MetroTouch .rcRow span {
+.RadCalendar.RadCalendar_MetroTouch .rcRow a,
+.RadCalendar.RadCalendar_MetroTouch .rcRow span {
   /* The Sunday column is not rendering correctly because it's in a <th>
-     instead of a <td>. This corrects the issue. */
+         instead of a <td>. This corrects the issue. */
   display: block;
   padding: 0.08em 0.4em;
   text-decoration: none;
@@ -4426,7 +4570,8 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   padding: 0;
 }
 
-.RadCalendar.RadCalendar_Metro .rcRow a, .RadCalendar.RadCalendar_Metro .rcRow span {
+.RadCalendar.RadCalendar_Metro .rcRow a,
+.RadCalendar.RadCalendar_Metro .rcRow span {
   display: block;
   padding: 0 0.6em;
   text-decoration: none;
@@ -4436,7 +4581,8 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   padding: 0;
 }
 
-.RadCalendarMonthView.RadCalendarMonthView_Metro, .RadCalendarMonthView.RadCalendarMonthView_Metro .rcButtons input,
+.RadCalendarMonthView.RadCalendarMonthView_Metro,
+.RadCalendarMonthView.RadCalendarMonthView_Metro .rcButtons input,
 .RadCalendarMonthView.RadCalendarMonthView_MetroTouch,
 .RadCalendarMonthView.RadCalendarMonthView_MetroTouch .rcButtons input {
   font-family: inherit;
@@ -4463,7 +4609,10 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   background: #333;
 }
 
-.RadPicker.RadPicker_Metro .rcCalPopup:hover, .RadPicker.RadPicker_Metro .rcCalPopup:focus, .RadPicker.RadPicker_Metro .rcCalPopup:active, .RadPicker.RadPicker_Metro .rcTimePopup:hover, .RadPicker.RadPicker_Metro .rcTimePopup:focus, .RadPicker.RadPicker_Metro .rcTimePopup:active,
+.RadPicker.RadPicker_Metro .rcCalPopup:hover, .RadPicker.RadPicker_Metro .rcCalPopup:focus, .RadPicker.RadPicker_Metro .rcCalPopup:active,
+.RadPicker.RadPicker_Metro .rcTimePopup:hover,
+.RadPicker.RadPicker_Metro .rcTimePopup:focus,
+.RadPicker.RadPicker_Metro .rcTimePopup:active,
 .RadPicker.RadPicker_MetroTouch .rcCalPopup:hover,
 .RadPicker.RadPicker_MetroTouch .rcCalPopup:focus,
 .RadPicker.RadPicker_MetroTouch .rcCalPopup:active,
@@ -4474,21 +4623,24 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   background-color: #333;
 }
 
-.RadPicker .rcCalPopup, .RadPicker .rcTimePopup {
+.RadPicker .rcCalPopup,
+.RadPicker .rcTimePopup {
   width: inherit;
   text-indent: inherit;
   border-bottom-right-radius: 0px;
   border-top-right-radius: 0px;
 }
 
-/* ==========================================================================
-   JUMBOTRON
-   ========================================================================== */
-/* Home page full width banners */
-/* Home page full width area
-   ========================================================================== */
+/* !SASS: NaturalHeritageSites/jumbotron ================================================ */
+/*****************************************************/
+/*            !JUMBOTRON                             */
+/*****************************************************/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*      !Home page full width banners => JUMBOTRON              */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/* !Home page full width area ************** */
 /* This is for the full width area of the Cities and Cities_Responsive home page.
- * It uses a content area to acheive the full width
+ * It uses a content area to achieve the full width
  */
 .HomePageFullWidthArea .ContentItemContainer .panel:not(.panel-border),
 .HomePageFullWidthArea .ContentItemContainer div .panel:not(.panel-border) {
@@ -4501,8 +4653,9 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   padding: 0;
 }
 
-/* !Mobile Hero Area
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*             !Mobile Hero Area => JUMBOTRON                   */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 .HeroArea {
   height: 350px;
   width: 100%;
@@ -4537,10 +4690,10 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   float: right;
 }
 
-/* !Responsive Hero Content
-   ========================================================================== */
-/* This header is used in the out-of-the-box Member, Member Responsive
- * and Annual Conference sample sites */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*             !Responsive Hero Content => JUMBOTRON            */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/* This header is used in the out-of-the-box Member, Member Responsive and Annual Conference sample sites */
 /* Note: this is actually a static hero image and text.
  * For the Slideshow iPart styles see Carousel.
  */
@@ -4620,8 +4773,9 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   text-align: right;
 }
 
-/* !Responsive "Jumbotron"
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*             !Responsive "Jumbotron" => JUMBOTRON             */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 /* This header is used in the out-of-the-box Donor sample site */
 .jumbotron .jumbotron-content {
   max-height: 100%;
@@ -4781,8 +4935,9 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   color: #fff;
 }
 
-/* !Carousel
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*                   !Carousel => JUMBOTRON                     */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 /* Used by the Slideshow iPart */
 .carousel h1,
 .carousel h2,
@@ -4957,7 +5112,9 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   line-height: 28px;
 }
 
-/* Internal page carousel */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*            !Internal page carousel => JUMBOTRON              */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 .InternalHeaderArea {
   background-image: url(images/banner2.png);
   background-size: contain;
@@ -5044,10 +5201,13 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   margin-top: 159px;
 }
 
-/* ==========================================================================
-   COMMUNITIES
-   ========================================================================== */
-/* Community left nav */
+/* !SASS: shared/modules/communities ===================================+================ */
+/*****************************************************/
+/*                 !COMMUNITIES                      */
+/*****************************************************/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/*     !Common Left Nav => COMMUNITIES             */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 .CommunityLinksBlock {
   display: none;
 }
@@ -5066,13 +5226,17 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   text-decoration: none;
 }
 
-/* Community breadcrumb */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/*     !Community Breadcrumbs => COMMUNITIES       */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 .BreadCrumbCurrent {
   font-size: 100%;
   font-weight: bold;
 }
 
-/*** Communities common elements ***/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/*  !Communities Common Elements => COMMUNITIES    */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 .CommunityItemActionLinks a:hover {
   background-color: #004851;
 }
@@ -5093,14 +5257,17 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   background: #f2f2f2;
 }
 
-/* For adding comments */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/*     !Community Comments => COMMUNITIES          */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 .CommunityWikiReplyForm {
   background: #f2f2f2;
   box-shadow: 1px 1px 28px 3px #e3e3e3;
 }
 
+/* !SASS: shared/donor_site =================================+++++++++++++=============== */
 /*****************************************************/
-/*            Donor Sample Site Styles               */
+/*            !Donor Sample Site Styles              */
 /*****************************************************/
 /* These styles are used in the Donor sample site  */
 .DonorBannerHome {
@@ -5158,14 +5325,16 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   margin: 20px;
 }
 
-.DonorBannerTextBackgroundHome h1, .DonorBannerTextBackgroundInterior h1 {
+.DonorBannerTextBackgroundHome h1,
+.DonorBannerTextBackgroundInterior h1 {
   color: #fff;
   font-size: 280%;
   background: none;
   margin: 0.4em;
 }
 
-.DonorBannerTextBackgroundHome p, .DonorBannerTextBackgroundInterior p {
+.DonorBannerTextBackgroundHome p,
+.DonorBannerTextBackgroundInterior p {
   color: #fff;
   font-size: 120%;
   line-height: 1.6em;
@@ -5173,23 +5342,32 @@ html .RadTabStrip.RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected, html .RadTabSt
   padding: 0.4em;
 }
 
-/**** End Donor Sample Site Styles ****/
-/* ==========================================================================
-   MISCELLANEOUS
-   ========================================================================== */
+/* !SASS: NaturalHeritageSites/misc ===================================================== */
+/*****************************************************/
+/*            !MISCELLANEOUS                         */
+/*****************************************************/
 /* Classes that can be used for iParts and HTML content */
-/* Titles */
-h1.BigHeader, .h1.BigHeader {
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*              !Titles => MISCELLANEOUS                    */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+h1.BigHeader,
+.h1.BigHeader {
   background-color: transparent;
   color: #333;
 }
 
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*        !ContentBlockPrimary => MISCELLANEOUS             */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 /* Use class ContentBlockPrimary to give a block of content extra emphasis */
 .ContentBlockPrimary {
   padding: 20px;
   background-color: #f0edf2;
 }
 
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*        !Secondary Column => MISCELLANEOUS                */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 /* Make the titles on secondary columns smaller - used on the Member home page */
 .SecondaryColumn h2,
 .SecondaryColumn .PanelTitle,
@@ -5229,6 +5407,9 @@ h1.BigHeader, .h1.BigHeader {
   width: 100%;
 }
 
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*        !ContentBlockPictureArea => MISCELLANEOUS         */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 /* Use class ContentBlockPictureArea to surround an image within a ContentBlockPrimary area */
 .ContentBlockPictureArea,
 .ContentBlockLeft {
@@ -5271,6 +5452,9 @@ h1.BigHeader, .h1.BigHeader {
   margin-bottom: 0;
 }
 
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*        !Block Tagged List => MISCELLANEOUS               */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 /* Tagged list format, styled similar to BlockList */
 .BlockTLItem {
   display: block;
@@ -5289,12 +5473,18 @@ h1.BigHeader, .h1.BigHeader {
   font-weight: normal;
 }
 
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*          !Publish Date => MISCELLANEOUS                  */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 /* PublishDate and ReadMoreLink are used in the Block tagged list format */
 .PublishDate {
   font-size: 85%;
   font-style: italic;
 }
 
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*             !Quote => MISCELLANEOUS                      */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 /* Use on the blockquote element for a styled quote */
 .Quote {
   margin: 1.5em 0.7em 1.5em 0;
@@ -5342,6 +5532,9 @@ h1.BigHeader, .h1.BigHeader {
   border-left-color: #004851;
 }
 
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*      !CalloutPanelField1 => MISCELLANEOUS                */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 /* CalloutPanelField1 can be used as a wrapper for PanelFields, or on the PanelField directly, to callout the first label. */
 .CalloutPanelField1 .PanelField label:first-child,
 .CalloutPanelField1.PanelField label:first-child,
@@ -5376,6 +5569,9 @@ h1.BigHeader, .h1.BigHeader {
   width: 0;
 }
 
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*             !TotalBox => MISCELLANEOUS                   */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 /* TotalBox can be used as a wrapper for PanelFields, or on the PanelField directly, to visually distinguish a calculated total. */
 .TotalBox {
   border-color: #ddd;
@@ -5388,6 +5584,9 @@ h1.BigHeader, .h1.BigHeader {
   color: #fff;
 }
 
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*             !CCOGrayBg => MISCELLANEOUS                  */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 /* Add zone style "CCOGrayBg" to give CCO content a gray background */
 .CCOGrayBg .ContentWizardDisplay {
   background-color: #f0edf2;
@@ -5397,11 +5596,19 @@ h1.BigHeader, .h1.BigHeader {
   float: none;
 }
 
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*             !TitleBarNoBorder => MISCELLANEOUS           */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 /* Add zone style "TitleBarNoBorder" to remove the bottom border from the title bar caption */
-.TitleBarNoBorder .TitleBarCaption, .TitleBarNoBorder .PanelHead.Distinguish, .TitleBarNoBorder .panel-heading.Distinguish {
+.TitleBarNoBorder .TitleBarCaption,
+.TitleBarNoBorder .PanelHead.Distinguish,
+.TitleBarNoBorder .panel-heading.Distinguish {
   border-bottom: none;
 }
 
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*             !FeatureText => MISCELLANEOUS                */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 /* Use the FeatureText class to make a block of text larger for emphasis */
 .FeatureText {
   color: #506576;
@@ -5409,15 +5616,25 @@ h1.BigHeader, .h1.BigHeader {
   line-height: 170%;
 }
 
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*             !CenterText => MISCELLANEOUS                 */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 /* Use the CenterText class to center the text within the iPart */
 .CenterText {
   text-align: center;
 }
 
-.FullWidthButtons .btn, .FullWidthButtons .TextButton {
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*             !FullWidthButtons => MISCELLANEOUS           */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+.FullWidthButtons .btn,
+.FullWidthButtons .TextButton {
   display: block;
 }
 
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*             !FeatureActionLink => MISCELLANEOUS          */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 /* Use class FeatureActionLink on a link to call attention to it */
 a.FeatureActionLink {
   transition: all 0.2s ease 0;
@@ -5440,13 +5657,15 @@ a.FeatureActionLink:hover {
   text-decoration: underline;
 }
 
-/* Spotlight
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*             !Spotlight => MISCELLANEOUS                  */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 /* Featured items display */
 .Spotlight {
   text-align: center;
 }
-.Spotlight img, .Spotlight h4 {
+.Spotlight img,
+.Spotlight h4 {
   text-align: center;
 }
 @media (min-width: 768px) {
@@ -5457,7 +5676,8 @@ a.FeatureActionLink:hover {
 .no-mqs .Spotlight .ImageWrapper {
   height: 160px;
 }
-.Spotlight .TextButton, .Spotlight .btn {
+.Spotlight .TextButton,
+.Spotlight .btn {
   margin-top: 1em;
 }
 .Spotlight p {
@@ -5482,16 +5702,18 @@ a.FeatureActionLink:hover {
 .SpotlightRow:after {
   clear: both;
 }
-/* Feature Header
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*           !Feature Header => MISCELLANEOUS               */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .feature-header {
   color: #f0d283;
   border-bottom: none;
   margin-bottom: 0.8em;
 }
 
-/* Feature Link
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*             !Feature Link => MISCELLANEOUS               */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .feature-link-with-image {
   margin-bottom: 1em;
 }
@@ -5519,7 +5741,11 @@ a.FeatureActionLink:hover {
 .no-mqs .feature-link-with-image .feature-link-text {
   width: 45%;
 }
-.feature-link-with-image .feature-link-text h1, .feature-link-with-image .feature-link-text h2, .feature-link-with-image .feature-link-text h3, .feature-link-with-image .feature-link-text h4, .feature-link-with-image .feature-link-text h5 {
+.feature-link-with-image .feature-link-text h1,
+.feature-link-with-image .feature-link-text h2,
+.feature-link-with-image .feature-link-text h3,
+.feature-link-with-image .feature-link-text h4,
+.feature-link-with-image .feature-link-text h5 {
   margin-top: 0;
 }
 .feature-link-with-image.feature-link-1 .feature-link-text {
@@ -5539,14 +5765,16 @@ a.FeatureActionLink:hover {
   background-color: rgba(26, 26, 26, 0.75);
 }
 
-/* Feature Text Inline
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*        !Feature Text Inline => MISCELLANEOUS             */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .feature-text-inline {
   color: #f0d283;
 }
 
-/* Header Links
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*           !Header Links  => MISCELLANEOUS                */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .header-link {
   border-bottom: none;
 }
@@ -5560,8 +5788,9 @@ a.FeatureActionLink:hover {
   color: #499a89;
 }
 
-/* Image Banners
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*          !Image Banners  => MISCELLANEOUS                */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 /* use these classes to get a particular background image on an element */
 .bg-img-conference-tall {
   background-color: #081337;
@@ -5626,7 +5855,8 @@ a.FeatureActionLink:hover {
   background-position: center 88% !important;
 }
 
-.banner-tall, .banner-short {
+.banner-tall,
+.banner-short {
   text-decoration: none;
   display: block;
   background-repeat: no-repeat;
@@ -5634,7 +5864,14 @@ a.FeatureActionLink:hover {
   position: relative;
   border-radius: 0;
 }
-.banner-tall, .banner-tall:visited, .banner-tall:active, .banner-tall:hover, .banner-tall:focus, .banner-tall h2, .banner-short, .banner-short:visited, .banner-short:active, .banner-short:hover, .banner-short:focus, .banner-short h2 {
+.banner-tall, .banner-tall:visited, .banner-tall:active, .banner-tall:hover, .banner-tall:focus,
+.banner-tall h2,
+.banner-short,
+.banner-short:visited,
+.banner-short:active,
+.banner-short:hover,
+.banner-short:focus,
+.banner-short h2 {
   color: #fff;
 }
 
@@ -5666,14 +5903,16 @@ a.FeatureActionLink:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-/* Image Copyright Statements
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*      !Image Copyright Statements => MISCELLANEOUS        */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .img-copyright {
   font-size: 70%;
 }
 
-/* Donation page enhancements
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*      !Donation page enhancements => MISCELLANEOUS        */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 /* To enhance the display of a donation page, apply the donate-page class to the Donation Creator iPart's CSS Class */
 .donate-page .GiftItemName {
   color: #f0d283;
@@ -5692,13 +5931,16 @@ a.FeatureActionLink:hover {
 }
 
 /* Fix product name overlapping other content */
-ul.RelatedItemsHorizontal li, .RelatedItemsHorizontal ul.rrItemsList li {
+ul.RelatedItemsHorizontal li,
+.RelatedItemsHorizontal ul.rrItemsList li {
   height: auto;
 }
 
-/* ==========================================================================
-   DASHBOARDS
-   ========================================================================== */
+/* !SASS: shared/panel_callouts ========================================================= */
+/* !SASS: shared/dashboards ==========================================++++=============== */
+/*****************************************************/
+/*            !Dashboards                            */
+/*****************************************************/
 /* Zone or iPart style for the staff dashboards for consistent styling */
 .ProgressTracker_Dashboard .panel-body,
 .ProgressTracker_Dashboard_Overview .panel-body {
@@ -5722,7 +5964,8 @@ ul.RelatedItemsHorizontal li, .RelatedItemsHorizontal ul.rrItemsList li {
   margin: 0;
   padding: 0;
 }
-.ProgressTracker2 ul, .ProgressTracker2 li,
+.ProgressTracker2 ul,
+.ProgressTracker2 li,
 .ProgressTracker_Dashboard ul,
 .ProgressTracker_Dashboard li,
 .ProgressTracker_Dashboard_Overview ul,
@@ -5812,6 +6055,10 @@ ul.RelatedItemsHorizontal li, .RelatedItemsHorizontal ul.rrItemsList li {
   border-bottom-color: #ddd;
 }
 
+/* !SASS: shared/svg ==================================================================== */
+/*****************************************************/
+/*            !SVG                                   */
+/*****************************************************/
 .smile {
   border-bottom: 5px solid transparent;
 }
@@ -5915,6 +6162,11 @@ ul.RelatedItemsHorizontal li, .RelatedItemsHorizontal ul.rrItemsList li {
   fill: #004851;
 }
 
+/*****************************************************/
+/* !End SVG */
+/*==================================================================== */
+/*            !Media Queries                                           */
+/*==================================================================== */
 @media (min-width: 768px) {
   .header-containger .carousel-caption {
     top: 170px;
@@ -6000,8 +6252,9 @@ ul.RelatedItemsHorizontal li, .RelatedItemsHorizontal ul.rrItemsList li {
   z-index: 1000;
 }
 
-/* !Expander
-************************* */
+/*****************************************************/
+/*            !Expander                              */
+/*****************************************************/
 .RadWindow .expander-container .expander-body {
   display: block;
 }
@@ -6044,8 +6297,9 @@ ul.RelatedItemsHorizontal li, .RelatedItemsHorizontal ul.rrItemsList li {
   width: 100%;
 }
 
-/* !FullWidthFt
-************************************** */
+/*****************************************************/
+/*            !FullWidthFt                           */
+/*****************************************************/
 .FullWidthFt {
   background-color: #004851;
   padding: 30px 0 30px 0;
@@ -6067,7 +6321,9 @@ ul.RelatedItemsHorizontal li, .RelatedItemsHorizontal ul.rrItemsList li {
   float: right;
 }
 
-/* !Colors */
+/*****************************************************/
+/*            !Colors                                */
+/*****************************************************/
 .dkgrey {
   color: #333;
 }
@@ -6127,8 +6383,9 @@ h1.mobileShow {
     display: block;
   }
 }
-/* !Alt background colors
-   ========================================================================== */
+/*****************************************************/
+/*            !Alt background colors                 */
+/*****************************************************/
 .AltBgColor1 {
   background-color: #fff;
   padding: 10px;
@@ -6384,7 +6641,6 @@ Foundation (purple) – Mountain #330072
   border-color: #aca199;
 }
 
-/* Pie Graph – Sea Foam, Evergreen, Rain, Sea, Leaf, Slate */
 .ListSearchPrompt {
   padding: 4px 0px;
   color: #ffffff;

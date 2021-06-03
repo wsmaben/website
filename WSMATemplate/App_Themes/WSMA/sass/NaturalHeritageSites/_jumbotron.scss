@@ -1,12 +1,12 @@
-/* ==========================================================================
-   JUMBOTRON
-   ========================================================================== */
-/* Home page full width banners */
-
-/* Home page full width area
-   ========================================================================== */
+/*****************************************************/
+/*            !JUMBOTRON                             */
+/*****************************************************/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*      !Home page full width banners => JUMBOTRON              */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/* !Home page full width area ************** */
 /* This is for the full width area of the Cities and Cities_Responsive home page.
- * It uses a content area to acheive the full width
+ * It uses a content area to achieve the full width
  */
 .HomePageFullWidthArea .ContentItemContainer .panel,
 .HomePageFullWidthArea .ContentItemContainer div .panel {
@@ -20,9 +20,9 @@
     padding: 0;
   }
 }
-
-/* !Mobile Hero Area
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*             !Mobile Hero Area => JUMBOTRON                   */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 .HeroArea {
   height: 350px;
   width: 100%;
@@ -58,10 +58,10 @@
   }
 }
 
-/* !Responsive Hero Content
-   ========================================================================== */
-/* This header is used in the out-of-the-box Member, Member Responsive
- * and Annual Conference sample sites */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*             !Responsive Hero Content => JUMBOTRON            */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/* This header is used in the out-of-the-box Member, Member Responsive and Annual Conference sample sites */
 /* Note: this is actually a static hero image and text.
  * For the Slideshow iPart styles see Carousel.
  */
@@ -139,8 +139,9 @@
   }
 }
 
-/* !Responsive "Jumbotron"
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*             !Responsive "Jumbotron" => JUMBOTRON             */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 /* This header is used in the out-of-the-box Donor sample site */
 
 .jumbotron {
@@ -265,8 +266,9 @@
   }
 }
 
-/* !Carousel
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*                   !Carousel => JUMBOTRON                     */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 /* Used by the Slideshow iPart */
 
 .carousel {
@@ -404,8 +406,9 @@
     line-height: 28px;
   }
 }
-
-/* Internal page carousel */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*            !Internal page carousel => JUMBOTRON              */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 .InternalHeaderArea {
   //background: $navbar-default-bg;
   background-image: url(images/banner2.png);

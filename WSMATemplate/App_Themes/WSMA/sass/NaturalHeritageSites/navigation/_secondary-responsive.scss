@@ -1,141 +1,148 @@
-/* ==========================================================================
-   SECONDARY NAVIGATION
-   ========================================================================== */
+/*****************************************************/
+/*            !Secondary Navigation                  */
+/*****************************************************/
 
 /**** Telerik overrides ****/
 .RadTreeView.RadTreeView_#{$theme-name} {
-    white-space: normal;
-    padding-bottom: 30px;
-    font-size: 14px!important;
-    color: $color-neutral;
+  white-space: normal;
+  padding-bottom: 30px;
+  font-size: 14px !important;
+  color: $color-neutral;
 
+  .rtLI,
+  .rtTop,
+  .rtMid,
+  .rtBot {
+    padding: 0;
+  }
 
-    .rtLI,
-    .rtTop,
-    .rtMid,
-    .rtBot { padding: 0; }
-    
+  .rtIn {
+    //font-weight:bold !important;
+    display: block;
+  }
 
-
-    .rtIn {
-        //font-weight:bold !important;
-        display:block;
+  .rtTop,
+  .rtMid,
+  .rtBot {
+    border-left: 5px solid transparent;
+    .rtSelected {
+      border-left: 5px solid #8cdbd0;
     }
-
-    .rtTop,
-    .rtMid,
-    .rtBot {
-        border-left: 5px solid transparent;
-        .rtSelected {
-            border-left: 5px solid #8cdbd0;
-        }
-        &:hover, &:active, &:focus {
-            border-left: 5px solid #8cdbd0;
-            background: rgba(255,255,255,0.3)
-        }
+    &:hover,
+    &:active,
+    &:focus {
+      border-left: 5px solid #8cdbd0;
+      background: rgba(255, 255, 255, 0.3);
     }
+  }
 
-    .rtIn,
-    .rtHover .rtIn,
-    .rtSelected .rtIn {
-        padding: $nav-link-padding-vertical $nav-link-padding-horizontal;
-        border: none;
+  .rtIn,
+  .rtHover .rtIn,
+  .rtSelected .rtIn {
+    padding: $nav-link-padding-vertical $nav-link-padding-horizontal;
+    border: none;
+  }
+
+  .rtSelected > a.rtIn,
+  .child-is-selected.rtIn {
+    //$nav-link-active-bg;
+    color: $nav-link-active-color;
+    //border-left:5px solid #8cdbd0;
+    //background-color: rgba(255,255,255,0.3);
+    border-bottom: 1px solid white;
+  }
+
+  .rtSelected > a.rtIn {
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $nav-link-active-bg;
     }
+  }
 
-    .rtSelected > a.rtIn,
-    .child-is-selected.rtIn { 
-        //$nav-link-active-bg;
-        color: $nav-link-active-color;
-        //border-left:5px solid #8cdbd0;
-        //background-color: rgba(255,255,255,0.3);
-        border-bottom: 1px solid white;
+  .rtUL {
+    width: 100%;
+  }
+
+  .rtUL .rtUL {
+    padding-left: $nav-link-padding-horizontal;
+  }
+
+  > .rtUL > .rtLI {
+    /* add a separator border to the first-level sub-nav items only */
+    //border-top: 1px $border-style $border-color;
+    //&:first-child { border-top: none; }
+
+    .rtLI .rtIn {
+      /* children should have less padding */
+      padding: ($nav-link-padding-vertical / 2) $nav-link-padding-horizontal;
     }
-
-    .rtSelected > a.rtIn {
-        &:hover, &:active, &:focus { background-color: $nav-link-active-bg; }
-    }
-
-    .rtUL {
-        width: 100%;
-    }
-
-    .rtUL .rtUL {
-        padding-left: $nav-link-padding-horizontal;
-    }
-
-    > .rtUL > .rtLI {
-        /* add a separator border to the first-level sub-nav items only */
-        //border-top: 1px $border-style $border-color;
-        //&:first-child { border-top: none; }
-
-        .rtLI .rtIn {
-            /* children should have less padding */
-            padding: ($nav-link-padding-vertical / 2) $nav-link-padding-horizontal;
-        }
-        > .rtUL { 
-            /* this makes the children section padding even */
-            padding-right: $nav-link-padding-horizontal;
-            padding-bottom: $nav-link-padding-vertical;
-        }
-    }
-
     > .rtUL {
-        /* add a boundary for hovered navs */
-        margin: 0 1px 1px 1px;
-        //width:100%;
-        //padding-right: 25px;
+      /* this makes the children section padding even */
+      padding-right: $nav-link-padding-horizontal;
+      padding-bottom: $nav-link-padding-vertical;
+    }
+  }
+
+  > .rtUL {
+    /* add a boundary for hovered navs */
+    margin: 0 1px 1px 1px;
+    //width:100%;
+    //padding-right: 25px;
+  }
+
+  .rtSp,
+  .rtPlus,
+  .rtMinus {
+    /* we don't want to display the expand/collapse icons in this theme */
+    display: none;
+  }
+
+  a.rtIn {
+    color: $color-neutral;
+    //@include transition(all $transition-speed ease-in);
+    margin: 0 20px 0 15px;
+    border-bottom: 1px solid white;
+    //border-left: 5px solid transparent;
+    &:hover,
+    &:active,
+    &:focus {
+      //    border-left:5px solid #8cdbd0;
+      //    background-color: rgba(255,255,255,0.3);
+      border-bottom: 1px solid white;
+      color: $black;
     }
 
-    .rtSp,
-    .rtPlus,
-    .rtMinus { 
-        /* we don't want to display the expand/collapse icons in this theme */
-        display: none;
-    }
-
-    a.rtIn { 
-        color: $color-neutral; 
-        //@include transition(all $transition-speed ease-in);
-        margin: 0 20px 0 15px ;
-        border-bottom: 1px solid white;
-        //border-left: 5px solid transparent;
-        &:hover, &:active, &:focus {
-        //    border-left:5px solid #8cdbd0;
-        //    background-color: rgba(255,255,255,0.3);
-            border-bottom: 1px solid white;
-            color:$black;
-        }
-
-        // &:hover, &:focus, &:active {
-        //     background-color: $nav-link-hover-bg;
-        // }
-    }
+    // &:hover, &:focus, &:active {
+    //     background-color: $nav-link-hover-bg;
+    // }
+  }
 }
 
-.nav-secondary  {
+.nav-secondary {
+  background-color: $nav-secondary-bg;
+  margin-bottom: 1em;
+
+  .sub-nav-head {
     background-color: $nav-secondary-bg;
-    margin-bottom: 1em;  
+    color: $nav-secondary-header-color;
+    font-weight: 400;
+    font-size: 155%;
+    padding: 25px 0 10px 0;
+    margin: 0 20px;
+    border-bottom: 3px solid white;
+    line-height: 25px;
+    //text-transform:capitalize;
+  }
 
-    .sub-nav-head {
-        background-color: $nav-secondary-bg;
-        color: $nav-secondary-header-color;
-        font-weight: 400;
-        font-size: 155%;
-        padding: 25px 0 10px 0;
-        margin: 0 20px;
-        border-bottom: 3px solid white;
-        line-height: 25px;
-        //text-transform:capitalize;
+  .SubNavigationSeparator {
+    border: none;
+    height: 4px;
+    background-color: $nav-secondar-divider-bg;
+
+    .rtIn {
+      padding: 0;
+      color: $nav-secondary-link-color;
     }
-
-    .SubNavigationSeparator {
-        border: none;
-        height: 4px;
-        background-color: $nav-secondar-divider-bg;
-
-        .rtIn { 
-            padding: 0;
-            color:$nav-secondary-link-color;
-        }
-    }
+  }
 }

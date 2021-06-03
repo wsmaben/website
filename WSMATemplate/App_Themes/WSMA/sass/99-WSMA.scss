@@ -1,57 +1,90 @@
-/* !Responsive NaturalHeritage theme */
-
-/* !Core variables and mixins */
+// !Responsive NaturalHeritage theme
+// !CORE VARIABLES AND MIXINS
+/* !SASS: breakpoint ==================================================================== */
 @import 'breakpoint'; // Sass plugin used to generate responsive media queries
+/* !SASS: mixins ======================================================================== */
 @import 'mixins';
 
+/* !SASS: NaturalHeritageSites/variables/variables_WSMA ================================= */
 @import 'NaturalHeritageSites/variables/variables_WSMA';
-/* import base variables after theme variables so calculations of dependent variables
- are based on the theme's variable settings */
+// import base variables after theme variables so calculations of dependent variables
+// are based on the theme's variable settings
+/* !SASS: variables ===================================================================== */
 @import 'variables';
+/* !SASS: breakpoint-setup ============================================================== */
 @import 'breakpoint-setup';
 
-/* !Master page layout */
+// !MASTER PAGE LAYOUT
+/* !SASS: NaturalHeritageSites/layouts/_naturalHeritageSites-mp.scss ===================== */
 @import 'NaturalHeritageSites/layouts/_naturalHeritageSites-mp.scss';
 
-/* !Skin-specific styles */
+// !SKIN-SPECIFIC STYLES
+/* !SASS: NaturalHeritageSites/_WSMA ===================================================== */
 @import 'NaturalHeritageSites/_WSMA';
 
-/* !Typography and other basic setup */
+// !TYPOGRAPHY AND OTHER BASIC SETUP
+/* !SASS: shared/basics ================================================================== */
 @import 'shared/basics';
 
-/* !Master page elements */
+// !MASTER PAGE ELEMENTS
+/* !SASS: shared/masterpage_styles ======================================================= */
 @import 'shared/masterpage_styles';
+/* !SASS: shared/modules/footer ========================================================== */
 @import 'shared/modules/footer';
 
-/* !Navigation controls */
+// !NAVIGATION CONTROLS
+/* !SASS: NaturalHeritageSites/navigation/primary-responsive ============================ */
 @import 'NaturalHeritageSites/navigation/primary-responsive';
+/* !SASS: NaturalHeritageSites/navigation/secondary-responsive ========================== */
 @import 'NaturalHeritageSites/navigation/secondary-responsive';
+/* !SASS: NaturalHeritageSites/navigation/auxiliary-responsive ========================== */
 @import 'NaturalHeritageSites/navigation/auxiliary-responsive';
 //@import "NaturalHeritageSites/navigation/navs"; // This isn't part of the template. It breaks things. Don't know why...
 
-/* !Other components */
+// !OTHER COMPONENTS
+/* !SASS: shared/icon_sprite ============================================================= */
 @import 'shared/icon_sprite';
+/* !SASS: shared/forms ====================================================================*/
 @import 'shared/forms';
+/* !SASS: shared/buttons_flat ============================================================ */
 @import 'shared/buttons_flat';
+/* !SASS: shared/modules/other-iParts ==================================================== */
 @import 'shared/modules/other-iParts';
+/* !SASS: shared/modules/search ========================================================== */
 @import 'shared/modules/search';
+/* !SASS: shared/modules/events-products ================================================= */
 @import 'shared/modules/events-products';
+/* !SASS: shared/modules/progress-tracker ================================================ */
 @import 'shared/modules/progress-tracker';
+/* !SASS: shared/modules/query-menu ====================================================== */
 @import 'shared/modules/query-menu';
+/* !SASS: shared/modules/cart-charges =================================================== */
 @import 'shared/modules/cart-charges';
+/* !SASS: NaturalHeritageSites/telerik_overrides ======================================== */
 @import 'NaturalHeritageSites/telerik_overrides';
+/* !SASS: NaturalHeritageSites/jumbotron ================================================ */
 @import 'NaturalHeritageSites/jumbotron';
+/* !SASS: shared/modules/communities ===================================+================ */
 @import 'shared/modules/communities';
+/* !SASS: shared/donor_site =================================+++++++++++++=============== */
 @import 'shared/donor_site';
+/* !SASS: NaturalHeritageSites/misc ===================================================== */
 @import 'NaturalHeritageSites/misc';
+/* !SASS: shared/panel_callouts ========================================================= */
 @import 'shared/panel_callouts';
+/* !SASS: shared/dashboards ==========================================++++=============== */
 @import 'shared/dashboards';
+/* !SASS: shared/svg ==================================================================== */
 @import 'shared/svg';
 
 // #masterHeaderImage {
 //     margin-top: 32px;
 //     //margin-bottom: 10px;
 // }
+
+/*==================================================================== */
+/*            !Media Queries                                           */
+/*==================================================================== */
 
 .header-containger {
   @include respond-to('grid large') {
@@ -102,8 +135,9 @@
     }
   }
 }
-/* !Expander
-************************* */
+/*****************************************************/
+/*            !Expander                              */
+/*****************************************************/
 
 .RadWindow {
   .expander-container {
@@ -157,8 +191,9 @@
   }
 }
 
-/* !FullWidthFt
-************************************** */
+/*****************************************************/
+/*            !FullWidthFt                           */
+/*****************************************************/
 
 .FullWidthFt {
   background-color: $color-wsma-evergreen;
@@ -185,7 +220,9 @@
   }
 }
 
-/* !Colors */
+/*****************************************************/
+/*            !Colors                                */
+/*****************************************************/
 
 .dkgrey {
   color: $color-wsma-dkgrey;
@@ -196,10 +233,6 @@
 .ltgrey {
   color: $color-wsma-ltgrey;
 }
-//.red {color:$color-wsma-red;}
-//.forest {color:$color-wsma-forest;}
-//.teal {color:$color-wsma-teal;}
-//.ltteal {color:$color-wsma-ltteal;}
 .seafoam {
   color: $color-wsma-seafoam;
 }
@@ -221,10 +254,7 @@
 .bg-ltgrey {
   background-color: $color-wsma-ltgrey;
 }
-//.bg-red {background-color:$color-wsma-red;color:#fff;}
-//.bg-forest {background-color:$color-wsma-forest;color:#fff;}
-//.bg-teal {background-color:$color-wsma-teal;}
-//.bg-ltteal {background-color:$color-wsma-ltteal;}
+
 .bg-seafoam {
   background-color: $color-wsma-seafoam;
 }
@@ -234,18 +264,6 @@
 .bg-evergreen {
   background-color: $color-wsma-evergreen;
 }
-
-// $color-wsma-dkgrey:         #36424a !default; //From style guide
-// $color-wsma-mdgrey:         #6c6f70 !default; //From style guide
-// $color-wsma-ltgrey:         #d0cfcb !default; //From style guide
-// //$color-wsma-red:            #a22a2e !default; This is the one they used in their design files
-// $color-wsma-red:			#a62d38 !default; //From style guide
-// $color-wsma-forest:         #00837e !default; //From style guide
-// $color-wsma-teal:           #4bc8b6 !default;
-// $color-wsma-ltteal:			#ecf9f7 !default;
-// $color-wsma-seafoam:        #9fe6d9 !default; //From style guide
-// $color-wsma-ltseafoam:		#C5F0E8 !default;
-// $color-wsma-green:          #8fd400 !default; //From style guide
 
 //**************************************
 // TEST
@@ -295,8 +313,9 @@ h1.mobileShow {
   }
 }
 
-/* !Alt background colors
-   ========================================================================== */
+/*****************************************************/
+/*            !Alt background colors                 */
+/*****************************************************/
 .AltBgColor1 {
   background-color: #fff;
   padding: 10px;
@@ -536,7 +555,7 @@ Foundation (purple) – Mountain #330072
   border-color: #aca199;
 }
 
-/* Pie Graph – Sea Foam, Evergreen, Rain, Sea, Leaf, Slate */
+// Pie Graph – Sea Foam, Evergreen, Rain, Sea, Leaf, Slate
 
 // Front page search box bottom text "Please enter your search criteria to the view results."
 .ListSearchPrompt {

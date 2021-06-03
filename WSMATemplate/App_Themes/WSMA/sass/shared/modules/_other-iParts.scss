@@ -1,51 +1,58 @@
-﻿/* ==========================================================================
-   CONTENT ITEMS
-   ========================================================================== */
+﻿/*****************************************************/
+/*            !CONTENT ITEMS                        */
+/*****************************************************/
 
-/* Open Invoices
-   ========================================================================== */
-
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*           !Open Invoices  => CONTENT ITEMS               */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .OpenInvoicesTotals {
-    .SelectedTotal .PanelFieldValue {
-        color: $color-callout;
-    }
+  .SelectedTotal .PanelFieldValue {
+    color: $color-callout;
+  }
 }
 
-/* Group List Editor
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*           !Group List Editor => CONTENT ITEMS            */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .RadTreeView.GLE {
-    .rtLI { margin-bottom: .3em; }
-    .rtIn, .rtHover .rtIn, .rtSelected .rtIn { 
-        background-color: transparent; 
-        border: none;
-        color: $link-color;
+  .rtLI {
+    margin-bottom: 0.3em;
+  }
+  .rtIn,
+  .rtHover .rtIn,
+  .rtSelected .rtIn {
+    background-color: transparent;
+    border: none;
+    color: $link-color;
+  }
+  a,
+  span[onclick] {
+    &:hover,
+    &:focus {
+      background-color: $selected-highlight;
+      color: #fff;
     }
-    a, span[onclick]
-    {
-        &:hover, 
-        &:focus {
-            background-color: $selected-highlight;
-            color: #fff;
-        }
+  }
+  @if ($border-radius-base > 0) {
+    .rtImg {
+      border-radius: $border-radius-base;
     }
-    @if ($border-radius-base > 0) {
-        .rtImg {
-            border-radius: $border-radius-base;
-        }
-    }
+  }
 }
 
-/* Communiaction Preferences
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+/*    !Communication Preferences  => CONTENT ITEMS          */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
 .CommunicationPreferencesSection {
-    background-color: $color-alt-bg;
+  background-color: $color-alt-bg;
 }
 
 @if ($btn-style == 'pushable') {
-    /* Big Button Panel
-       ========================================================================== */
-    .HorizontalButtons a.btn {
-        /*give the drop-shadow some room to breathe */
-        margin-bottom: .6em;
-    }
+  /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+  /*           !Big Button Panel  => CONTENT ITEMS            */
+  /*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+*/
+  .HorizontalButtons a.btn {
+    /*give the drop-shadow some room to breathe */
+    margin-bottom: 0.6em;
+  }
 }

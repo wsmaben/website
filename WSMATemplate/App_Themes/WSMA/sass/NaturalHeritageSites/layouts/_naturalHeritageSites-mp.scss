@@ -1,15 +1,15 @@
-/* ==========================================================================
-   MASTER PAGE LAYOUT
-   ========================================================================== */
+/*****************************************************/
+/*            !MASTER PAGE LAYOUT                    */
+/*****************************************************/
 
-// Mixins
+// !Mixins
 // -------------------------
 @mixin IconBackground($XPosition, $YPosition, $bgColor: transparent) {
   background: $bgColor url($theme-icons-sprite-path) $XPosition $YPosition
     no-repeat !important;
 }
 
-// Functions
+// !Functions
 // -------------------------
 @function GetBestContextualTextColor($color) {
   @if (lightness($color) > 50) {
@@ -19,7 +19,7 @@
   }
 }
 
-/* Class used to contain the various pieces of the master page */
+/* !Class used to contain the various pieces of the master page */
 .container,
 .header-container,
 .SliderPage1,
@@ -44,7 +44,7 @@
   @include clearfix();
 }
 
-/* handle secondary column layout */
+/* !Handle secondary column layout */
 .has-secondary-col {
   @include respond-to('desktops and up') {
     .col-primary {
@@ -80,8 +80,9 @@
   }
 }
 
-/* Header
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/*            !Header => MASTER PAGE LAYOUT          */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 /**
  * The following declarations are required to reposition the search bar and
  * Sign In/Out link at different sizes via appendAround
@@ -190,10 +191,9 @@
     display: none !important;
   }
 }
-
-/* Main
-   ========================================================================== */
-
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/*            !Main => MASTER PAGE LAYOUT            */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 #masterContentArea {
   //margin-top: 4px;
   @include respond-to('grid small') {
@@ -274,7 +274,9 @@
   }
 }
 
-/***** Proxy Panel Styling *****/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/*    !Proxy Panel Styling => MASTER PAGE LAYOUT     */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 /* This applies to the on behalf of (proxy) area */
 .obo-container {
   float: right;
@@ -328,8 +330,9 @@
   }
 }
 
-/* Sticky Footer
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/*        !Sticky Footer  => MASTER PAGE LAYOUT      */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 /**
  * Responsive sticky footer.
  * See http://www.joshrcook.com/a-responsive-sticky-footer/

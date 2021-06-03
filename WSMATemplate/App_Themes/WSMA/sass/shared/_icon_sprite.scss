@@ -1,143 +1,243 @@
-﻿@if ($theme-name != 'Orion'){
-    /* ==========================================================================
-       ON BEHALF OF ICONS
-       ========================================================================== */
-    $iconSizeSmall: 20px;
-    $spriteGridSizeSmall: -35px;
-    .obo-action {
-        background-image: url('images/OboSprite.png');
-    }
-    .obo-action.obo-change-contact {
-        @include sprite-bg($spriteGridSizeSmall, 0)
-    }
-    .obo-action.obo-clear {
-        @include sprite-bg($spriteGridSizeSmall, 1);
-    }
-}
+﻿/*****************************************************/
+/*                    !ICONS                         */
+/*****************************************************/
 
-/* ==========================================================================
-   SOCIAL ICONS
-   ========================================================================== */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/*            !On Behalf Of Icons => Icons           */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+
+@if ($theme-name != 'Orion') {
+  $iconSizeSmall: 20px;
+  $spriteGridSizeSmall: -35px;
+  .obo-action {
+    background-image: url('images/OboSprite.png');
+  }
+  .obo-action.obo-change-contact {
+    @include sprite-bg($spriteGridSizeSmall, 0);
+  }
+  .obo-action.obo-clear {
+    @include sprite-bg($spriteGridSizeSmall, 1);
+  }
+}
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/*            !Social Icons => Icons                 */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 
 $socialSpriteGridSize: -40px;
 $socialSpriteChangeImageOnHover: 0;
 .SocialSprite {
-    background-image: url(images/SocialSprite.png);
-    background-repeat: no-repeat;
-    width: 24px;
-    height: 24px;
-    vertical-align: top;
-    @if $border-radius-base > 0 {
-        border-radius: $border-radius-base;
+  background-image: url(images/SocialSprite.png);
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  vertical-align: top;
+  @if $border-radius-base > 0 {
+    border-radius: $border-radius-base;
+  }
+  @if $view-type != Mobile {
+    @include opacity(0.7);
+  }
+  @include transition(opacity $transition-speed ease-out);
+  &.LargeButtons {
+    width: 32px;
+    height: 32px;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    @include opacity(1);
+  }
+
+  &.FacebookIcon {
+    &,
+    &:hover,
+    a:hover &,
+    &:focus,
+    a:focus &,
+    &:active,
+    a:active & {
+      background-position: 0 0;
+      background-color: #3b5998;
     }
-    @if $view-type != Mobile {
-        @include opacity(.70);
-    }
-    @include transition(opacity $transition-speed ease-out);
+
     &.LargeButtons {
-        width: 32px;
-        height: 32px;
+      &,
+      &:hover,
+      a:hover &,
+      &:focus,
+      a:focus &,
+      &:active,
+      a:active & {
+        background-position: 0 $socialSpriteGridSize * 2;
+      }
     }
-    &:hover, &:focus, &:active {
-        @include opacity(1);
+  }
+  &.TwitterIcon {
+    &,
+    &:hover,
+    a:hover &,
+    &:focus,
+    a:focus &,
+    &:active,
+    a:active & {
+      background-position: $socialSpriteGridSize 0;
+      background-color: #00a0d1;
     }
 
-    &.FacebookIcon {
-        &, &:hover, a:hover &, &:focus, a:focus &,  &:active, a:active & {
-            background-position: 0 0;
-            background-color: #3b5998;
-        }
-
-        &.LargeButtons {
-            &, &:hover, a:hover &, &:focus, a:focus &,  &:active, a:active & {
-                background-position: 0 $socialSpriteGridSize*2;
-            }
-        }
+    &.LargeButtons {
+      &,
+      &:hover,
+      a:hover &,
+      &:focus,
+      a:focus &,
+      &:active,
+      a:active & {
+        background-position: $socialSpriteGridSize $socialSpriteGridSize * 2;
+      }
     }
-    &.TwitterIcon {
-        &, &:hover, a:hover &, &:focus, a:focus &,  &:active, a:active & {
-            background-position: $socialSpriteGridSize 0;
-            background-color: #00a0d1;
-        }
-
-        &.LargeButtons {
-            &, &:hover, a:hover &, &:focus, a:focus &,  &:active, a:active & {
-                background-position: $socialSpriteGridSize $socialSpriteGridSize*2;
-            }
-        }
+  }
+  &.LinkedInIcon {
+    &,
+    &:hover,
+    a:hover &,
+    &:focus,
+    a:focus &,
+    &:active,
+    a:active & {
+      background-position: $socialSpriteGridSize * 2 0;
+      background-color: #0e76a8;
     }
-    &.LinkedInIcon {
-        &, &:hover, a:hover &, &:focus, a:focus &,  &:active, a:active & {
-            background-position: $socialSpriteGridSize*2 0;
-            background-color: #0e76a8;
-        }
 
-        &.LargeButtons {
-            &, &:hover, a:hover &, &:focus, a:focus &,  &:active, a:active & {
-                background-position: $socialSpriteGridSize*2 $socialSpriteGridSize*2;
-            }
-        }
+    &.LargeButtons {
+      &,
+      &:hover,
+      a:hover &,
+      &:focus,
+      a:focus &,
+      &:active,
+      a:active & {
+        background-position: $socialSpriteGridSize * 2 $socialSpriteGridSize * 2;
+      }
     }
-    &.YouTubeIcon {
-        &, &:hover, a:hover &, &:focus, a:focus &,  &:active, a:active & {
-            background-position: $socialSpriteGridSize*3 0;
-            background-color: #c4302b;
-        }
+  }
+  &.YouTubeIcon {
+    &,
+    &:hover,
+    a:hover &,
+    &:focus,
+    a:focus &,
+    &:active,
+    a:active & {
+      background-position: $socialSpriteGridSize * 3 0;
+      background-color: #c4302b;
+    }
 
-        &.LargeButtons {
-            &, &:hover, a:hover &, &:focus, a:focus &,  &:active, a:active & {
-                background-position: $socialSpriteGridSize*3 $socialSpriteGridSize*2;
-            }
-        }
+    &.LargeButtons {
+      &,
+      &:hover,
+      a:hover &,
+      &:focus,
+      a:focus &,
+      &:active,
+      a:active & {
+        background-position: $socialSpriteGridSize * 3 $socialSpriteGridSize * 2;
+      }
     }
-    &.EmailIcon {
-        &, &:hover, a:hover &, &:focus, a:focus &,  &:active, a:active & {
-            background-position: $socialSpriteGridSize*4 0;
-            background-color: #0a629a;
-        }
+  }
+  &.EmailIcon {
+    &,
+    &:hover,
+    a:hover &,
+    &:focus,
+    a:focus &,
+    &:active,
+    a:active & {
+      background-position: $socialSpriteGridSize * 4 0;
+      background-color: #0a629a;
+    }
 
-        &.LargeButtons {
-            &, &:hover, a:hover &, &:focus, a:focus &,  &:active, a:active & {
-                background-position: $socialSpriteGridSize*4 $socialSpriteGridSize*2;
-            }
-        }
+    &.LargeButtons {
+      &,
+      &:hover,
+      a:hover &,
+      &:focus,
+      a:focus &,
+      &:active,
+      a:active & {
+        background-position: $socialSpriteGridSize * 4 $socialSpriteGridSize * 2;
+      }
     }
-    &.PinterestIcon {
-        &, &:hover, a:hover &, &:focus, a:focus &,  &:active, a:active & {
-            background-position: $socialSpriteGridSize*5 0;
-            background-color: #0a629a;
-        }
+  }
+  &.PinterestIcon {
+    &,
+    &:hover,
+    a:hover &,
+    &:focus,
+    a:focus &,
+    &:active,
+    a:active & {
+      background-position: $socialSpriteGridSize * 5 0;
+      background-color: #0a629a;
+    }
 
-        &.LargeButtons {
-            &, &:hover, a:hover &, &:focus, a:focus &,  &:active, a:active & {
-                background-position: $socialSpriteGridSize*5 $socialSpriteGridSize*2;
-            }
-        }
+    &.LargeButtons {
+      &,
+      &:hover,
+      a:hover &,
+      &:focus,
+      a:focus &,
+      &:active,
+      a:active & {
+        background-position: $socialSpriteGridSize * 5 $socialSpriteGridSize * 2;
+      }
     }
-    &.GPlusIcon {
-        &, &:hover, a:hover &, &:focus, a:focus &,  &:active, a:active & {
-            background-position: $socialSpriteGridSize*6 0;
-            background-color: #db4a39;
-        }
+  }
+  &.GPlusIcon {
+    &,
+    &:hover,
+    a:hover &,
+    &:focus,
+    a:focus &,
+    &:active,
+    a:active & {
+      background-position: $socialSpriteGridSize * 6 0;
+      background-color: #db4a39;
+    }
 
-        &.LargeButtons {
-            &, &:hover, a:hover &, &:focus, a:focus &,  &:active, a:active & {
-                background-position: $socialSpriteGridSize*6 $socialSpriteGridSize*2;
-            }
-        }
+    &.LargeButtons {
+      &,
+      &:hover,
+      a:hover &,
+      &:focus,
+      a:focus &,
+      &:active,
+      a:active & {
+        background-position: $socialSpriteGridSize * 6 $socialSpriteGridSize * 2;
+      }
     }
-    &.SkypeIcon {
-        &, &:hover, a:hover &, &:focus, a:focus &,  &:active, a:active & {
-            background-position: $socialSpriteGridSize*7 0;
-            background-color: #00aff0;
-        }
+  }
+  &.SkypeIcon {
+    &,
+    &:hover,
+    a:hover &,
+    &:focus,
+    a:focus &,
+    &:active,
+    a:active & {
+      background-position: $socialSpriteGridSize * 7 0;
+      background-color: #00aff0;
+    }
 
-        &.LargeButtons {
-            &, &:hover, a:hover &, &:focus, a:focus &,  &:active, a:active & {
-                background-position: $socialSpriteGridSize*7 $socialSpriteGridSize*2;
-            }
-        }
+    &.LargeButtons {
+      &,
+      &:hover,
+      a:hover &,
+      &:focus,
+      a:focus &,
+      &:active,
+      a:active & {
+        background-position: $socialSpriteGridSize * 7 $socialSpriteGridSize * 2;
+      }
     }
+  }
 }
-
-/**** End Social Netowrking Icon Styling ****/

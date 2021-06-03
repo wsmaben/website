@@ -1,8 +1,8 @@
-﻿/* ==========================================================================
-   Great Barrier Reef Skin Specific Styles
-   ========================================================================== */
+﻿/*****************************************************/
+/*        !WSMA SKIN-SPECIFIC STYLES FOR GBR         */
+/*****************************************************/
 
-// Skin-Specific Mixins
+// !Skin-Specific Mixins
 // -------------------------
 @mixin underlinedTitles($title-color, $line-thickness: 2px, $line-length: 45%) {
   &:after {
@@ -60,8 +60,9 @@
   }
 }
 
-// Page Titles
-// -------------------------
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/* !Page Titles => WSMA SKIN-SPECIFIC STYLES FOR GBR */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 h1 {
   position: relative;
   display: table;
@@ -74,8 +75,9 @@ h1 {
   //@include underlinedTitles($color-secondary-b,2px,30%);
 }
 
-// Homepage Full Width Areas
-// -------------------------
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
+/*  !Homepage Full Width Areas => WSMA SKIN-SPECIFIC STYLES FOR GBR  */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 .Wrapper-HomePage {
   //.FullWidthArea-StyleBg2 {
   //background: $color-alt-bg2 url(images/FullWidthArea_Bg2.jpg) center top no-repeat;
@@ -136,8 +138,9 @@ h1 {
   }
 }
 
-// Buttons
-// -------------------------
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*   !Buttons => WSMA SKIN-SPECIFIC STYLES FOR GBR    */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 /* Diamond shaped button, excluding Safari */
 html:not(.t-safari) {
   .btn,
@@ -166,7 +169,7 @@ html:not(.t-safari) {
   }
 }
 
-/* Button styles for all browsers */
+/* !Button styles for all browsers */
 .btn,
 .TextButton,
 .ruButton {
@@ -180,7 +183,7 @@ html:not(.t-safari) {
   }
 }
 
-/* Button styles for Safari only */
+/* !Button styles for Safari only */
 html.t-safari {
   .PrimaryButton,
   .SaveAndClose,
@@ -241,8 +244,9 @@ html.t-safari {
   }
 }
 
-// Spotlight Sections
-// -------------------------
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*  !Spotlight Sections => WSMA SKIN-SPECIFIC STYLES FOR GBR    */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 .Spotlight .SectionLabel,
 .Spotlight h4 {
   display: block;
@@ -297,8 +301,9 @@ html.t-safari {
     margin-bottom: 60px;
   }
 }
-// Membership Box
-// -------------------------
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*   !Membership Box => WSMA SKIN-SPECIFIC STYLES FOR GBR       */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 
 .Spotlight .MembershipBox {
   padding: 0 20px 20px 20px;
@@ -348,8 +353,9 @@ html.t-safari {
   }
 }
 
-// Testimonial Area
-// -------------------------
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*    !Testimonial Area => WSMA SKIN-SPECIFIC STYLES FOR GBR    */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 .TestimonialArea {
   @include respond-to('grid large') {
     width: 70%;
@@ -387,8 +393,9 @@ html.t-safari {
   }
 }
 
-// Upcoming Events
-// -------------------------
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*  !Upcoming Events => WSMA SKIN-SPECIFIC STYLES FOR GBR       */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 .UpcomingEventsHome {
   @include respond-to('grid large') {
     ul.RelatedItemsHorizontal li,
@@ -411,8 +418,9 @@ html.t-safari {
   }
 }
 
-// Progress Tracker
-// -------------------------
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*  !Progress Tracker => WSMA SKIN-SPECIFIC STYLES FOR GBR      */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 .ProgressTracker2 {
   text-align: center;
 
@@ -456,15 +464,16 @@ html.t-safari {
   }
 }
 
-// TELERIK overwrites
-// -------------------------
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*  !Telerik Overrides  => WSMA SKIN-SPECIFIC STYLES FOR GBR    */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 
-/* Search Results */
+/* !Search Results */
 .SearchResultSummary .ListItemTitle a {
   background: none !important;
 }
 
-/* RadStrip Tabs */
+/* !RadStrip Tabs */
 .RadTabStrip.RadTabStrip_MetroTouch {
   background: $color-base;
   padding: 10px 10px 0 10px !important;
@@ -497,8 +506,10 @@ div.PanelTitle,
   border: none !important;
 }
 
-// Account Mini Profile
-// -------------------------
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*  !Account Mini Profile => WSMA SKIN-SPECIFIC STYLES FOR GBR  */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+
 .CalloutPart2 {
   background-color: $color-alt-bg;
   text-align: center;
@@ -520,7 +531,7 @@ div.PanelTitle,
   border: none;
 }
 
-// Other
+// !Other
 // -------------------------
 .SelectedItem a,
 .ProxyPanelContact a {
@@ -536,11 +547,9 @@ div.PanelTitle,
   border-bottom: 5px solid $color-wsma-seafoam;
 }
 
-/***************************************
-/*
-/* Interior Banner
-/*
-/**************************************/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*  !Interior Banner => WSMA SKIN-SPECIFIC STYLES FOR GBR       */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 
 .body-container {
   @include respond-to('grid large') {
@@ -609,9 +618,9 @@ div.PanelTitle,
   }
 }
 
-/****************************************
-/** imgBanner
-/***************************************/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*     !imgBanner => WSMA SKIN-SPECIFIC STYLES FOR GBR          */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 
 .imgBanner .breadcrumb-obo-container {
   background-color: rgb(00, 72, 81);
@@ -643,9 +652,10 @@ div.PanelTitle,
   mask: url(#mask);
 }
 
-/***********************************
-/ Footer Nav
-/**********************************/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*      !Footer Nav  => WSMA SKIN-SPECIFIC STYLES FOR GBR       */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+
 footer#ft {
   float: left;
   width: 100%;
@@ -670,11 +680,9 @@ footer#ft {
   display: block;
 }
 
-/**********************************
-/
-/ Panels
-/
-/**********************************/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*        !Panels => WSMA SKIN-SPECIFIC STYLES FOR GBR          */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 
 .panel {
   border: none;
@@ -684,11 +692,9 @@ footer#ft {
   width: -webkit-fill-available;
 }
 
-/**********************************
-/
-/ Aux Nav
-/
-/**********************************/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*        !Aux Nav => WSMA SKIN-SPECIFIC STYLES FOR GBR         */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 
 .aux-nav {
   padding: 20px;
@@ -716,11 +722,9 @@ footer#ft {
   }
 }
 
-/**********************************
-/
-/ News & Events
-/
-/**********************************/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*    !News & Events => WSMA SKIN-SPECIFIC STYLES FOR GBR       */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 
 .NewsFullWidth {
   background-color: #f5f7f8;
@@ -831,7 +835,7 @@ footer#ft {
   }
 }
 
-// // Elipses
+// // !Elipses
 // // -------------------------
 
 // @mixin excerpt($font-size: $paragraph-font-size, $line-height: 1.8, $lines-to-show: 8, $excerpt-bg: transparent) {
@@ -881,11 +885,9 @@ footer#ft {
   margin-bottom: 30px;
 }
 
-/***********************************
-/
-/ News Collapse
-/
-/**********************************/
+//////////////////
+// !News Collapse
+//////////////////
 
 //   .ellip {
 //     display: block;
@@ -911,11 +913,9 @@ footer#ft {
 //     overflow: hidden;
 // }
 
-/***********************************
-/
-/ News Widget
-/
-/**********************************/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*      !News Widget => WSMA SKIN-SPECIFIC STYLES FOR GBR       */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 
 .newsWidget {
   // body.newsWidget .NewsFullWidth
@@ -957,12 +957,9 @@ footer#ft {
     }
   }
 }
-
-/***********************************
-/
-/ Misc
-/
-/**********************************/
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
+/*        !Misc => WSMA SKIN-SPECIFIC STYLES FOR GBR            */
+/*+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-++-+*/
 
 // .ContentItemButtonPanel {
 //     position: absolute;

@@ -1,45 +1,45 @@
-﻿/* Filter Panel (Query Menu)
-   ========================================================================== */
+﻿/*****************************************************/
+/*            !Filter Panel (Query Menu)             */
+/*****************************************************/
+
 /* This is an alternate style for the Query Menu filter panel */
 .FilterPanel {
-    @if ($theme-name != 'Orion') {
-        background-color: transparent;
-    }
-    border: none !important;
-    margin-top: -3px;  
-    
-    .PanelTitle, 
-    .panel-title {
-        background-image: none;
-        padding-left: 0.1em;
-        line-height: normal;
-        margin-left: 0;
-        font-size: $font-size-h2 * .82353;
-    }
+  @if ($theme-name != 'Orion') {
+    background-color: transparent;
+  }
+  border: none !important;
+  margin-top: -3px;
 
-    .PanelHead.Distinguish,
-    .panel-heading.Distinguish {
-        border: none;
-        min-height: 1em;
-    }
+  .PanelTitle,
+  .panel-title {
+    background-image: none;
+    padding-left: 0.1em;
+    line-height: normal;
+    margin-left: 0;
+    font-size: $font-size-h2 * 0.82353;
+  }
+
+  .PanelHead.Distinguish,
+  .panel-heading.Distinguish {
+    border: none;
+    min-height: 1em;
+  }
 }
 
 .FoD {
+  .panel-heading.Distinguish {
+    padding: 0;
+  }
 
-    .panel-heading.Distinguish {
-        padding: 0;
-    }
+  .panel-body {
+    padding: 0;
+  }
 
-    .panel-body {
-        padding: 0;
-    }
-
-    h2.panel-title {
+  h2.panel-title {
     color: white;
     margin-bottom: 20px;
-    }
-    .PanelField label {
-        color: white;
-    }
+  }
+  .PanelField label {
+    color: white;
+  }
 }
-
