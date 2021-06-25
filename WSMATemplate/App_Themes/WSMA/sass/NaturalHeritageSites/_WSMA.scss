@@ -937,9 +937,11 @@ footer#ft {
     ol,
     ul,
     li,
+    blockquote,
     h3,
     h4,
-    h6 {
+    h6,
+    .secondaryImage {
       display: none;
     }
     // .col-md-12 {

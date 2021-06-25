@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Physician Leadership News</title>
+    <!-- !CSS ************************************************************************* -->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="/WSMATemplate/App_Themes/WSMA/css/10-UltraWave.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="/WSMATemplate/App_Themes/WSMA/css/99-WSMA.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="/WSMATemplate/App_Themes/WSMA/css/elegant-icons.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="/WSMATemplate/App_Themes/WSMA/css/zzCustom.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="/WSMATemplate/App_Themes/WSMA/css/99-WSMA_GBR_Responsive.css"
+    />
+    <!-- !JavaScript ************************************************************************** -->
+    <script src="https://wsma.org/AsiCommon/scripts/Asi.js"></script>
+    <script src="https://wsma.org/AsiCommon/Scripts/Asi.Web.js"></script>
+    <script src="https://wsma.org/AsiCommon/Scripts/Jquery/jquery-migrate-3.0.1.min.js"></script>
+    <script src="https://wsma.org/AsiCommon/Scripts/Jquery/jquery-ui.custom.min.js"></script>
+    <script src="https://wsma.org/AsiCommon/Scripts/Jquery/Jquery.min.js"></script>
+    <script src="https://wsma.org/AsiCommon/Scripts/Modernizr/Modernizr.min.js"></script>
+    <!-- !META *************************************************************************-->
+    <!-- Physician Leadership News -->
+    <!-- !Description:  -->
+    <!-- !Keywords:  -->
+    <!-- !Access Settings: Everyone Full Control -->
+    <!-- !Layout: 1-1-Sidebar -->
+    <!--  -->
+  </head>
+  <body>
+    <!-- !Banner - iPART - Content HTML *************************************************** -->
+    <div class="secondaryHero row">
+      <div class="hero2banner">
+        <svg
+          id="Layer_1"
+          viewbox="0 0 650 314"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          data-name="Layer 1"
+        >
+          <defs>
+            <lineargradient
+              id="linear-gradient"
+              gradientunits="userSpaceOnUse"
+              x1="0"
+              y1="154.5"
+              x2="650"
+              y2="154.5"
+            >
+              <stop stop-color="rgb(255, 255, 255)" offset="0"></stop>
+              <stop offset="0"></stop>
+              <stop stop-color="rgb(6, 6, 6)" offset="0.03"></stop>
+              <stop stop-color="rgb(22, 22, 22)" offset="0.06"></stop>
+              <stop stop-color="rgb(49, 49, 49)" offset="0.1"></stop>
+              <stop stop-color="rgb(86, 86, 86)" offset="0.14"></stop>
+              <stop stop-color="rgb(134, 134, 134)" offset="0.19"></stop>
+              <stop stop-color="silver" offset="0.24"></stop>
+              <stop stop-color="rgb(255, 255, 255)" offset="0.28"></stop>
+              <stop stop-color="rgb(255, 255, 255)" offset="0.68"></stop>
+              <stop stop-color="rgb(231, 231, 231)" offset="0.71"></stop>
+              <stop stop-color="rgb(133, 133, 133)" offset="0.82"></stop>
+              <stop stop-color="rgb(61, 61, 61)" offset="0.9"></stop>
+              <stop stop-color="rgb(17, 17, 17)" offset="0.97"></stop>
+              <stop offset="1"></stop>
+            </lineargradient>
+            <mask
+              id="mask"
+              maskunits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="650"
+              height="314"
+            >
+              <rect class="cls-1" x="0" y="0" width="650" height="314"></rect>
+            </mask>
+          </defs>
+          <g class="cls-2">
+            <image width="650" height="314" href="/images/****.jpg"></image>
+          </g>
+        </svg>
+        <img alt="****" width="650" height="314" src="/images/*****.jpg" />
+      </div>
+      <div class="col-md-6">*****</div>
+    </div>
+    <script>
+      jQuery('.hero2banner').appendTo('.hero2after');
+      jQuery('.secondaryHero').appendTo('#ctl01_BreadCrumb');
+    </script>
+    <!-- !Physician Leadership News - iPART - Content HTML ******************************** -->
+    <h1>Early Career News</h1>
+    <!-- !iPART - Query Menu *************************************************** -->
+    <!-- Name: Tagged List Query
+iPart CSS Class: Hidden
+Display on screen sizes: all checked
+Show initial results for queries with optional filters: check
+Source query or folder: $/Website/News Feeds/NewsFeed-PhysicianLeadershipNews
+Menu Label: Select a query
+Results to display per page: 3
+Results display style: Advanced -->
+
+    <!-- Sidebar - Base Directory and News Display ****************************** -->
+    <div id="BaseDirectory" class="SideBar aux-nav">&nbsp;</div>
+    <div id="NewsDisplay">&nbsp;</div>
+
+    <!-- Newsfeed Javascript **************************************** -->
+    <script>
+      // hide the iPart containing the IQA
+      jQuery('#ste_container_ciTaggedListQuery').parent().hide();
+
+      // Read the IQA contents into a jQuery variable
+      var r = jQuery('#ste_container_ciTaggedListQuery table tbody tr');
+
+      // define a new array variable
+      var ar = [];
+
+      // set default field names (based on the position in the IQA)
+      var vals = {
+        0: 'Name',
+        1: 'Alternatename',
+        2: 'TagName',
+        //3: "ParentTag",
+        3: 'Location',
+        4: 'Blob',
+      };
+
+      // Loop through the rows, writing the results into a new object
+      // and then add the object to the array
+      jQuery.each(r, function (key, value) {
+        var l = jQuery(value).find('td');
+        var i = l.length;
+        var news = {};
+        for (i = 0; i < l.length; i++) {
+          var a = jQuery(l[i]).html();
+          var s = vals[i];
+          news[s] = a;
+        }
+        ar.push(news);
+      });
+
+      // result is an array of objects -- ar
+
+      // generate markup for index and sidebar nav
+      function rtnMarkup(news) {
+        var markup =
+          '<div class="Tag' +
+          news.TagName +
+          '"><a href="/' +
+          news.Location +
+          '">' +
+          news.Alternatename +
+          '</a></div>';
+        return markup;
+      }
+
+      // generate markup for output (one per feed)
+      function rtnFeed(news) {
+        var feed =
+          '<div class="encoded row">' +
+          '<div class="newsBody">' +
+          news.Blob +
+          '</div>' +
+          '</div>' +
+          '<div class="row">' +
+          '<div class="col-md-12 readMore"><a href="/' +
+          news.Location +
+          '">Read More <span>&#10140;</span></a><hr></div>' +
+          '</div>';
+        return feed;
+      }
+
+      // Add a header
+      jQuery('#BaseDirectory').append('<h2>Physician Leadership Articles</h2>');
+
+      // loop through the news (object = news) and output the markup
+      for (i = 0; i < ar.length; i++) {
+        var b = ar[i];
+        var g = rtnMarkup(b);
+        var h = rtnFeed(b);
+        jQuery('#BaseDirectory').append(g);
+        jQuery('#NewsDisplay').append(h);
+      }
+
+      // Decode encoded HTML so it is readable by the browser
+      jQuery('.newsBody').each(function (index, element) {
+        //console.log(jQuery(this).text());
+        var b = jQuery(this).text();
+        var encoded = b.replace(/(\&amp\;)/g, '&');
+        function htmlDecode(input) {
+          var e = document.createElement('div');
+          e.innerHTML = input;
+          // handle case of empty input
+          return e.childNodes.length === 0 ? '' : e.childNodes[0].nodeValue;
+        }
+        jQuery(this).html('');
+        jQuery(this).append(htmlDecode(encoded));
+      });
+
+      // Decode encoded HTML so it is readable by the browser
+      jQuery('.newsImg').each(function (index, element) {
+        //console.log(jQuery(this).text());
+        var b = jQuery(this).text();
+        var encoded = b.replace(/(\&amp\;)/g, '&');
+        function htmlDecode(input) {
+          var e = document.createElement('div');
+          e.innerHTML = input;
+          // handle case of empty input
+          return e.childNodes.length === 0 ? '' : e.childNodes[0].nodeValue;
+        }
+        jQuery(this).html('');
+        jQuery(this).append(htmlDecode(encoded));
+      });
+    </script>
+
+    <!-- !HTML FOOTER *************************************************************************** -->
+  </body>
+</html>

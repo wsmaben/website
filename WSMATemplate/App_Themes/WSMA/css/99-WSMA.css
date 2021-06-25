@@ -1279,9 +1279,11 @@ footer#ft {
 .newsWidget .newsBody ol,
 .newsWidget .newsBody ul,
 .newsWidget .newsBody li,
+.newsWidget .newsBody blockquote,
 .newsWidget .newsBody h3,
 .newsWidget .newsBody h4,
-.newsWidget .newsBody h6 {
+.newsWidget .newsBody h6,
+.newsWidget .newsBody .secondaryImage {
   display: none;
 }
 .newsWidget .newsBody div,
