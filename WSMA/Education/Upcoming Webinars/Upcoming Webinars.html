@@ -44,6 +44,16 @@
     <!-- <link rel="canonical" href="http://wsma.org/WSMA/education/Upcoming_Webinars/Upcoming_Webinars.aspx" /> -->
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) ****************************************-->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MM89MWB"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+
     <!-- !Banner ******************************************************* -->
     <!-- Page container CSS class:  imgBanner newsWidget -->
     <!-- Zone CSS class: inner-banner -->
@@ -118,7 +128,7 @@
       jQuery('.secondaryHero').appendTo('#ctl01_BreadCrumb');
     </script>
     <!-- !Upcoming Webinars - main - iPART - Content HTML *************************************************** -->
-    <h1>Upcoming Webinars</h1>
+    <h1 id="upcomingWebinars">Upcoming Webinars</h1>
     <p>
       Continuing professional development is the process of lifelong learning in
       which physicians acquire, through formal and informal activities, the
@@ -193,7 +203,7 @@
     <div>
       <div class="row">
         <div class="col-lg-10">
-          <h2>Latest News</h2>
+          <h2 id="latestNews">Latest News</h2>
         </div>
         <div class="col-lg-2">
           <h3>
@@ -309,6 +319,30 @@
         jQuery(this).append(htmlDecode(encoded));
       });
     </script>
+    <!-- !Hide Main Side Nav **************************************** -->
+
+    <style>
+      .nav-secondary {
+        display: none;
+      }
+    </style>
+
+    <!-- !Advertising Sidebar - iPART - Content HTML ******************** -->
+    <div class="col-sm-12 aux-nav">
+      <div class="container-fluid">
+        <div class="row">
+          <a
+            href="https://www.glpattorneys.com/provider-resources/"
+            id="Adv-GLPAttorneys"
+            style="display: inline !important"
+          >
+            <img
+              alt="Health Care Resources from GLP Personal Injury Attorneys"
+              src="/images/education/upcoming-webinars/glp-attorneys-250-square-ad-for-website-start-7121.jpg"
+          /></a>
+        </div>
+      </div>
+    </div>
     <!-- !HTML FOOTER ************************************** -->
   </body>
 </html>
